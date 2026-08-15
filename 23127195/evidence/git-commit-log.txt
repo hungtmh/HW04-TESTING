@@ -1,4 +1,132 @@
-﻿commit 94ea79c24480bb5f515fb2f7f7eda3d84f08dbc6
+﻿commit 94898dca5dc3074d4e2bb7f4ac42943337fee9c8
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 22:44:04 +0700
+
+    feat(skill): add reusable eshop-automation Agent Skill
+
+    Packages the workflow the three feature suites converged on: read the 
+    specification before the code, probe the real DOM before writing
+    selectors, keep all data in tests/data, avoid race-prone assertions, clean
+    up on both branches, run one report per engine, and verify each failure
+    reason rather than the totals.
+
+    Also carries a table of SUT facts that were expensive to rediscover - the 
+    real admin password, the two-attempt lockout, the IPv6-only Vite binding,
+    the non-persistent cart, and the admin app not being covered by webServer.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit c819a76e61d348ec459906835f3b6eb9bfd89ff6
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 22:38:42 +0700
+
+    chore(sut): reset seeded database after the full test matrix
+
+commit cb11c7ea3140dda0008c64b408e7d311363c04bd
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 22:38:25 +0700
+
+    docs(23127195): extend report to all three features
+
+    Rewrites the main report to cover FR-01, FR-09 and FR-14 together, updates 
+    the summary and self-assessment, and documents 15 defects with
+    reproduction steps and screenshots.
+
+    The gap analysis now records eleven review findings. Beyond the two that
+    had produced false greens, three made tests fail for reasons unrelated to
+    the defect they targeted, one surfaced only on WebKit, one was a patch
+    that broke six passing tests, and one repeated a selector mistake already
+    fixed once.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 1e22622d4c4b586b94b0dfb182af7948638fe6cf
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 22:38:25 +0700
+
+    test: add nine multi-browser HTML reports and bug evidence
+
+    Three features times three engines: FR-01 19 passed / 8 failed, FR-09 12
+    passed / 6 failed, FR-14 8 passed / 9 failed, identical on Chromium, 
+    Firefox and WebKit. 186 executions in total, 117 passed and 69 failed.
+
+    Every one of the 69 reds belongs to a test tagged @bug, verified by
+    scanning each results.json rather than trusting the totals - after a
+    helper once made five tests fail for a reason unrelated to the defect they
+    were written for, matching counts are not evidence on their own.
+
+    Each report header carries "Run by: 23127195" with the ISO timestamp of
+    its run. capture-bug-evidence-fr09-fr14.mjs adds screenshots for the nine
+    new defects, rendering API payloads onto the page where the evidence is a
+    JSON body rather than something visible in the product.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit c19eb77eb8cbba813c2b08d125ed57311307bdc4
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 22:38:24 +0700
+
+    test(fr14): add 17 data-driven category management test cases
+
+    Covers create through the admin UI, read consistency between the table and 
+    the API, update through the API, delete through the UI, referential 
+    integrity, and role enforcement on every write endpoint.
+
+    Nine tests are tagged @bug: blank and missing names are stored, any 
+    authenticated customer can create, rename and delete categories,
+    operations on a non-existent id answer 200, deleting a category in use
+    orphans its products, and the admin screen offers no way to rename a
+    category at all even though PUT /api/categories/:id exists.
+
+    Two review fixes are folded in:
+
+    - The admin login form gives its e-mail field no type attribute, so
+     input[type="email"] matched nothing and eight UI tests timed out. The
+     placeholder is the only stable handle, and the submit button reads
+     "Login". This repeats the getByLabel mistake already fixed on FR-01.
+    - Every test now restores the category table through cleanupAdded(),
+     including when its assertion is about to fail. The negative tests leave a
+     row behind precisely when they catch a bug, so the table filled up with
+     blank and stray rows and a later cross-layer test started failing on the
+     rubbish instead of on what it checks. That test also no longer depends on
+     a seeded category name, which the delete tests may legitimately remove.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 7272c8a0becbb820209221b683fca2796dae9103
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 22:38:24 +0700
+
+    test(fr09): add 18 data-driven coupon test cases
+
+    Covers the percent and fixed calculation matrix, the minimum-order
+    boundary, unusable codes, code normalisation, the per-user usage limit,
+    the full customer journey from product to payment, and two invariants that
+    must hold for every coupon.
+
+    Six tests are tagged @bug. The heaviest is the percent formula: server.js 
+    computes total*(1-discount_value) instead of total*discount_value/100, so
+    a 10% coupon on a 500,000 order returns a discount of -4,500,000 and a
+    payable of 5,000,000 while the UI still shows a green tick and "Giảm 10%".
+
+    TC-18 asserts invariants rather than specific figures - no discount may be 
+    negative and no discounted total may exceed the original - because an 
+    invariant also catches variants of the fault that a fixed expected value 
+    would miss.
+
+    The cart is plain React state with no persistence, so a full page load 
+    empties it. The end-to-end case therefore navigates by clicking, while the 
+    calculation cases go straight to checkout and drive the editable total.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 79fee15e394574871bbe986b6961c3464b31f18a
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:37 +0700
+
+    docs: add git commit log and ignore transient SQLite journal
+
+commit 94ea79c24480bb5f515fb2f7f7eda3d84f08dbc6
 Author: hungtmh <hungtmh20002@gmail.com>
 Date:   2026-08-15 12:21:13 +0700
 
