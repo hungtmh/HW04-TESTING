@@ -1,0 +1,11 @@
+Captured 2026-08-15T15:30:16.263Z by 23127195
+
+BUG-07 UI: ✅ Áp dụng thành công! Giảm 10% |  | Tiết kiệm: -4,500,000 ₫ |  | Thành tiền: 5,000,000 ₫
+BUG-07 API: discount=-4500000 final=5000000
+BUG-08: total=500000 -> 400; total=500001 -> 200
+BUG-09: with user_id -> 400, without -> 200
+BUG-10: blank -> 200, missing -> 200
+BUG-11: role=user create -> 200, delete -> 200
+BUG-12: PUT ghost -> 200, DELETE ghost -> 200
+BUG-13: delete used category -> 200, orphaned products = 1
+BUG-14: row actions offered by the admin UI = ["Xóa"]

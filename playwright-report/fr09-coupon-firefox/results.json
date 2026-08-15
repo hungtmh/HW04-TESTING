@@ -1,0 +1,1430 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Kiem_thu\\HW4\\HW04-TESTING\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr09-coupon.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\playwright.config.js",
+    "rootDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127195",
+      "Student ID": "23127195",
+      "Executed at (ISO)": "2026-08-15T15:25:48.324Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+      "Features under test": "FR-01 Account registration",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T15:25:48.324Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T15:25:48.324Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T15:25:48.324Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr09-coupon-firefox",
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T15:25:48.324Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr09-coupon-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09-coupon.spec.js",
+      "file": "fr09-coupon.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-09 | Mã giảm giá",
+          "file": "fr09-coupon.spec.js",
+          "line": 38,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-14 - Nhap ma chu thuong van ap dung duoc (UI tu viet hoa)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-14"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2529,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:26:50.716Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-14"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4763e1e72eb39689c491-662d1ba7f553849679bb",
+              "file": "fr09-coupon.spec.js",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "TC-15 - Vuot gioi han so lan dung tren moi nguoi",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-15"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2503,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:26:53.256Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-15"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4763e1e72eb39689c491-eca3f553d3f44d5ff5d1",
+              "file": "fr09-coupon.spec.js",
+              "line": 147,
+              "column": 3
+            },
+            {
+              "title": "TC-16 - Bo qua user_id de lach gioi han so lan dung @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-16"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-09 - bỏ user_id là lách được giới hạn số lần dùng"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 257,
+                      "error": {
+                        "message": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:204:7",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                          "column": 7,
+                          "line": 204
+                        },
+                        "snippet": "  202 |       withoutId.status,\n  203 |       'omitting user_id must not bypass the per-user usage limit',\n> 204 |     ).toBe(400);\n      |       ^\n  205 |   });\n  206 |\n  207 |   // =========================================================================="
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                            "column": 7,
+                            "line": 204
+                          },
+                          "message": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  202 |       withoutId.status,\n  203 |       'omitting user_id must not bypass the per-user usage limit',\n> 204 |     ).toBe(400);\n      |       ^\n  205 |   });\n  206 |\n  207 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:204:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:26:55.770Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-16"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-09 - bỏ user_id là lách được giới hạn số lần dùng"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--05d62-ch-gioi-han-so-lan-dung-bug-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--05d62-ch-gioi-han-so-lan-dung-bug-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--05d62-ch-gioi-han-so-lan-dung-bug-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                        "column": 7,
+                        "line": 204
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4763e1e72eb39689c491-ae75f9d041088f24f6e0",
+              "file": "fr09-coupon.spec.js",
+              "line": 176,
+              "column": 3
+            },
+            {
+              "title": "TC-17 - Luong day du: chon san pham - gio hang - thanh toan voi ma giam gia",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-17"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3576,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:26:56.740Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-17"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4763e1e72eb39689c491-c50e11396d89e5165a21",
+              "file": "fr09-coupon.spec.js",
+              "line": 210,
+              "column": 3
+            },
+            {
+              "title": "TC-18 - Bat bien: giam gia khong am va thanh tien khong vuot tong goc @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-18"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-07 - giảm giá âm và thành tiền lớn hơn tổng gốc"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 288,
+                      "error": {
+                        "message": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                        "stack": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:255:80",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                          "column": 80,
+                          "line": 255
+                        },
+                        "snippet": "  253 |     // exceed the original amount. Both hold for the fixed coupons and both\n  254 |     // break for the percent coupon.\n> 255 |     expect(violations, `coupon invariants violated: ${violations.join('; ')}`).toEqual([]);\n      |                                                                                ^\n  256 |   });\n  257 | });\n  258 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                            "column": 80,
+                            "line": 255
+                          },
+                          "message": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  253 |     // exceed the original amount. Both hold for the fixed coupons and both\n  254 |     // break for the percent coupon.\n> 255 |     expect(violations, `coupon invariants violated: ${violations.join('; ')}`).toEqual([]);\n      |                                                                                ^\n  256 |   });\n  257 | });\n  258 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:255:80"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:27:00.666Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-18"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-07 - giảm giá âm và thành tiền lớn hơn tổng gốc"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--28e44-ien-khong-vuot-tong-goc-bug-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--28e44-ien-khong-vuot-tong-goc-bug-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--28e44-ien-khong-vuot-tong-goc-bug-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                        "column": 80,
+                        "line": 255
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4763e1e72eb39689c491-57de72944ddaa5b79aaf",
+              "file": "fr09-coupon.spec.js",
+              "line": 231,
+              "column": 3
+            }
+          ],
+          "suites": [
+            {
+              "title": "Nhóm 1 - Ma trận tính toán giảm giá (CSV)",
+              "file": "fr09-coupon.spec.js",
+              "line": 50,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-01 - SAVE10 giam 10 phan tram tren don 500k @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-01"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "SAVE10 (percent)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "10 phan tram cua 500000 = 50000. SUT tra ve -4500000 => BUG-07"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-07 - công thức giảm giá phần trăm sai"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 3260,
+                          "error": {
+                            "message": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m",
+                            "stack": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                              "column": 13,
+                              "line": 85
+                            },
+                            "snippet": "  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                                "column": 13,
+                                "line": 85
+                              },
+                              "message": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m\n\n  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:25:48.694Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-01"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "SAVE10 (percent)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "10 phan tram cua 500000 = 50000. SUT tra ve -4500000 => BUG-07"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-07 - công thức giảm giá phần trăm sai"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--5c86c-phan-tram-tren-don-500k-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--5c86c-phan-tram-tren-don-500k-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--5c86c-phan-tram-tren-don-500k-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                            "column": 13,
+                            "line": 85
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-8ee29ddecdd9e30d8741",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-02 - SAVE10 giam 10 phan tram tren don 1 trieu @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-02"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "SAVE10 (percent)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "10 phan tram cua 1000000 = 100000. SUT tra ve -9000000 => BUG-07"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-07 - công thức giảm giá phần trăm sai"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 3267,
+                          "error": {
+                            "message": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m",
+                            "stack": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                              "column": 13,
+                              "line": 85
+                            },
+                            "snippet": "  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                                "column": 13,
+                                "line": 85
+                              },
+                              "message": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m\n\n  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:25:53.327Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-02"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "SAVE10 (percent)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "10 phan tram cua 1000000 = 100000. SUT tra ve -9000000 => BUG-07"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-07 - công thức giảm giá phần trăm sai"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--3ebd1-n-tram-tren-don-1-trieu-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--3ebd1-n-tram-tren-don-1-trieu-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--3ebd1-n-tram-tren-don-1-trieu-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                            "column": 13,
+                            "line": 85
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-ded3ad0883a19f5c5a61",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-03 - SAVE10 giam 10 phan tram tren don 400k @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-03"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "SAVE10 (percent)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Bien tren muc toi thieu 300000 => BUG-07"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-07 - công thức giảm giá phần trăm sai"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 3470,
+                          "error": {
+                            "message": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m",
+                            "stack": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                              "column": 13,
+                              "line": 85
+                            },
+                            "snippet": "  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                                "column": 13,
+                                "line": 85
+                              },
+                              "message": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m\n\n  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:25:58.416Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-03"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "SAVE10 (percent)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Bien tren muc toi thieu 300000 => BUG-07"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-07 - công thức giảm giá phần trăm sai"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--56144-phan-tram-tren-don-400k-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--56144-phan-tram-tren-don-400k-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--56144-phan-tram-tren-don-400k-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                            "column": 13,
+                            "line": 85
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-29e3201fde6650ea5dda",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-04 - BIGBUY giam co dinh 50k tren don 600k",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-04"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "BIGBUY (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Coupon fixed tinh dung"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4121,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:03.995Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-04"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "BIGBUY (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Coupon fixed tinh dung"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-8e5ab1b476dfc9478412",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-05 - BIGBUY giam co dinh 50k tren don 1 trieu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-05"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "BIGBUY (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Coupon fixed tinh dung"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3463,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:08.507Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-05"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "BIGBUY (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Coupon fixed tinh dung"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-b5a4fa56dd64fddf3785",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-06 - VIP100 giam co dinh 100k tren don 400k",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-06"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "VIP100 (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Coupon fixed tinh dung"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3165,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:11.989Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-06"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "VIP100 (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Coupon fixed tinh dung"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-4aad2c6ca8a0c93211fe",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-07 - BIGBUY tai dung nguong toi thieu 500k @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-07"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "BIGBUY (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Dieu kien ghi la toi thieu 500000 nen 500000 phai duoc chap nhan. SUT dung dau > => BUG-08"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-08 - ngưỡng đơn tối thiểu loại trừ giá trị bằng"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 13810,
+                          "error": {
+                            "message": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n",
+                            "stack": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:79:13",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                              "column": 13,
+                              "line": 79
+                            },
+                            "snippet": "  77 |             checkout.couponSuccess,\n  78 |             `${row.code} on ${row.total_amount} must be accepted`,\n> 79 |           ).toBeVisible();\n     |             ^\n  80 |\n  81 |           // [P3] numeric assertions on the money actually rendered\n  82 |           expect("
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                                "column": 13,
+                                "line": 79
+                              },
+                              "message": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n\n\n  77 |             checkout.couponSuccess,\n  78 |             `${row.code} on ${row.total_amount} must be accepted`,\n> 79 |           ).toBeVisible();\n     |             ^\n  80 |\n  81 |           // [P3] numeric assertions on the money actually rendered\n  82 |           expect(\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:79:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:15.164Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-07"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "BIGBUY (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Dieu kien ghi la toi thieu 500000 nen 500000 phai duoc chap nhan. SUT dung dau > => BUG-08"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-08 - ngưỡng đơn tối thiểu loại trừ giá trị bằng"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--27711-g-nguong-toi-thieu-500k-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--27711-g-nguong-toi-thieu-500k-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr09-coupon-FR-09-Mã-giảm--27711-g-nguong-toi-thieu-500k-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
+                            "column": 13,
+                            "line": 79
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-33c7b8297d8fd926ced7",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-08 - BIGBUY ngay tren nguong toi thieu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-08"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "BIGBUY (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Bien duong cua rang buoc min_order_amount"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4230,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:30.653Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-08"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "BIGBUY (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Bien duong cua rang buoc min_order_amount"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-844009872bbb7fd6c2d4",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-09 - BIGBUY duoi nguong toi thieu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-09"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "BIGBUY (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Phai bi tu choi vi chua du gia tri toi thieu"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3633,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:35.264Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-09"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "BIGBUY (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Phai bi tu choi vi chua du gia tri toi thieu"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-ccd44af31b1a82f0a95b",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                },
+                {
+                  "title": "TC-10 - VIP100 duoi nguong toi thieu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-10"
+                        },
+                        {
+                          "type": "coupon",
+                          "description": "VIP100 (fixed)"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Phai bi tu choi vi chua du gia tri toi thieu"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3667,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:38.952Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-10"
+                            },
+                            {
+                              "type": "coupon",
+                              "description": "VIP100 (fixed)"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Phai bi tu choi vi chua du gia tri toi thieu"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-edbe938d736b84c43f83",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 55,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 2 - Mã không hợp lệ",
+              "file": "fr09-coupon.spec.js",
+              "line": 103,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-11 - Ma khong ton tai",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-11"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3048,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:42.660Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-11"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-cefbe49e0efbaf9220b7",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 105,
+                  "column": 7
+                },
+                {
+                  "title": "TC-12 - Ma da het han",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-12"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2518,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:45.732Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-12"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-f4a239c4abe83c786423",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 105,
+                  "column": 7
+                },
+                {
+                  "title": "TC-13 - Ma chi gom khoang trang",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-13"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2444,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:26:48.261Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-13"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4763e1e72eb39689c491-3b5e33aceb0e2fc126d8",
+                  "file": "fr09-coupon.spec.js",
+                  "line": 105,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-15T15:25:48.326Z",
+    "duration": 73104.052,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

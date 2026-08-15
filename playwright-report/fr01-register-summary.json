@@ -2,7 +2,7 @@
   "feature": "fr01-register",
   "spec": "tests/fr01-register.spec.js",
   "runBy": "23127195",
-  "executedAtISO": "2026-08-15T05:11:41.014Z",
+  "executedAtISO": "2026-08-15T15:22:07.617Z",
   "browserRuns": 3,
   "perBrowser": [
     {

@@ -21,7 +21,7 @@
     "metadata": {
       "Run by": "23127195",
       "Student ID": "23127195",
-      "Executed at (ISO)": "2026-08-15T05:09:14.159Z",
+      "Executed at (ISO)": "2026-08-15T15:19:08.570Z",
       "Homework": "HW04 - Automation Testing",
       "SUT": "EShop (eshop-sut) - frontend-web + backend API",
       "Features under test": "FR-01 Account registration",
@@ -36,7 +36,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T05:09:14.159Z",
+          "Executed at (ISO)": "2026-08-15T15:19:08.570Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -58,7 +58,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T05:09:14.159Z",
+          "Executed at (ISO)": "2026-08-15T15:19:08.570Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -80,7 +80,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T05:09:14.159Z",
+          "Executed at (ISO)": "2026-08-15T15:19:08.570Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -107,7 +107,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr01-register-firefox",
-          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T05:09:14.159Z"
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T15:19:08.570Z"
         }
       ],
       [
@@ -170,7 +170,7 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 3172,
+                      "duration": 4615,
                       "error": {
                         "message": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
                         "stack": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:272:73",
@@ -194,7 +194,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T05:10:26.365Z",
+                      "startTime": "2026-08-15T15:20:24.769Z",
                       "annotations": [
                         {
                           "type": "test-case",
@@ -258,12 +258,12 @@
                       "workerIndex": 6,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2552,
+                      "duration": 3455,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T05:10:36.818Z",
+                      "startTime": "2026-08-15T15:20:40.546Z",
                       "annotations": [
                         {
                           "type": "test-case",
@@ -308,7 +308,7 @@
                       "workerIndex": 6,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2463,
+                      "duration": 3351,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:363:36",
@@ -332,7 +332,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T05:10:39.379Z",
+                      "startTime": "2026-08-15T15:20:44.029Z",
                       "annotations": [
                         {
                           "type": "test-case",
@@ -402,7 +402,7 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 13190,
+                      "duration": 14012,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:386:24",
@@ -426,7 +426,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T05:10:42.560Z",
+                      "startTime": "2026-08-15T15:20:48.848Z",
                       "annotations": [
                         {
                           "type": "test-case",
@@ -506,12 +506,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 3050,
+                          "duration": 3106,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:14.538Z",
+                          "startTime": "2026-08-15T15:19:08.953Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -572,7 +572,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 12616,
+                          "duration": 12628,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:124:30",
@@ -596,7 +596,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:17.952Z",
+                          "startTime": "2026-08-15T15:19:12.563Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -676,12 +676,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2972,
+                          "duration": 3046,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:31.264Z",
+                          "startTime": "2026-08-15T15:19:25.893Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -736,12 +736,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2563,
+                          "duration": 2579,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:34.589Z",
+                          "startTime": "2026-08-15T15:19:29.297Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -796,12 +796,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2511,
+                          "duration": 2477,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:37.165Z",
+                          "startTime": "2026-08-15T15:19:31.887Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -856,12 +856,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2581,
+                          "duration": 2533,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:39.685Z",
+                          "startTime": "2026-08-15T15:19:34.374Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -916,12 +916,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2528,
+                          "duration": 2545,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:42.278Z",
+                          "startTime": "2026-08-15T15:19:36.915Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -976,12 +976,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2531,
+                          "duration": 2525,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:44.819Z",
+                          "startTime": "2026-08-15T15:19:39.468Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1036,12 +1036,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2485,
+                          "duration": 2527,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:47.359Z",
+                          "startTime": "2026-08-15T15:19:42.005Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1096,12 +1096,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2490,
+                          "duration": 2499,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:49.852Z",
+                          "startTime": "2026-08-15T15:19:44.540Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1156,12 +1156,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2593,
+                          "duration": 2517,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:52.351Z",
+                          "startTime": "2026-08-15T15:19:47.049Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1200,12 +1200,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2764,
+                          "duration": 2890,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:54.955Z",
+                          "startTime": "2026-08-15T15:19:49.576Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1244,12 +1244,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2562,
+                          "duration": 2516,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:09:57.729Z",
+                          "startTime": "2026-08-15T15:19:52.473Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1296,12 +1296,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2555,
+                          "duration": 2509,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:00.299Z",
+                          "startTime": "2026-08-15T15:19:54.997Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1340,12 +1340,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2492,
+                          "duration": 2488,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:02.864Z",
+                          "startTime": "2026-08-15T15:19:57.513Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1384,12 +1384,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2515,
+                          "duration": 2585,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:05.366Z",
+                          "startTime": "2026-08-15T15:20:00.010Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1428,12 +1428,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2533,
+                          "duration": 2525,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:07.889Z",
+                          "startTime": "2026-08-15T15:20:02.605Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1486,7 +1486,7 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 2593,
+                          "duration": 2590,
                           "error": {
                             "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
                             "stack": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
@@ -1510,7 +1510,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:10.429Z",
+                          "startTime": "2026-08-15T15:20:05.140Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1580,7 +1580,7 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 3085,
+                          "duration": 3014,
                           "error": {
                             "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
                             "stack": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
@@ -1604,7 +1604,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:13.764Z",
+                          "startTime": "2026-08-15T15:20:08.434Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1674,7 +1674,7 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 3080,
+                          "duration": 3141,
                           "error": {
                             "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
                             "stack": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
@@ -1698,7 +1698,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:17.907Z",
+                          "startTime": "2026-08-15T15:20:12.504Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1768,7 +1768,7 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 3211,
+                          "duration": 6070,
                           "error": {
                             "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
                             "stack": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
@@ -1792,7 +1792,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:22.069Z",
+                          "startTime": "2026-08-15T15:20:16.935Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1864,12 +1864,12 @@
                           "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 3012,
+                          "duration": 5393,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:30.849Z",
+                          "startTime": "2026-08-15T15:20:31.167Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1908,12 +1908,12 @@
                           "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2593,
+                          "duration": 3418,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T05:10:34.217Z",
+                          "startTime": "2026-08-15T15:20:36.998Z",
                           "annotations": [
                             {
                               "type": "test-case",
@@ -1940,8 +1940,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-15T05:09:14.162Z",
-    "duration": 102326.122,
+    "startTime": "2026-08-15T15:19:08.573Z",
+    "duration": 115990.42400000001,
     "expected": 19,
     "skipped": 0,
     "unexpected": 8,

@@ -1,0 +1,1442 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Kiem_thu\\HW4\\HW04-TESTING\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr14-category.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\playwright.config.js",
+    "rootDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127195",
+      "Student ID": "23127195",
+      "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+      "Features under test": "FR-01 Account registration",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr14-category-firefox",
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T15:27:47.873Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr14-category-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr14-category.spec.js",
+      "file": "fr14-category.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-14 | Quản lý danh mục",
+          "file": "fr14-category.spec.js",
+          "line": 70,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-07 - Danh sach tren giao dien khop voi du lieu backend",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-07"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3253,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:08.011Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-07"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-59b0e951cbf69cc55464",
+              "file": "fr14-category.spec.js",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "TC-08 - Giao dien phai co chuc nang Sua danh muc @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-08"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-14 - giao diện quản lý danh mục thiếu hoàn toàn chức năng Sửa"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2647,
+                      "error": {
+                        "message": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m",
+                        "stack": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:195:7",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                          "column": 7,
+                          "line": 195
+                        },
+                        "snippet": "  193 |       actions.join(' | '),\n  194 |       `row actions offered by the UI: ${JSON.stringify(actions)}`,\n> 195 |     ).toMatch(new RegExp(c.expectedControlPattern));\n      |       ^\n  196 |   });\n  197 |\n  198 |   test(`${data.update.viaApi.tc_id} - ${data.update.viaApi.label}`, async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 7,
+                            "line": 195
+                          },
+                          "message": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m\n\n  193 |       actions.join(' | '),\n  194 |       `row actions offered by the UI: ${JSON.stringify(actions)}`,\n> 195 |     ).toMatch(new RegExp(c.expectedControlPattern));\n      |       ^\n  196 |   });\n  197 |\n  198 |   test(`${data.update.viaApi.tc_id} - ${data.update.viaApi.label}`, async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:195:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:11.610Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-08"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-14 - giao diện quản lý danh mục thiếu hoàn toàn chức năng Sửa"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-61a10--chuc-nang-Sua-danh-muc-bug-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-61a10--chuc-nang-Sua-danh-muc-bug-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-61a10--chuc-nang-Sua-danh-muc-bug-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                        "column": 7,
+                        "line": 195
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-5cb1d29b027b0dbe5f11",
+              "file": "fr14-category.spec.js",
+              "line": 171,
+              "column": 3
+            },
+            {
+              "title": "TC-09 - Doi ten danh muc qua API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-09"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 56,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:14.971Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-09"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-32a12c901b2167a972a4",
+              "file": "fr14-category.spec.js",
+              "line": 198,
+              "column": 3
+            },
+            {
+              "title": "TC-10 - Cap nhat danh muc khong ton tai phai bao loi @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-10"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-12 - thao tác trên id không tồn tại vẫn báo thành công"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 22,
+                      "error": {
+                        "message": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:234:7",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                          "column": 7,
+                          "line": 234
+                        },
+                        "snippet": "  232 |       res.status,\n  233 |       `PUT /api/categories/${c.id} on a non-existent row must not return success`,\n> 234 |     ).toBe(c.expectedStatus);\n      |       ^\n  235 |   });\n  236 |\n  237 |   // =========================================================================="
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 7,
+                            "line": 234
+                          },
+                          "message": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  232 |       res.status,\n  233 |       `PUT /api/categories/${c.id} on a non-existent row must not return success`,\n> 234 |     ).toBe(c.expectedStatus);\n      |       ^\n  235 |   });\n  236 |\n  237 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:234:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:15.058Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-10"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-12 - thao tác trên id không tồn tại vẫn báo thành công"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-826c7-ng-ton-tai-phai-bao-loi-bug-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-826c7-ng-ton-tai-phai-bao-loi-bug-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                        "column": 7,
+                        "line": 234
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-2e7346c200734855d58d",
+              "file": "fr14-category.spec.js",
+              "line": 221,
+              "column": 3
+            },
+            {
+              "title": "TC-11 - Xoa danh muc tren giao dien",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-11"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3296,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:15.457Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-11"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-b0de8a805718e1542644",
+              "file": "fr14-category.spec.js",
+              "line": 240,
+              "column": 3
+            },
+            {
+              "title": "TC-12 - Xoa danh muc khong ton tai phai bao loi @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-12"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-12 - thao tác trên id không tồn tại vẫn báo thành công"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 23,
+                      "error": {
+                        "message": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:275:7",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                          "column": 7,
+                          "line": 275
+                        },
+                        "snippet": "  273 |       res.status,\n  274 |       `DELETE /api/categories/${c.id} on a non-existent row must not return success`,\n> 275 |     ).toBe(c.expectedStatus);\n      |       ^\n  276 |   });\n  277 |\n  278 |   test(`${data.delete.withProducts.tc_id} - ${data.delete.withProducts.label} @bug`, async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 7,
+                            "line": 275
+                          },
+                          "message": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  273 |       res.status,\n  274 |       `DELETE /api/categories/${c.id} on a non-existent row must not return success`,\n> 275 |     ).toBe(c.expectedStatus);\n      |       ^\n  276 |   });\n  277 |\n  278 |   test(`${data.delete.withProducts.tc_id} - ${data.delete.withProducts.label} @bug`, async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:275:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:19.118Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-12"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-12 - thao tác trên id không tồn tại vẫn báo thành công"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-aa71c-ng-ton-tai-phai-bao-loi-bug-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-aa71c-ng-ton-tai-phai-bao-loi-bug-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                        "column": 7,
+                        "line": 275
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-950cb043a7f8ad86c0ac",
+              "file": "fr14-category.spec.js",
+              "line": 263,
+              "column": 3
+            },
+            {
+              "title": "TC-13 - Khong duoc xoa danh muc dang co san pham @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-13"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-13 - xoá danh mục đang có sản phẩm làm sản phẩm mồ côi"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 80,
+                      "error": {
+                        "message": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:310:7",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                          "column": 7,
+                          "line": 310
+                        },
+                        "snippet": "  308 |       { status: res.status, orphanedProducts: orphans.length },\n  309 |       'deleting a category in use must be refused and must not orphan products',\n> 310 |     ).toMatchObject({ status: c.expectedStatus, orphanedProducts: 0 });\n      |       ^\n  311 |   });\n  312 |\n  313 |   // =========================================================================="
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 7,
+                            "line": 310
+                          },
+                          "message": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  308 |       { status: res.status, orphanedProducts: orphans.length },\n  309 |       'deleting a category in use must be refused and must not orphan products',\n> 310 |     ).toMatchObject({ status: c.expectedStatus, orphanedProducts: 0 });\n      |       ^\n  311 |   });\n  312 |\n  313 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:310:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:19.853Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-13"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-13 - xoá danh mục đang có sản phẩm làm sản phẩm mồ côi"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-051cd-nh-muc-dang-co-san-pham-bug-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-051cd-nh-muc-dang-co-san-pham-bug-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                        "column": 7,
+                        "line": 310
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-99e2d7412ed8364996b4",
+              "file": "fr14-category.spec.js",
+              "line": 278,
+              "column": 3
+            },
+            {
+              "title": "TC-17 - Yeu cau khong co token phai bi tu choi",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-17"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 45,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T15:28:21.773Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-17"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-234007443ce245024967",
+              "file": "fr14-category.spec.js",
+              "line": 355,
+              "column": 3
+            }
+          ],
+          "suites": [
+            {
+              "title": "Nhóm 1 - Tạo danh mục trên giao diện (CSV)",
+              "file": "fr14-category.spec.js",
+              "line": 86,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-01 - Ten danh muc thong thuong -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-01"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Truong hop hop le co ban"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3372,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:27:48.261Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-01"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Truong hop hop le co ban"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-d00872564f277ae8f4f0",
+                  "file": "fr14-category.spec.js",
+                  "line": 91,
+                  "column": 7
+                },
+                {
+                  "title": "TC-02 - Ten co dau tieng Viet day du -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-02"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Kiem tra luu tru Unicode"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2756,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:27:52.002Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-02"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Kiem tra luu tru Unicode"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-b353fcdec9ae9e0f6e9a",
+                  "file": "fr14-category.spec.js",
+                  "line": 91,
+                  "column": 7
+                },
+                {
+                  "title": "TC-03 - Ten co chu so va ky tu dac biet -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-03"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Ky tu dac biet hop le trong ten danh muc"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2718,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:27:54.769Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-03"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Ky tu dac biet hop le trong ten danh muc"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-0324fc68db10eb71772a",
+                  "file": "fr14-category.spec.js",
+                  "line": 91,
+                  "column": 7
+                },
+                {
+                  "title": "TC-04 - Ten dai 255 ky tu -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-04"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Bien tren cua do dai ten"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2702,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:27:57.500Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-04"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Bien tren cua do dai ten"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-093f2744a720081efab3",
+                  "file": "fr14-category.spec.js",
+                  "line": 91,
+                  "column": 7
+                },
+                {
+                  "title": "TC-05 - Ten rong -> rejected @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-05"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "required"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Ten danh muc la bat buoc. SUT chap nhan va tao dong rong => BUG-10"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-10 - tên danh mục rỗng/khoảng trắng vẫn tạo được"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 2713,
+                          "error": {
+                            "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m",
+                            "stack": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                              "column": 13,
+                              "line": 132
+                            },
+                            "snippet": "  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                                "column": 13,
+                                "line": 132
+                              },
+                              "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n\n  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:28:00.209Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-05"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "required"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Ten danh muc la bat buoc. SUT chap nhan va tao dong rong => BUG-10"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-10 - tên danh mục rỗng/khoảng trắng vẫn tạo được"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-a0412-5---Ten-rong---rejected-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-a0412-5---Ten-rong---rejected-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-a0412-5---Ten-rong---rejected-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 13,
+                            "line": 132
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-cab3f9c4257999f8e890",
+                  "file": "fr14-category.spec.js",
+                  "line": 91,
+                  "column": 7
+                },
+                {
+                  "title": "TC-06 - Ten chi gom khoang trang -> rejected @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-06"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "required"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Chuoi toan khoang trang khong phai ten hop le. SUT van tao => BUG-10"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-10 - tên danh mục rỗng/khoảng trắng vẫn tạo được"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 3288,
+                          "error": {
+                            "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m",
+                            "stack": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                              "column": 13,
+                              "line": 132
+                            },
+                            "snippet": "  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                                "column": 13,
+                                "line": 132
+                              },
+                              "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n\n  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:28:03.641Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-06"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "required"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Chuoi toan khoang trang khong phai ten hop le. SUT van tao => BUG-10"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-10 - tên danh mục rỗng/khoảng trắng vẫn tạo được"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-d2452-khoang-trang---rejected-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-d2452-khoang-trang---rejected-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-d2452-khoang-trang---rejected-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 13,
+                            "line": 132
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-ce8d7fca1767c754d734",
+                  "file": "fr14-category.spec.js",
+                  "line": 91,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 5 - Phân quyền",
+              "file": "fr14-category.spec.js",
+              "line": 316,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-14 - Nguoi dung thuong khong duoc tao danh muc @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-14"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-11 - người dùng thường toàn quyền CRUD danh mục"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 89,
+                          "error": {
+                            "message": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                            "stack": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                              "column": 11,
+                              "line": 350
+                            },
+                            "snippet": "  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                                "column": 11,
+                                "line": 350
+                              },
+                              "message": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:28:20.321Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-14"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-11 - người dùng thường toàn quyền CRUD danh mục"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-42a57-khong-duoc-tao-danh-muc-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-42a57-khong-duoc-tao-danh-muc-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 11,
+                            "line": 350
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-ff802bbd3aebffa841b2",
+                  "file": "fr14-category.spec.js",
+                  "line": 318,
+                  "column": 7
+                },
+                {
+                  "title": "TC-15 - Nguoi dung thuong khong duoc sua danh muc @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-15"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-11 - người dùng thường toàn quyền CRUD danh mục"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 7,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 95,
+                          "error": {
+                            "message": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                            "stack": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                              "column": 11,
+                              "line": 350
+                            },
+                            "snippet": "  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                                "column": 11,
+                                "line": 350
+                              },
+                              "message": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:28:20.804Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-15"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-11 - người dùng thường toàn quyền CRUD danh mục"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-634bb-khong-duoc-sua-danh-muc-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-634bb-khong-duoc-sua-danh-muc-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 11,
+                            "line": 350
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-63f9dade2db21719aaaa",
+                  "file": "fr14-category.spec.js",
+                  "line": 318,
+                  "column": 7
+                },
+                {
+                  "title": "TC-16 - Nguoi dung thuong khong duoc xoa danh muc @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-16"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-11 - người dùng thường toàn quyền CRUD danh mục"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 8,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 90,
+                          "error": {
+                            "message": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                            "stack": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                              "column": 11,
+                              "line": 350
+                            },
+                            "snippet": "  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                                "column": 11,
+                                "line": 350
+                              },
+                              "message": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T15:28:21.283Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-16"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-11 - người dùng thường toàn quyền CRUD danh mục"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-77738-khong-duoc-xoa-danh-muc-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr14-category-FR-14-Quản-l-77738-khong-duoc-xoa-danh-muc-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
+                            "column": 11,
+                            "line": 350
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-4eaf86187eea470ab3d8",
+                  "file": "fr14-category.spec.js",
+                  "line": 318,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-15T15:27:47.875Z",
+    "duration": 33987.407,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}
