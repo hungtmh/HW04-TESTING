@@ -1,0 +1,168 @@
+﻿commit 94ea79c24480bb5f515fb2f7f7eda3d84f08dbc6
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:13 +0700
+
+    docs(23127195): add HW04 submission folder for FR-01
+
+    Main report with the gap analysis of the AI-generated scripts, bug report 
+    covering six defects, AI audit log of thirteen interactions, AI critique
+    at 299 words, plus the screenshot evidence for the reports and the bugs.
+
+    The gap analysis records eight review findings. Two of them had produced 
+    false greens, one surfaced only on WebKit, and one made five tests go red 
+    for a reason unrelated to the defect they were written for: the helper was 
+    logging in with the admin password from setup_guide.md, which is wrong,
+    and the SUT locks an account after two failed attempts.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 3380ee05c4b9be1055874404d9500e61f0894f58
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:13 +0700
+
+    test(fr01): add multi-browser HTML reports for the registration suite
+
+    Three browser runs of tests/fr01-register.spec.js, 27 cases each, 19
+    passed and 8 failed on every engine. The 24 reds are the eight @bug tests
+    times three browsers, all of them genuine defects.
+
+    Each report header shows "Run by: 23127195" with the ISO timestamp of its 
+    run, as HW04 requires for attributable execution evidence.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit e81b4f52a4a786153b7503c80e6ed674fc65f73b
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:13 +0700
+
+    chore(test): add bug evidence capture script
+
+    Produces one clean screenshot per FR-01 defect for attaching to GitHub 
+    Issues. Kept separate from the failure screenshots the suite itself emits, 
+    because test-results/ is wiped on every run and is not committed.
+
+    For the two API-level defects the raw JSON is rendered onto the page
+    before the screenshot, so the duplicate rows and the echoed plaintext
+    password are legible in the image rather than buried in a console log.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 0ecb2f7da740a5fedd2318753a1e73aa0566feb7
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:13 +0700
+
+    chore(test): add multi-browser runner and report attribution verifier
+
+    run-multibrowser.mjs runs a spec once per engine so every browser run has
+    a standalone HTML report, as HW04 requires, and writes a combined
+    pass/fail summary. It always exits 0 because the @bug tests fail by
+    design.
+
+    verify-report-banner.mjs opens each report in a real browser and proves
+    the attribution is on screen. The Playwright HTML reporter stores its data
+    as a base64 zip inside index.html, so grepping the file finds nothing even
+    when the rendered page shows the string. It saves a screenshot per report
+    as evidence.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 234db109fedcee19846055e7392807126aa66222
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:13 +0700
+
+    test(fr01): add 27 data-driven registration test cases
+
+    Cover the password rule matrix, happy paths, required fields, e-mail
+    format, duplicate e-mail, XSS and SQL injection payloads, the
+    255-character name boundary, credential storage and UI/spec consistency.
+    Six distinct assertion patterns are used and tagged P1 to P6 at each call
+    site.
+
+    Eight tests are tagged @bug and fail on purpose. They assert the behaviour 
+    the specification and the on-screen hint promise, not the behaviour the
+    code currently implements, and each red maps one-to-one onto a defect
+    recorded in 23127195/bug-report/BUG_REPORT.md. Relaxing them to green
+    would turn the defects into the specification.
+
+    Three review fixes are folded in:
+
+    - Account existence is proved by asking the back end how many user rows
+    hold
+     the address, not by asserting the URL is unchanged. The latter matches
+     instantly, because right after the click the SPA has not resolved its
+    POST
+     yet, so four e-mail-format tests went green against a SUT that in fact
+     accepts malformed addresses.
+    - Required-field cases assert the HTML5 constraint validity state instead
+    of
+     the browser validation message, which differs across engines and locales.
+    - API assertions wait for the SPA navigation first, otherwise they can
+    outrun
+     the registration request. That race surfaced only on WebKit.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit ce0449dc0e05ab9df63e9900e7d1173c4e8c9686
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:12 +0700
+
+    test(fr01): add RegisterPage page object
+
+    Anchor each field on the wrapper div that carries its label text instead
+    of using getByLabel(). Register.jsx renders labels without htmlFor and
+    inputs without id or name, so the accessible-name association never exists
+    and getByLabel resolves to zero elements on all three fields.
+
+    Waiting on the rendered heading in goto() replaces the fixed sleep the
+    first draft used: Vite serves the shell immediately but React mounts a
+    tick later, and on a cold start it first has to bundle dependencies.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 33488ecbb4536f9b793bd3036f3ca909472bcdce
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:12 +0700
+
+    test(fr01): add external test data for account registration
+
+    HW04 forbids inline test-data arrays, so the registration matrix lives in 
+    tests/data/: a CSV holding the ten password-rule rows, and a JSON file 
+    holding the happy paths, required-field cases, malformed e-mails, security 
+    payloads and the 255-character boundary case.
+
+    The admin password is taken from the seed script database.js, not from 
+    setup_guide.md. The guide documents "admin123" while the seed actually 
+    writes "Admin123!", a documentation defect logged as BUG-06.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 8b4f3860f236f282a46b08423f65ab5a055814b0
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 12:21:12 +0700
+
+    chore(test): scaffold Playwright suite for HW04
+
+    Add the test runner config with three browser projects (Chromium, Firefox, 
+    WebKit) and a webServer block that boots the backend and frontend-web of
+    the SUT, so the suite runs from a clean clone with no manual setup.
+
+    The HTML reporter title and metadata both carry "Run by: 23127195"
+    together with an ISO timestamp, which HW04 requires as non-fabricable
+    execution evidence. Shared constants live in tests/utils/env.js rather
+    than on the config object, so the exported config only holds keys
+    Playwright understands.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 756fa65fbc162a77863a0db12f97c4283a8d6618
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-15 11:24:55 +0700
+
+    chore: import EShop SUT source into HW04 repo
+
+    Vendor the eshop-sut project (cloned from ttbhanh/eshop-sut) as plain 
+    files instead of a nested git repo, so the full source is browsable in 
+    this repository. Add .gitignore that keeps playwright-report/ tracked, as
+    HW04 requires the multi-browser HTML reports in the public repo.
+
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>

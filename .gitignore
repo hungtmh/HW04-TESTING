@@ -29,6 +29,10 @@ playwright/.cache/
 # NOTE: playwright-report/ and allure-report/ are intentionally NOT ignored.
 # HW04 requires the multi-browser HTML reports to live in the public repo.
 
+# ---- SUT runtime artefacts ----
+# database.sqlite itself IS tracked (seeded state); its journal is transient.
+eshop-sut/backend/database.sqlite-journal
+
 # ---- OS / editor ----
 .DS_Store
 Thumbs.db
