@@ -1,0 +1,7 @@
+tc_id,label,name,expected,rule,note
+TC-01,Ten danh muc thong thuong,Thiet bi am thanh,accepted,none,Truong hop hop le co ban
+TC-02,Ten co dau tieng Viet day du,Đồ gia dụng thông minh,accepted,none,Kiem tra luu tru Unicode
+TC-03,Ten co chu so va ky tu dac biet,Phu kien 4K & HDR,accepted,none,Ky tu dac biet hop le trong ten danh muc
+TC-04,Ten dai 255 ky tu,GENERATE_255,accepted,none,Bien tren cua do dai ten
+TC-05,Ten rong,,rejected,required,"Ten danh muc la bat buoc. SUT chap nhan va tao dong rong => BUG-10"
+TC-06,Ten chi gom khoang trang,    ,rejected,required,"Chuoi toan khoang trang khong phai ten hop le. SUT van tao => BUG-10"

@@ -1,0 +1,91 @@
+{
+  "_comment": "FR-14 Category management (CRUD) - test data for HW04 (Student 23127195).",
+
+  "adminAccount": {
+    "email": "admin@eshop.com",
+    "password": "Admin123!",
+    "note": "From the seed script database.js, NOT from setup_guide.md - see BUG-06."
+  },
+
+  "adminBaseUrl": "http://localhost:5174",
+
+  "seededCategories": ["Điện thoại", "Laptop", "Phụ kiện"],
+
+  "read": {
+    "tc_id": "TC-07",
+    "label": "Danh sach tren giao dien khop voi du lieu backend"
+  },
+
+  "update": {
+    "uiControl": {
+      "tc_id": "TC-08",
+      "label": "Giao dien phai co chuc nang Sua danh muc",
+      "expectedControlPattern": "Sửa|Edit|Cập nhật"
+    },
+    "viaApi": {
+      "tc_id": "TC-09",
+      "label": "Doi ten danh muc qua API",
+      "originalName": "Danh muc can doi ten",
+      "newName": "Danh muc da doi ten"
+    },
+    "nonExistent": {
+      "tc_id": "TC-10",
+      "label": "Cap nhat danh muc khong ton tai phai bao loi",
+      "id": 999999,
+      "name": "Ghost Category",
+      "expectedStatus": 404
+    }
+  },
+
+  "delete": {
+    "viaUi": {
+      "tc_id": "TC-11",
+      "label": "Xoa danh muc tren giao dien",
+      "name": "Danh muc se bi xoa"
+    },
+    "nonExistent": {
+      "tc_id": "TC-12",
+      "label": "Xoa danh muc khong ton tai phai bao loi",
+      "id": 999999,
+      "expectedStatus": 404
+    },
+    "withProducts": {
+      "tc_id": "TC-13",
+      "label": "Khong duoc xoa danh muc dang co san pham",
+      "categoryName": "Danh muc co san pham",
+      "productName": "San pham thuoc danh muc",
+      "productPrice": 199000,
+      "expectedStatus": 409
+    }
+  },
+
+  "accessControl": [
+    {
+      "tc_id": "TC-14",
+      "label": "Nguoi dung thuong khong duoc tao danh muc",
+      "action": "create",
+      "name": "Danh muc tao boi user thuong",
+      "expectedStatus": 403
+    },
+    {
+      "tc_id": "TC-15",
+      "label": "Nguoi dung thuong khong duoc sua danh muc",
+      "action": "update",
+      "name": "Bi sua boi user thuong",
+      "expectedStatus": 403
+    },
+    {
+      "tc_id": "TC-16",
+      "label": "Nguoi dung thuong khong duoc xoa danh muc",
+      "action": "delete",
+      "expectedStatus": 403
+    }
+  ],
+
+  "unauthenticated": {
+    "tc_id": "TC-17",
+    "label": "Yeu cau khong co token phai bi tu choi",
+    "name": "Danh muc khong token",
+    "expectedStatus": 401
+  }
+}
