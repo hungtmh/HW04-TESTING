@@ -1,0 +1,96 @@
+{
+  "_comment": "FR-01 Account registration - test data for HW04 (Student 23127195). Kept outside the spec files as required by the assignment: no inline arrays/objects in the scripts.",
+
+  "validPasswordForSut": "Password 123",
+  "specCompliantPassword": "Password123!",
+
+  "adminAccount": {
+    "email": "admin@eshop.com",
+    "password": "Admin123!",
+    "note": "Password taken from the seed script database.js (source of truth). setup_guide.md documents 'admin123', which is WRONG - see BUG-06. Used only to read GET /api/admin/users so tests can assert deterministically whether an account row was created."
+  },
+
+  "happyPath": [
+    {
+      "tc_id": "TC-11",
+      "label": "Ten tieng Viet co dau",
+      "name": "Nguyễn Văn Hùng",
+      "emailPrefix": "vn.name"
+    },
+    {
+      "tc_id": "TC-12",
+      "label": "Email dang plus-tag",
+      "name": "Tran Minh Hung",
+      "emailPrefix": "plus.tag+hw04"
+    },
+    {
+      "tc_id": "TC-13",
+      "label": "Ten co nhieu khoang trang giua cac tu",
+      "name": "Le  Thi   Hoa",
+      "emailPrefix": "multi.space"
+    }
+  ],
+
+  "requiredFields": [
+    {
+      "tc_id": "TC-14",
+      "label": "Bo trong Ho Ten",
+      "omit": "name",
+      "expectInvalidField": "name"
+    },
+    {
+      "tc_id": "TC-15",
+      "label": "Bo trong Email",
+      "omit": "email",
+      "expectInvalidField": "email"
+    },
+    {
+      "tc_id": "TC-16",
+      "label": "Bo trong Mat khau",
+      "omit": "password",
+      "expectInvalidField": "password"
+    },
+    {
+      "tc_id": "TC-17",
+      "label": "Bo trong toan bo form",
+      "omit": "all",
+      "expectInvalidField": "name"
+    }
+  ],
+
+  "invalidEmails": [
+    { "tc_id": "TC-18", "label": "Email khong co @ va domain", "email": "abc" },
+    { "tc_id": "TC-19", "label": "Email thieu phan domain", "email": "abc@" },
+    { "tc_id": "TC-20", "label": "Email thieu phan local", "email": "@domain.com" },
+    { "tc_id": "TC-21", "label": "Email co khoang trang o giua", "email": "a b@domain.com" }
+  ],
+
+  "securityPayloads": [
+    {
+      "tc_id": "TC-23",
+      "label": "XSS payload trong truong Ho Ten",
+      "name": "<script>window.__xss=1</script>",
+      "emailPrefix": "xss.name",
+      "flag": "__xss"
+    },
+    {
+      "tc_id": "TC-24",
+      "label": "SQL injection payload trong truong Ho Ten",
+      "name": "Robert'); DROP TABLE users;--",
+      "emailPrefix": "sqli.name",
+      "flag": null
+    }
+  ],
+
+  "boundary": {
+    "tc_id": "TC-25",
+    "label": "Ho Ten do dai 255 ky tu",
+    "nameLength": 255,
+    "emailPrefix": "long.name"
+  },
+
+  "expectedMessages": {
+    "weakPassword": "Mật khẩu quá yếu!",
+    "passwordHintFragment": "ký tự đặc biệt"
+  }
+}
