@@ -1,0 +1,11 @@
+tc_id,label,code,coupon_type,total_amount,expected_discount,expected_final,outcome,note
+TC-01,SAVE10 giam 10 phan tram tren don 500k,SAVE10,percent,500000,50000,450000,accepted,"10 phan tram cua 500000 = 50000. SUT tra ve -4500000 => BUG-07"
+TC-02,SAVE10 giam 10 phan tram tren don 1 trieu,SAVE10,percent,1000000,100000,900000,accepted,"10 phan tram cua 1000000 = 100000. SUT tra ve -9000000 => BUG-07"
+TC-03,SAVE10 giam 10 phan tram tren don 400k,SAVE10,percent,400000,40000,360000,accepted,"Bien tren muc toi thieu 300000 => BUG-07"
+TC-04,BIGBUY giam co dinh 50k tren don 600k,BIGBUY,fixed,600000,50000,550000,accepted,Coupon fixed tinh dung
+TC-05,BIGBUY giam co dinh 50k tren don 1 trieu,BIGBUY,fixed,1000000,50000,950000,accepted,Coupon fixed tinh dung
+TC-06,VIP100 giam co dinh 100k tren don 400k,VIP100,fixed,400000,100000,300000,accepted,Coupon fixed tinh dung
+TC-07,BIGBUY tai dung nguong toi thieu 500k,BIGBUY,fixed,500000,50000,450000,accepted,"Dieu kien ghi la toi thieu 500000 nen 500000 phai duoc chap nhan. SUT dung dau > => BUG-08"
+TC-08,BIGBUY ngay tren nguong toi thieu,BIGBUY,fixed,500001,50000,450001,accepted,Bien duong cua rang buoc min_order_amount
+TC-09,BIGBUY duoi nguong toi thieu,BIGBUY,fixed,499999,0,0,rejected,Phai bi tu choi vi chua du gia tri toi thieu
+TC-10,VIP100 duoi nguong toi thieu,VIP100,fixed,299999,0,0,rejected,Phai bi tu choi vi chua du gia tri toi thieu

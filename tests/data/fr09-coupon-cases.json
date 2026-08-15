@@ -1,0 +1,80 @@
+{
+  "_comment": "FR-09 Discount coupons - test data for HW04 (Student 23127195). Values mirror the seed in eshop-sut/backend/database.js.",
+
+  "testUser": {
+    "namePrefix": "Coupon Tester",
+    "password": "Password 123"
+  },
+
+  "seededCoupons": {
+    "percent10": { "code": "SAVE10", "type": "percent", "value": 10, "minOrder": 300000, "maxUsesPerUser": 1 },
+    "fixed50k": { "code": "BIGBUY", "type": "fixed", "value": 50000, "minOrder": 500000, "maxUsesPerUser": 1 },
+    "fixed100k": { "code": "VIP100", "type": "fixed", "value": 100000, "minOrder": 300000, "maxUsesPerUser": 2 },
+    "expired": { "code": "EXPIRED", "type": "percent", "value": 20, "minOrder": 100000, "maxUsesPerUser": 1 }
+  },
+
+  "invalidCodes": [
+    {
+      "tc_id": "TC-11",
+      "label": "Ma khong ton tai",
+      "code": "KHONGTONTAI2026",
+      "totalAmount": 800000,
+      "expectedErrorFragment": "không tồn tại"
+    },
+    {
+      "tc_id": "TC-12",
+      "label": "Ma da het han",
+      "code": "EXPIRED",
+      "totalAmount": 800000,
+      "expectedErrorFragment": "hết hạn"
+    },
+    {
+      "tc_id": "TC-13",
+      "label": "Ma chi gom khoang trang",
+      "code": "   ",
+      "totalAmount": 800000,
+      "expectedErrorFragment": null,
+      "expectButtonDisabled": true
+    }
+  ],
+
+  "caseInsensitive": {
+    "tc_id": "TC-14",
+    "label": "Nhap ma chu thuong van ap dung duoc (UI tu viet hoa)",
+    "typed": "bigbuy",
+    "totalAmount": 800000,
+    "expectedDiscount": 50000
+  },
+
+  "usageLimit": {
+    "tc_id": "TC-15",
+    "label": "Vuot gioi han so lan dung tren moi nguoi",
+    "code": "VIP100",
+    "maxUses": 2,
+    "totalAmount": 800000,
+    "expectedErrorFragment": "đã đạt giới hạn"
+  },
+
+  "usageLimitBypass": {
+    "tc_id": "TC-16",
+    "label": "Bo qua user_id de lach gioi han so lan dung",
+    "code": "VIP100",
+    "maxUses": 2,
+    "totalAmount": 800000
+  },
+
+  "endToEnd": {
+    "tc_id": "TC-17",
+    "label": "Luong day du: chon san pham - gio hang - thanh toan voi ma giam gia",
+    "code": "BIGBUY",
+    "totalAmount": 800000,
+    "expectedFinal": 750000
+  },
+
+  "invariants": {
+    "tc_id": "TC-18",
+    "label": "Bat bien: giam gia khong am va thanh tien khong vuot tong goc",
+    "codes": ["SAVE10", "BIGBUY", "VIP100"],
+    "totalAmount": 800000
+  }
+}
