@@ -118,8 +118,14 @@ node scripts/verify-report-banner.mjs
 | 1 | Task 1 — Feature B (FR-09 Mã giảm giá) | 25 | **24** |
 | 1 | Task 1 — Feature C (FR-14 Quản lý danh mục) | 25 | **24** |
 | 2 | Task 2 — Demo video | 15 | **0** |
-| 3 | Agent Skills | 10 | **0** |
-| | **Total** | **100** | **72** |
+| 3 | Agent Skills | 10 | **6** |
+| | **Total** | **100** | **78** |
+
+> **Agent Skill** đã xây tại [`.claude/skills/eshop-automation/SKILL.md`](../.claude/skills/eshop-automation/SKILL.md)
+> — đóng gói toàn bộ quy trình 8 bước (probe DOM trước khi viết spec, data-driven,
+> assertion không race, dọn dẹp hai nhánh, chạy 3 engine, kiểm chứng từng lý do
+> fail) cùng bảng "SUT facts" ghi lại các cạm bẫy đã tốn công phát hiện.
+> Tự chấm 6/10 vì **chưa có video demo dùng skill** theo yêu cầu mục 7 của đề.
 
 ### Căn cứ tự chấm mỗi feature 24/25
 
@@ -138,8 +144,10 @@ node scripts/verify-report-banner.mjs
 
 ## 6. Việc còn lại trước khi nộp
 
+- [x] ~~Tạo GitHub Issues cho 15 bug, kèm ảnh~~ — xong (#1 → #15)
+- [x] ~~Xây Agent Skill~~ — xong (`.claude/skills/eshop-automation/`)
 - [ ] Quay video demo ≥ 5 phút, tiếng Việt, có `whoami` + `hostname`
-- [ ] Xây Agent Skill + video demo skill
-- [ ] Bổ sung commit chạm file `.spec.js` cho đủ 8
+- [ ] Quay video demo dùng Agent Skill trên một feature hoàn chỉnh
+- [ ] Bổ sung commit chạm file `.spec.js` cho đủ 8 (hiện 3)
 - [ ] Xuất bản PDF cho `HW04_Main_Report.md`, `AI_Audit_Report.md`, `AI_Critique.md`
-- [ ] Đóng gói `23127195_HW04_AI_Automation_072.zip`
+- [ ] Đóng gói `23127195_HW04_AI_Automation_078.zip`
