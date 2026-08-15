@@ -1,0 +1,1950 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Kiem_thu\\HW4\\HW04-TESTING\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr01-register.spec.js",
+      "--project=chromium"
+    ],
+    "configFile": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\playwright.config.js",
+    "rootDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127195",
+      "Student ID": "23127195",
+      "Executed at (ISO)": "2026-08-15T05:08:39.944Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+      "Features under test": "FR-01 Account registration",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T05:08:39.944Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T05:08:39.944Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-15T05:08:39.944Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr01-register-chromium",
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T05:08:39.944Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr01-register-chromium/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr01-register.spec.js",
+      "file": "fr01-register.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-01 | Đăng ký tài khoản",
+          "file": "fr01-register.spec.js",
+          "line": 87,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-22 - Email đã tồn tại phải bị từ chối @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-22"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-03 - email trùng tạo được nhiều tài khoản"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 411,
+                      "error": {
+                        "message": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                        "stack": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:272:73",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                          "column": 73,
+                          "line": 272
+                        },
+                        "snippet": "  270 |     // must stay at 1. The SUT creates a second row -> BUG-03.\n  271 |     const rows = await countAccountsByEmail(request, email);\n> 272 |     expect(rows, 'a duplicate e-mail must not create a second account').toBe(1);\n      |                                                                         ^\n  273 |   });\n  274 |\n  275 |   // =========================================================================="
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 73,
+                            "line": 272
+                          },
+                          "message": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  270 |     // must stay at 1. The SUT creates a second row -> BUG-03.\n  271 |     const rows = await countAccountsByEmail(request, email);\n> 272 |     expect(rows, 'a duplicate e-mail must not create a second account').toBe(1);\n      |                                                                         ^\n  273 |   });\n  274 |\n  275 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:272:73"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T05:08:59.732Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-22"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-03 - email trùng tạo được nhiều tài khoản"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-f49b3-tồn-tại-phải-bị-từ-chối-bug-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-f49b3-tồn-tại-phải-bị-từ-chối-bug-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-f49b3-tồn-tại-phải-bị-từ-chối-bug-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                        "column": 73,
+                        "line": 272
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "cbfc4d4c5ba3a022dc78-aca034ffa6ec759e2dcb",
+              "file": "fr01-register.spec.js",
+              "line": 248,
+              "column": 3
+            },
+            {
+              "title": "TC-25 - Họ Tên dài 255 ký tự vẫn đăng ký được",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-25"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 310,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T05:09:01.416Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-25"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cbfc4d4c5ba3a022dc78-f33225107568f9ab4a19",
+              "file": "fr01-register.spec.js",
+              "line": 318,
+              "column": 3
+            },
+            {
+              "title": "TC-26 - Mật khẩu không được lưu/trả về dạng plaintext @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-26"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-04 - mật khẩu lưu và trả về dạng plaintext"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 240,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:363:36",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                          "column": 36,
+                          "line": 363
+                        },
+                        "snippet": "  361 |     // [P4] The login response must never echo the credential back, and whatever\n  362 |     // is persisted must not equal the raw password.\n> 363 |     expect(body.user.password).not.toBe(password);\n      |                                    ^\n  364 |   });\n  365 |\n  366 |   // =========================================================================="
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 36,
+                            "line": 363
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n\n  361 |     // [P4] The login response must never echo the credential back, and whatever\n  362 |     // is persisted must not equal the raw password.\n> 363 |     expect(body.user.password).not.toBe(password);\n      |                                    ^\n  364 |   });\n  365 |\n  366 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:363:36"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T05:09:01.734Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-26"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-04 - mật khẩu lưu và trả về dạng plaintext"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-89f88-u-trả-về-dạng-plaintext-bug-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-89f88-u-trả-về-dạng-plaintext-bug-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-89f88-u-trả-về-dạng-plaintext-bug-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                        "column": 36,
+                        "line": 363
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "cbfc4d4c5ba3a022dc78-65caec4b0d4aadff413d",
+              "file": "fr01-register.spec.js",
+              "line": 344,
+              "column": 3
+            },
+            {
+              "title": "TC-27 - Hint mật khẩu trên UI phải khớp luật thực thi @bug",
+              "ok": false,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "test-case",
+                      "description": "TC-27"
+                    },
+                    {
+                      "type": "bug",
+                      "description": "BUG-01 - hint yêu cầu ký tự đặc biệt nhưng luật lại cấm"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10383,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:386:24",
+                        "location": {
+                          "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                          "column": 24,
+                          "line": 386
+                        },
+                        "snippet": "  384 |       password: data.specCompliantPassword,\n  385 |     });\n> 386 |     await expect(page).toHaveURL(/\\/login$/);\n      |                        ^\n  387 |   });\n  388 | });\n  389 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 24,
+                            "line": 386
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  384 |       password: data.specCompliantPassword,\n  385 |     });\n> 386 |     await expect(page).toHaveURL(/\\/login$/);\n      |                        ^\n  387 |   });\n  388 | });\n  389 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:386:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-15T05:09:02.400Z",
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-27"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-01 - hint yêu cầu ký tự đặc biệt nhưng luật lại cấm"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-ddbfe-phải-khớp-luật-thực-thi-bug-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-ddbfe-phải-khớp-luật-thực-thi-bug-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-ddbfe-phải-khớp-luật-thực-thi-bug-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                        "column": 24,
+                        "line": 386
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "cbfc4d4c5ba3a022dc78-2838f1e301f37e134973",
+              "file": "fr01-register.spec.js",
+              "line": 369,
+              "column": 3
+            }
+          ],
+          "suites": [
+            {
+              "title": "Nhóm 1 - Ma trận quy tắc mật khẩu (CSV)",
+              "file": "fr01-register.spec.js",
+              "line": 98,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-01 - Mat khau hop le theo luat DANG HIEN HANH (co khoang trang) -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-01"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Regex hien tai bat buoc co whitespace nen chuoi nay duoc chap nhan"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 366,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:40.397Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-01"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Regex hien tai bat buoc co whitespace nen chuoi nay duoc chap nhan"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-9f36a80b254d0facff22",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-02 - Mat khau dung DAC TA (co ky tu dac biet) -> accepted @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-02"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Dac ta API va hint tren UI deu yeu cau ky tu dac biet - ky vong ACCEPTED. Test nay FAIL tren SUT => BUG-01"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-01 - mật khẩu đúng đặc tả bị từ chối"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 10317,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:124:30",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                              "column": 30,
+                              "line": 124
+                            },
+                            "snippet": "  122 |         if (row.expected === 'accepted') {\n  123 |           // [P1] navigation assertion: a successful registration redirects to /login\n> 124 |           await expect(page).toHaveURL(/\\/login$/);\n      |                              ^\n  125 |           // [P5] element-count assertion: the error banner must not exist at all\n  126 |           await expect(registerPage.errorBox).toHaveCount(0);\n  127 |         } else {"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                                "column": 30,
+                                "line": 124
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  122 |         if (row.expected === 'accepted') {\n  123 |           // [P1] navigation assertion: a successful registration redirects to /login\n> 124 |           await expect(page).toHaveURL(/\\/login$/);\n      |                              ^\n  125 |           // [P5] element-count assertion: the error banner must not exist at all\n  126 |           await expect(registerPage.errorBox).toHaveCount(0);\n  127 |         } else {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:124:30"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:40.849Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-02"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Dac ta API va hint tren UI deu yeu cau ky tu dac biet - ky vong ACCEPTED. Test nay FAIL tren SUT => BUG-01"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-01 - mật khẩu đúng đặc tả bị từ chối"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-dbf9c--tu-dac-biet---accepted-bug-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-dbf9c--tu-dac-biet---accepted-bug-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-dbf9c--tu-dac-biet---accepted-bug-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 30,
+                            "line": 124
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-8d8c02810c88ad0e014e",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-03 - Mat khau qua ngan duoi 8 ky tu -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-03"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "min-length"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Chi co 4 ky tu"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 365,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:51.583Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-03"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "min-length"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Chi co 4 ky tu"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-b8e27ece3ac4e02c5ef2",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-04 - Thieu chu hoa -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-04"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "uppercase"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Khong co ky tu in hoa"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 313,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:52.040Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-04"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "uppercase"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Khong co ky tu in hoa"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-225732ae6b65d468f3d2",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-05 - Thieu chu thuong -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-05"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "lowercase"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Khong co ky tu thuong"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 291,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:52.364Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-05"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "lowercase"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Khong co ky tu thuong"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-f830d43a3552b5499abb",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-06 - Thieu chu so -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-06"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "digit"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Khong co chu so"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 293,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:52.662Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-06"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "digit"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Khong co chu so"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-2a565a2bf0e5ebbc4c09",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-07 - Chi gom chu so -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-07"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "letters"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Thieu ca chu hoa va chu thuong"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 294,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:52.963Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-07"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "letters"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Thieu ca chu hoa va chu thuong"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-559bfb7b16631815b487",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-08 - Dung 8 ky tu - bien duoi hop le -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-08"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "none"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Bien gia tri bien duoi cua rang buoc do dai (boundary)"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 313,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:53.262Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-08"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "none"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Bien gia tri bien duoi cua rang buoc do dai (boundary)"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-bcb35aeaac78a58649f3",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-09 - Bay ky tu - ngay duoi bien -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-09"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "min-length"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Boundary am - it hon 1 ky tu so voi muc toi thieu"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 273,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:53.582Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-09"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "min-length"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Boundary am - it hon 1 ky tu so voi muc toi thieu"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-ccab9d0eaf69f2bbebbd",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                },
+                {
+                  "title": "TC-10 - Mat khau manh thong thuong nhung khong co khoang trang -> rejected",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-10"
+                        },
+                        {
+                          "type": "rule",
+                          "description": "whitespace-required"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Bi tu choi vi regex hien hanh BAT BUOC co whitespace - bang chung phu cho BUG-01"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 277,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:53.863Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-10"
+                            },
+                            {
+                              "type": "rule",
+                              "description": "whitespace-required"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Bi tu choi vi regex hien hanh BAT BUOC co whitespace - bang chung phu cho BUG-01"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-85e9cde6d3600bb6a8d2",
+                  "file": "fr01-register.spec.js",
+                  "line": 103,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 2 - Đăng ký thành công",
+              "file": "fr01-register.spec.js",
+              "line": 146,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-11 - Ten tieng Viet co dau",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-11"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 326,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:54.146Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-11"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-1aeb13acab531f211d90",
+                  "file": "fr01-register.spec.js",
+                  "line": 148,
+                  "column": 7
+                },
+                {
+                  "title": "TC-12 - Email dang plus-tag",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-12"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 313,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:54.479Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-12"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-696a6a6b691c328b2b66",
+                  "file": "fr01-register.spec.js",
+                  "line": 148,
+                  "column": 7
+                },
+                {
+                  "title": "TC-13 - Ten co nhieu khoang trang giua cac tu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-13"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 293,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:54.799Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-13"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-8b6d587f0779c9cff5c2",
+                  "file": "fr01-register.spec.js",
+                  "line": 148,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 3 - Trường bắt buộc",
+              "file": "fr01-register.spec.js",
+              "line": 179,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-14 - Bo trong Ho Ten",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-14"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 295,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:55.098Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-14"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-829ff595de65f329018c",
+                  "file": "fr01-register.spec.js",
+                  "line": 181,
+                  "column": 7
+                },
+                {
+                  "title": "TC-15 - Bo trong Email",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-15"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 294,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:55.399Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-15"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-e17fe4034bd73de22c8c",
+                  "file": "fr01-register.spec.js",
+                  "line": 181,
+                  "column": 7
+                },
+                {
+                  "title": "TC-16 - Bo trong Mat khau",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-16"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 278,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:55.700Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-16"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-04e7f969c99481ae030b",
+                  "file": "fr01-register.spec.js",
+                  "line": 181,
+                  "column": 7
+                },
+                {
+                  "title": "TC-17 - Bo trong toan bo form",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-17"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 292,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:55.984Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-17"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-2960c047ca14399d09ff",
+                  "file": "fr01-register.spec.js",
+                  "line": 181,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 4 - Định dạng email",
+              "file": "fr01-register.spec.js",
+              "line": 215,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-18 - Email khong co @ va domain @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-18"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 347,
+                          "error": {
+                            "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                            "stack": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                              "column": 71,
+                              "line": 240
+                            },
+                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                                "column": 71,
+                                "line": 240
+                              },
+                              "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:56.282Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-18"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-6af1a-mail-khong-co-va-domain-bug-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-6af1a-mail-khong-co-va-domain-bug-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-6af1a-mail-khong-co-va-domain-bug-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 71,
+                            "line": 240
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-7f0a2457fb59228eec56",
+                  "file": "fr01-register.spec.js",
+                  "line": 217,
+                  "column": 7
+                },
+                {
+                  "title": "TC-19 - Email thieu phan domain @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-19"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 399,
+                          "error": {
+                            "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                            "stack": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                              "column": 71,
+                              "line": 240
+                            },
+                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                                "column": 71,
+                                "line": 240
+                              },
+                              "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:57.056Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-19"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-549a9-Email-thieu-phan-domain-bug-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-549a9-Email-thieu-phan-domain-bug-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-549a9-Email-thieu-phan-domain-bug-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 71,
+                            "line": 240
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-393eb9fad24c6a2d27b3",
+                  "file": "fr01-register.spec.js",
+                  "line": 217,
+                  "column": 7
+                },
+                {
+                  "title": "TC-20 - Email thieu phan local @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-20"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 411,
+                          "error": {
+                            "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                            "stack": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                              "column": 71,
+                              "line": 240
+                            },
+                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                                "column": 71,
+                                "line": 240
+                              },
+                              "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:57.947Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-20"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-43137--Email-thieu-phan-local-bug-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-43137--Email-thieu-phan-local-bug-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-43137--Email-thieu-phan-local-bug-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 71,
+                            "line": 240
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-2dadaf8a441da14de1df",
+                  "file": "fr01-register.spec.js",
+                  "line": 217,
+                  "column": 7
+                },
+                {
+                  "title": "TC-21 - Email co khoang trang o giua @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-21"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 400,
+                          "error": {
+                            "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                            "stack": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                              "column": 71,
+                              "line": 240
+                            },
+                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                                "column": 71,
+                                "line": 240
+                              },
+                              "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:08:58.832Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-21"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-02 - email sai định dạng vẫn đăng ký được"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-6579c--co-khoang-trang-o-giua-bug-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-6579c--co-khoang-trang-o-giua-bug-chromium\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr01-register-FR-01-Đăng-k-6579c--co-khoang-trang-o-giua-bug-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
+                            "column": 71,
+                            "line": 240
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-90eadcdd91dfd16598d2",
+                  "file": "fr01-register.spec.js",
+                  "line": 217,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 6 - Payload bảo mật",
+              "file": "fr01-register.spec.js",
+              "line": 278,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-23 - XSS payload trong truong Ho Ten",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-23"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 381,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:09:00.624Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-23"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-72997c305a9203b44ac1",
+                  "file": "fr01-register.spec.js",
+                  "line": 280,
+                  "column": 7
+                },
+                {
+                  "title": "TC-24 - SQL injection payload trong truong Ho Ten",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "test-case",
+                          "description": "TC-24"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 320,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-15T05:09:01.086Z",
+                          "annotations": [
+                            {
+                              "type": "test-case",
+                              "description": "TC-24"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "cbfc4d4c5ba3a022dc78-744c1c4da490c44e2efa",
+                  "file": "fr01-register.spec.js",
+                  "line": 280,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-15T05:08:39.947Z",
+    "duration": 33034.755000000005,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

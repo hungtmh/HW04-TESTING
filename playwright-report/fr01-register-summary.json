@@ -1,0 +1,39 @@
+{
+  "feature": "fr01-register",
+  "spec": "tests/fr01-register.spec.js",
+  "runBy": "23127195",
+  "executedAtISO": "2026-08-15T05:11:41.014Z",
+  "browserRuns": 3,
+  "perBrowser": [
+    {
+      "browser": "chromium",
+      "reportDir": "playwright-report/fr01-register-chromium",
+      "passed": 19,
+      "failed": 8,
+      "skipped": 0,
+      "total": 27
+    },
+    {
+      "browser": "firefox",
+      "reportDir": "playwright-report/fr01-register-firefox",
+      "passed": 19,
+      "failed": 8,
+      "skipped": 0,
+      "total": 27
+    },
+    {
+      "browser": "webkit",
+      "reportDir": "playwright-report/fr01-register-webkit",
+      "passed": 19,
+      "failed": 8,
+      "skipped": 0,
+      "total": 27
+    }
+  ],
+  "totals": {
+    "passed": 57,
+    "failed": 24,
+    "skipped": 0,
+    "total": 81
+  }
+}
