@@ -1,0 +1,20 @@
+{
+  "name": "hw04-eshop-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HW04 - Automation Testing for EShop SUT (Student 23127195)",
+  "scripts": {
+    "test": "playwright test",
+    "test:fr01": "playwright test tests/fr01-register.spec.js",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "report": "playwright show-report playwright-report",
+    "sut:seed": "node eshop-sut/backend/database.js",
+    "sut:backend": "node eshop-sut/backend/server.js",
+    "sut:web": "npm --prefix eshop-sut/frontend-web run dev"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}
