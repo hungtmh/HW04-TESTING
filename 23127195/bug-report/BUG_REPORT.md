@@ -8,17 +8,28 @@
 | **Ngày** | 2026-08-15 |
 | **Môi trường** | Windows 11, Node.js 22.20.0, Playwright 1.62.1, Chromium/Firefox/WebKit |
 
-**Tổng quan:** 6 lỗi. 4 lỗi thuộc phạm vi FR-01 (BUG-01 → BUG-04), 2 lỗi phát hiện
-tình cờ trong quá trình xây dựng bộ test (BUG-05, BUG-06).
+**Tổng quan:** 15 lỗi trên cả ba feature.
 
-| ID | Mức độ | Tóm tắt | Test phát hiện |
-|---|---|---|---|
-| BUG-01 | High | Luật mật khẩu bắt buộc khoảng trắng, cấm ký tự đặc biệt — ngược với hint UI và đặc tả | TC-02, TC-27 |
-| BUG-02 | High | Không validate định dạng email ở cả frontend và backend | TC-18 → TC-21 |
-| BUG-03 | Critical | Email trùng tạo được nhiều tài khoản | TC-22 |
-| BUG-04 | Critical | Mật khẩu lưu plaintext và bị trả về trong response đăng nhập | TC-26 |
-| BUG-05 | High | `GET /api/admin/users` không kiểm tra `role` | (phát hiện khi xây helper) |
-| BUG-06 | Low | Tài liệu `setup_guide.md` ghi sai mật khẩu admin | (phát hiện khi xây helper) |
+| ID | Feature | Mức độ | Tóm tắt | Test phát hiện |
+|---|---|---|---|---|
+| BUG-01 | FR-01 | High | Luật mật khẩu bắt buộc khoảng trắng, cấm ký tự đặc biệt — ngược với hint UI và đặc tả | TC-02, TC-27 |
+| BUG-02 | FR-01 | High | Không validate định dạng email ở cả frontend và backend | TC-18 → TC-21 |
+| BUG-03 | FR-01 | Critical | Email trùng tạo được nhiều tài khoản | TC-22 |
+| BUG-04 | FR-01 | Critical | Mật khẩu lưu plaintext và bị trả về trong response đăng nhập | TC-26 |
+| BUG-05 | FR-12* | High | `GET /api/admin/users` không kiểm tra `role` | thủ công |
+| BUG-06 | Tài liệu | Low | `setup_guide.md` ghi sai mật khẩu admin | thủ công |
+| **BUG-07** | **FR-09** | **Critical** | **Công thức giảm giá phần trăm bị đảo — khách bị tính gấp 10 lần** | TC-01→03, TC-18 |
+| BUG-08 | FR-09 | Medium | Ngưỡng đơn tối thiểu loại trừ chính giá trị bằng ngưỡng | TC-07 |
+| BUG-09 | FR-09 | High | Bỏ `user_id` là lách được giới hạn số lần dùng mã | TC-16 |
+| BUG-10 | FR-14 | Medium | Tên danh mục rỗng/`null`/khoảng trắng vẫn tạo được | TC-05, TC-06 |
+| BUG-11 | FR-14 | Critical | Người dùng thường toàn quyền tạo/sửa/xoá danh mục | TC-14 → TC-16 |
+| BUG-12 | FR-14 | Medium | Sửa/xoá `id` không tồn tại vẫn trả về 200 thành công | TC-10, TC-12 |
+| BUG-13 | FR-14 | High | Xoá danh mục đang có sản phẩm làm sản phẩm mồ côi | TC-13 |
+| BUG-14 | FR-14 | High | Giao diện quản lý danh mục thiếu hoàn toàn chức năng Sửa | TC-08 |
+| BUG-15 | FR-13* | Medium | Dashboard nhân đôi doanh thu đơn đã giao | thủ công |
+
+\* BUG-05, BUG-15 nằm ngoài ba feature được giao, phát hiện tình cờ khi đọc mã
+nguồn và xây helper; ghi nhận để đầy đủ.
 
 ---
 
@@ -324,17 +335,405 @@ Sửa `setup_guide.md` thành `Admin123!`, hoặc đổi seed cho khớp tài li
 
 ---
 
+## BUG-07 — Công thức giảm giá phần trăm bị đảo, khách bị tính gấp 10 lần
+
+- **Mức độ:** Critical — đây là lỗi nghiêm trọng nhất của toàn bài
+- **Thành phần:** `backend/server.js:399` và `server.js:419`
+- **Test:** TC-01, TC-02, TC-03, TC-18 (đều fail)
+- **Ảnh:** `../evidence/bugs/BUG-07-percent-coupon-overcharge.png`, `BUG-07-percent-coupon-api.png`
+
+### Mô tả
+
+Với mã loại `percent`, `discount_value` lưu số phần trăm (ví dụ `SAVE10` có
+`discount_value = 10`). Nhưng công thức tính lại là:
+
+```js
+discount_amount = Math.floor(total_amount * (1 - coupon.discount_value));
+```
+
+Thay vì `total_amount * discount_value / 100`. Với `discount_value = 10`, biểu
+thức thành `total × (1 − 10) = total × (−9)` → **số tiền giảm âm**. Vì
+`final_amount = total_amount − discount_amount`, trừ một số âm thành cộng:
+
+```
+final = total − (−9 × total) = 10 × total
+```
+
+### Steps to reproduce
+
+1. Đăng nhập, vào `http://localhost:5173/checkout`
+2. Đặt "Tổng tiền thanh toán" = `500000`
+3. Nhập mã `SAVE10`, bấm **Áp dụng**
+
+### Expected
+
+Giảm 50.000 ₫ (10% của 500.000), thành tiền 450.000 ₫.
+
+### Actual
+
+```
+✅ Áp dụng thành công! Giảm 10%
+Tiết kiệm: -4,500,000 ₫
+Thành tiền: 5,000,000 ₫
+```
+
+Khách bị tính **gấp 10 lần** giá trị đơn hàng, trong khi giao diện vẫn hiển thị
+dấu ✅ và câu "Áp dụng thành công! Giảm 10%". Người dùng không có cách nào nhận
+ra ngoài việc tự đọc con số.
+
+Kiểm chứng qua API:
+
+```
+POST /api/apply-coupon {"code":"SAVE10","total_amount":500000}
+{"success":true,"coupon_id":1,"discount_amount":-4500000,"final_amount":5000000,...}
+```
+
+Lỗi này phá vỡ hai bất biến cơ bản mà TC-18 kiểm tra: **số tiền giảm không bao
+giờ được âm**, và **thành tiền không bao giờ được lớn hơn tổng gốc**.
+
+### Đề xuất sửa
+
+```js
+discount_amount = coupon.type === 'percent'
+  ? Math.floor(total_amount * coupon.discount_value / 100)
+  : coupon.discount_value;
+discount_amount = Math.min(discount_amount, total_amount); // không giảm quá tổng đơn
+```
+
+---
+
+## BUG-08 — Ngưỡng đơn tối thiểu loại trừ chính giá trị bằng ngưỡng
+
+- **Mức độ:** Medium (lỗi biên)
+- **Thành phần:** `backend/server.js:379`
+- **Test:** TC-07 (fail)
+- **Ảnh:** `../evidence/bugs/BUG-08-min-order-boundary.png`
+
+### Mô tả
+
+```js
+if (total_amount > coupon.min_order_amount) {
+```
+
+Thông báo lỗi của chính hệ thống ghi *"Đơn hàng chưa đủ giá trị **tối thiểu**
+500,000 ₫"* — "tối thiểu" nghĩa là `>=`. Nhưng điều kiện dùng `>`, nên đơn đúng
+bằng ngưỡng bị từ chối.
+
+### Steps to reproduce
+
+| total_amount | Kết quả |
+|---|---|
+| 500.000 (= ngưỡng của BIGBUY) | ❌ HTTP 400 — *"chưa đủ giá trị tối thiểu 500,000 ₫"* |
+| 500.001 | ✅ HTTP 200, giảm 50.000 ₫ |
+
+### Expected / Actual
+
+Đơn 500.000 ₫ phải được áp mã (bằng ngưỡng tối thiểu). Thực tế bị từ chối, và
+thông báo lỗi tự mâu thuẫn: nó nói ngưỡng là 500.000 trong khi từ chối đúng
+500.000.
+
+### Đề xuất sửa
+
+Đổi `>` thành `>=`.
+
+---
+
+## BUG-09 — Bỏ `user_id` là lách được giới hạn số lần dùng mã
+
+- **Mức độ:** High
+- **Thành phần:** `backend/server.js:386` (`if (user_id) { ... }`)
+- **Test:** TC-16 (fail)
+- **Ảnh:** `../evidence/bugs/BUG-09-usage-limit-bypass.png`
+
+### Mô tả
+
+Kiểm tra `max_uses_per_user` chỉ nằm **bên trong** nhánh `if (user_id)`. Nhánh
+`else` tính giảm giá và trả về thành công mà không hề tra bảng `coupon_usage`.
+Vì `user_id` do client gửi lên, chỉ cần bỏ trường này là bỏ qua toàn bộ giới hạn.
+
+### Steps to reproduce
+
+1. Đăng ký một tài khoản, dùng hết quota của `VIP100` (`max_uses_per_user = 2`)
+2. Gọi `POST /api/apply-coupon` **có** `user_id` → HTTP 400 *"đã đạt giới hạn"*
+3. Gọi lại **không** có `user_id`, mọi thứ khác giữ nguyên
+
+### Expected
+
+Bước 3 vẫn bị từ chối — giới hạn gắn với tài khoản, không phụ thuộc client có
+khai báo danh tính hay không.
+
+### Actual
+
+```
+WITH user_id     -> HTTP 400  {"error":"Bạn đã sử dụng mã này 2 lần (đã đạt giới hạn)"}
+WITHOUT user_id  -> HTTP 200  {"success":true,"discount_amount":100000,...}
+```
+
+Mã có thể tái sử dụng vô hạn.
+
+### Đề xuất sửa
+
+Lấy danh tính từ JWT (`req.user.id`) thay vì tin `user_id` trong body, và bắt
+buộc xác thực cho endpoint này.
+
+---
+
+## BUG-10 — Tên danh mục không được validate
+
+- **Mức độ:** Medium
+- **Thành phần:** `backend/server.js:249`
+- **Test:** TC-05, TC-06 (fail)
+- **Ảnh:** `../evidence/bugs/BUG-10-blank-category-name.png`
+
+### Mô tả
+
+`POST /api/categories` `INSERT` thẳng giá trị `name` nhận được, không kiểm tra
+rỗng, không kiểm tra thiếu trường, không `trim()`.
+
+### Steps to reproduce
+
+1. Vào Web Admin → **Danh mục**, để trống ô "Tên danh mục mới", bấm **Thêm mới**
+2. Hoặc gọi `POST /api/categories` với body `{}`
+
+### Expected
+
+HTTP 400, không tạo bản ghi.
+
+### Actual
+
+```
+POST /api/categories {"name":""}  -> HTTP 200  {"message":"Category created","id":4}
+POST /api/categories {}           -> HTTP 200  {"message":"Category created","id":5}
+```
+
+Bảng danh mục xuất hiện dòng tên rỗng và dòng tên `null`. Trên giao diện chúng
+hiện thành ô trắng không thể phân biệt, và vẫn gán được cho sản phẩm.
+
+### Đề xuất sửa
+
+Validate `typeof name === 'string' && name.trim().length > 0` trước khi `INSERT`.
+
+---
+
+## BUG-11 — Người dùng thường toàn quyền quản lý danh mục
+
+- **Mức độ:** Critical
+- **Thành phần:** `backend/server.js:100` (`authenticateToken`), áp cho `server.js:249/257/269`
+- **Test:** TC-14, TC-15, TC-16 (đều fail)
+- **Ảnh:** `../evidence/bugs/BUG-11-category-access-control.png`
+
+### Mô tả
+
+Cả ba endpoint ghi của danh mục chỉ gắn `authenticateToken`, mà middleware này
+**chỉ xác minh chữ ký JWT**, không đọc `req.user.role`. Bất kỳ khách hàng nào
+đăng ký xong đều có toàn quyền CRUD trên danh mục sản phẩm của toàn hệ thống.
+
+### Steps to reproduce
+
+1. Đăng ký một tài khoản thường bất kỳ, đăng nhập lấy `token`
+2. `POST /api/categories` với `Authorization: Bearer <token>`
+3. `DELETE /api/categories/:id` với cùng token
+
+### Expected
+
+HTTP 403 Forbidden ở cả hai bước.
+
+### Actual
+
+```
+Account role: user
+POST   /api/categories        -> HTTP 200  {"message":"Category created","id":...}
+DELETE /api/categories/7      -> HTTP 200  {"message":"Category deleted"}
+```
+
+Kết hợp với BUG-13, một tài khoản thường có thể xoá sạch danh mục và làm mồ côi
+toàn bộ sản phẩm của cửa hàng.
+
+### Đề xuất sửa
+
+Thêm middleware `requireAdmin` kiểm tra `req.user.role === 'admin'` cho toàn bộ
+endpoint ghi của danh mục (và các endbcpoint quản trị khác — xem BUG-05).
+
+---
+
+## BUG-12 — Sửa/xoá `id` không tồn tại vẫn báo thành công
+
+- **Mức độ:** Medium
+- **Thành phần:** `backend/server.js:257` (PUT), `server.js:269` (DELETE)
+- **Test:** TC-10, TC-12 (fail)
+- **Ảnh:** `../evidence/bugs/BUG-12-nonexistent-id-reports-success.png`
+
+### Mô tả
+
+Cả hai handler đều bỏ qua `this.changes` — số dòng thực sự bị tác động — nên
+luôn trả về 200 kèm thông báo thành công dù không đụng vào dòng nào.
+
+### Steps to reproduce
+
+```
+PUT    /api/categories/999999  {"name":"Ghost"}
+DELETE /api/categories/999999
+```
+
+### Expected
+
+HTTP 404 Not Found cho cả hai.
+
+### Actual
+
+```
+PUT    /api/categories/999999 -> HTTP 200  {"message":"Category updated"}
+DELETE /api/categories/999999 -> HTTP 200  {"message":"Category deleted"}
+```
+
+Client không có cách nào phân biệt "đã sửa thành công" với "không tìm thấy",
+dẫn tới giao diện báo thành công giả.
+
+### Đề xuất sửa
+
+```js
+if (this.changes === 0) return res.status(404).json({ error: "Category not found" });
+```
+
+---
+
+## BUG-13 — Xoá danh mục đang có sản phẩm làm sản phẩm mồ côi
+
+- **Mức độ:** High
+- **Thành phần:** `backend/server.js:269` + `database.js` (thiếu khoá ngoại)
+- **Test:** TC-13 (fail)
+- **Ảnh:** `../evidence/bugs/BUG-13-delete-category-orphans-products.png`
+
+### Mô tả
+
+Bảng `products` có cột `category_id` nhưng **không khai báo `FOREIGN KEY`**, và
+handler `DELETE` không kiểm tra xem còn sản phẩm nào tham chiếu hay không.
+
+### Steps to reproduce
+
+1. Tạo danh mục mới, ghi lại `id`
+2. Tạo một sản phẩm với `category_id` là `id` đó
+3. Xoá danh mục vừa tạo
+4. Gọi `GET /api/products`
+
+### Expected
+
+Bước 3 bị từ chối (HTTP 409) kèm thông báo danh mục đang được sử dụng — hoặc
+phải xử lý sản phẩm liên quan trước.
+
+### Actual
+
+```
+DELETE /api/categories/8 -> HTTP 200  {"message":"Category deleted"}
+Products still pointing at the deleted category: 1
+```
+
+Sản phẩm giữ `category_id` trỏ tới danh mục không còn tồn tại. Trên giao diện
+admin, ô danh mục của sản phẩm đó trở thành rỗng và không sửa được về trạng thái
+hợp lệ nếu không gán lại thủ công.
+
+### Đề xuất sửa
+
+Khai báo `FOREIGN KEY (category_id) REFERENCES categories(id)`, bật
+`PRAGMA foreign_keys = ON`, và kiểm tra số sản phẩm liên quan trước khi xoá.
+
+---
+
+## BUG-14 — Giao diện quản lý danh mục thiếu hoàn toàn chức năng Sửa
+
+- **Mức độ:** High (thiếu chức năng so với đặc tả)
+- **Thành phần:** `frontend-admin/src/App.jsx:294-335`
+- **Test:** TC-08 (fail)
+- **Ảnh:** `../evidence/bugs/BUG-14-no-edit-control.png`
+
+### Mô tả
+
+FR-14 được đặc tả là **Category management (CRUD)** và backend đã có sẵn
+`PUT /api/categories/:id`. Nhưng màn hình quản lý danh mục chỉ render đúng một
+nút trên mỗi dòng:
+
+```jsx
+<button ... onClick={() => deleteCategory(c.id)}>Xóa</button>
+```
+
+Không có nút Sửa, không có ô input inline, không có modal. Chữ **U** trong CRUD
+không thể thực hiện được từ giao diện — endpoint `PUT` tồn tại nhưng không có
+đường nào gọi tới.
+
+### Steps to reproduce
+
+1. Đăng nhập Web Admin (`http://localhost:5174`) bằng `admin@eshop.com` / `Admin123!`
+2. Mở tab **Danh mục**
+3. Quan sát cột **Hành động** của mọi dòng
+
+### Expected
+
+Có nút/điều khiển cho phép đổi tên danh mục.
+
+### Actual
+
+Tự động liệt kê toàn bộ control trên một dòng cho kết quả:
+
+```
+row actions offered by the admin UI = ["Xóa"]
+```
+
+Ngoài ra nút **Xóa** không có hộp thoại xác nhận — một cú nhấp nhầm là mất danh
+mục ngay (kết hợp BUG-13 thì mất luôn liên kết của sản phẩm).
+
+### Đề xuất sửa
+
+Bổ sung nút "Sửa" mở form đổi tên gọi `PUT /api/categories/:id`, và thêm xác
+nhận trước khi xoá.
+
+---
+
+## BUG-15 — Dashboard nhân đôi doanh thu đơn đã giao
+
+- **Mức độ:** Medium
+- **Thành phần:** `frontend-admin/src/App.jsx:218`
+- **Phạm vi:** thuộc **FR-13 (Dashboard)**, ngoài ba feature được giao — ghi nhận vì phát hiện khi đọc mã nguồn cho FR-14
+- **Test:** không có test tự động; xác minh bằng đọc mã
+
+### Mô tả
+
+```js
+const totalRevenue = orders.reduce((sum, o) => {
+  if (o.status === "delivered") return sum + o.total_amount * 2;
+  return sum;
+}, 0);
+```
+
+Doanh thu của mỗi đơn `delivered` được nhân 2 không có lý do nghiệp vụ nào. Số
+liệu tổng doanh thu trên dashboard luôn gấp đôi giá trị thật.
+
+### Đề xuất sửa
+
+Bỏ `* 2`.
+
+---
+
 ## Trạng thái GitHub Issues
+
+Toàn bộ 15 bug đã được đăng lên GitHub Issues của repository, mỗi issue kèm ảnh
+chụp bằng chứng:
 
 | Bug | Issue |
 |---|---|
-| BUG-01 | ⏳ chưa tạo |
-| BUG-02 | ⏳ chưa tạo |
-| BUG-03 | ⏳ chưa tạo |
-| BUG-04 | ⏳ chưa tạo |
-| BUG-05 | ⏳ chưa tạo |
-| BUG-06 | ⏳ chưa tạo |
+| BUG-01 | [#1](https://github.com/hungtmh/HW04-TESTING/issues/1) |
+| BUG-02 | [#2](https://github.com/hungtmh/HW04-TESTING/issues/2) |
+| BUG-03 | [#3](https://github.com/hungtmh/HW04-TESTING/issues/3) |
+| BUG-04 | [#4](https://github.com/hungtmh/HW04-TESTING/issues/4) |
+| BUG-05 | [#5](https://github.com/hungtmh/HW04-TESTING/issues/5) |
+| BUG-06 | [#6](https://github.com/hungtmh/HW04-TESTING/issues/6) |
+| BUG-07 | [#7](https://github.com/hungtmh/HW04-TESTING/issues/7) |
+| BUG-08 | [#8](https://github.com/hungtmh/HW04-TESTING/issues/8) |
+| BUG-09 | [#9](https://github.com/hungtmh/HW04-TESTING/issues/9) |
+| BUG-10 | [#10](https://github.com/hungtmh/HW04-TESTING/issues/10) |
+| BUG-11 | [#11](https://github.com/hungtmh/HW04-TESTING/issues/11) |
+| BUG-12 | [#12](https://github.com/hungtmh/HW04-TESTING/issues/12) |
+| BUG-13 | [#13](https://github.com/hungtmh/HW04-TESTING/issues/13) |
+| BUG-14 | [#14](https://github.com/hungtmh/HW04-TESTING/issues/14) |
+| BUG-15 | [#15](https://github.com/hungtmh/HW04-TESTING/issues/15) |
 
-> Nội dung từng issue đã sẵn sàng trong tài liệu này; ảnh đính kèm nằm ở
-> `23127195/evidence/bugs/`. Cần đăng nhập GitHub để tạo issue và cập nhật bảng
-> trên với link tương ứng.
+Ảnh bằng chứng gốc nằm ở `23127195/evidence/bugs/`.

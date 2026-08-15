@@ -4,8 +4,9 @@
 |---|---|
 | **Sinh viên** | 23127195 |
 | **Bài tập** | HW04-AI — Automation Testing |
-| **SUT** | EShop (`eshop-sut`) — frontend-web + backend API |
+| **SUT** | EShop (`eshop-sut`) — frontend-web, frontend-admin, backend API |
 | **GitHub repository** | https://github.com/hungtmh/HW04-TESTING |
+| **GitHub Issues** | https://github.com/hungtmh/HW04-TESTING/issues (15 bug) |
 | **Video demo (YouTube, unlisted)** | ⏳ *chưa quay* |
 | **Ngày** | 2026-08-15 |
 
@@ -15,44 +16,55 @@
 
 | Chỉ số | Giá trị |
 |---|---|
-| Số feature đã tự động hoá | **1 / 3** (FR-01) |
-| Số test case đã tự động hoá | **27** |
-| Số test case đã thực thi | **81** (27 × 3 browser) |
-| Số test **passed** | **57** |
-| Số test **failed** | **24** (= 8 test `@bug` × 3 browser) |
-| Số browser run | **3** (Chromium, Firefox, WebKit) |
-| Số bug phát hiện | **6** (4 thuộc FR-01, 2 phát hiện tình cờ) |
-| Số phát hiện khi review AI | **8** (R-01 → R-08) |
+| Số feature đã tự động hoá | **3 / 3** (FR-01, FR-09, FR-14) |
+| Số test case đã tự động hoá | **62** |
+| Số test case đã thực thi | **186** (62 × 3 browser) |
+| Số test **passed** | **117** |
+| Số test **failed** | **69** (= 23 test `@bug` × 3 browser) |
+| Số browser run | **9** (3 feature × 3 engine) |
+| Số bug phát hiện | **15** |
+| Số phát hiện khi review AI | **11** (R-01 → R-11) |
 
-### Chi tiết theo browser
+### Chi tiết theo feature và browser
 
-| Browser | Tổng | Pass | Fail | HTML report |
-|---|---|---|---|---|
-| Chromium | 27 | 19 | 8 | `playwright-report/fr01-register-chromium/index.html` |
-| Firefox | 27 | 19 | 8 | `playwright-report/fr01-register-firefox/index.html` |
-| WebKit | 27 | 19 | 8 | `playwright-report/fr01-register-webkit/index.html` |
+| Feature | Test case | Chromium | Firefox | WebKit | HTML report |
+|---|---|---|---|---|---|
+| FR-01 Đăng ký tài khoản | 27 | 19/8 | 19/8 | 19/8 | `playwright-report/fr01-register-<browser>/` |
+| FR-09 Mã giảm giá | 18 | 12/6 | 12/6 | 12/6 | `playwright-report/fr09-coupon-<browser>/` |
+| FR-14 Quản lý danh mục | 17 | 8/9 | 8/9 | 8/9 | `playwright-report/fr14-category-<browser>/` |
 
-Cả 3 HTML report đều hiển thị `Run by: 23127195` kèm ISO timestamp ở tiêu đề —
-ảnh chụp kiểm chứng nằm trong `evidence/report-screenshots/`.
+*(định dạng: pass/fail)*
 
-> **Lưu ý về 24 lượt fail:** đây **không** phải lỗi của bộ test. Tám test được
+Cả 9 HTML report đều hiển thị `Run by: 23127195` kèm ISO timestamp ở tiêu đề —
+ảnh chụp kiểm chứng trong `evidence/report-screenshots/`.
+
+> **Lưu ý về 69 lượt fail:** đây **không** phải lỗi của bộ test. 23 test được
 > viết theo **đặc tả** (`api_specification.md` + hint hiển thị trên UI) chứ không
-> theo hành vi đang có của SUT; mỗi test đỏ ánh xạ 1-1 tới một bug đã ghi nhận
-> trong `bug-report/BUG_REPORT.md`. Việc "nới" chúng cho xanh sẽ biến bug thành
-> đặc tả.
+> theo hành vi hiện có của SUT; mỗi test đỏ ánh xạ 1-1 tới một bug đã ghi nhận.
+> Đã kiểm chứng bằng script quét toàn bộ `results.json`: **không có test nào fail
+> ngoài nhóm `@bug`**.
 
 ---
 
-## 2. Bug đã phát hiện
+## 2. Bug đã phát hiện (15)
 
-| ID | Mức độ | Tóm tắt | Test |
-|---|---|---|---|
-| BUG-01 | High | Luật mật khẩu bắt buộc khoảng trắng, cấm ký tự đặc biệt — ngược với hint UI và đặc tả | TC-02, TC-27 |
-| BUG-02 | High | Không validate định dạng email ở cả frontend và backend | TC-18 → TC-21 |
-| BUG-03 | Critical | Email trùng tạo được nhiều tài khoản (thiếu `UNIQUE`) | TC-22 |
-| BUG-04 | Critical | Mật khẩu lưu plaintext và bị trả về trong response đăng nhập | TC-26 |
-| BUG-05 | High | `GET /api/admin/users` không kiểm tra `role` (thuộc FR-12) | thủ công |
-| BUG-06 | Low | `setup_guide.md` ghi sai mật khẩu admin | thủ công |
+| ID | Feature | Mức độ | Tóm tắt | Issue |
+|---|---|---|---|---|
+| BUG-01 | FR-01 | High | Luật mật khẩu bắt buộc khoảng trắng, cấm ký tự đặc biệt | [#1](https://github.com/hungtmh/HW04-TESTING/issues/1) |
+| BUG-02 | FR-01 | High | Không validate định dạng email | [#2](https://github.com/hungtmh/HW04-TESTING/issues/2) |
+| BUG-03 | FR-01 | Critical | Email trùng tạo được nhiều tài khoản | [#3](https://github.com/hungtmh/HW04-TESTING/issues/3) |
+| BUG-04 | FR-01 | Critical | Mật khẩu plaintext, bị trả về trong response login | [#4](https://github.com/hungtmh/HW04-TESTING/issues/4) |
+| BUG-05 | FR-12 | High | `GET /api/admin/users` không kiểm tra `role` | [#5](https://github.com/hungtmh/HW04-TESTING/issues/5) |
+| BUG-06 | Tài liệu | Low | `setup_guide.md` ghi sai mật khẩu admin | [#6](https://github.com/hungtmh/HW04-TESTING/issues/6) |
+| **BUG-07** | **FR-09** | **Critical** | **Công thức % bị đảo — khách bị tính gấp 10 lần** | [#7](https://github.com/hungtmh/HW04-TESTING/issues/7) |
+| BUG-08 | FR-09 | Medium | Ngưỡng đơn tối thiểu loại trừ giá trị bằng ngưỡng | [#8](https://github.com/hungtmh/HW04-TESTING/issues/8) |
+| BUG-09 | FR-09 | High | Bỏ `user_id` là lách được giới hạn lượt dùng | [#9](https://github.com/hungtmh/HW04-TESTING/issues/9) |
+| BUG-10 | FR-14 | Medium | Tên danh mục rỗng/`null` vẫn tạo được | [#10](https://github.com/hungtmh/HW04-TESTING/issues/10) |
+| BUG-11 | FR-14 | Critical | User thường toàn quyền CRUD danh mục | [#11](https://github.com/hungtmh/HW04-TESTING/issues/11) |
+| BUG-12 | FR-14 | Medium | Sửa/xoá `id` không tồn tại vẫn báo 200 | [#12](https://github.com/hungtmh/HW04-TESTING/issues/12) |
+| BUG-13 | FR-14 | High | Xoá danh mục có sản phẩm làm sản phẩm mồ côi | [#13](https://github.com/hungtmh/HW04-TESTING/issues/13) |
+| BUG-14 | FR-14 | High | Giao diện danh mục thiếu hoàn toàn chức năng Sửa | [#14](https://github.com/hungtmh/HW04-TESTING/issues/14) |
+| BUG-15 | FR-13 | Medium | Dashboard nhân đôi doanh thu đơn đã giao | [#15](https://github.com/hungtmh/HW04-TESTING/issues/15) |
 
 ---
 
@@ -61,34 +73,18 @@ Cả 3 HTML report đều hiển thị `Run by: 23127195` kèm ISO timestamp ở
 ```
 23127195/
 ├── README.md                          ← tài liệu này
-├── report/
-│   └── HW04_Main_Report.md            ← báo cáo chính + gap analysis
-├── ai/
-│   ├── AI_Audit_Report.md             ← nhật ký 13 lần tương tác với AI
-│   └── AI_Critique.md                 ← 299 từ
-├── bug-report/
-│   └── BUG_REPORT.md                  ← 6 bug, đầy đủ steps to reproduce
+├── report/HW04_Main_Report.md         ← báo cáo chính + gap analysis (R-01 → R-11)
+├── ai/AI_Audit_Report.md              ← nhật ký tương tác với AI
+├── ai/AI_Critique.md                  ← 299 từ
+├── bug-report/BUG_REPORT.md           ← 15 bug, đầy đủ steps to reproduce
 └── evidence/
-    ├── report-screenshots/            ← ảnh 3 HTML report (chứng minh "Run by:")
-    └── bugs/                          ← ảnh bằng chứng từng bug
+    ├── report-screenshots/            ← 9 ảnh HTML report (chứng minh "Run by:")
+    ├── bugs/                          ← ảnh bằng chứng từng bug
+    └── git-commit-log*.txt            ← lịch sử commit dạng text
 ```
 
-Mã nguồn bộ test nằm ở thư mục gốc repository:
-
-```
-tests/
-├── data/fr01-password-rules.csv       ← dữ liệu test (CSV)
-├── data/fr01-register-cases.json      ← dữ liệu test (JSON)
-├── pages/RegisterPage.js              ← Page Object
-├── utils/{csv,env}.js
-└── fr01-register.spec.js              ← 27 test case
-scripts/
-├── run-multibrowser.mjs               ← chạy 3 engine, mỗi engine 1 report
-├── verify-report-banner.mjs           ← kiểm chứng "Run by: 23127195"
-└── capture-bug-evidence.mjs           ← chụp ảnh bằng chứng bug
-playwright.config.js
-playwright-report/                     ← HTML report của từng browser
-```
+Mã nguồn bộ test ở thư mục gốc repository: `tests/`, `scripts/`,
+`playwright.config.js`, `playwright-report/`.
 
 ---
 
@@ -97,16 +93,20 @@ playwright-report/                     ← HTML report của từng browser
 ```bash
 npm install
 npx playwright install chromium firefox webkit
+
 npm --prefix eshop-sut/backend install
 npm --prefix eshop-sut/frontend-web install
+npm --prefix eshop-sut/frontend-admin install
 npm run sut:seed
 
+# frontend-admin phải chạy tay (config chỉ tự khởi động backend + frontend-web)
+npm --prefix eshop-sut/frontend-admin run dev
+
 node scripts/run-multibrowser.mjs tests/fr01-register.spec.js
+node scripts/run-multibrowser.mjs tests/fr09-coupon.spec.js
+node scripts/run-multibrowser.mjs tests/fr14-category.spec.js
 node scripts/verify-report-banner.mjs
 ```
-
-`playwright.config.js` tự khởi động backend (`:3000`) và frontend-web (`:5173`)
-qua `webServer` với `reuseExistingServer: true`.
 
 ---
 
@@ -114,35 +114,32 @@ qua `webServer` với `reuseExistingServer: true`.
 
 | No. | Criteria | Grade | Self-Assessed Grade |
 |---|---|---|---|
-| 1 | Task 1 — Feature A (FR-01 Đăng ký tài khoản) | 25 | **23** |
-| 1 | Task 1 — Feature B (FR-09 Mã giảm giá) | 25 | **0** |
-| 1 | Task 1 — Feature C (FR-14 Quản lý danh mục) | 25 | **0** |
+| 1 | Task 1 — Feature A (FR-01 Đăng ký tài khoản) | 25 | **24** |
+| 1 | Task 1 — Feature B (FR-09 Mã giảm giá) | 25 | **24** |
+| 1 | Task 1 — Feature C (FR-14 Quản lý danh mục) | 25 | **24** |
 | 2 | Task 2 — Demo video | 15 | **0** |
 | 3 | Agent Skills | 10 | **0** |
-| | **Total** | **100** | **23** |
+| | **Total** | **100** | **72** |
 
-### Căn cứ tự chấm Feature A = 23/25
+### Căn cứ tự chấm mỗi feature 24/25
 
 | Yêu cầu | Ngưỡng | Đạt được |
 |---|---|---|
-| Test case tự động hoá | ≥ 12 | 27 ✅ |
-| Dữ liệu tách file riêng | `.csv` / `.json` | cả hai ✅ |
+| Test case tự động hoá | ≥ 12 | 27 / 18 / 17 ✅ |
+| Dữ liệu tách file riêng | `.csv` / `.json` | cả hai loại ✅ |
 | Assertion pattern | ≥ 3 | 6 ✅ |
-| Browser | ≥ 3 | 3 ✅ |
-| HTML report có `Run by:` + ISO | bắt buộc | ✅ đã chụp ảnh kiểm chứng |
-| Review & phân tích lỗi AI | bắt buộc | 8 phát hiện ✅ |
-| Bug report | nếu có | 6 bug ✅ |
-| GitHub Issues kèm screenshot | nếu có bug | ⏳ **chưa tạo** (−2) |
+| Browser | ≥ 3 | 3 engine ✅ |
+| HTML report có `Run by:` + ISO | bắt buộc | 9/9, có ảnh kiểm chứng ✅ |
+| Review & phân tích lỗi AI | bắt buộc | 11 phát hiện ✅ |
+| Bug report + GitHub Issues kèm ảnh | nếu có bug | 15 bug, 15 issue ✅ |
+| Commit chạm `.spec.js` | ≥ 8 | ⏳ **chưa đủ** (−1 mỗi feature) |
 
 ---
 
 ## 6. Việc còn lại trước khi nộp
 
-- [ ] FR-09 — Mã giảm giá: spec + data + 3 browser run
-- [ ] FR-14 — Quản lý danh mục: spec + data + 3 browser run
-- [ ] Tạo 6 GitHub Issues, đính ảnh từ `evidence/bugs/`, cập nhật link vào `BUG_REPORT.md`
 - [ ] Quay video demo ≥ 5 phút, tiếng Việt, có `whoami` + `hostname`
 - [ ] Xây Agent Skill + video demo skill
-- [ ] Đạt ≥ 8 commit chạm file `.spec.js`, xuất `git log` ra file text
+- [ ] Bổ sung commit chạm file `.spec.js` cho đủ 8
 - [ ] Xuất bản PDF cho `HW04_Main_Report.md`, `AI_Audit_Report.md`, `AI_Critique.md`
-- [ ] Đóng gói `23127195_HW04_AI_Automation_<điểm>.zip`
+- [ ] Đóng gói `23127195_HW04_AI_Automation_072.zip`

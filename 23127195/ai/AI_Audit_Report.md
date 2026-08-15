@@ -232,15 +232,130 @@ liệu này, `AI_Critique.md`, `README.md`.
 
 ---
 
+---
+
+### #14 — 22:05 | Giao làm nốt FR-09 và FR-14
+
+**Prompt:**
+> "làm tiếp cho 2 FR còn lại đi nói chung là làm đầy đủ hết, tất cả yêu cầu, có gì tạo github isse cho FR1 và các FR còn lại luôn"
+
+**AI output:** Kế hoạch: cài + chạy `frontend-admin` (:5174) cho FR-14, đọc mã
+nguồn coupon và category, probe hành vi thật bằng API trước khi viết spec, rồi
+mới sinh test.
+
+**Human review:** Giữ nguyên nguyên tắc đã rút ra ở FR-01 — **probe trước, viết
+spec sau**. Đây là bước đã cứu cả FR-01 khỏi kết luận sai.
+
+---
+
+### #15 — 22:12 | Probe FR-09 và FR-14 bằng API
+
+**Prompt:**
+> "Viết script probe kiểm tra: công thức tính coupon percent/fixed, biên min_order_amount, mã hết hạn, giới hạn lượt dùng; và với category: tên rỗng, phân quyền user thường, id không tồn tại, xoá danh mục đang có sản phẩm."
+
+**AI output (trích kết quả chạy):**
+```
+SAVE10 percent, total 500000  200  {"discount_amount":-4500000,"final_amount":5000000}
+SAVE10 at min boundary 300000 400  {"error":"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫"}
+POST category with empty name 200  {"message":"Category created","id":4}
+POST category as ROLE=user     200  {"message":"Category created","id":6}
+PUT /categories/99999          200  {"message":"Category updated"}
+DELETE category 1 still used   200  → products still referencing: 2
+```
+
+**Human review:** Phát hiện lỗi nghiêm trọng nhất của toàn bài (BUG-07): công
+thức `total × (1 − discount_value)` cho ra số giảm **âm**, khiến khách bị tính
+gấp 10 lần. Quyết định viết TC-18 dưới dạng **bất biến** (giảm giá không âm,
+thành tiền ≤ tổng gốc) thay vì chỉ so số cụ thể — bất biến bắt được cả những
+biến thể của lỗi mà case cụ thể có thể bỏ sót.
+
+---
+
+### #16 — 22:30 | Sinh spec FR-09, chạy thử → 12 pass / 6 fail
+
+**AI output:** `fr09-coupon.spec.js` (18 test case), `CheckoutPage.js`,
+`fr09-coupon-calculations.csv`, `fr09-coupon-cases.json`.
+
+**Human review:** Kiểm tra message của 6 test đỏ — tất cả đúng bản chất. Nhưng
+phát hiện `readAmount()` báo `4500000` thay vì `-4500000`: hàm vừa bắt dấu trừ
+trong regex vừa nhân `-1`, gây khử dấu. Nếu không soi thì bug report đã ghi sai
+con số.
+
+---
+
+### #17 — 22:38 | Sinh spec FR-14 → 15/17 test fail
+
+**AI output:** `fr14-category.spec.js` (17 test case), `AdminCategoryPage.js`.
+Kết quả lần đầu: **15 fail**, phần lớn timeout ở `input[type="email"]`.
+
+**Human review:** Đọc `frontend-admin/src/App.jsx` thì ô email **không có thuộc
+tính `type`**, chỉ có `placeholder="Email"`, và nút ghi `Login` chứ không phải
+"Đăng nhập". Đây là **lặp lại đúng sai lầm R-01** trên một màn hình khác — AI
+tiếp tục suy diễn theo form chuẩn thay vì theo mã nguồn. Sửa thành
+`getByPlaceholder` + `getByRole('button', { name: 'Login' })` → còn 10 fail.
+
+---
+
+### #18 — 22:46 | Truy vết test fail không gắn @bug
+
+**Prompt:**
+> "TC-07 không gắn @bug mà vẫn fail, kiểm tra tại sao."
+
+**AI output:** TC-07 so khớp danh sách UI với backend, nhận được
+`["Laptop","Phụ kiện","","","Hacked By User","Danh muc kiem tra nut sua",...]`.
+
+**Human review:** Hai nguyên nhân, đều là lỗi thiết kế test của tôi:
+1. Các test kỳ vọng "phải bị từ chối" chỉ dọn dẹp ở nhánh thành công — đúng lúc
+   chúng **bắt được bug** thì thao tác lại thành công và để lại dòng rác.
+2. TC-07 phụ thuộc danh mục seed `"Điện thoại"`, thứ mà chính probe trước đó đã
+   xoá → kết quả phụ thuộc thứ tự chạy.
+
+Sửa: hàm `cleanupAdded()` dọn dẹp **bất kể pass hay fail**; TC-07 tự tạo danh mục
+riêng để kiểm chứng. → 8 pass / 9 fail, toàn bộ fail đều `@bug`.
+
+---
+
+### #19 — 23:02 | Chạy 9 browser run → phát hiện hồi quy do chính bản vá
+
+**AI output:** FR-01 19/8 ×3 ổn định. FR-09 tụt từ 12 pass xuống **6 pass**.
+
+**Human review:** Truy nguyên: bản vá `readAmount()` ở #16 đã bỏ dấu phẩy khỏi
+character class. Playwright để locale mặc định **en-US** nên trang render
+`50,000` chứ không phải `50.000`; regex tách thành `50` và `000` rồi lấy phần
+cuối → ra `0`. **Chính bản sửa lỗi lại tạo ra lỗi mới.** Sửa lại cho nhận cả hai
+dấu phân cách → khôi phục 12/6 đồng nhất trên 3 engine.
+
+---
+
+### #20 — 23:20 | Kiểm chứng toàn cục và sinh tài liệu
+
+**Prompt:**
+> "Kiểm tra mọi test fail có đúng đều gắn @bug không, và 9 report có banner không."
+
+**AI output:**
+```
+Total executions : 186   Passed : 117   Failed : 69
+OK - moi test fail deu duoc gan @bug (khong co fail ngoai y muon)
+9/9 report: runBy=true, ISO timestamp hợp lệ
+```
+
+**Human review:** Đây là bước kiểm chứng bắt buộc trước khi công bố số liệu —
+sau bài học R-08, không chấp nhận kết luận từ con số tổng mà không quét từng
+test. Sau đó sinh ảnh bằng chứng cho 9 bug mới và cập nhật toàn bộ tài liệu.
+
+---
+
 ## Tổng kết mức độ can thiệp của con người
 
 | Hạng mục | Số lượng |
 |---|---|
-| Lỗi trong sản phẩm do AI sinh, được người phát hiện và sửa | **8** (R-01 → R-08) |
+| Lỗi trong sản phẩm do AI sinh, được người phát hiện và sửa | **11** (R-01 → R-11) |
 | Trong đó lỗi khiến test **xanh giả** (nguy hiểm nhất) | **2** (R-03, R-07) |
+| Trong đó lỗi khiến test **đỏ vì sai lý do** | **3** (R-08, R-10, R-11) |
 | Trong đó lỗi chỉ lộ khi chạy đa trình duyệt | **1** (R-05) |
-| Trong đó lỗi khiến test **đỏ vì sai lý do** | **1** (R-08) |
-| Quyết định thiết kế do người đưa ra, không phải AI | Đặt kỳ vọng theo đặc tả thay vì theo code; chấp nhận 8 test đỏ thay vì nới cho xanh |
+| Trong đó **bản vá lại tạo ra lỗi mới** | **1** (R-09) |
+| Trong đó sai lầm **lặp lại** dù đã sửa một lần | **1** (R-10 lặp lại R-01) |
+| Quyết định thiết kế do người đưa ra, không phải AI | Đặt kỳ vọng theo đặc tả thay vì theo code; chấp nhận 23 test đỏ thay vì nới cho xanh; dùng assertion **bất biến** cho TC-18 của FR-09 |
 
 **Cam kết:** Tôi đã đọc, kiểm chứng và chịu trách nhiệm hoàn toàn về mã nguồn và
 kết quả trong bài nộp này.
