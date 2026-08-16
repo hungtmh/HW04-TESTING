@@ -1,296 +1,502 @@
-﻿commit 94898dca5dc3074d4e2bb7f4ac42943337fee9c8
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 22:44:04 +0700
+commit 439da11c87a913f1e0f827ecaa7a732b66088989
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:33:02 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:33:02 +0700
+
+    docs: finalize submission for grading
+    
+    - Add both YouTube links (demo + Agent Skill) to README and main report
+    - Self-assessment to 100/100 now that both videos are recorded
+    - Update counts after FR-09 TC-19 (63 tests, 189 executions, 120/69)
+    - Add review findings R-12 (Firefox render race) and R-13 (XSS false negative)
+    - Add agent-skill/ documenting the FR-05 demo and its XSS + SQLi findings,
+      kept separate from the 15 bugs of the three graded features
+    - Remove the now-completed "remaining work" checklists
+    - Regenerate every PDF
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit abfb8a36156609ecf472295b1898e574b7cf1fa5
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:32:50 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:32:50 +0700
+
+    test: regenerate multi-browser HTML reports and add FR-05 evidence capture
+    
+    Refreshes all HTML reports from a clean seed: FR-01 19/8, FR-09 13/6,
+    FR-14 8/9, each identical across the three engines and every failure
+    @bug-tagged. Adds the script that captures the FR-05 search XSS/SQLi
+    evidence for the Agent Skill demo.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit d1f6ea0f02abf5f275691d9b2314f800d91c23d2
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:32:26 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:32:26 +0700
+
+    test(fr14): wait for the created row to render before reading the table
+    
+    The create-via-UI test read the category table immediately after the POST
+    resolved, before React had re-rendered the new row. Chromium and WebKit
+    won that race; Firefox lost it and TC-02 (a test that must pass) went red
+    only there. Wait on a web-first visibility assertion for the new row, then
+    read - deterministic 8/9 on all three engines.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 16f751b40102c97a4bb404026091e291d283c929
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:32:11 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:32:11 +0700
+
+    test(fr14): stamp run provenance into every test result
+    
+    Records "Run by: 23127195" and the feature name in each test's annotations
+    via stampRun(), matching the other suites.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 662ad31776ecdb68ea426dae78de77837a64e49d
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:31:55 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:31:55 +0700
+
+    test(fr09): validate a missing coupon code at the API (TC-19)
+    
+    The existing invalid-code group proves the UI disables the button for a
+    blank code. TC-19 goes straight to POST /api/apply-coupon with no `code`
+    field to confirm the server enforces the same rule (spec 5.1 marks it
+    required) and answers 400. Also stamps run provenance per test.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit f0f47959cbd576ec23b85a3b174728ac8321efe9
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:31:55 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:31:55 +0700
+
+    test(fr01): stamp run provenance into every test result
+    
+    Pushes "Run by: 23127195" and the feature name into each test's annotations
+    via the shared stampRun() helper, so the exported HTML report carries the
+    provenance per result, not only in the page header.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 4cc816aead16af8885f536209c585a4fe68ddf22
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 13:31:46 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 13:31:46 +0700
+
+    test(fr05): add data-driven product-search suite for the Agent Skill demo
+    
+    Applies the eshop-automation skill to FR-05 (product search), a feature
+    outside the three graded ones, to demonstrate the workflow. The probe step
+    found a real reflected XSS in the search-result banner and a SQL injection
+    in GET /api/products?search=, so five tests are @bug by design.
+    
+    Adds SearchPage, the CSV/JSON data files, a raw searchProducts helper that
+    (unlike listProducts) does not pre-assert 200 so the 500 error path is
+    testable, and a shared stampRun() that records run provenance per test.
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 0a8dedddf13773b48038d78467bb05a1bf45dd8c
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 11:41:37 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 11:41:37 +0700
+
+    docs: expand the video scripts into full read-aloud narration
+    
+    Both scripts now open with every command needed, split across the three
+    terminals and written with absolute paths, so recording is copy-paste rather
+    than reconstruction from memory. The prompt for the skill demo is included
+    verbatim for the same reason.
+    
+    The narration itself is written out in full sentences instead of bullet
+    prompts: how Playwright drives real browser binaries over a WebSocket, why
+    each engine is a genuinely different one, why the percent-coupon formula
+    yields a tenfold overcharge, and the false-green assertion told end to end
+    with its root cause and its fix.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 3971d4ac2eaa383553cf281799bd9b2b5d4b6952
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 11:29:21 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 11:29:21 +0700
+
+    docs: shorten the video scripts and add a Markdown-to-PDF converter
+    
+    The narration scripts are now condensed for reading while recording: what to
+    do and what to say are visually separated, and the whoami/hostname section is
+    dropped because the recording uses a face-cam, which the assignment accepts as
+    the alternative form of authorship evidence.
+    
+    md-to-pdf.mjs renders Markdown through the Chromium that Playwright already
+    ships, so producing the PDF half of every deliverable needs no LaTeX or pandoc
+    toolchain. Run it with --all to convert everything under 23127195/.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 787daff2663b21270555043c77562459ea3be785
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-16 11:22:34 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-16 11:22:34 +0700
+
+    docs: add narration scripts for both demo videos
+    
+    Video 1 demos FR-09 end to end: it runs in about two minutes across the three
+    engines, which leaves room to narrate while it works, and its defect is the
+    most striking one found - a 10% coupon on a 500,000 order charges 5,000,000.
+    The script walks the required beats: whoami and hostname, the multi-browser
+    run, the report header carrying the student id and ISO timestamp, and the
+    false-green assertion that was found and fixed during review.
+    
+    Video 2 demos the Agent Skill on FR-05, a feature never automated before, so
+    that reuse is actually demonstrated rather than asserted. Product search
+    renders the query through dangerouslySetInnerHTML and a payload does execute
+    - verified before scripting it - so the skill surfaces a genuine XSS during
+    its probe step, on camera.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+commit 53e20a6ce668f8bd8afbbcec27d5bb1ecb51a6eb
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:44:05 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:44:05 +0700
+
+    docs: refresh git commit log after all three features
+
+commit 94898dca5dc3074d4e2bb7f4ac42943337fee9c8
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:44:04 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:44:04 +0700
 
     feat(skill): add reusable eshop-automation Agent Skill
-
-    Packages the workflow the three feature suites converged on: read the 
-    specification before the code, probe the real DOM before writing
-    selectors, keep all data in tests/data, avoid race-prone assertions, clean
-    up on both branches, run one report per engine, and verify each failure
-    reason rather than the totals.
-
-    Also carries a table of SUT facts that were expensive to rediscover - the 
-    real admin password, the two-attempt lockout, the IPv6-only Vite binding,
-    the non-persistent cart, and the admin app not being covered by webServer.
-
+    
+    Packages the workflow the three feature suites converged on: read the
+    specification before the code, probe the real DOM before writing selectors,
+    keep all data in tests/data, avoid race-prone assertions, clean up on both
+    branches, run one report per engine, and verify each failure reason rather
+    than the totals.
+    
+    Also carries a table of SUT facts that were expensive to rediscover - the
+    real admin password, the two-attempt lockout, the IPv6-only Vite binding, the
+    non-persistent cart, and the admin app not being covered by webServer.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit c819a76e61d348ec459906835f3b6eb9bfd89ff6
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 22:38:42 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:38:42 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:38:42 +0700
 
     chore(sut): reset seeded database after the full test matrix
 
 commit cb11c7ea3140dda0008c64b408e7d311363c04bd
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 22:38:25 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:38:25 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:38:25 +0700
 
     docs(23127195): extend report to all three features
-
-    Rewrites the main report to cover FR-01, FR-09 and FR-14 together, updates 
-    the summary and self-assessment, and documents 15 defects with
-    reproduction steps and screenshots.
-
-    The gap analysis now records eleven review findings. Beyond the two that
-    had produced false greens, three made tests fail for reasons unrelated to
-    the defect they targeted, one surfaced only on WebKit, one was a patch
-    that broke six passing tests, and one repeated a selector mistake already
-    fixed once.
-
+    
+    Rewrites the main report to cover FR-01, FR-09 and FR-14 together, updates
+    the summary and self-assessment, and documents 15 defects with reproduction
+    steps and screenshots.
+    
+    The gap analysis now records eleven review findings. Beyond the two that had
+    produced false greens, three made tests fail for reasons unrelated to the
+    defect they targeted, one surfaced only on WebKit, one was a patch that broke
+    six passing tests, and one repeated a selector mistake already fixed once.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 1e22622d4c4b586b94b0dfb182af7948638fe6cf
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 22:38:25 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:38:25 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:38:25 +0700
 
     test: add nine multi-browser HTML reports and bug evidence
-
-    Three features times three engines: FR-01 19 passed / 8 failed, FR-09 12
-    passed / 6 failed, FR-14 8 passed / 9 failed, identical on Chromium, 
+    
+    Three features times three engines: FR-01 19 passed / 8 failed, FR-09
+    12 passed / 6 failed, FR-14 8 passed / 9 failed, identical on Chromium,
     Firefox and WebKit. 186 executions in total, 117 passed and 69 failed.
-
-    Every one of the 69 reds belongs to a test tagged @bug, verified by
-    scanning each results.json rather than trusting the totals - after a
-    helper once made five tests fail for a reason unrelated to the defect they
-    were written for, matching counts are not evidence on their own.
-
-    Each report header carries "Run by: 23127195" with the ISO timestamp of
-    its run. capture-bug-evidence-fr09-fr14.mjs adds screenshots for the nine
-    new defects, rendering API payloads onto the page where the evidence is a
-    JSON body rather than something visible in the product.
-
+    
+    Every one of the 69 reds belongs to a test tagged @bug, verified by scanning
+    each results.json rather than trusting the totals - after a helper once made
+    five tests fail for a reason unrelated to the defect they were written for,
+    matching counts are not evidence on their own.
+    
+    Each report header carries "Run by: 23127195" with the ISO timestamp of its
+    run. capture-bug-evidence-fr09-fr14.mjs adds screenshots for the nine new
+    defects, rendering API payloads onto the page where the evidence is a JSON
+    body rather than something visible in the product.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit c19eb77eb8cbba813c2b08d125ed57311307bdc4
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 22:38:24 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:38:24 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:38:24 +0700
 
     test(fr14): add 17 data-driven category management test cases
-
-    Covers create through the admin UI, read consistency between the table and 
-    the API, update through the API, delete through the UI, referential 
+    
+    Covers create through the admin UI, read consistency between the table and
+    the API, update through the API, delete through the UI, referential
     integrity, and role enforcement on every write endpoint.
-
-    Nine tests are tagged @bug: blank and missing names are stored, any 
-    authenticated customer can create, rename and delete categories,
-    operations on a non-existent id answer 200, deleting a category in use
-    orphans its products, and the admin screen offers no way to rename a
-    category at all even though PUT /api/categories/:id exists.
-
+    
+    Nine tests are tagged @bug: blank and missing names are stored, any
+    authenticated customer can create, rename and delete categories, operations
+    on a non-existent id answer 200, deleting a category in use orphans its
+    products, and the admin screen offers no way to rename a category at all
+    even though PUT /api/categories/:id exists.
+    
     Two review fixes are folded in:
-
+    
     - The admin login form gives its e-mail field no type attribute, so
-     input[type="email"] matched nothing and eight UI tests timed out. The
-     placeholder is the only stable handle, and the submit button reads
-     "Login". This repeats the getByLabel mistake already fixed on FR-01.
+      input[type="email"] matched nothing and eight UI tests timed out. The
+      placeholder is the only stable handle, and the submit button reads
+      "Login". This repeats the getByLabel mistake already fixed on FR-01.
     - Every test now restores the category table through cleanupAdded(),
-     including when its assertion is about to fail. The negative tests leave a
-     row behind precisely when they catch a bug, so the table filled up with
-     blank and stray rows and a later cross-layer test started failing on the
-     rubbish instead of on what it checks. That test also no longer depends on
-     a seeded category name, which the delete tests may legitimately remove.
-
+      including when its assertion is about to fail. The negative tests leave a
+      row behind precisely when they catch a bug, so the table filled up with
+      blank and stray rows and a later cross-layer test started failing on the
+      rubbish instead of on what it checks. That test also no longer depends on
+      a seeded category name, which the delete tests may legitimately remove.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 7272c8a0becbb820209221b683fca2796dae9103
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 22:38:24 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 22:38:24 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 22:38:24 +0700
 
     test(fr09): add 18 data-driven coupon test cases
-
-    Covers the percent and fixed calculation matrix, the minimum-order
-    boundary, unusable codes, code normalisation, the per-user usage limit,
-    the full customer journey from product to payment, and two invariants that
-    must hold for every coupon.
-
-    Six tests are tagged @bug. The heaviest is the percent formula: server.js 
-    computes total*(1-discount_value) instead of total*discount_value/100, so
-    a 10% coupon on a 500,000 order returns a discount of -4,500,000 and a
-    payable of 5,000,000 while the UI still shows a green tick and "Giảm 10%".
-
-    TC-18 asserts invariants rather than specific figures - no discount may be 
-    negative and no discounted total may exceed the original - because an 
-    invariant also catches variants of the fault that a fixed expected value 
+    
+    Covers the percent and fixed calculation matrix, the minimum-order boundary,
+    unusable codes, code normalisation, the per-user usage limit, the full
+    customer journey from product to payment, and two invariants that must hold
+    for every coupon.
+    
+    Six tests are tagged @bug. The heaviest is the percent formula: server.js
+    computes total*(1-discount_value) instead of total*discount_value/100, so a
+    10% coupon on a 500,000 order returns a discount of -4,500,000 and a payable
+    of 5,000,000 while the UI still shows a green tick and "Giảm 10%".
+    
+    TC-18 asserts invariants rather than specific figures - no discount may be
+    negative and no discounted total may exceed the original - because an
+    invariant also catches variants of the fault that a fixed expected value
     would miss.
-
-    The cart is plain React state with no persistence, so a full page load 
-    empties it. The end-to-end case therefore navigates by clicking, while the 
+    
+    The cart is plain React state with no persistence, so a full page load
+    empties it. The end-to-end case therefore navigates by clicking, while the
     calculation cases go straight to checkout and drive the editable total.
-
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 79fee15e394574871bbe986b6961c3464b31f18a
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:37 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:37 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:37 +0700
 
     docs: add git commit log and ignore transient SQLite journal
 
 commit 94ea79c24480bb5f515fb2f7f7eda3d84f08dbc6
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:13 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:13 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:13 +0700
 
     docs(23127195): add HW04 submission folder for FR-01
-
-    Main report with the gap analysis of the AI-generated scripts, bug report 
-    covering six defects, AI audit log of thirteen interactions, AI critique
-    at 299 words, plus the screenshot evidence for the reports and the bugs.
-
-    The gap analysis records eight review findings. Two of them had produced 
-    false greens, one surfaced only on WebKit, and one made five tests go red 
-    for a reason unrelated to the defect they were written for: the helper was 
-    logging in with the admin password from setup_guide.md, which is wrong,
-    and the SUT locks an account after two failed attempts.
-
+    
+    Main report with the gap analysis of the AI-generated scripts, bug report
+    covering six defects, AI audit log of thirteen interactions, AI critique at
+    299 words, plus the screenshot evidence for the reports and the bugs.
+    
+    The gap analysis records eight review findings. Two of them had produced
+    false greens, one surfaced only on WebKit, and one made five tests go red
+    for a reason unrelated to the defect they were written for: the helper was
+    logging in with the admin password from setup_guide.md, which is wrong, and
+    the SUT locks an account after two failed attempts.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 3380ee05c4b9be1055874404d9500e61f0894f58
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:13 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:13 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:13 +0700
 
     test(fr01): add multi-browser HTML reports for the registration suite
-
-    Three browser runs of tests/fr01-register.spec.js, 27 cases each, 19
-    passed and 8 failed on every engine. The 24 reds are the eight @bug tests
-    times three browsers, all of them genuine defects.
-
-    Each report header shows "Run by: 23127195" with the ISO timestamp of its 
+    
+    Three browser runs of tests/fr01-register.spec.js, 27 cases each, 19 passed
+    and 8 failed on every engine. The 24 reds are the eight @bug tests times
+    three browsers, all of them genuine defects.
+    
+    Each report header shows "Run by: 23127195" with the ISO timestamp of its
     run, as HW04 requires for attributable execution evidence.
-
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit e81b4f52a4a786153b7503c80e6ed674fc65f73b
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:13 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:13 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:13 +0700
 
     chore(test): add bug evidence capture script
-
-    Produces one clean screenshot per FR-01 defect for attaching to GitHub 
-    Issues. Kept separate from the failure screenshots the suite itself emits, 
+    
+    Produces one clean screenshot per FR-01 defect for attaching to GitHub
+    Issues. Kept separate from the failure screenshots the suite itself emits,
     because test-results/ is wiped on every run and is not committed.
-
-    For the two API-level defects the raw JSON is rendered onto the page
-    before the screenshot, so the duplicate rows and the echoed plaintext
-    password are legible in the image rather than buried in a console log.
-
+    
+    For the two API-level defects the raw JSON is rendered onto the page before
+    the screenshot, so the duplicate rows and the echoed plaintext password are
+    legible in the image rather than buried in a console log.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 0ecb2f7da740a5fedd2318753a1e73aa0566feb7
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:13 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:13 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:13 +0700
 
     chore(test): add multi-browser runner and report attribution verifier
-
-    run-multibrowser.mjs runs a spec once per engine so every browser run has
-    a standalone HTML report, as HW04 requires, and writes a combined
-    pass/fail summary. It always exits 0 because the @bug tests fail by
-    design.
-
-    verify-report-banner.mjs opens each report in a real browser and proves
-    the attribution is on screen. The Playwright HTML reporter stores its data
-    as a base64 zip inside index.html, so grepping the file finds nothing even
-    when the rendered page shows the string. It saves a screenshot per report
-    as evidence.
-
+    
+    run-multibrowser.mjs runs a spec once per engine so every browser run has a
+    standalone HTML report, as HW04 requires, and writes a combined pass/fail
+    summary. It always exits 0 because the @bug tests fail by design.
+    
+    verify-report-banner.mjs opens each report in a real browser and proves the
+    attribution is on screen. The Playwright HTML reporter stores its data as a
+    base64 zip inside index.html, so grepping the file finds nothing even when
+    the rendered page shows the string. It saves a screenshot per report as
+    evidence.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 234db109fedcee19846055e7392807126aa66222
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:13 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:13 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:13 +0700
 
     test(fr01): add 27 data-driven registration test cases
-
-    Cover the password rule matrix, happy paths, required fields, e-mail
-    format, duplicate e-mail, XSS and SQL injection payloads, the
-    255-character name boundary, credential storage and UI/spec consistency.
-    Six distinct assertion patterns are used and tagged P1 to P6 at each call
-    site.
-
-    Eight tests are tagged @bug and fail on purpose. They assert the behaviour 
-    the specification and the on-screen hint promise, not the behaviour the
-    code currently implements, and each red maps one-to-one onto a defect
-    recorded in 23127195/bug-report/BUG_REPORT.md. Relaxing them to green
-    would turn the defects into the specification.
-
+    
+    Cover the password rule matrix, happy paths, required fields, e-mail format,
+    duplicate e-mail, XSS and SQL injection payloads, the 255-character name
+    boundary, credential storage and UI/spec consistency. Six distinct assertion
+    patterns are used and tagged P1 to P6 at each call site.
+    
+    Eight tests are tagged @bug and fail on purpose. They assert the behaviour
+    the specification and the on-screen hint promise, not the behaviour the code
+    currently implements, and each red maps one-to-one onto a defect recorded in
+    23127195/bug-report/BUG_REPORT.md. Relaxing them to green would turn the
+    defects into the specification.
+    
     Three review fixes are folded in:
-
-    - Account existence is proved by asking the back end how many user rows
-    hold
-     the address, not by asserting the URL is unchanged. The latter matches
-     instantly, because right after the click the SPA has not resolved its
-    POST
-     yet, so four e-mail-format tests went green against a SUT that in fact
-     accepts malformed addresses.
-    - Required-field cases assert the HTML5 constraint validity state instead
-    of
-     the browser validation message, which differs across engines and locales.
-    - API assertions wait for the SPA navigation first, otherwise they can
-    outrun
-     the registration request. That race surfaced only on WebKit.
-
+    
+    - Account existence is proved by asking the back end how many user rows hold
+      the address, not by asserting the URL is unchanged. The latter matches
+      instantly, because right after the click the SPA has not resolved its POST
+      yet, so four e-mail-format tests went green against a SUT that in fact
+      accepts malformed addresses.
+    - Required-field cases assert the HTML5 constraint validity state instead of
+      the browser validation message, which differs across engines and locales.
+    - API assertions wait for the SPA navigation first, otherwise they can outrun
+      the registration request. That race surfaced only on WebKit.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit ce0449dc0e05ab9df63e9900e7d1173c4e8c9686
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:12 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:12 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:12 +0700
 
     test(fr01): add RegisterPage page object
-
-    Anchor each field on the wrapper div that carries its label text instead
-    of using getByLabel(). Register.jsx renders labels without htmlFor and
-    inputs without id or name, so the accessible-name association never exists
-    and getByLabel resolves to zero elements on all three fields.
-
-    Waiting on the rendered heading in goto() replaces the fixed sleep the
-    first draft used: Vite serves the shell immediately but React mounts a
-    tick later, and on a cold start it first has to bundle dependencies.
-
+    
+    Anchor each field on the wrapper div that carries its label text instead of
+    using getByLabel(). Register.jsx renders labels without htmlFor and inputs
+    without id or name, so the accessible-name association never exists and
+    getByLabel resolves to zero elements on all three fields.
+    
+    Waiting on the rendered heading in goto() replaces the fixed sleep the first
+    draft used: Vite serves the shell immediately but React mounts a tick later,
+    and on a cold start it first has to bundle dependencies.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 33488ecbb4536f9b793bd3036f3ca909472bcdce
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:12 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:12 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:12 +0700
 
     test(fr01): add external test data for account registration
-
-    HW04 forbids inline test-data arrays, so the registration matrix lives in 
-    tests/data/: a CSV holding the ten password-rule rows, and a JSON file 
-    holding the happy paths, required-field cases, malformed e-mails, security 
+    
+    HW04 forbids inline test-data arrays, so the registration matrix lives in
+    tests/data/: a CSV holding the ten password-rule rows, and a JSON file
+    holding the happy paths, required-field cases, malformed e-mails, security
     payloads and the 255-character boundary case.
-
-    The admin password is taken from the seed script database.js, not from 
-    setup_guide.md. The guide documents "admin123" while the seed actually 
+    
+    The admin password is taken from the seed script database.js, not from
+    setup_guide.md. The guide documents "admin123" while the seed actually
     writes "Admin123!", a documentation defect logged as BUG-06.
-
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 8b4f3860f236f282a46b08423f65ab5a055814b0
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 12:21:12 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 12:21:12 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 12:21:12 +0700
 
     chore(test): scaffold Playwright suite for HW04
-
-    Add the test runner config with three browser projects (Chromium, Firefox, 
-    WebKit) and a webServer block that boots the backend and frontend-web of
-    the SUT, so the suite runs from a clean clone with no manual setup.
-
-    The HTML reporter title and metadata both carry "Run by: 23127195"
-    together with an ISO timestamp, which HW04 requires as non-fabricable
-    execution evidence. Shared constants live in tests/utils/env.js rather
-    than on the config object, so the exported config only holds keys
-    Playwright understands.
-
+    
+    Add the test runner config with three browser projects (Chromium, Firefox,
+    WebKit) and a webServer block that boots the backend and frontend-web of the
+    SUT, so the suite runs from a clean clone with no manual setup.
+    
+    The HTML reporter title and metadata both carry "Run by: 23127195" together
+    with an ISO timestamp, which HW04 requires as non-fabricable execution
+    evidence. Shared constants live in tests/utils/env.js rather than on the
+    config object, so the exported config only holds keys Playwright understands.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
 commit 756fa65fbc162a77863a0db12f97c4283a8d6618
-Author: hungtmh <hungtmh20002@gmail.com>
-Date:   2026-08-15 11:24:55 +0700
+Author:     hungtmh <hungtmh20002@gmail.com>
+AuthorDate: 2026-08-15 11:24:55 +0700
+Commit:     hungtmh <hungtmh20002@gmail.com>
+CommitDate: 2026-08-15 11:24:55 +0700
 
     chore: import EShop SUT source into HW04 repo
-
-    Vendor the eshop-sut project (cloned from ttbhanh/eshop-sut) as plain 
-    files instead of a nested git repo, so the full source is browsable in 
-    this repository. Add .gitignore that keeps playwright-report/ tracked, as
-    HW04 requires the multi-browser HTML reports in the public repo.
-
+    
+    Vendor the eshop-sut project (cloned from ttbhanh/eshop-sut) as plain
+    files instead of a nested git repo, so the full source is browsable in
+    this repository. Add .gitignore that keeps playwright-report/ tracked,
+    as HW04 requires the multi-browser HTML reports in the public repo.
+    
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
