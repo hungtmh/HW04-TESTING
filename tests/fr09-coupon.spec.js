@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { CheckoutPage } = require('./pages/CheckoutPage');
 const { readCsv, readJson } = require('./utils/csv');
+const { stampRun } = require('./utils/env');
 const {
   createCustomer,
   applyCoupon,
@@ -39,7 +40,8 @@ test.describe('FR-09 | Mã giảm giá', () => {
   let customer;
   let checkout;
 
-  test.beforeEach(async ({ page, request }) => {
+  test.beforeEach(async ({ page, request }, testInfo) => {
+    stampRun(testInfo, 'FR-09 Mã giảm giá');
     customer = await createCustomer(request, data.testUser);
     checkout = new CheckoutPage(page);
   });
@@ -122,6 +124,26 @@ test.describe('FR-09 | Mã giảm giá', () => {
         await expect(checkout.couponError).toContainText(c.expectedErrorFragment);
       });
     }
+  });
+
+  // ==========================================================================
+  // GROUP 2b - Ràng buộc đầu vào ở tầng API : TC-19
+  // ==========================================================================
+  // Nhóm 2 chứng minh nút bị disable trên UI khi mã rỗng. Test này đi thẳng
+  // xuống API để chắc chắn máy chủ cũng tự bảo vệ: đặc tả 5.1 khai báo `code`
+  // là bắt buộc, nên một request thiếu hẳn trường này phải bị từ chối 400.
+  test(`${data.apiValidation.tc_id} - ${data.apiValidation.label}`, async ({ request }) => {
+    const c = data.apiValidation;
+    test.info().annotations.push({ type: 'test-case', description: c.tc_id });
+
+    const { status, body } = await applyCoupon(request, {
+      total_amount: c.totalAmount,
+      user_id: customer.id,
+    });
+
+    // [P4] Back-end API assertion: đúng status và đúng lý do lỗi.
+    expect(status).toBe(400);
+    expect(body?.error ?? '').toContain(c.expectedErrorFragment);
   });
 
   // ==========================================================================

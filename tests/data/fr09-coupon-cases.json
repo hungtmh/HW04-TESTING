@@ -76,5 +76,12 @@
     "label": "Bat bien: giam gia khong am va thanh tien khong vuot tong goc",
     "codes": ["SAVE10", "BIGBUY", "VIP100"],
     "totalAmount": 800000
+  },
+
+  "apiValidation": {
+    "tc_id": "TC-19",
+    "label": "Thieu ma giam gia phai bi API tu choi 400",
+    "totalAmount": 500000,
+    "expectedErrorFragment": "nhập mã"
   }
 }
