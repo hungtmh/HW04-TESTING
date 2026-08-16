@@ -105,6 +105,24 @@ async function listProducts(request) {
   return res.json();
 }
 
+/**
+ * Raw product search that does NOT assert the response is ok. FR-05 needs to
+ * inspect the failure path too: a `%` or `'` in the term makes the SUT return a
+ * 500 with a raw SQL error, so a helper that pre-asserts 200 (like listProducts)
+ * cannot express those tests. Returns the status, content-type and parsed/raw
+ * body for the caller to assert on.
+ */
+async function searchProducts(request, term) {
+  const res = await request.get(`${API_BASE_URL}/api/products`, {
+    params: term === undefined ? {} : { search: term },
+  });
+  const contentType = res.headers()['content-type'] || '';
+  const text = await res.text();
+  let json = null;
+  try { json = JSON.parse(text); } catch { /* HTML error body */ }
+  return { status: res.status(), contentType, text, json };
+}
+
 module.exports = {
   createCustomer,
   loginAdmin,
@@ -117,4 +135,5 @@ module.exports = {
   deleteCategory,
   createProduct,
   listProducts,
+  searchProducts,
 };

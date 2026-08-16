@@ -15,4 +15,15 @@ function uniqueEmail(prefix = 'auto') {
   return `${prefix}.${stamp}.${rand}@eshop-test.local`;
 }
 
-module.exports = { STUDENT_ID, WEB_BASE_URL, API_BASE_URL, uniqueEmail };
+/**
+ * Stamps run provenance onto a single test's report entry. The HTML report
+ * header already carries "Run by: 23127195"; adding it per test makes every
+ * individual result traceable to this student and feature inside the exported
+ * report, which is what the assignment's anti-cheat rule actually inspects.
+ */
+function stampRun(testInfo, feature) {
+  testInfo.annotations.push({ type: 'run-by', description: STUDENT_ID });
+  if (feature) testInfo.annotations.push({ type: 'feature', description: feature });
+}
+
+module.exports = { STUDENT_ID, WEB_BASE_URL, API_BASE_URL, uniqueEmail, stampRun };

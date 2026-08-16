@@ -1,0 +1,8 @@
+tc_id,query,expected_count,must_contain,note
+TC-01,,5,,Không có từ khoá thì trả về toàn bộ 5 sản phẩm đã seed
+TC-02,iPhone,1,iPhone 15 Pro Max,Khớp chính xác một sản phẩm theo tên
+TC-03,iphone,1,iPhone 15 Pro Max,LIKE của SQLite không phân biệt hoa thường với ASCII
+TC-04,Pro,3,,Khớp cụm con trong nhiều tên: iPhone 15 Pro Max / MacBook Pro M3 / AirPods Pro 2
+TC-05,Galaxy,1,Samsung Galaxy S24 Ultra,Khớp một phần tên
+TC-06,Bàn phím,1,Bàn phím cơ Keychron Q1,Từ khoá tiếng Việt có dấu vẫn khớp đúng
+TC-07,zzz-khong-ton-tai,0,,Từ khoá không khớp sản phẩm nào thì trả mảng rỗng

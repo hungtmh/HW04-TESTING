@@ -1,0 +1,55 @@
+{
+  "seededProducts": [
+    "iPhone 15 Pro Max",
+    "Samsung Galaxy S24 Ultra",
+    "MacBook Pro M3",
+    "Tai nghe AirPods Pro 2",
+    "Bàn phím cơ Keychron Q1"
+  ],
+  "seededCount": 5,
+
+  "uiSearch": {
+    "match":   { "query": "iPhone", "expectedCount": 1, "expectedName": "iPhone 15 Pro Max" },
+    "multi":   { "query": "Pro",    "expectedCount": 3 },
+    "noMatch": { "query": "zzz-khong-ton-tai", "expectedCount": 0 }
+  },
+
+  "invariantTerms": ["Pro", "iPhone", "Galaxy", "Tai nghe"],
+
+  "xssPayloads": [
+    {
+      "tc_id": "TC-12",
+      "label": "img onerror",
+      "payload": "<img src=x onerror=\"window.__xss_fr05=1\">",
+      "flag": "__xss_fr05",
+      "bug": "BUG-16 - Reflected XSS trong ô tìm kiếm (dangerouslySetInnerHTML)"
+    },
+    {
+      "tc_id": "TC-13",
+      "label": "img onerror - phai duoc escape",
+      "payload": "<img src=x onerror=\"window.__xss_fr05b=1\">",
+      "flag": "__xss_fr05b",
+      "bug": "BUG-16 - Payload người dùng nhập không được escape trước khi chèn vào DOM"
+    }
+  ],
+
+  "sqlInjection": [
+    {
+      "tc_id": "TC-14",
+      "label": "OR 1=1 tautology",
+      "query": "' OR '1'='1",
+      "expectedCount": 0,
+      "note": "Không có sản phẩm nào tên như vậy, nên đúng ra phải trả 0. SUT trả về toàn bộ 5.",
+      "bug": "BUG-17 - SQL injection: chuỗi nối trực tiếp vào câu LIKE, tautology bỏ qua bộ lọc"
+    },
+    {
+      "tc_id": "TC-15",
+      "label": "ky tu dac biet lam vo cau truy van",
+      "query": "%'",
+      "note": "Ký tự đặc biệt phải được coi là văn bản tìm kiếm, không được làm hỏng câu SQL.",
+      "bug": "BUG-18 - Lỗi 500 và rò rỉ thông báo lỗi SQL thô ra client"
+    }
+  ],
+
+  "sqlErrorLeakMarker": "SQLITE_ERROR"
+}
