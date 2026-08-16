@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { AdminCategoryPage } = require('./pages/AdminCategoryPage');
 const { readCsv, readJson } = require('./utils/csv');
+const { stampRun } = require('./utils/env');
 const {
   createCustomer,
   loginAdmin,
@@ -75,7 +76,8 @@ test.describe('FR-14 | Quản lý danh mục', () => {
   let cachedAdminToken = null;
   let adminToken;
 
-  test.beforeEach(async ({ request }) => {
+  test.beforeEach(async ({ request }, testInfo) => {
+    stampRun(testInfo, 'FR-14 Quản lý danh mục');
     if (!cachedAdminToken) cachedAdminToken = await loginAdmin(request, data.adminAccount);
     adminToken = cachedAdminToken;
   });
