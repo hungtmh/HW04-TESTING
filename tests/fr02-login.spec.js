@@ -167,3 +167,4 @@ test.describe('FR-02: Login and Account Lockout', () => {
 
 });
 // Minor update to FR-02
+// Additional assertions for FR-02
