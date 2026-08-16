@@ -1,8 +1,9 @@
 // Shared constants for the HW04 suite. Kept out of playwright.config.js so the
 // config object only ever contains keys Playwright understands.
-const STUDENT_ID = '23127195';
+const STUDENT_ID = '23127259';
 const WEB_BASE_URL = process.env.WEB_BASE_URL || 'http://localhost:5173';
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
+const ADMIN_BASE_URL = process.env.ADMIN_BASE_URL || 'http://localhost:5174';
 
 /**
  * Every registration test must use an address no earlier test has consumed,
@@ -26,4 +27,4 @@ function stampRun(testInfo, feature) {
   if (feature) testInfo.annotations.push({ type: 'feature', description: feature });
 }
 
-module.exports = { STUDENT_ID, WEB_BASE_URL, API_BASE_URL, uniqueEmail, stampRun };
+module.exports = { STUDENT_ID, WEB_BASE_URL, API_BASE_URL, ADMIN_BASE_URL, uniqueEmail, stampRun };

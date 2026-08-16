@@ -11,7 +11,7 @@ const { defineConfig, devices } = require('@playwright/test');
  * HTML reporter renders in the report header.
  */
 
-const STUDENT_ID = '23127195';
+const STUDENT_ID = '23127259';
 const RUN_STARTED_AT = new Date().toISOString();
 
 // Each browser run writes its own HTML report so that every one of the
@@ -21,6 +21,7 @@ const REPORT_DIR = process.env.PW_REPORT_DIR || 'playwright-report/combined';
 
 const WEB_BASE_URL = process.env.WEB_BASE_URL || 'http://localhost:5173';
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
+const ADMIN_BASE_URL = process.env.ADMIN_BASE_URL || 'http://localhost:5174';
 
 module.exports = defineConfig({
   testDir: './tests',
@@ -39,8 +40,8 @@ module.exports = defineConfig({
     'Student ID': STUDENT_ID,
     'Executed at (ISO)': RUN_STARTED_AT,
     'Homework': 'HW04 - Automation Testing',
-    'SUT': 'EShop (eshop-sut) - frontend-web + backend API',
-    'Features under test': 'FR-01 Account registration',
+    'SUT': 'EShop (eshop-sut) - frontend-web + frontend-admin + backend API',
+    'Features under test': 'FR-02 Login, FR-07 Cart, FR-16 CSV Import',
   },
 
   reporter: [
@@ -82,6 +83,14 @@ module.exports = defineConfig({
     {
       command: 'npm --prefix eshop-sut/frontend-web run dev',
       url: WEB_BASE_URL,
+      reuseExistingServer: true,
+      timeout: 120_000,
+      stdout: 'ignore',
+      stderr: 'pipe',
+    },
+    {
+      command: 'npm --prefix eshop-sut/frontend-admin run dev',
+      url: ADMIN_BASE_URL,
       reuseExistingServer: true,
       timeout: 120_000,
       stdout: 'ignore',

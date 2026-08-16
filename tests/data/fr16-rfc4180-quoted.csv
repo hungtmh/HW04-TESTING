@@ -1,0 +1,3 @@
+name,price,description,imageUrl,category_id
+"Product, with comma",100000,"Desc, also comma",,1
+Product without quote,50000,Desc,,2

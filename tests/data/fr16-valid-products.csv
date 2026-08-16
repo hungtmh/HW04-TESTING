@@ -1,0 +1,4 @@
+name,price,description,imageUrl,category_id
+Imported Product 1,150000,Desc 1,http://img.com/1.png,1
+Imported Product 2,200000,Desc 2,http://img.com/2.png,2
+Imported Product 3,300000,Desc 3,http://img.com/3.png,1
