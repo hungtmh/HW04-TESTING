@@ -1,6 +1,6 @@
 # AI Critique
 
-**Sinh viên:** 23127195 — **HW04 Automation Testing** — 2026-08-15
+**Sinh viên:** 23127195 — **HW04 Automation Testing** — 2026-08-16
 
 ---
 

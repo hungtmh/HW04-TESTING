@@ -7,8 +7,10 @@
 | **SUT** | EShop (`eshop-sut`) — frontend-web `:5173`, frontend-admin `:5174`, backend API `:3000` |
 | **Repository** | https://github.com/hungtmh/HW04-TESTING |
 | **Công cụ** | Playwright 1.62.1 (Test Runner + HTML Reporter), Node.js 22.20.0 |
-| **Trình duyệt** | Chromium / Firefox (Gecko) / WebKit — 3 engine độc lập |
-| **Ngày thực hiện** | 2026-08-15 |
+| **Trình duyệt** | Chromium / Firefox (Gecko) / WebKit, 3 engine độc lập |
+| **Video demo (Task 2)** | https://youtu.be/AR1Z5RGFVRs |
+| **Video Agent Skill** | https://youtu.be/Vxf9-R9AC54 |
+| **Ngày thực hiện** | 2026-08-16 |
 
 ---
 
@@ -19,7 +21,7 @@ Ba feature giữ nguyên từ HW02, mỗi Pool một feature:
 | Pool | Mã | Tên feature | Giao diện kiểm thử | Test case |
 |---|---|---|---|---|
 | A | **FR-01** | Đăng ký tài khoản | frontend-web `/register` | 27 |
-| B | **FR-09** | Mã giảm giá | frontend-web `/checkout` | 18 |
+| B | **FR-09** | Mã giảm giá | frontend-web `/checkout` | 19 |
 | C | **FR-14** | Quản lý danh mục (CRUD) | frontend-admin `:5174` | 17 |
 
 ---
@@ -29,19 +31,20 @@ Ba feature giữ nguyên từ HW02, mỗi Pool một feature:
 | Feature | Test case | Browser | Pass/browser | Fail/browser | Tổng lượt chạy |
 |---|---|---|---|---|---|
 | FR-01 | 27 | 3 | 19 | 8 | 81 |
-| FR-09 | 18 | 3 | 12 | 6 | 54 |
+| FR-09 | 19 | 3 | 13 | 6 | 57 |
 | FR-14 | 17 | 3 | 8 | 9 | 51 |
-| **Tổng** | **62** | **9 browser run** | **117** | **69** | **186** |
+| **Tổng** | **63** | **9 browser run** | **120** | **69** | **189** |
 
-Kết quả **giống hệt nhau trên cả 3 engine** ở cả ba feature — không có test nào
-flaky sau các lần sửa mô tả ở mục 6.
+Ba engine cho kết quả trùng khớp hoàn toàn ở cả ba feature. Không còn test nào
+flaky sau các lần sửa mô tả ở mục 6 (kể cả race chỉ lộ trên Firefox, xem R-12).
 
-**69 lượt fail = 23 test gắn `@bug` × 3 browser.** Đã kiểm chứng bằng script
-quét toàn bộ `results.json`: không có bất kỳ test nào fail ngoài nhóm `@bug`.
+69 lượt fail chính là 23 test gắn `@bug` chạy trên 3 browser. Tôi kiểm chứng lại
+bằng một script quét toàn bộ `results.json`: không có bất kỳ test nào fail ngoài
+nhóm `@bug`.
 
 ```
-Total executions : 186
-Passed           : 117
+Total executions : 189
+Passed           : 120
 Failed           : 69
 OK - moi test fail deu duoc gan @bug (khong co fail ngoai y muon)
 ```
@@ -112,8 +115,9 @@ tests/
 │   ├── env.js                             ← hằng số + sinh email duy nhất
 │   └── api.js                             ← helper backend dùng chung
 ├── fr01-register.spec.js                  (27 test case)
-├── fr09-coupon.spec.js                    (18 test case)
-└── fr14-category.spec.js                  (17 test case)
+├── fr09-coupon.spec.js                    (19 test case)
+├── fr14-category.spec.js                  (17 test case)
+└── fr05-search.spec.js                    (buổi demo Agent Skill, không tính điểm feature)
 scripts/
 ├── run-multibrowser.mjs                   ← 1 spec × 3 engine → 3 report
 ├── verify-report-banner.mjs               ← chứng minh "Run by: 23127195"
@@ -154,12 +158,13 @@ file CSV và ba file JSON cung cấp toàn bộ giá trị đầu vào; spec đ�
 | 8 — Lưu trữ | TC-26 | Mật khẩu plaintext | **fail → BUG-04** |
 | 9 — Nhất quán UI | TC-27 | Hint UI vs luật thực thi | **fail → BUG-01** |
 
-### 5.2 FR-09 — Mã giảm giá (18 test case, 12 pass / 6 fail)
+### 5.2 FR-09 — Mã giảm giá (19 test case, 13 pass / 6 fail)
 
 | Nhóm | Mã | Nội dung | Kết quả |
 |---|---|---|---|
 | 1 — Tính toán (CSV) | TC-01 → TC-10 | Ma trận 10 case: percent/fixed, biên ngưỡng đơn tối thiểu | 6 pass, **TC-01/02/03 fail → BUG-07**, **TC-07 fail → BUG-08** |
 | 2 — Mã không hợp lệ | TC-11 → TC-13 | Không tồn tại, hết hạn, chỉ khoảng trắng (nút bị disable) | 3 pass |
+| 2b — Ràng buộc API | TC-19 | Gọi thẳng API thiếu trường `code` phải bị từ chối 400 | pass |
 | 3 — Chuẩn hoá mã | TC-14 | Nhập chữ thường `bigbuy` → UI tự viết hoa | pass |
 | 4 — Giới hạn lượt dùng | TC-15 | Dùng hết quota `VIP100` thì bị từ chối | pass |
 | 5 — Lách giới hạn | TC-16 | Bỏ `user_id` để lách quota | **fail → BUG-09** |
@@ -202,8 +207,9 @@ trị này.
 
 ## 6. Human review — AI đã sai/thiếu ở đâu
 
-Đây là phần trọng tâm. **11 phát hiện**, trong đó **4 lỗi khiến test cho kết quả
-sai lệch** (xanh giả hoặc đỏ sai lý do).
+Đây là phần trọng tâm. **13 phát hiện**, trong đó **5 lỗi khiến test cho kết quả
+sai lệch** (xanh giả hoặc đỏ sai lý do). Hai phát hiện cuối (R-12, R-13) đến từ
+đợt hoàn thiện sau khi đã đóng gói xong ba feature.
 
 ### R-01 — Selector `getByLabel()` trả về 0 phần tử (FR-01)
 
@@ -323,6 +329,42 @@ thay vì dựa vào dữ liệu seed.
 **Bài học:** test âm tính phải dọn dẹp ở **cả hai** nhánh — nếu không, mỗi lần
 bắt được bug là một lần làm bẩn môi trường cho test sau.
 
+### R-12 — Race dựng lại bảng, chỉ thua trên Firefox (FR-14) ⚠️
+
+Khi bổ sung một chút cho bộ test rồi chạy lại toàn bộ ma trận, TC-02 ("tạo danh
+mục tên tiếng Việt có dấu") đột nhiên fail **chỉ trên Firefox** (7/10 thay vì
+8/9), còn Chromium và WebKit vẫn xanh. Đây là một test *phải pass*, nên con số
+lệch đó là tín hiệu phải truy tới cùng.
+
+Nguyên nhân: sau khi bấm "Thêm mới", test đọc ngay bảng danh mục trên UI, nhưng
+React chưa kịp render dòng vừa thêm. Chromium/WebKit tình cờ render đủ nhanh nên
+qua được, Firefox chậm hơn một nhịp nên đọc phải bảng cũ. Bản thân dữ liệu ở
+backend đã đúng (assertion `after == before + 1` vẫn pass), chỉ có phần đọc UI bị
+đọc hớ.
+
+**Đã sửa:** chờ dòng mới thật sự hiện ra (`await expect(rowByName(name)).toBeVisible()`)
+rồi mới đọc bảng, thay vì đọc ngay. Sau khi sửa, Firefox chạy lại nhiều lần đều
+ổn định 8/9 như hai engine kia.
+
+**Bài học:** giống R-05, một race trong *bộ test* chỉ chịu lộ mặt khi chạy đủ ba
+engine; nếu chỉ chạy một trình duyệt thì đã tưởng là ổn.
+
+### R-13 — Chọn sai payload XSS tạo ra âm tính giả (buổi demo FR-05) ⚠️
+
+Khi dùng Agent Skill trên FR-05 để kiểm tra XSS ở ô tìm kiếm, bản nháp đầu định
+thử payload `<svg onload=...>`. Probe cho thấy payload này **không chạy**: trình
+duyệt không kích hoạt `onload` của `<svg>` khi node được chèn bằng `innerHTML`.
+Nếu tin vào kết quả đó, test sẽ **xanh** và kết luận "không có XSS", trong khi lỗ
+hổng vẫn nằm nguyên tại chỗ.
+
+Chỉ payload `<img src=x onerror=...>` mới thực sự thực thi khi chèn qua
+`innerHTML`. Đổi sang payload này, cờ `window.__xss` bật lên đúng như dự đoán và
+lỗ hổng phản chiếu (reflected XSS) hiện ra rõ ràng.
+
+**Bài học:** với test bảo mật, một cái xanh không chứng minh phần mềm an toàn —
+nó có thể chỉ chứng minh mình đã chọn nhầm cách tấn công. Phải probe để biết
+payload nào thật sự chạy trước khi tin vào kết quả.
+
 ---
 
 ## 7. Bug phát hiện được
@@ -363,20 +405,25 @@ thay vì `total × discount_value / 100`.
 | Tiêu chí | Yêu cầu | Đạt được |
 |---|---|---|
 | Số feature | 3 (mỗi Pool 1) | **3** ✅ |
-| Test case / feature | ≥ 12 | **27 / 18 / 17** ✅ |
+| Test case / feature | ≥ 12 | **27 / 19 / 17** ✅ |
 | Dữ liệu tách file riêng | `.csv` hoặc `.json` | **3 CSV + 3 JSON** ✅ |
 | Assertion pattern | ≥ 3 | **6** ✅ |
 | Browser | ≥ 3 | **3 engine** ✅ |
 | Browser run | ≥ 9 | **9** ✅ |
 | HTML report có `Run by:` + ISO | bắt buộc | **9/9 report**, có ảnh kiểm chứng ✅ |
-| Review & phân tích lỗi AI | bắt buộc | **11 phát hiện R-01 → R-11** ✅ |
+| Review & phân tích lỗi AI | bắt buộc | **13 phát hiện R-01 → R-13** ✅ |
 | Bug report + GitHub Issues | nếu có | **15 bug**, 15 issue kèm ảnh ✅ |
+| Commit chạm file `.spec.js` | ≥ 8 | đạt (xem `evidence/git-commit-log-files.txt`) |
 
 ---
 
-## 9. Việc còn lại
+## 9. Video và Agent Skill
 
-- [ ] Quay video demo ≥ 5 phút (tiếng Việt, có `whoami` + `hostname`)
-- [ ] Xây Agent Skill + video demo skill
-- [ ] Xuất bản PDF cho báo cáo chính, AI Audit, AI Critique
-- [ ] Đóng gói `23127195_HW04_AI_Automation_<điểm>.zip`
+- **Video demo (Task 2):** https://youtu.be/AR1Z5RGFVRs — đi qua kiến trúc bộ
+  test, chạy 3 engine, mở HTML report có `Run by: 23127195`, và tái hiện tay
+  BUG-07 trên giao diện.
+- **Video Agent Skill:** https://youtu.be/Vxf9-R9AC54 — dùng skill
+  `eshop-automation` trên một feature mới (FR-05) và để nó tự tìm ra reflected
+  XSS + SQL injection ở ô tìm kiếm. Xem thêm `../agent-skill/AGENT_SKILL.md`.
+
+Cả hai video đều để Unlisted, nói tiếng Việt và quay kèm face-cam.

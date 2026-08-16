@@ -1,7 +1,7 @@
 # AI Audit Report — HW04 Automation Testing
 
 **Sinh viên:** 23127195
-**Ngày:** 2026-08-15
+**Ngày:** 2026-08-15 → 2026-08-16
 **Múi giờ:** UTC+7 (giờ ghi bên dưới là giờ local; các mốc ISO trong HTML report là UTC)
 
 > **Declaration:** *I use AI tools for the following tasks.*
@@ -345,14 +345,50 @@ test. Sau đó sinh ảnh bằng chứng cho 9 bug mới và cập nhật toàn 
 
 ---
 
+### #21 — 16/08, 12:30 | Demo Agent Skill trên FR-05
+
+**Prompt:**
+> "Dùng skill eshop-automation để tự động hoá FR-05 — tìm kiếm sản phẩm […]
+> đặc biệt kiểm tra kỹ ô tìm kiếm có lỗ hổng XSS không."
+
+**AI output:** Theo đúng 8 bước của skill: probe DOM + hành vi thật, rồi sinh
+`tests/fr05-search.spec.js` (21 test case), `SearchPage.js`, hai file dữ liệu và
+helper `searchProducts`. Chạy 3 engine ra 16/5 đồng nhất; 5 test đỏ là XSS phản
+chiếu và SQL injection thật ở ô tìm kiếm.
+
+**Human review:** Bước probe cứu một bàn thua trông thấy. Payload thử đầu tiên là
+`<svg onload=...>` nhưng probe cho thấy nó **không chạy** khi chèn qua
+`innerHTML`, tức test sẽ xanh giả và bỏ sót lỗ hổng. Đổi sang
+`<img src=x onerror=...>` mới lộ ra XSS (ghi thành R-13). Ba bug này để riêng ở
+phần Agent Skill, không trộn vào 15 bug của ba feature chính. FR-05 chỉ là demo,
+không tính vào feature nộp.
+
+---
+
+### #22 — 16/08, 13:10 | Hoàn thiện và đóng gói, phát hiện thêm một race
+
+**Prompt:**
+> "hoàn thiện bài làm toàn diện […] verify lại hết […] chỉ cần nén file rồi nộp"
+
+**AI output:** Bổ sung TC-19 cho FR-09 (gọi thẳng API thiếu `code` phải 400),
+gắn provenance `Run by: 23127195` vào từng test, cập nhật lại toàn bộ số liệu,
+chèn hai link video, và dựng gói nộp.
+
+**Human review:** Khi chạy lại ma trận, FR-14 tụt xuống 7/10 **chỉ trên Firefox**.
+Truy tới cùng: TC-02 đọc bảng UI trước khi React kịp render dòng mới (R-12). Đã
+sửa bằng cách chờ dòng mới hiện ra rồi mới đọc; Firefox chạy lại nhiều lần đều ổn
+định 8/9. Đúng tinh thần R-08: một con số lệch là đủ để phải truy, không bỏ qua.
+
+---
+
 ## Tổng kết mức độ can thiệp của con người
 
 | Hạng mục | Số lượng |
 |---|---|
-| Lỗi trong sản phẩm do AI sinh, được người phát hiện và sửa | **11** (R-01 → R-11) |
-| Trong đó lỗi khiến test **xanh giả** (nguy hiểm nhất) | **2** (R-03, R-07) |
+| Lỗi trong sản phẩm do AI sinh, được người phát hiện và sửa | **13** (R-01 → R-13) |
+| Trong đó lỗi khiến test **xanh giả** (nguy hiểm nhất) | **3** (R-03, R-07, R-13) |
 | Trong đó lỗi khiến test **đỏ vì sai lý do** | **3** (R-08, R-10, R-11) |
-| Trong đó lỗi chỉ lộ khi chạy đa trình duyệt | **1** (R-05) |
+| Trong đó lỗi chỉ lộ khi chạy đa trình duyệt | **2** (R-05, R-12) |
 | Trong đó **bản vá lại tạo ra lỗi mới** | **1** (R-09) |
 | Trong đó sai lầm **lặp lại** dù đã sửa một lần | **1** (R-10 lặp lại R-01) |
 | Quyết định thiết kế do người đưa ra, không phải AI | Đặt kỳ vọng theo đặc tả thay vì theo code; chấp nhận 23 test đỏ thay vì nới cho xanh; dùng assertion **bất biến** cho TC-18 của FR-09 |
