@@ -114,7 +114,15 @@ test.describe('FR-14 | Quản lý danh mục', () => {
         await admin.addCategory(name);
 
         const after = await listCategories(request);
-        const uiNames = row.expected === 'accepted' ? await admin.visibleCategoryNames() : null;
+        let uiNames = null;
+        if (row.expected === 'accepted') {
+          // Wait for the SPA to actually render the new row before reading the
+          // table. Without this a slow re-render (seen on Firefox) lets the read
+          // race the create and the row is missed - a false red on a test that
+          // is meant to pass. Ask the DOM to settle; never sleep.
+          await expect(admin.rowByName(name)).toBeVisible();
+          uiNames = await admin.visibleCategoryNames();
+        }
 
         // Always restore the table, including when the assertion below is about
         // to fail: a refused-but-actually-created row would otherwise persist.
