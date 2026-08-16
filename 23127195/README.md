@@ -77,6 +77,9 @@ Cả 9 HTML report đều hiển thị `Run by: 23127195` kèm ISO timestamp ở
 ├── ai/AI_Audit_Report.md              ← nhật ký tương tác với AI
 ├── ai/AI_Critique.md                  ← 299 từ
 ├── bug-report/BUG_REPORT.md           ← 15 bug, đầy đủ steps to reproduce
+├── video-script/                      ← kịch bản quay 2 video (lời thoại + phân cảnh)
+│   ├── VIDEO_1_DEMO_SCRIPT.md
+│   └── VIDEO_2_AGENT_SKILL_SCRIPT.md
 └── evidence/
     ├── report-screenshots/            ← 9 ảnh HTML report (chứng minh "Run by:")
     ├── bugs/                          ← ảnh bằng chứng từng bug
