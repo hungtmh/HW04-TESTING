@@ -1,0 +1,10 @@
+{
+  "adminAccount": {
+    "email": "admin@eshop.com",
+    "password": "Admin123!"
+  },
+  "messages": {
+    "noData": "Không có dữ liệu để import",
+    "successPrefix": "Import hoàn tất:"
+  }
+}

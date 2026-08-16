@@ -1,0 +1,10 @@
+{
+  "adminAccount": {
+    "email": "admin@eshop.com",
+    "password": "Admin123!"
+  },
+  "messages": {
+    "invalidCredentials": "Đăng nhập thất bại. Vui lòng kiểm tra lại.",
+    "lockedAccount": "Tài khoản đã bị khóa. Vui lòng thử lại sau."
+  }
+}

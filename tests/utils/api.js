@@ -123,6 +123,30 @@ async function searchProducts(request, term) {
   return { status: res.status(), contentType, text, json };
 }
 
+async function addToCart(request, token, product) {
+  const res = await request.post(`${API_BASE_URL}/api/cart`, {
+    headers: authHeaders(token),
+    data: product,
+  });
+  return { status: res.status(), body: await res.json().catch(() => null) };
+}
+
+async function importProductsCSV(request, token, productsArray) {
+  const res = await request.post(`${API_BASE_URL}/api/admin/import-products`, {
+    headers: authHeaders(token),
+    data: { products: productsArray },
+  });
+  return { status: res.status(), body: await res.json().catch(() => null) };
+}
+
+// Resets login attempts to unblock the account
+async function resetLoginAttempts(request, email, password) {
+  // Use a hack to run sql on backend if there is an endpoint, or just wait for timeout.
+  // Actually, we can't easily reset login attempts via existing API without raw DB access.
+  // The tests will need to just use different emails if locked, or wait, or we can use admin to delete and recreate.
+  // We'll handle it in test logic (create fresh user for each test that needs one).
+}
+
 module.exports = {
   createCustomer,
   loginAdmin,
@@ -136,4 +160,6 @@ module.exports = {
   createProduct,
   listProducts,
   searchProducts,
+  addToCart,
+  importProductsCSV,
 };

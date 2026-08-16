@@ -1,0 +1,4 @@
+name,price,description,imageUrl,category_id
+Imported Bad 1,-50000,Negative Price,,1
+,100000,No name,,1
+Imported Bad 3,0,Zero Price,,2
