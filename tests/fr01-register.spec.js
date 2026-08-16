@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { RegisterPage } = require('./pages/RegisterPage');
 const { readCsv, readJson } = require('./utils/csv');
-const { API_BASE_URL, uniqueEmail } = require('./utils/env');
+const { API_BASE_URL, uniqueEmail, stampRun } = require('./utils/env');
 
 /**
  * ============================================================================
@@ -87,7 +87,8 @@ async function countAccountsByEmail(request, email) {
 test.describe('FR-01 | Đăng ký tài khoản', () => {
   let registerPage;
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page }, testInfo) => {
+    stampRun(testInfo, 'FR-01 Đăng ký tài khoản');
     registerPage = new RegisterPage(page);
     await registerPage.goto();
   });
