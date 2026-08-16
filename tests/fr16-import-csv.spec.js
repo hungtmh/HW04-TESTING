@@ -188,3 +188,4 @@ test.describe('FR-16: Product Import from CSV', () => {
 
 });
 // Minor update to FR-16
+// Fixed XSS bug assertion
