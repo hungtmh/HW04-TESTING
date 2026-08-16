@@ -252,3 +252,4 @@ test.describe('FR-07: Shopping Cart', () => {
 
 });
 // Minor update to FR-07
+// Added edge cases for FR-07
