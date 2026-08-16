@@ -21,7 +21,7 @@
     "metadata": {
       "Run by": "23127195",
       "Student ID": "23127195",
-      "Executed at (ISO)": "2026-08-15T15:25:27.554Z",
+      "Executed at (ISO)": "2026-08-16T06:04:48.135Z",
       "Homework": "HW04 - Automation Testing",
       "SUT": "EShop (eshop-sut) - frontend-web + backend API",
       "Features under test": "FR-01 Account registration",
@@ -36,7 +36,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:25:27.554Z",
+          "Executed at (ISO)": "2026-08-16T06:04:48.135Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -58,7 +58,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:25:27.554Z",
+          "Executed at (ISO)": "2026-08-16T06:04:48.135Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -80,7 +80,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:25:27.554Z",
+          "Executed at (ISO)": "2026-08-16T06:04:48.135Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -107,7 +107,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr09-coupon-chromium",
-          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T15:25:27.554Z"
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-16T06:04:48.135Z"
         }
       ],
       [
@@ -140,9 +140,69 @@
         {
           "title": "FR-09 | Mã giảm giá",
           "file": "fr09-coupon.spec.js",
-          "line": 38,
+          "line": 39,
           "column": 6,
           "specs": [
+            {
+              "title": "TC-19 - Thieu ma giam gia phai bi API tu choi 400",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-09 Mã giảm giá"
+                    },
+                    {
+                      "type": "test-case",
+                      "description": "TC-19"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 102,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-16T06:05:07.624Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-19"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4763e1e72eb39689c491-7a158cae75e2f0f0e8f5",
+              "file": "fr09-coupon.spec.js",
+              "line": 135,
+              "column": 3
+            },
             {
               "title": "TC-14 - Nhap ma chu thuong van ap dung duoc (UI tu viet hoa)",
               "ok": true,
@@ -151,6 +211,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-09 Mã giảm giá"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-14"
@@ -164,13 +232,21 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 311,
+                      "duration": 413,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:25:44.958Z",
+                      "startTime": "2026-08-16T06:05:07.736Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-14"
@@ -184,7 +260,7 @@
               ],
               "id": "4763e1e72eb39689c491-c07379f29ed47df72d09",
               "file": "fr09-coupon.spec.js",
-              "line": 130,
+              "line": 152,
               "column": 3
             },
             {
@@ -195,6 +271,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-09 Mã giảm giá"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-15"
@@ -208,13 +292,21 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 344,
+                      "duration": 424,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:25:45.276Z",
+                      "startTime": "2026-08-16T06:05:08.157Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-15"
@@ -228,7 +320,7 @@
               ],
               "id": "4763e1e72eb39689c491-5c8b9687ec50fb07c48d",
               "file": "fr09-coupon.spec.js",
-              "line": 147,
+              "line": 169,
               "column": 3
             },
             {
@@ -241,6 +333,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-09 Mã giảm giá"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-16"
@@ -258,32 +358,40 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 127,
+                      "duration": 174,
                       "error": {
                         "message": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
-                        "stack": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:204:7",
+                        "stack": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:226:7",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                           "column": 7,
-                          "line": 204
+                          "line": 226
                         },
-                        "snippet": "  202 |       withoutId.status,\n  203 |       'omitting user_id must not bypass the per-user usage limit',\n> 204 |     ).toBe(400);\n      |       ^\n  205 |   });\n  206 |\n  207 |   // =========================================================================="
+                        "snippet": "\u001b[0m \u001b[90m 224 |\u001b[39m       withoutId\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m\n \u001b[90m 225 |\u001b[39m       \u001b[32m'omitting user_id must not bypass the per-user usage limit'\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 226 |\u001b[39m     )\u001b[33m.\u001b[39mtoBe(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 227 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 228 |\u001b[39m\n \u001b[90m 229 |\u001b[39m   \u001b[90m// ==========================================================================\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                             "column": 7,
-                            "line": 204
+                            "line": 226
                           },
-                          "message": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  202 |       withoutId.status,\n  203 |       'omitting user_id must not bypass the per-user usage limit',\n> 204 |     ).toBe(400);\n      |       ^\n  205 |   });\n  206 |\n  207 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:204:7"
+                          "message": "Error: omitting user_id must not bypass the per-user usage limit\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  224 |       withoutId.status,\n  225 |       'omitting user_id must not bypass the per-user usage limit',\n> 226 |     ).toBe(400);\n      |       ^\n  227 |   });\n  228 |\n  229 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:226:7"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:25:45.626Z",
+                      "startTime": "2026-08-16T06:05:08.591Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-16"
@@ -313,7 +421,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                         "column": 7,
-                        "line": 204
+                        "line": 226
                       }
                     }
                   ],
@@ -322,7 +430,7 @@
               ],
               "id": "4763e1e72eb39689c491-a9a2693e1aaa0259d655",
               "file": "fr09-coupon.spec.js",
-              "line": 176,
+              "line": 198,
               "column": 3
             },
             {
@@ -333,6 +441,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-09 Mã giảm giá"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-17"
@@ -346,13 +462,21 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 684,
+                      "duration": 858,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:25:46.171Z",
+                      "startTime": "2026-08-16T06:05:09.321Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-17"
@@ -366,7 +490,7 @@
               ],
               "id": "4763e1e72eb39689c491-50fda57444e324fe9614",
               "file": "fr09-coupon.spec.js",
-              "line": 210,
+              "line": 232,
               "column": 3
             },
             {
@@ -379,6 +503,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-09 Mã giảm giá"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-18"
@@ -396,32 +528,40 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 145,
+                      "duration": 178,
                       "error": {
                         "message": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
-                        "stack": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:255:80",
+                        "stack": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:277:80",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                           "column": 80,
-                          "line": 255
+                          "line": 277
                         },
-                        "snippet": "  253 |     // exceed the original amount. Both hold for the fixed coupons and both\n  254 |     // break for the percent coupon.\n> 255 |     expect(violations, `coupon invariants violated: ${violations.join('; ')}`).toEqual([]);\n      |                                                                                ^\n  256 |   });\n  257 | });\n  258 |"
+                        "snippet": "\u001b[0m \u001b[90m 275 |\u001b[39m     \u001b[90m// exceed the original amount. Both hold for the fixed coupons and both\u001b[39m\n \u001b[90m 276 |\u001b[39m     \u001b[90m// break for the percent coupon.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 277 |\u001b[39m     expect(violations\u001b[33m,\u001b[39m \u001b[32m`coupon invariants violated: ${violations.join('; ')}`\u001b[39m)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 278 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 279 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 280 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                             "column": 80,
-                            "line": 255
+                            "line": 277
                           },
-                          "message": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  253 |     // exceed the original amount. Both hold for the fixed coupons and both\n  254 |     // break for the percent coupon.\n> 255 |     expect(violations, `coupon invariants violated: ${violations.join('; ')}`).toEqual([]);\n      |                                                                                ^\n  256 |   });\n  257 | });\n  258 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:255:80"
+                          "message": "Error: coupon invariants violated: SAVE10: discount -7200000 < 0; SAVE10: final 8000000 > total 800000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"SAVE10: discount -7200000 < 0\",\u001b[39m\n\u001b[31m+   \"SAVE10: final 8000000 > total 800000\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  275 |     // exceed the original amount. Both hold for the fixed coupons and both\n  276 |     // break for the percent coupon.\n> 277 |     expect(violations, `coupon invariants violated: ${violations.join('; ')}`).toEqual([]);\n      |                                                                                ^\n  278 |   });\n  279 | });\n  280 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:277:80"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:25:46.939Z",
+                      "startTime": "2026-08-16T06:05:10.291Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-18"
@@ -451,7 +591,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                         "column": 80,
-                        "line": 255
+                        "line": 277
                       }
                     }
                   ],
@@ -460,7 +600,7 @@
               ],
               "id": "4763e1e72eb39689c491-5a054e8b764013ddcdeb",
               "file": "fr09-coupon.spec.js",
-              "line": 231,
+              "line": 253,
               "column": 3
             }
           ],
@@ -468,7 +608,7 @@
             {
               "title": "Nhóm 1 - Ma trận tính toán giảm giá (CSV)",
               "file": "fr09-coupon.spec.js",
-              "line": 50,
+              "line": 52,
               "column": 8,
               "specs": [
                 {
@@ -481,6 +621,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-01"
@@ -506,32 +654,40 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 437,
+                          "duration": 571,
                           "error": {
                             "message": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m",
-                            "stack": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13",
+                            "stack": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:87:13",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                               "column": 13,
-                              "line": 85
+                              "line": 87
                             },
-                            "snippet": "  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,"
+                            "snippet": "\u001b[0m \u001b[90m 85 |\u001b[39m             \u001b[36mawait\u001b[39m checkout\u001b[33m.\u001b[39mreadAmount(\u001b[32m'discount'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 86 |\u001b[39m             \u001b[32m`discount shown for ${row.code} on ${row.total_amount}`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m           )\u001b[33m.\u001b[39mtoBe(\u001b[33mNumber\u001b[39m(row\u001b[33m.\u001b[39mexpected_discount))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m           expect(\n \u001b[90m 89 |\u001b[39m             \u001b[36mawait\u001b[39m checkout\u001b[33m.\u001b[39mreadAmount(\u001b[32m'final'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m             \u001b[32m`payable shown for ${row.code} on ${row.total_amount}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                                 "column": 13,
-                                "line": 85
+                                "line": 87
                               },
-                              "message": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m\n\n  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13"
+                              "message": "Error: discount shown for SAVE10 on 500000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50000\u001b[39m\nReceived: \u001b[31m-4500000\u001b[39m\n\n  85 |             await checkout.readAmount('discount'),\n  86 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 87 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  88 |           expect(\n  89 |             await checkout.readAmount('final'),\n  90 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:87:13"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:27.963Z",
+                          "startTime": "2026-08-16T06:04:48.624Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-01"
@@ -569,7 +725,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                             "column": 13,
-                            "line": 85
+                            "line": 87
                           }
                         }
                       ],
@@ -578,7 +734,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-430f6662d73398cd0501",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -591,6 +747,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-02"
@@ -616,32 +780,40 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 478,
+                          "duration": 559,
                           "error": {
                             "message": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m",
-                            "stack": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13",
+                            "stack": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:87:13",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                               "column": 13,
-                              "line": 85
+                              "line": 87
                             },
-                            "snippet": "  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,"
+                            "snippet": "\u001b[0m \u001b[90m 85 |\u001b[39m             \u001b[36mawait\u001b[39m checkout\u001b[33m.\u001b[39mreadAmount(\u001b[32m'discount'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 86 |\u001b[39m             \u001b[32m`discount shown for ${row.code} on ${row.total_amount}`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m           )\u001b[33m.\u001b[39mtoBe(\u001b[33mNumber\u001b[39m(row\u001b[33m.\u001b[39mexpected_discount))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m           expect(\n \u001b[90m 89 |\u001b[39m             \u001b[36mawait\u001b[39m checkout\u001b[33m.\u001b[39mreadAmount(\u001b[32m'final'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m             \u001b[32m`payable shown for ${row.code} on ${row.total_amount}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                                 "column": 13,
-                                "line": 85
+                                "line": 87
                               },
-                              "message": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m\n\n  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13"
+                              "message": "Error: discount shown for SAVE10 on 1000000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100000\u001b[39m\nReceived: \u001b[31m-9000000\u001b[39m\n\n  85 |             await checkout.readAmount('discount'),\n  86 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 87 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  88 |           expect(\n  89 |             await checkout.readAmount('final'),\n  90 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:87:13"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:28.902Z",
+                          "startTime": "2026-08-16T06:04:49.861Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-02"
@@ -679,7 +851,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                             "column": 13,
-                            "line": 85
+                            "line": 87
                           }
                         }
                       ],
@@ -688,7 +860,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-b32e034b52c3564ee91e",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -701,6 +873,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-03"
@@ -726,32 +906,40 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 443,
+                          "duration": 611,
                           "error": {
                             "message": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m",
-                            "stack": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13",
+                            "stack": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:87:13",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                               "column": 13,
-                              "line": 85
+                              "line": 87
                             },
-                            "snippet": "  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,"
+                            "snippet": "\u001b[0m \u001b[90m 85 |\u001b[39m             \u001b[36mawait\u001b[39m checkout\u001b[33m.\u001b[39mreadAmount(\u001b[32m'discount'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 86 |\u001b[39m             \u001b[32m`discount shown for ${row.code} on ${row.total_amount}`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m           )\u001b[33m.\u001b[39mtoBe(\u001b[33mNumber\u001b[39m(row\u001b[33m.\u001b[39mexpected_discount))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m           expect(\n \u001b[90m 89 |\u001b[39m             \u001b[36mawait\u001b[39m checkout\u001b[33m.\u001b[39mreadAmount(\u001b[32m'final'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m             \u001b[32m`payable shown for ${row.code} on ${row.total_amount}`\u001b[39m\u001b[33m,\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                                 "column": 13,
-                                "line": 85
+                                "line": 87
                               },
-                              "message": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m\n\n  83 |             await checkout.readAmount('discount'),\n  84 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 85 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  86 |           expect(\n  87 |             await checkout.readAmount('final'),\n  88 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:85:13"
+                              "message": "Error: discount shown for SAVE10 on 400000\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40000\u001b[39m\nReceived: \u001b[31m-3600000\u001b[39m\n\n  85 |             await checkout.readAmount('discount'),\n  86 |             `discount shown for ${row.code} on ${row.total_amount}`,\n> 87 |           ).toBe(Number(row.expected_discount));\n     |             ^\n  88 |           expect(\n  89 |             await checkout.readAmount('final'),\n  90 |             `payable shown for ${row.code} on ${row.total_amount}`,\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:87:13"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:29.886Z",
+                          "startTime": "2026-08-16T06:04:51.074Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-03"
@@ -789,7 +977,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                             "column": 13,
-                            "line": 85
+                            "line": 87
                           }
                         }
                       ],
@@ -798,7 +986,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-b4f922d237f9d1669f83",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -809,6 +997,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-04"
@@ -830,13 +1026,21 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 455,
+                          "duration": 558,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:30.835Z",
+                          "startTime": "2026-08-16T06:04:52.339Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-04"
@@ -858,7 +1062,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-ae56a5346618ff3ec844",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -869,6 +1073,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-05"
@@ -890,13 +1102,21 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 337,
+                          "duration": 477,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:31.381Z",
+                          "startTime": "2026-08-16T06:04:53.010Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-05"
@@ -918,7 +1138,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-8d9af126e0fea338a3f0",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -929,6 +1149,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-06"
@@ -950,13 +1178,21 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 311,
+                          "duration": 481,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:31.725Z",
+                          "startTime": "2026-08-16T06:04:53.500Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-06"
@@ -978,7 +1214,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-424b089b7df1d7a00a0e",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -991,6 +1227,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-07"
@@ -1016,32 +1260,40 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 10368,
+                          "duration": 10460,
                           "error": {
                             "message": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n",
-                            "stack": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:79:13",
+                            "stack": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:81:13",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                               "column": 13,
-                              "line": 79
+                              "line": 81
                             },
-                            "snippet": "  77 |             checkout.couponSuccess,\n  78 |             `${row.code} on ${row.total_amount} must be accepted`,\n> 79 |           ).toBeVisible();\n     |             ^\n  80 |\n  81 |           // [P3] numeric assertions on the money actually rendered\n  82 |           expect("
+                            "snippet": "\u001b[0m \u001b[90m 79 |\u001b[39m             checkout\u001b[33m.\u001b[39mcouponSuccess\u001b[33m,\u001b[39m\n \u001b[90m 80 |\u001b[39m             \u001b[32m`${row.code} on ${row.total_amount} must be accepted`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m           )\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 82 |\u001b[39m\n \u001b[90m 83 |\u001b[39m           \u001b[90m// [P3] numeric assertions on the money actually rendered\u001b[39m\n \u001b[90m 84 |\u001b[39m           expect(\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                                 "column": 13,
-                                "line": 79
+                                "line": 81
                               },
-                              "message": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n\n\n  77 |             checkout.couponSuccess,\n  78 |             `${row.code} on ${row.total_amount} must be accepted`,\n> 79 |           ).toBeVisible();\n     |             ^\n  80 |\n  81 |           // [P3] numeric assertions on the money actually rendered\n  82 |           expect(\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:79:13"
+                              "message": "Error: BIGBUY on 500000 must be accepted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.bg-gray-50').locator('div.text-green-700')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - BIGBUY on 500000 must be accepted with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.bg-gray-50').locator('div.text-green-700')\u001b[22m\n\n\n  79 |             checkout.couponSuccess,\n  80 |             `${row.code} on ${row.total_amount} must be accepted`,\n> 81 |           ).toBeVisible();\n     |             ^\n  82 |\n  83 |           // [P3] numeric assertions on the money actually rendered\n  84 |           expect(\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js:81:13"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:32.043Z",
+                          "startTime": "2026-08-16T06:04:53.990Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-07"
@@ -1079,7 +1331,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr09-coupon.spec.js",
                             "column": 13,
-                            "line": 79
+                            "line": 81
                           }
                         }
                       ],
@@ -1088,7 +1340,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-8b6ae698caa482170c36",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -1099,6 +1351,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-08"
@@ -1120,13 +1380,21 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 414,
+                          "duration": 497,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:42.841Z",
+                          "startTime": "2026-08-16T06:05:04.985Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-08"
@@ -1148,7 +1416,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-0005e30173d744fa93b4",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -1159,6 +1427,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-09"
@@ -1180,13 +1456,21 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 322,
+                          "duration": 421,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:43.346Z",
+                          "startTime": "2026-08-16T06:05:05.592Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-09"
@@ -1208,7 +1492,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-2b8df63f65b9c8f09852",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 },
                 {
@@ -1219,6 +1503,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-10"
@@ -1240,13 +1532,21 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 328,
+                          "duration": 407,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:43.676Z",
+                          "startTime": "2026-08-16T06:05:06.023Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-10"
@@ -1268,7 +1568,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-ea63d8548906bb5686da",
                   "file": "fr09-coupon.spec.js",
-                  "line": 55,
+                  "line": 57,
                   "column": 7
                 }
               ]
@@ -1276,7 +1576,7 @@
             {
               "title": "Nhóm 2 - Mã không hợp lệ",
               "file": "fr09-coupon.spec.js",
-              "line": 103,
+              "line": 105,
               "column": 8,
               "specs": [
                 {
@@ -1287,6 +1587,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-11"
@@ -1300,13 +1608,21 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 324,
+                          "duration": 417,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:44.013Z",
+                          "startTime": "2026-08-16T06:05:06.440Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-11"
@@ -1320,7 +1636,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-fe495c7c8f13fb4fdc5d",
                   "file": "fr09-coupon.spec.js",
-                  "line": 105,
+                  "line": 107,
                   "column": 7
                 },
                 {
@@ -1331,6 +1647,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-12"
@@ -1344,13 +1668,21 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 325,
+                          "duration": 400,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:44.345Z",
+                          "startTime": "2026-08-16T06:05:06.867Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-12"
@@ -1364,7 +1696,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-952c214da1fb885aa215",
                   "file": "fr09-coupon.spec.js",
-                  "line": 105,
+                  "line": 107,
                   "column": 7
                 },
                 {
@@ -1375,6 +1707,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-09 Mã giảm giá"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-13"
@@ -1388,13 +1728,21 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 273,
+                          "duration": 339,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:25:44.677Z",
+                          "startTime": "2026-08-16T06:05:07.276Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-09 Mã giảm giá"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-13"
@@ -1408,7 +1756,7 @@
                   ],
                   "id": "4763e1e72eb39689c491-d5f00bedd9d3f7d5cf97",
                   "file": "fr09-coupon.spec.js",
-                  "line": 105,
+                  "line": 107,
                   "column": 7
                 }
               ]
@@ -1420,9 +1768,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-15T15:25:27.556Z",
-    "duration": 19623.715,
-    "expected": 12,
+    "startTime": "2026-08-16T06:04:48.139Z",
+    "duration": 22450.361,
+    "expected": 13,
     "skipped": 0,
     "unexpected": 6,
     "flaky": 0

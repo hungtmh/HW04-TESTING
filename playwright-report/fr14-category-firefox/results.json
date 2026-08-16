@@ -21,7 +21,7 @@
     "metadata": {
       "Run by": "23127195",
       "Student ID": "23127195",
-      "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+      "Executed at (ISO)": "2026-08-16T06:13:28.320Z",
       "Homework": "HW04 - Automation Testing",
       "SUT": "EShop (eshop-sut) - frontend-web + backend API",
       "Features under test": "FR-01 Account registration",
@@ -36,7 +36,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+          "Executed at (ISO)": "2026-08-16T06:13:28.320Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -58,7 +58,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+          "Executed at (ISO)": "2026-08-16T06:13:28.320Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -80,7 +80,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:27:47.873Z",
+          "Executed at (ISO)": "2026-08-16T06:13:28.320Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -107,7 +107,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr14-category-firefox",
-          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T15:27:47.873Z"
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-16T06:13:28.320Z"
         }
       ],
       [
@@ -140,7 +140,7 @@
         {
           "title": "FR-14 | Quản lý danh mục",
           "file": "fr14-category.spec.js",
-          "line": 70,
+          "line": 71,
           "column": 6,
           "specs": [
             {
@@ -151,6 +151,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-07"
@@ -164,13 +172,21 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3253,
+                      "duration": 3246,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:08.011Z",
+                      "startTime": "2026-08-16T06:13:48.987Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-07"
@@ -184,7 +200,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-59b0e951cbf69cc55464",
               "file": "fr14-category.spec.js",
-              "line": 141,
+              "line": 151,
               "column": 3
             },
             {
@@ -197,6 +213,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-08"
@@ -214,32 +238,40 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2647,
+                      "duration": 2711,
                       "error": {
                         "message": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m",
-                        "stack": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:195:7",
+                        "stack": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:205:7",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                           "column": 7,
-                          "line": 195
+                          "line": 205
                         },
-                        "snippet": "  193 |       actions.join(' | '),\n  194 |       `row actions offered by the UI: ${JSON.stringify(actions)}`,\n> 195 |     ).toMatch(new RegExp(c.expectedControlPattern));\n      |       ^\n  196 |   });\n  197 |\n  198 |   test(`${data.update.viaApi.tc_id} - ${data.update.viaApi.label}`, async ({ request }) => {"
+                        "snippet": "\u001b[0m \u001b[90m 203 |\u001b[39m       actions\u001b[33m.\u001b[39mjoin(\u001b[32m' | '\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 204 |\u001b[39m       \u001b[32m`row actions offered by the UI: ${JSON.stringify(actions)}`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 205 |\u001b[39m     )\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(c\u001b[33m.\u001b[39mexpectedControlPattern))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 206 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m\n \u001b[90m 208 |\u001b[39m   test(\u001b[32m`${data.update.viaApi.tc_id} - ${data.update.viaApi.label}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 7,
-                            "line": 195
+                            "line": 205
                           },
-                          "message": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m\n\n  193 |       actions.join(' | '),\n  194 |       `row actions offered by the UI: ${JSON.stringify(actions)}`,\n> 195 |     ).toMatch(new RegExp(c.expectedControlPattern));\n      |       ^\n  196 |   });\n  197 |\n  198 |   test(`${data.update.viaApi.tc_id} - ${data.update.viaApi.label}`, async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:195:7"
+                          "message": "Error: row actions offered by the UI: [\"Xóa\"]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Sửa|Edit|Cập nhật/\u001b[39m\nReceived string:  \u001b[31m\"Xóa\"\u001b[39m\n\n  203 |       actions.join(' | '),\n  204 |       `row actions offered by the UI: ${JSON.stringify(actions)}`,\n> 205 |     ).toMatch(new RegExp(c.expectedControlPattern));\n      |       ^\n  206 |   });\n  207 |\n  208 |   test(`${data.update.viaApi.tc_id} - ${data.update.viaApi.label}`, async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:205:7"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:11.610Z",
+                      "startTime": "2026-08-16T06:13:52.627Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-08"
@@ -269,7 +301,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                         "column": 7,
-                        "line": 195
+                        "line": 205
                       }
                     }
                   ],
@@ -278,7 +310,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-5cb1d29b027b0dbe5f11",
               "file": "fr14-category.spec.js",
-              "line": 171,
+              "line": 181,
               "column": 3
             },
             {
@@ -289,6 +321,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-09"
@@ -302,13 +342,21 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 56,
+                      "duration": 65,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:14.971Z",
+                      "startTime": "2026-08-16T06:13:56.166Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-09"
@@ -322,7 +370,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-32a12c901b2167a972a4",
               "file": "fr14-category.spec.js",
-              "line": 198,
+              "line": 208,
               "column": 3
             },
             {
@@ -335,6 +383,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-10"
@@ -352,32 +408,40 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 22,
+                      "duration": 26,
                       "error": {
                         "message": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
-                        "stack": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:234:7",
+                        "stack": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:244:7",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                           "column": 7,
-                          "line": 234
+                          "line": 244
                         },
-                        "snippet": "  232 |       res.status,\n  233 |       `PUT /api/categories/${c.id} on a non-existent row must not return success`,\n> 234 |     ).toBe(c.expectedStatus);\n      |       ^\n  235 |   });\n  236 |\n  237 |   // =========================================================================="
+                        "snippet": "\u001b[0m \u001b[90m 242 |\u001b[39m       res\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m\n \u001b[90m 243 |\u001b[39m       \u001b[32m`PUT /api/categories/${c.id} on a non-existent row must not return success`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 244 |\u001b[39m     )\u001b[33m.\u001b[39mtoBe(c\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 245 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 246 |\u001b[39m\n \u001b[90m 247 |\u001b[39m   \u001b[90m// ==========================================================================\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 7,
-                            "line": 234
+                            "line": 244
                           },
-                          "message": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  232 |       res.status,\n  233 |       `PUT /api/categories/${c.id} on a non-existent row must not return success`,\n> 234 |     ).toBe(c.expectedStatus);\n      |       ^\n  235 |   });\n  236 |\n  237 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:234:7"
+                          "message": "Error: PUT /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  242 |       res.status,\n  243 |       `PUT /api/categories/${c.id} on a non-existent row must not return success`,\n> 244 |     ).toBe(c.expectedStatus);\n      |       ^\n  245 |   });\n  246 |\n  247 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:244:7"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:15.058Z",
+                      "startTime": "2026-08-16T06:13:56.261Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-10"
@@ -402,7 +466,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                         "column": 7,
-                        "line": 234
+                        "line": 244
                       }
                     }
                   ],
@@ -411,7 +475,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-2e7346c200734855d58d",
               "file": "fr14-category.spec.js",
-              "line": 221,
+              "line": 231,
               "column": 3
             },
             {
@@ -422,6 +486,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-11"
@@ -435,13 +507,21 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3296,
+                      "duration": 3319,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:15.457Z",
+                      "startTime": "2026-08-16T06:13:56.707Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-11"
@@ -455,7 +535,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-b0de8a805718e1542644",
               "file": "fr14-category.spec.js",
-              "line": 240,
+              "line": 250,
               "column": 3
             },
             {
@@ -468,6 +548,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-12"
@@ -485,32 +573,40 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 23,
+                      "duration": 26,
                       "error": {
                         "message": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
-                        "stack": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:275:7",
+                        "stack": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:285:7",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                           "column": 7,
-                          "line": 275
+                          "line": 285
                         },
-                        "snippet": "  273 |       res.status,\n  274 |       `DELETE /api/categories/${c.id} on a non-existent row must not return success`,\n> 275 |     ).toBe(c.expectedStatus);\n      |       ^\n  276 |   });\n  277 |\n  278 |   test(`${data.delete.withProducts.tc_id} - ${data.delete.withProducts.label} @bug`, async ({ request }) => {"
+                        "snippet": "\u001b[0m \u001b[90m 283 |\u001b[39m       res\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m\n \u001b[90m 284 |\u001b[39m       \u001b[32m`DELETE /api/categories/${c.id} on a non-existent row must not return success`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 285 |\u001b[39m     )\u001b[33m.\u001b[39mtoBe(c\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 286 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 287 |\u001b[39m\n \u001b[90m 288 |\u001b[39m   test(\u001b[32m`${data.delete.withProducts.tc_id} - ${data.delete.withProducts.label} @bug`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 7,
-                            "line": 275
+                            "line": 285
                           },
-                          "message": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  273 |       res.status,\n  274 |       `DELETE /api/categories/${c.id} on a non-existent row must not return success`,\n> 275 |     ).toBe(c.expectedStatus);\n      |       ^\n  276 |   });\n  277 |\n  278 |   test(`${data.delete.withProducts.tc_id} - ${data.delete.withProducts.label} @bug`, async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:275:7"
+                          "message": "Error: DELETE /api/categories/999999 on a non-existent row must not return success\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  283 |       res.status,\n  284 |       `DELETE /api/categories/${c.id} on a non-existent row must not return success`,\n> 285 |     ).toBe(c.expectedStatus);\n      |       ^\n  286 |   });\n  287 |\n  288 |   test(`${data.delete.withProducts.tc_id} - ${data.delete.withProducts.label} @bug`, async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:285:7"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:19.118Z",
+                      "startTime": "2026-08-16T06:14:00.442Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-12"
@@ -535,7 +631,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                         "column": 7,
-                        "line": 275
+                        "line": 285
                       }
                     }
                   ],
@@ -544,7 +640,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-950cb043a7f8ad86c0ac",
               "file": "fr14-category.spec.js",
-              "line": 263,
+              "line": 273,
               "column": 3
             },
             {
@@ -557,6 +653,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-13"
@@ -574,32 +678,40 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 80,
+                      "duration": 87,
                       "error": {
                         "message": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m",
-                        "stack": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:310:7",
+                        "stack": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:320:7",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                           "column": 7,
-                          "line": 310
+                          "line": 320
                         },
-                        "snippet": "  308 |       { status: res.status, orphanedProducts: orphans.length },\n  309 |       'deleting a category in use must be refused and must not orphan products',\n> 310 |     ).toMatchObject({ status: c.expectedStatus, orphanedProducts: 0 });\n      |       ^\n  311 |   });\n  312 |\n  313 |   // =========================================================================="
+                        "snippet": "\u001b[0m \u001b[90m 318 |\u001b[39m       { status\u001b[33m:\u001b[39m res\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m orphanedProducts\u001b[33m:\u001b[39m orphans\u001b[33m.\u001b[39mlength }\u001b[33m,\u001b[39m\n \u001b[90m 319 |\u001b[39m       \u001b[32m'deleting a category in use must be refused and must not orphan products'\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 320 |\u001b[39m     )\u001b[33m.\u001b[39mtoMatchObject({ status\u001b[33m:\u001b[39m c\u001b[33m.\u001b[39mexpectedStatus\u001b[33m,\u001b[39m orphanedProducts\u001b[33m:\u001b[39m \u001b[35m0\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 321 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 322 |\u001b[39m\n \u001b[90m 323 |\u001b[39m   \u001b[90m// ==========================================================================\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 7,
-                            "line": 310
+                            "line": 320
                           },
-                          "message": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  308 |       { status: res.status, orphanedProducts: orphans.length },\n  309 |       'deleting a category in use must be refused and must not orphan products',\n> 310 |     ).toMatchObject({ status: c.expectedStatus, orphanedProducts: 0 });\n      |       ^\n  311 |   });\n  312 |\n  313 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:310:7"
+                          "message": "Error: deleting a category in use must be refused and must not orphan products\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"orphanedProducts\": 0,\u001b[39m\n\u001b[32m-   \"status\": 409,\u001b[39m\n\u001b[31m+   \"orphanedProducts\": 1,\u001b[39m\n\u001b[31m+   \"status\": 200,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  318 |       { status: res.status, orphanedProducts: orphans.length },\n  319 |       'deleting a category in use must be refused and must not orphan products',\n> 320 |     ).toMatchObject({ status: c.expectedStatus, orphanedProducts: 0 });\n      |       ^\n  321 |   });\n  322 |\n  323 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:320:7"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:19.853Z",
+                      "startTime": "2026-08-16T06:14:01.253Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-13"
@@ -624,7 +736,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                         "column": 7,
-                        "line": 310
+                        "line": 320
                       }
                     }
                   ],
@@ -633,7 +745,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-99e2d7412ed8364996b4",
               "file": "fr14-category.spec.js",
-              "line": 278,
+              "line": 288,
               "column": 3
             },
             {
@@ -644,6 +756,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-14 Quản lý danh mục"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-17"
@@ -657,13 +777,21 @@
                       "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 45,
+                      "duration": 52,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:28:21.773Z",
+                      "startTime": "2026-08-16T06:14:03.435Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-17"
@@ -677,7 +805,7 @@
               ],
               "id": "5536b5a74a27a9a5813c-234007443ce245024967",
               "file": "fr14-category.spec.js",
-              "line": 355,
+              "line": 365,
               "column": 3
             }
           ],
@@ -685,7 +813,7 @@
             {
               "title": "Nhóm 1 - Tạo danh mục trên giao diện (CSV)",
               "file": "fr14-category.spec.js",
-              "line": 86,
+              "line": 88,
               "column": 8,
               "specs": [
                 {
@@ -696,6 +824,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-01"
@@ -717,13 +853,21 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 3372,
+                          "duration": 3445,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:27:48.261Z",
+                          "startTime": "2026-08-16T06:13:28.763Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-01"
@@ -745,7 +889,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-d00872564f277ae8f4f0",
                   "file": "fr14-category.spec.js",
-                  "line": 91,
+                  "line": 93,
                   "column": 7
                 },
                 {
@@ -756,6 +900,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-02"
@@ -777,13 +929,21 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2756,
+                          "duration": 2734,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:27:52.002Z",
+                          "startTime": "2026-08-16T06:13:32.613Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-02"
@@ -805,7 +965,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-b353fcdec9ae9e0f6e9a",
                   "file": "fr14-category.spec.js",
-                  "line": 91,
+                  "line": 93,
                   "column": 7
                 },
                 {
@@ -816,6 +976,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-03"
@@ -837,13 +1005,21 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2718,
+                          "duration": 2787,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:27:54.769Z",
+                          "startTime": "2026-08-16T06:13:35.356Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-03"
@@ -865,7 +1041,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-0324fc68db10eb71772a",
                   "file": "fr14-category.spec.js",
-                  "line": 91,
+                  "line": 93,
                   "column": 7
                 },
                 {
@@ -876,6 +1052,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-04"
@@ -897,13 +1081,21 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2702,
+                          "duration": 2744,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:27:57.500Z",
+                          "startTime": "2026-08-16T06:13:38.152Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-04"
@@ -925,7 +1117,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-093f2744a720081efab3",
                   "file": "fr14-category.spec.js",
-                  "line": 91,
+                  "line": 93,
                   "column": 7
                 },
                 {
@@ -938,6 +1130,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-05"
@@ -965,30 +1165,38 @@
                           "status": "failed",
                           "duration": 2713,
                           "error": {
-                            "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m",
-                            "stack": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13",
+                            "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m4\u001b[39m",
+                            "stack": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m4\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:142:13",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                               "column": 13,
-                              "line": 132
+                              "line": 142
                             },
-                            "snippet": "  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }"
+                            "snippet": "\u001b[0m \u001b[90m 140 |\u001b[39m             after\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m\n \u001b[90m 141 |\u001b[39m             \u001b[32m`blank name \"${JSON.stringify(row.name)}\" must not create a category row`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           )\u001b[33m.\u001b[39mtoBe(before\u001b[33m.\u001b[39mlength)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m         }\n \u001b[90m 144 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m     }\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                                 "column": 13,
-                                "line": 132
+                                "line": 142
                               },
-                              "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n\n  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13"
+                              "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m4\u001b[39m\n\n  140 |             after.length,\n  141 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 142 |           ).toBe(before.length);\n      |             ^\n  143 |         }\n  144 |       });\n  145 |     }\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:142:13"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:28:00.209Z",
+                          "startTime": "2026-08-16T06:13:40.904Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-05"
@@ -1026,7 +1234,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 13,
-                            "line": 132
+                            "line": 142
                           }
                         }
                       ],
@@ -1035,7 +1243,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-cab3f9c4257999f8e890",
                   "file": "fr14-category.spec.js",
-                  "line": 91,
+                  "line": 93,
                   "column": 7
                 },
                 {
@@ -1048,6 +1256,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-06"
@@ -1073,32 +1289,40 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 3288,
+                          "duration": 3388,
                           "error": {
-                            "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m",
-                            "stack": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13",
+                            "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m4\u001b[39m",
+                            "stack": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m4\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:142:13",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                               "column": 13,
-                              "line": 132
+                              "line": 142
                             },
-                            "snippet": "  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }"
+                            "snippet": "\u001b[0m \u001b[90m 140 |\u001b[39m             after\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m\n \u001b[90m 141 |\u001b[39m             \u001b[32m`blank name \"${JSON.stringify(row.name)}\" must not create a category row`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           )\u001b[33m.\u001b[39mtoBe(before\u001b[33m.\u001b[39mlength)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m         }\n \u001b[90m 144 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m     }\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                                 "column": 13,
-                                "line": 132
+                                "line": 142
                               },
-                              "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n\n  130 |             after.length,\n  131 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 132 |           ).toBe(before.length);\n      |             ^\n  133 |         }\n  134 |       });\n  135 |     }\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:132:13"
+                              "message": "Error: blank name \"\"\"\" must not create a category row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m4\u001b[39m\n\n  140 |             after.length,\n  141 |             `blank name \"${JSON.stringify(row.name)}\" must not create a category row`,\n> 142 |           ).toBe(before.length);\n      |             ^\n  143 |         }\n  144 |       });\n  145 |     }\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:142:13"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:28:03.641Z",
+                          "startTime": "2026-08-16T06:13:44.408Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-06"
@@ -1136,7 +1360,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 13,
-                            "line": 132
+                            "line": 142
                           }
                         }
                       ],
@@ -1145,7 +1369,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-ce8d7fca1767c754d734",
                   "file": "fr14-category.spec.js",
-                  "line": 91,
+                  "line": 93,
                   "column": 7
                 }
               ]
@@ -1153,7 +1377,7 @@
             {
               "title": "Nhóm 5 - Phân quyền",
               "file": "fr14-category.spec.js",
-              "line": 316,
+              "line": 326,
               "column": 8,
               "specs": [
                 {
@@ -1166,6 +1390,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-14"
@@ -1183,32 +1415,40 @@
                           "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 89,
+                          "duration": 96,
                           "error": {
                             "message": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
-                            "stack": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11",
+                            "stack": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:360:11",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                               "column": 11,
-                              "line": 350
+                              "line": 360
                             },
-                            "snippet": "  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 358 |\u001b[39m           res\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m\n \u001b[90m 359 |\u001b[39m           \u001b[32m`a role=\"user\" account must not be able to ${c.action} a category`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 360 |\u001b[39m         )\u001b[33m.\u001b[39mtoBe(c\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 361 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 362 |\u001b[39m     }\n \u001b[90m 363 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                                 "column": 11,
-                                "line": 350
+                                "line": 360
                               },
-                              "message": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11"
+                              "message": "Error: a role=\"user\" account must not be able to create a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  358 |           res.status,\n  359 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 360 |         ).toBe(c.expectedStatus);\n      |           ^\n  361 |       });\n  362 |     }\n  363 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:360:11"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:28:20.321Z",
+                          "startTime": "2026-08-16T06:14:01.788Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-14"
@@ -1233,7 +1473,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 11,
-                            "line": 350
+                            "line": 360
                           }
                         }
                       ],
@@ -1242,7 +1482,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-ff802bbd3aebffa841b2",
                   "file": "fr14-category.spec.js",
-                  "line": 318,
+                  "line": 328,
                   "column": 7
                 },
                 {
@@ -1255,6 +1495,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-15"
@@ -1272,32 +1520,40 @@
                           "workerIndex": 7,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 95,
+                          "duration": 103,
                           "error": {
                             "message": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
-                            "stack": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11",
+                            "stack": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:360:11",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                               "column": 11,
-                              "line": 350
+                              "line": 360
                             },
-                            "snippet": "  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 358 |\u001b[39m           res\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m\n \u001b[90m 359 |\u001b[39m           \u001b[32m`a role=\"user\" account must not be able to ${c.action} a category`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 360 |\u001b[39m         )\u001b[33m.\u001b[39mtoBe(c\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 361 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 362 |\u001b[39m     }\n \u001b[90m 363 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                                 "column": 11,
-                                "line": 350
+                                "line": 360
                               },
-                              "message": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11"
+                              "message": "Error: a role=\"user\" account must not be able to update a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  358 |           res.status,\n  359 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 360 |         ).toBe(c.expectedStatus);\n      |           ^\n  361 |       });\n  362 |     }\n  363 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:360:11"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:28:20.804Z",
+                          "startTime": "2026-08-16T06:14:02.347Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-15"
@@ -1322,7 +1578,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 11,
-                            "line": 350
+                            "line": 360
                           }
                         }
                       ],
@@ -1331,7 +1587,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-63f9dade2db21719aaaa",
                   "file": "fr14-category.spec.js",
-                  "line": 318,
+                  "line": 328,
                   "column": 7
                 },
                 {
@@ -1344,6 +1600,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-14 Quản lý danh mục"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-16"
@@ -1361,32 +1625,40 @@
                           "workerIndex": 8,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 90,
+                          "duration": 97,
                           "error": {
                             "message": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
-                            "stack": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11",
+                            "stack": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:360:11",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                               "column": 11,
-                              "line": 350
+                              "line": 360
                             },
-                            "snippet": "  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 358 |\u001b[39m           res\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m\n \u001b[90m 359 |\u001b[39m           \u001b[32m`a role=\"user\" account must not be able to ${c.action} a category`\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 360 |\u001b[39m         )\u001b[33m.\u001b[39mtoBe(c\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 361 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 362 |\u001b[39m     }\n \u001b[90m 363 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                                 "column": 11,
-                                "line": 350
+                                "line": 360
                               },
-                              "message": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  348 |           res.status,\n  349 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 350 |         ).toBe(c.expectedStatus);\n      |           ^\n  351 |       });\n  352 |     }\n  353 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:350:11"
+                              "message": "Error: a role=\"user\" account must not be able to delete a category\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  358 |           res.status,\n  359 |           `a role=\"user\" account must not be able to ${c.action} a category`,\n> 360 |         ).toBe(c.expectedStatus);\n      |           ^\n  361 |       });\n  362 |     }\n  363 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js:360:11"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:28:21.283Z",
+                          "startTime": "2026-08-16T06:14:02.883Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-14 Quản lý danh mục"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-16"
@@ -1411,7 +1683,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr14-category.spec.js",
                             "column": 11,
-                            "line": 350
+                            "line": 360
                           }
                         }
                       ],
@@ -1420,7 +1692,7 @@
                   ],
                   "id": "5536b5a74a27a9a5813c-4eaf86187eea470ab3d8",
                   "file": "fr14-category.spec.js",
-                  "line": 318,
+                  "line": 328,
                   "column": 7
                 }
               ]
@@ -1432,8 +1704,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-15T15:27:47.875Z",
-    "duration": 33987.407,
+    "startTime": "2026-08-16T06:13:28.323Z",
+    "duration": 35207.953,
     "expected": 8,
     "skipped": 0,
     "unexpected": 9,

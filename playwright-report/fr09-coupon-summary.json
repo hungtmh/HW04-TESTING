@@ -2,38 +2,38 @@
   "feature": "fr09-coupon",
   "spec": "tests/fr09-coupon.spec.js",
   "runBy": "23127195",
-  "executedAtISO": "2026-08-15T15:27:29.061Z",
+  "executedAtISO": "2026-08-16T06:07:12.305Z",
   "browserRuns": 3,
   "perBrowser": [
     {
       "browser": "chromium",
       "reportDir": "playwright-report/fr09-coupon-chromium",
-      "passed": 12,
+      "passed": 13,
       "failed": 6,
       "skipped": 0,
-      "total": 18
+      "total": 19
     },
     {
       "browser": "firefox",
       "reportDir": "playwright-report/fr09-coupon-firefox",
-      "passed": 12,
+      "passed": 13,
       "failed": 6,
       "skipped": 0,
-      "total": 18
+      "total": 19
     },
     {
       "browser": "webkit",
       "reportDir": "playwright-report/fr09-coupon-webkit",
-      "passed": 12,
+      "passed": 13,
       "failed": 6,
       "skipped": 0,
-      "total": 18
+      "total": 19
     }
   ],
   "totals": {
-    "passed": 36,
+    "passed": 39,
     "failed": 18,
     "skipped": 0,
-    "total": 54
+    "total": 57
   }
 }

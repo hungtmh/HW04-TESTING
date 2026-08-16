@@ -21,7 +21,7 @@
     "metadata": {
       "Run by": "23127195",
       "Student ID": "23127195",
-      "Executed at (ISO)": "2026-08-15T15:18:34.509Z",
+      "Executed at (ISO)": "2026-08-16T06:01:22.851Z",
       "Homework": "HW04 - Automation Testing",
       "SUT": "EShop (eshop-sut) - frontend-web + backend API",
       "Features under test": "FR-01 Account registration",
@@ -36,7 +36,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:18:34.509Z",
+          "Executed at (ISO)": "2026-08-16T06:01:22.851Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -58,7 +58,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:18:34.509Z",
+          "Executed at (ISO)": "2026-08-16T06:01:22.851Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -80,7 +80,7 @@
         "metadata": {
           "Run by": "23127195",
           "Student ID": "23127195",
-          "Executed at (ISO)": "2026-08-15T15:18:34.509Z",
+          "Executed at (ISO)": "2026-08-16T06:01:22.851Z",
           "Homework": "HW04 - Automation Testing",
           "SUT": "EShop (eshop-sut) - frontend-web + backend API",
           "Features under test": "FR-01 Account registration",
@@ -107,7 +107,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr01-register-chromium",
-          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-15T15:18:34.509Z"
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-16T06:01:22.851Z"
         }
       ],
       [
@@ -154,6 +154,14 @@
                   "timeout": 45000,
                   "annotations": [
                     {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-01 Đăng ký tài khoản"
+                    },
+                    {
                       "type": "test-case",
                       "description": "TC-22"
                     },
@@ -170,32 +178,40 @@
                       "workerIndex": 5,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 424,
+                      "duration": 538,
                       "error": {
                         "message": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
-                        "stack": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:272:73",
+                        "stack": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:273:73",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                           "column": 73,
-                          "line": 272
+                          "line": 273
                         },
-                        "snippet": "  270 |     // must stay at 1. The SUT creates a second row -> BUG-03.\n  271 |     const rows = await countAccountsByEmail(request, email);\n> 272 |     expect(rows, 'a duplicate e-mail must not create a second account').toBe(1);\n      |                                                                         ^\n  273 |   });\n  274 |\n  275 |   // =========================================================================="
+                        "snippet": "\u001b[0m \u001b[90m 271 |\u001b[39m     \u001b[90m// must stay at 1. The SUT creates a second row -> BUG-03.\u001b[39m\n \u001b[90m 272 |\u001b[39m     \u001b[36mconst\u001b[39m rows \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m countAccountsByEmail(request\u001b[33m,\u001b[39m email)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 273 |\u001b[39m     expect(rows\u001b[33m,\u001b[39m \u001b[32m'a duplicate e-mail must not create a second account'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 274 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 275 |\u001b[39m\n \u001b[90m 276 |\u001b[39m   \u001b[90m// ==========================================================================\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 73,
-                            "line": 272
+                            "line": 273
                           },
-                          "message": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  270 |     // must stay at 1. The SUT creates a second row -> BUG-03.\n  271 |     const rows = await countAccountsByEmail(request, email);\n> 272 |     expect(rows, 'a duplicate e-mail must not create a second account').toBe(1);\n      |                                                                         ^\n  273 |   });\n  274 |\n  275 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:272:73"
+                          "message": "Error: a duplicate e-mail must not create a second account\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  271 |     // must stay at 1. The SUT creates a second row -> BUG-03.\n  272 |     const rows = await countAccountsByEmail(request, email);\n> 273 |     expect(rows, 'a duplicate e-mail must not create a second account').toBe(1);\n      |                                                                         ^\n  274 |   });\n  275 |\n  276 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:273:73"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:18:54.140Z",
+                      "startTime": "2026-08-16T06:01:44.913Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-22"
@@ -225,7 +241,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                         "column": 73,
-                        "line": 272
+                        "line": 273
                       }
                     }
                   ],
@@ -234,7 +250,7 @@
               ],
               "id": "cbfc4d4c5ba3a022dc78-aca034ffa6ec759e2dcb",
               "file": "fr01-register.spec.js",
-              "line": 248,
+              "line": 249,
               "column": 3
             },
             {
@@ -245,6 +261,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-01 Đăng ký tài khoản"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-25"
@@ -258,13 +282,21 @@
                       "workerIndex": 6,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 322,
+                      "duration": 391,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:18:55.845Z",
+                      "startTime": "2026-08-16T06:01:47.045Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-25"
@@ -278,7 +310,7 @@
               ],
               "id": "cbfc4d4c5ba3a022dc78-f33225107568f9ab4a19",
               "file": "fr01-register.spec.js",
-              "line": 318,
+              "line": 319,
               "column": 3
             },
             {
@@ -291,6 +323,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-01 Đăng ký tài khoản"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-26"
@@ -308,32 +348,40 @@
                       "workerIndex": 6,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 244,
+                      "duration": 332,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:363:36",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:364:36",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                           "column": 36,
-                          "line": 363
+                          "line": 364
                         },
-                        "snippet": "  361 |     // [P4] The login response must never echo the credential back, and whatever\n  362 |     // is persisted must not equal the raw password.\n> 363 |     expect(body.user.password).not.toBe(password);\n      |                                    ^\n  364 |   });\n  365 |\n  366 |   // =========================================================================="
+                        "snippet": "\u001b[0m \u001b[90m 362 |\u001b[39m     \u001b[90m// [P4] The login response must never echo the credential back, and whatever\u001b[39m\n \u001b[90m 363 |\u001b[39m     \u001b[90m// is persisted must not equal the raw password.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 364 |\u001b[39m     expect(body\u001b[33m.\u001b[39muser\u001b[33m.\u001b[39mpassword)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBe(password)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 365 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 366 |\u001b[39m\n \u001b[90m 367 |\u001b[39m   \u001b[90m// ==========================================================================\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 36,
-                            "line": 363
+                            "line": 364
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n\n  361 |     // [P4] The login response must never echo the credential back, and whatever\n  362 |     // is persisted must not equal the raw password.\n> 363 |     expect(body.user.password).not.toBe(password);\n      |                                    ^\n  364 |   });\n  365 |\n  366 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:363:36"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"Password 123\"\u001b[39m\n\n  362 |     // [P4] The login response must never echo the credential back, and whatever\n  363 |     // is persisted must not equal the raw password.\n> 364 |     expect(body.user.password).not.toBe(password);\n      |                                    ^\n  365 |   });\n  366 |\n  367 |   // ==========================================================================\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:364:36"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:18:56.174Z",
+                      "startTime": "2026-08-16T06:01:47.447Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-26"
@@ -363,7 +411,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                         "column": 36,
-                        "line": 363
+                        "line": 364
                       }
                     }
                   ],
@@ -372,7 +420,7 @@
               ],
               "id": "cbfc4d4c5ba3a022dc78-65caec4b0d4aadff413d",
               "file": "fr01-register.spec.js",
-              "line": 344,
+              "line": 345,
               "column": 3
             },
             {
@@ -385,6 +433,14 @@
                 {
                   "timeout": 45000,
                   "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127195"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-01 Đăng ký tài khoản"
+                    },
                     {
                       "type": "test-case",
                       "description": "TC-27"
@@ -402,32 +458,40 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 10364,
+                      "duration": 10492,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:386:24",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:387:24",
                         "location": {
                           "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                           "column": 24,
-                          "line": 386
+                          "line": 387
                         },
-                        "snippet": "  384 |       password: data.specCompliantPassword,\n  385 |     });\n> 386 |     await expect(page).toHaveURL(/\\/login$/);\n      |                        ^\n  387 |   });\n  388 | });\n  389 |"
+                        "snippet": "\u001b[0m \u001b[90m 385 |\u001b[39m       password\u001b[33m:\u001b[39m data\u001b[33m.\u001b[39mspecCompliantPassword\u001b[33m,\u001b[39m\n \u001b[90m 386 |\u001b[39m     })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 387 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/login$/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 388 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 389 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 390 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 24,
-                            "line": 386
+                            "line": 387
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  384 |       password: data.specCompliantPassword,\n  385 |     });\n> 386 |     await expect(page).toHaveURL(/\\/login$/);\n      |                        ^\n  387 |   });\n  388 | });\n  389 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:386:24"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  385 |       password: data.specCompliantPassword,\n  386 |     });\n> 387 |     await expect(page).toHaveURL(/\\/login$/);\n      |                        ^\n  388 |   });\n  389 | });\n  390 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:387:24"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-15T15:18:56.828Z",
+                      "startTime": "2026-08-16T06:01:48.325Z",
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-27"
@@ -457,7 +521,7 @@
                       "errorLocation": {
                         "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                         "column": 24,
-                        "line": 386
+                        "line": 387
                       }
                     }
                   ],
@@ -466,7 +530,7 @@
               ],
               "id": "cbfc4d4c5ba3a022dc78-2838f1e301f37e134973",
               "file": "fr01-register.spec.js",
-              "line": 369,
+              "line": 370,
               "column": 3
             }
           ],
@@ -474,7 +538,7 @@
             {
               "title": "Nhóm 1 - Ma trận quy tắc mật khẩu (CSV)",
               "file": "fr01-register.spec.js",
-              "line": 98,
+              "line": 99,
               "column": 8,
               "specs": [
                 {
@@ -485,6 +549,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-01"
@@ -506,13 +578,21 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 356,
+                          "duration": 433,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:34.891Z",
+                          "startTime": "2026-08-16T06:01:23.307Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-01"
@@ -534,7 +614,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-9f36a80b254d0facff22",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -547,6 +627,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-02"
@@ -572,32 +660,40 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 10337,
+                          "duration": 10400,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:124:30",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:125:30",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                               "column": 30,
-                              "line": 124
+                              "line": 125
                             },
-                            "snippet": "  122 |         if (row.expected === 'accepted') {\n  123 |           // [P1] navigation assertion: a successful registration redirects to /login\n> 124 |           await expect(page).toHaveURL(/\\/login$/);\n      |                              ^\n  125 |           // [P5] element-count assertion: the error banner must not exist at all\n  126 |           await expect(registerPage.errorBox).toHaveCount(0);\n  127 |         } else {"
+                            "snippet": "\u001b[0m \u001b[90m 123 |\u001b[39m         \u001b[36mif\u001b[39m (row\u001b[33m.\u001b[39mexpected \u001b[33m===\u001b[39m \u001b[32m'accepted'\u001b[39m) {\n \u001b[90m 124 |\u001b[39m           \u001b[90m// [P1] navigation assertion: a successful registration redirects to /login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 125 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/login$/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 126 |\u001b[39m           \u001b[90m// [P5] element-count assertion: the error banner must not exist at all\u001b[39m\n \u001b[90m 127 |\u001b[39m           \u001b[36mawait\u001b[39m expect(registerPage\u001b[33m.\u001b[39merrorBox)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 128 |\u001b[39m         } \u001b[36melse\u001b[39m {\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                                 "column": 30,
-                                "line": 124
+                                "line": 125
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  122 |         if (row.expected === 'accepted') {\n  123 |           // [P1] navigation assertion: a successful registration redirects to /login\n> 124 |           await expect(page).toHaveURL(/\\/login$/);\n      |                              ^\n  125 |           // [P5] element-count assertion: the error banner must not exist at all\n  126 |           await expect(registerPage.errorBox).toHaveCount(0);\n  127 |         } else {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:124:30"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/login$/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:5173/register\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 10000ms\u001b[22m\n\u001b[2m    23 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://localhost:5173/register\"\u001b[22m\n\n\n  123 |         if (row.expected === 'accepted') {\n  124 |           // [P1] navigation assertion: a successful registration redirects to /login\n> 125 |           await expect(page).toHaveURL(/\\/login$/);\n      |                              ^\n  126 |           // [P5] element-count assertion: the error banner must not exist at all\n  127 |           await expect(registerPage.errorBox).toHaveCount(0);\n  128 |         } else {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:125:30"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:35.345Z",
+                          "startTime": "2026-08-16T06:01:23.849Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-02"
@@ -635,7 +731,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 30,
-                            "line": 124
+                            "line": 125
                           }
                         }
                       ],
@@ -644,7 +740,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-8d8c02810c88ad0e014e",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -655,6 +751,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-03"
@@ -676,13 +780,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 343,
+                          "duration": 421,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:46.101Z",
+                          "startTime": "2026-08-16T06:01:34.756Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-03"
@@ -704,7 +816,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-b8e27ece3ac4e02c5ef2",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -715,6 +827,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-04"
@@ -736,13 +856,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 290,
+                          "duration": 369,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:46.526Z",
+                          "startTime": "2026-08-16T06:01:35.280Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-04"
@@ -764,7 +892,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-225732ae6b65d468f3d2",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -775,6 +903,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-05"
@@ -796,13 +932,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 276,
+                          "duration": 346,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:46.824Z",
+                          "startTime": "2026-08-16T06:01:35.659Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-05"
@@ -824,7 +968,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-f830d43a3552b5499abb",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -835,6 +979,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-06"
@@ -856,13 +1008,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 279,
+                          "duration": 342,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:47.107Z",
+                          "startTime": "2026-08-16T06:01:36.012Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-06"
@@ -884,7 +1044,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-2a565a2bf0e5ebbc4c09",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -895,6 +1055,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-07"
@@ -916,13 +1084,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 292,
+                          "duration": 356,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:47.392Z",
+                          "startTime": "2026-08-16T06:01:36.363Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-07"
@@ -944,7 +1120,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-559bfb7b16631815b487",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -955,6 +1131,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-08"
@@ -976,13 +1160,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 293,
+                          "duration": 342,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:47.690Z",
+                          "startTime": "2026-08-16T06:01:36.728Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-08"
@@ -1004,7 +1196,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-bcb35aeaac78a58649f3",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -1015,6 +1207,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-09"
@@ -1036,13 +1236,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 279,
+                          "duration": 342,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:47.990Z",
+                          "startTime": "2026-08-16T06:01:37.078Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-09"
@@ -1064,7 +1272,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-ccab9d0eaf69f2bbebbd",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 },
                 {
@@ -1075,6 +1283,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-10"
@@ -1096,13 +1312,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 274,
+                          "duration": 358,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:48.275Z",
+                          "startTime": "2026-08-16T06:01:37.428Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-10"
@@ -1124,7 +1348,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-85e9cde6d3600bb6a8d2",
                   "file": "fr01-register.spec.js",
-                  "line": 103,
+                  "line": 104,
                   "column": 7
                 }
               ]
@@ -1132,7 +1356,7 @@
             {
               "title": "Nhóm 2 - Đăng ký thành công",
               "file": "fr01-register.spec.js",
-              "line": 146,
+              "line": 147,
               "column": 8,
               "specs": [
                 {
@@ -1143,6 +1367,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-11"
@@ -1156,13 +1388,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 294,
+                          "duration": 389,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:48.556Z",
+                          "startTime": "2026-08-16T06:01:37.796Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-11"
@@ -1176,7 +1416,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-1aeb13acab531f211d90",
                   "file": "fr01-register.spec.js",
-                  "line": 148,
+                  "line": 149,
                   "column": 7
                 },
                 {
@@ -1187,6 +1427,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-12"
@@ -1200,13 +1448,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 276,
+                          "duration": 355,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:48.857Z",
+                          "startTime": "2026-08-16T06:01:38.196Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-12"
@@ -1220,7 +1476,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-696a6a6b691c328b2b66",
                   "file": "fr01-register.spec.js",
-                  "line": 148,
+                  "line": 149,
                   "column": 7
                 },
                 {
@@ -1231,6 +1487,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-13"
@@ -1244,13 +1508,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 293,
+                          "duration": 373,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:49.140Z",
+                          "startTime": "2026-08-16T06:01:38.560Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-13"
@@ -1264,7 +1536,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-8b6d587f0779c9cff5c2",
                   "file": "fr01-register.spec.js",
-                  "line": 148,
+                  "line": 149,
                   "column": 7
                 }
               ]
@@ -1272,7 +1544,7 @@
             {
               "title": "Nhóm 3 - Trường bắt buộc",
               "file": "fr01-register.spec.js",
-              "line": 179,
+              "line": 180,
               "column": 8,
               "specs": [
                 {
@@ -1283,6 +1555,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-14"
@@ -1296,13 +1576,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 315,
+                          "duration": 361,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:49.439Z",
+                          "startTime": "2026-08-16T06:01:38.944Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-14"
@@ -1316,7 +1604,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-829ff595de65f329018c",
                   "file": "fr01-register.spec.js",
-                  "line": 181,
+                  "line": 182,
                   "column": 7
                 },
                 {
@@ -1327,6 +1615,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-15"
@@ -1340,13 +1636,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 292,
+                          "duration": 360,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:49.760Z",
+                          "startTime": "2026-08-16T06:01:39.312Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-15"
@@ -1360,7 +1664,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-e17fe4034bd73de22c8c",
                   "file": "fr01-register.spec.js",
-                  "line": 181,
+                  "line": 182,
                   "column": 7
                 },
                 {
@@ -1371,6 +1675,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-16"
@@ -1384,13 +1696,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 295,
+                          "duration": 357,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:50.060Z",
+                          "startTime": "2026-08-16T06:01:39.679Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-16"
@@ -1404,7 +1724,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-04e7f969c99481ae030b",
                   "file": "fr01-register.spec.js",
-                  "line": 181,
+                  "line": 182,
                   "column": 7
                 },
                 {
@@ -1415,6 +1735,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-17"
@@ -1428,13 +1756,21 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 274,
+                          "duration": 361,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:50.361Z",
+                          "startTime": "2026-08-16T06:01:40.044Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-17"
@@ -1448,7 +1784,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-2960c047ca14399d09ff",
                   "file": "fr01-register.spec.js",
-                  "line": 181,
+                  "line": 182,
                   "column": 7
                 }
               ]
@@ -1456,7 +1792,7 @@
             {
               "title": "Nhóm 4 - Định dạng email",
               "file": "fr01-register.spec.js",
-              "line": 215,
+              "line": 216,
               "column": 8,
               "specs": [
                 {
@@ -1469,6 +1805,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-18"
@@ -1486,32 +1830,40 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 345,
+                          "duration": 422,
                           "error": {
-                            "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
-                            "stack": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                            "stack": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                               "column": 71,
-                              "line": 240
+                              "line": 241
                             },
-                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 239 |\u001b[39m         \u001b[90m// database, not the address bar.\u001b[39m\n \u001b[90m 240 |\u001b[39m         \u001b[36mconst\u001b[39m rows \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m countAccountsByEmail(request\u001b[33m,\u001b[39m c\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 241 |\u001b[39m         expect(rows\u001b[33m,\u001b[39m \u001b[32m`email \"${c.email}\" must not create a user row`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 242 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 243 |\u001b[39m     }\n \u001b[90m 244 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                                 "column": 71,
-                                "line": 240
+                                "line": 241
                               },
-                              "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                              "message": "Error: email \"abc\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  239 |         // database, not the address bar.\n  240 |         const rows = await countAccountsByEmail(request, c.email);\n> 241 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  242 |       });\n  243 |     }\n  244 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:50.641Z",
+                          "startTime": "2026-08-16T06:01:40.412Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-18"
@@ -1541,7 +1893,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 71,
-                            "line": 240
+                            "line": 241
                           }
                         }
                       ],
@@ -1550,7 +1902,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-7f0a2457fb59228eec56",
                   "file": "fr01-register.spec.js",
-                  "line": 217,
+                  "line": 218,
                   "column": 7
                 },
                 {
@@ -1563,6 +1915,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-19"
@@ -1580,32 +1940,40 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 395,
+                          "duration": 497,
                           "error": {
-                            "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
-                            "stack": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                            "stack": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                               "column": 71,
-                              "line": 240
+                              "line": 241
                             },
-                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 239 |\u001b[39m         \u001b[90m// database, not the address bar.\u001b[39m\n \u001b[90m 240 |\u001b[39m         \u001b[36mconst\u001b[39m rows \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m countAccountsByEmail(request\u001b[33m,\u001b[39m c\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 241 |\u001b[39m         expect(rows\u001b[33m,\u001b[39m \u001b[32m`email \"${c.email}\" must not create a user row`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 242 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 243 |\u001b[39m     }\n \u001b[90m 244 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                                 "column": 71,
-                                "line": 240
+                                "line": 241
                               },
-                              "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                              "message": "Error: email \"abc@\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  239 |         // database, not the address bar.\n  240 |         const rows = await countAccountsByEmail(request, c.email);\n> 241 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  242 |       });\n  243 |     }\n  244 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:51.407Z",
+                          "startTime": "2026-08-16T06:01:41.381Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-19"
@@ -1635,7 +2003,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 71,
-                            "line": 240
+                            "line": 241
                           }
                         }
                       ],
@@ -1644,7 +2012,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-393eb9fad24c6a2d27b3",
                   "file": "fr01-register.spec.js",
-                  "line": 217,
+                  "line": 218,
                   "column": 7
                 },
                 {
@@ -1657,6 +2025,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-20"
@@ -1674,32 +2050,40 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 416,
+                          "duration": 504,
                           "error": {
-                            "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
-                            "stack": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                            "stack": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                               "column": 71,
-                              "line": 240
+                              "line": 241
                             },
-                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 239 |\u001b[39m         \u001b[90m// database, not the address bar.\u001b[39m\n \u001b[90m 240 |\u001b[39m         \u001b[36mconst\u001b[39m rows \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m countAccountsByEmail(request\u001b[33m,\u001b[39m c\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 241 |\u001b[39m         expect(rows\u001b[33m,\u001b[39m \u001b[32m`email \"${c.email}\" must not create a user row`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 242 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 243 |\u001b[39m     }\n \u001b[90m 244 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                                 "column": 71,
-                                "line": 240
+                                "line": 241
                               },
-                              "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                              "message": "Error: email \"@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  239 |         // database, not the address bar.\n  240 |         const rows = await countAccountsByEmail(request, c.email);\n> 241 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  242 |       });\n  243 |     }\n  244 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:52.301Z",
+                          "startTime": "2026-08-16T06:01:42.512Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-20"
@@ -1729,7 +2113,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 71,
-                            "line": 240
+                            "line": 241
                           }
                         }
                       ],
@@ -1738,7 +2122,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-2dadaf8a441da14de1df",
                   "file": "fr01-register.spec.js",
-                  "line": 217,
+                  "line": 218,
                   "column": 7
                 },
                 {
@@ -1751,6 +2135,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-21"
@@ -1768,32 +2160,40 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 457,
+                          "duration": 523,
                           "error": {
-                            "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
-                            "stack": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71",
+                            "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                            "stack": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71",
                             "location": {
                               "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                               "column": 71,
-                              "line": 240
+                              "line": 241
                             },
-                            "snippet": "  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });"
+                            "snippet": "\u001b[0m \u001b[90m 239 |\u001b[39m         \u001b[90m// database, not the address bar.\u001b[39m\n \u001b[90m 240 |\u001b[39m         \u001b[36mconst\u001b[39m rows \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m countAccountsByEmail(request\u001b[33m,\u001b[39m c\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 241 |\u001b[39m         expect(rows\u001b[33m,\u001b[39m \u001b[32m`email \"${c.email}\" must not create a user row`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 242 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 243 |\u001b[39m     }\n \u001b[90m 244 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                                 "column": 71,
-                                "line": 240
+                                "line": 241
                               },
-                              "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  238 |         // database, not the address bar.\n  239 |         const rows = await countAccountsByEmail(request, c.email);\n> 240 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  241 |       });\n  242 |     }\n  243 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:240:71"
+                              "message": "Error: email \"a b@domain.com\" must not create a user row\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  239 |         // database, not the address bar.\n  240 |         const rows = await countAccountsByEmail(request, c.email);\n> 241 |         expect(rows, `email \"${c.email}\" must not create a user row`).toBe(0);\n      |                                                                       ^\n  242 |       });\n  243 |     }\n  244 |   });\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js:241:71"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:53.194Z",
+                          "startTime": "2026-08-16T06:01:43.652Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-21"
@@ -1823,7 +2223,7 @@
                           "errorLocation": {
                             "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr01-register.spec.js",
                             "column": 71,
-                            "line": 240
+                            "line": 241
                           }
                         }
                       ],
@@ -1832,7 +2232,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-90eadcdd91dfd16598d2",
                   "file": "fr01-register.spec.js",
-                  "line": 217,
+                  "line": 218,
                   "column": 7
                 }
               ]
@@ -1840,7 +2240,7 @@
             {
               "title": "Nhóm 6 - Payload bảo mật",
               "file": "fr01-register.spec.js",
-              "line": 278,
+              "line": 279,
               "column": 8,
               "specs": [
                 {
@@ -1851,6 +2251,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-23"
@@ -1864,13 +2272,21 @@
                           "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 374,
+                          "duration": 471,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:55.075Z",
+                          "startTime": "2026-08-16T06:01:46.072Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-23"
@@ -1884,7 +2300,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-72997c305a9203b44ac1",
                   "file": "fr01-register.spec.js",
-                  "line": 280,
+                  "line": 281,
                   "column": 7
                 },
                 {
@@ -1895,6 +2311,14 @@
                     {
                       "timeout": 45000,
                       "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-01 Đăng ký tài khoản"
+                        },
                         {
                           "type": "test-case",
                           "description": "TC-24"
@@ -1908,13 +2332,21 @@
                           "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 302,
+                          "duration": 382,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-15T15:18:55.536Z",
+                          "startTime": "2026-08-16T06:01:46.654Z",
                           "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-01 Đăng ký tài khoản"
+                            },
                             {
                               "type": "test-case",
                               "description": "TC-24"
@@ -1928,7 +2360,7 @@
                   ],
                   "id": "cbfc4d4c5ba3a022dc78-744c1c4da490c44e2efa",
                   "file": "fr01-register.spec.js",
-                  "line": 280,
+                  "line": 281,
                   "column": 7
                 }
               ]
@@ -1940,8 +2372,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-15T15:18:34.511Z",
-    "duration": 32875.309,
+    "startTime": "2026-08-16T06:01:22.854Z",
+    "duration": 36161.647000000004,
     "expected": 19,
     "skipped": 0,
     "unexpected": 8,

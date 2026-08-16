@@ -1,0 +1,533 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Kiem_thu\\HW4\\HW04-TESTING\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr14-category.spec.js",
+      "--list",
+      "--project=chromium"
+    ],
+    "configFile": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\playwright.config.js",
+    "rootDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127195",
+      "Student ID": "23127195",
+      "Executed at (ISO)": "2026-08-16T06:32:49.342Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+      "Features under test": "FR-01 Account registration"
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-16T06:32:49.342Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration"
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-16T06:32:49.342Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration"
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-16T06:32:49.342Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration"
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/combined",
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-16T06:32:49.342Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/combined/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr14-category.spec.js",
+      "file": "fr14-category.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-14 | Quản lý danh mục",
+          "file": "fr14-category.spec.js",
+          "line": 71,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-07 - Danh sach tren giao dien khop voi du lieu backend",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-6f0817aca1e8fb0c7cbe",
+              "file": "fr14-category.spec.js",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "TC-08 - Giao dien phai co chuc nang Sua danh muc @bug",
+              "ok": true,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-5abbbf9f2f7a15638a31",
+              "file": "fr14-category.spec.js",
+              "line": 181,
+              "column": 3
+            },
+            {
+              "title": "TC-09 - Doi ten danh muc qua API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-92af595b07d2309a53c4",
+              "file": "fr14-category.spec.js",
+              "line": 208,
+              "column": 3
+            },
+            {
+              "title": "TC-10 - Cap nhat danh muc khong ton tai phai bao loi @bug",
+              "ok": true,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-e5868a4dd1f19ada0918",
+              "file": "fr14-category.spec.js",
+              "line": 231,
+              "column": 3
+            },
+            {
+              "title": "TC-11 - Xoa danh muc tren giao dien",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-a7e75bb9a1e03b84233c",
+              "file": "fr14-category.spec.js",
+              "line": 250,
+              "column": 3
+            },
+            {
+              "title": "TC-12 - Xoa danh muc khong ton tai phai bao loi @bug",
+              "ok": true,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-525c8de0031862ea970f",
+              "file": "fr14-category.spec.js",
+              "line": 273,
+              "column": 3
+            },
+            {
+              "title": "TC-13 - Khong duoc xoa danh muc dang co san pham @bug",
+              "ok": true,
+              "tags": [
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-9b85f40a80461c611c87",
+              "file": "fr14-category.spec.js",
+              "line": 288,
+              "column": 3
+            },
+            {
+              "title": "TC-17 - Yeu cau khong co token phai bi tu choi",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5536b5a74a27a9a5813c-0422f91e6ce2dcf95a10",
+              "file": "fr14-category.spec.js",
+              "line": 365,
+              "column": 3
+            }
+          ],
+          "suites": [
+            {
+              "title": "Nhóm 1 - Tạo danh mục trên giao diện (CSV)",
+              "file": "fr14-category.spec.js",
+              "line": 88,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-01 - Ten danh muc thong thuong -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-b294e654eb4be226b168",
+                  "file": "fr14-category.spec.js",
+                  "line": 93,
+                  "column": 7
+                },
+                {
+                  "title": "TC-02 - Ten co dau tieng Viet day du -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-fd0a52eb1faccac88ebd",
+                  "file": "fr14-category.spec.js",
+                  "line": 93,
+                  "column": 7
+                },
+                {
+                  "title": "TC-03 - Ten co chu so va ky tu dac biet -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-214381dea27debaf3ace",
+                  "file": "fr14-category.spec.js",
+                  "line": 93,
+                  "column": 7
+                },
+                {
+                  "title": "TC-04 - Ten dai 255 ky tu -> accepted",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-ea1321569c47e3b53185",
+                  "file": "fr14-category.spec.js",
+                  "line": 93,
+                  "column": 7
+                },
+                {
+                  "title": "TC-05 - Ten rong -> rejected @bug",
+                  "ok": true,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-b695b480b24172d1ed87",
+                  "file": "fr14-category.spec.js",
+                  "line": 93,
+                  "column": 7
+                },
+                {
+                  "title": "TC-06 - Ten chi gom khoang trang -> rejected @bug",
+                  "ok": true,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-24d4e5b7c395adca5e57",
+                  "file": "fr14-category.spec.js",
+                  "line": 93,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhóm 5 - Phân quyền",
+              "file": "fr14-category.spec.js",
+              "line": 326,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-14 - Nguoi dung thuong khong duoc tao danh muc @bug",
+                  "ok": true,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-71002f86eeb6e9e2bdf7",
+                  "file": "fr14-category.spec.js",
+                  "line": 328,
+                  "column": 7
+                },
+                {
+                  "title": "TC-15 - Nguoi dung thuong khong duoc sua danh muc @bug",
+                  "ok": true,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-306cca4588826e960bbc",
+                  "file": "fr14-category.spec.js",
+                  "line": 328,
+                  "column": 7
+                },
+                {
+                  "title": "TC-16 - Nguoi dung thuong khong duoc xoa danh muc @bug",
+                  "ok": true,
+                  "tags": [
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "5536b5a74a27a9a5813c-ea61dcc7e442d9f6504c",
+                  "file": "fr14-category.spec.js",
+                  "line": 328,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-16T06:32:49.344Z",
+    "duration": 31.654999999999973,
+    "expected": 0,
+    "skipped": 17,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

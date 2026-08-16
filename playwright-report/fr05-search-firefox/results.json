@@ -1,0 +1,1685 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Kiem_thu\\HW4\\HW04-TESTING\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr05-search.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\playwright.config.js",
+    "rootDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127195",
+      "Student ID": "23127195",
+      "Executed at (ISO)": "2026-08-16T06:18:04.675Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+      "Features under test": "FR-01 Account registration",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-16T06:18:04.675Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-16T06:18:04.675Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/Kiem_thu/HW4/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127195",
+          "Student ID": "23127195",
+          "Executed at (ISO)": "2026-08-16T06:18:04.675Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + backend API",
+          "Features under test": "FR-01 Account registration",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Kiem_thu/HW4/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr05-search-firefox",
+          "title": "HW04 EShop Automation - FR-01 | Run by: 23127195 | 2026-08-16T06:18:04.675Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr05-search-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr05-search.spec.js",
+      "file": "fr05-search.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-05 | Product listing and search",
+          "file": "fr05-search.spec.js",
+          "line": 40,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Nhom 1 - Tim kiem qua API (CSV)",
+              "file": "fr05-search.spec.js",
+              "line": 48,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-01 - search=\"(rong)\" -> 5 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-01"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Không có từ khoá thì trả về toàn bộ 5 sản phẩm đã seed"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 36,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.052Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-01"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Không có từ khoá thì trả về toàn bộ 5 sản phẩm đã seed"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-db305452b15b62e65291",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                },
+                {
+                  "title": "TC-02 - search=\"iPhone\" -> 1 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-02"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Khớp chính xác một sản phẩm theo tên"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 11,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.115Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-02"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Khớp chính xác một sản phẩm theo tên"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-bbf848a029ea3e00307d",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                },
+                {
+                  "title": "TC-03 - search=\"iphone\" -> 1 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-03"
+                        },
+                        {
+                          "type": "note",
+                          "description": "LIKE của SQLite không phân biệt hoa thường với ASCII"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 9,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.134Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-03"
+                            },
+                            {
+                              "type": "note",
+                              "description": "LIKE của SQLite không phân biệt hoa thường với ASCII"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-ea18193b193ab3cb7080",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                },
+                {
+                  "title": "TC-04 - search=\"Pro\" -> 3 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-04"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Khớp cụm con trong nhiều tên: iPhone 15 Pro Max / MacBook Pro M3 / AirPods Pro 2"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 10,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.149Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-04"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Khớp cụm con trong nhiều tên: iPhone 15 Pro Max / MacBook Pro M3 / AirPods Pro 2"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-27767ed9388f890f15b1",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                },
+                {
+                  "title": "TC-05 - search=\"Galaxy\" -> 1 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-05"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Khớp một phần tên"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 9,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.166Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-05"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Khớp một phần tên"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-acd669d1bc7404c37f72",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                },
+                {
+                  "title": "TC-06 - search=\"Bàn phím\" -> 1 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-06"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Từ khoá tiếng Việt có dấu vẫn khớp đúng"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.181Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-06"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Từ khoá tiếng Việt có dấu vẫn khớp đúng"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-11c59cbb0ce9b5e334a0",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                },
+                {
+                  "title": "TC-07 - search=\"zzz-khong-ton-tai\" -> 0 san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-07"
+                        },
+                        {
+                          "type": "note",
+                          "description": "Từ khoá không khớp sản phẩm nào thì trả mảng rỗng"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.193Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-07"
+                            },
+                            {
+                              "type": "note",
+                              "description": "Từ khoá không khớp sản phẩm nào thì trả mảng rỗng"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-f10ab7b3c1f60e6adf07",
+                  "file": "fr05-search.spec.js",
+                  "line": 53,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhom 2 - Tim kiem qua giao dien",
+              "file": "fr05-search.spec.js",
+              "line": 93,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-08 - tu khoa khop hien dung 1 the san pham",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3725,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:05.205Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-67c611612794b154b439",
+                  "file": "fr05-search.spec.js",
+                  "line": 94,
+                  "column": 5
+                },
+                {
+                  "title": "TC-09 - tu khoa khong khop khong hien the nao",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3172,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:09.283Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-3381ab2003eb51a31485",
+                  "file": "fr05-search.spec.js",
+                  "line": 112,
+                  "column": 5
+                },
+                {
+                  "title": "TC-10 - so the tren UI bang so ket qua tu API [invariant]",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3366,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:12.465Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-a7fc9209ace752abb041",
+                  "file": "fr05-search.spec.js",
+                  "line": 124,
+                  "column": 5
+                },
+                {
+                  "title": "TC-11 - xoa tu khoa quay lai danh sach day du",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3477,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:15.839Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-7cf49f69b5e70cefd73f",
+                  "file": "fr05-search.spec.js",
+                  "line": 136,
+                  "column": 5
+                },
+                {
+                  "title": "TC-19 - o tim kiem giu nguyen gia tri da nhap [DOM property]",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3219,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:19.323Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-7ab9409f8db207036c04",
+                  "file": "fr05-search.spec.js",
+                  "line": 147,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Nhom 3 - Bao mat: XSS (@bug)",
+              "file": "fr05-search.spec.js",
+              "line": 159,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-12 - img onerror khong duoc thuc thi @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug)",
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-12"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-16 - Reflected XSS trong ô tìm kiếm (dangerouslySetInnerHTML)"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 3278,
+                          "error": {
+                            "message": "Error: search term must NOT execute as script\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                            "stack": "Error: search term must NOT execute as script\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:177:67",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                              "column": 67,
+                              "line": 177
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 175 |\u001b[39m         \u001b[90m// attacker-controlled node appears in the DOM.\u001b[39m\n \u001b[90m 176 |\u001b[39m         \u001b[36mconst\u001b[39m flagged \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((f) \u001b[33m=>\u001b[39m window[f] \u001b[33m===\u001b[39m \u001b[35m1\u001b[39m\u001b[33m,\u001b[39m xss\u001b[33m.\u001b[39mflag)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 177 |\u001b[39m         expect(flagged\u001b[33m,\u001b[39m \u001b[32m'search term must NOT execute as script'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 178 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\n \u001b[90m 179 |\u001b[39m           search\u001b[33m.\u001b[39mresultBanner\u001b[33m.\u001b[39mlocator(\u001b[32m'img[src=\"x\"]'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 180 |\u001b[39m         )\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                                "column": 67,
+                                "line": 177
+                              },
+                              "message": "Error: search term must NOT execute as script\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n  175 |         // attacker-controlled node appears in the DOM.\n  176 |         const flagged = await page.evaluate((f) => window[f] === 1, xss.flag);\n> 177 |         expect(flagged, 'search term must NOT execute as script').toBe(false);\n      |                                                                   ^\n  178 |         await expect(\n  179 |           search.resultBanner.locator('img[src=\"x\"]'),\n  180 |         ).toHaveCount(0);\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:177:67"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:22.549Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-12"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-16 - Reflected XSS trong ô tìm kiếm (dangerouslySetInnerHTML)"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--99cd9-ror-khong-duoc-thuc-thi-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--99cd9-ror-khong-duoc-thuc-thi-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--99cd9-ror-khong-duoc-thuc-thi-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                            "column": 67,
+                            "line": 177
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-59ddc95eae63c708adea",
+                  "file": "fr05-search.spec.js",
+                  "line": 161,
+                  "column": 7
+                },
+                {
+                  "title": "TC-13 - img onerror - phai duoc escape khong duoc thuc thi @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug)",
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-13"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-16 - Payload người dùng nhập không được escape trước khi chèn vào DOM"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 3951,
+                          "error": {
+                            "message": "Error: search term must NOT execute as script\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                            "stack": "Error: search term must NOT execute as script\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:177:67",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                              "column": 67,
+                              "line": 177
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 175 |\u001b[39m         \u001b[90m// attacker-controlled node appears in the DOM.\u001b[39m\n \u001b[90m 176 |\u001b[39m         \u001b[36mconst\u001b[39m flagged \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((f) \u001b[33m=>\u001b[39m window[f] \u001b[33m===\u001b[39m \u001b[35m1\u001b[39m\u001b[33m,\u001b[39m xss\u001b[33m.\u001b[39mflag)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 177 |\u001b[39m         expect(flagged\u001b[33m,\u001b[39m \u001b[32m'search term must NOT execute as script'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 178 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\n \u001b[90m 179 |\u001b[39m           search\u001b[33m.\u001b[39mresultBanner\u001b[33m.\u001b[39mlocator(\u001b[32m'img[src=\"x\"]'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 180 |\u001b[39m         )\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                                "column": 67,
+                                "line": 177
+                              },
+                              "message": "Error: search term must NOT execute as script\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n  175 |         // attacker-controlled node appears in the DOM.\n  176 |         const flagged = await page.evaluate((f) => window[f] === 1, xss.flag);\n> 177 |         expect(flagged, 'search term must NOT execute as script').toBe(false);\n      |                                                                   ^\n  178 |         await expect(\n  179 |           search.resultBanner.locator('img[src=\"x\"]'),\n  180 |         ).toHaveCount(0);\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:177:67"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:26.577Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-13"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-16 - Payload người dùng nhập không được escape trước khi chèn vào DOM"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--9c9fe-ape-khong-duoc-thuc-thi-bug-firefox\\test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--9c9fe-ape-khong-duoc-thuc-thi-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--9c9fe-ape-khong-duoc-thuc-thi-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                            "column": 67,
+                            "line": 177
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-52cbc61dde400ccfc705",
+                  "file": "fr05-search.spec.js",
+                  "line": 161,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "Nhom 4 - Bao mat: SQL injection (@bug)",
+              "file": "fr05-search.spec.js",
+              "line": 188,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-14 - tautology khong duoc bo qua bo loc @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug)",
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-14"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-17 - SQL injection: chuỗi nối trực tiếp vào câu LIKE, tautology bỏ qua bộ lọc"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 50,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m5\u001b[39m\nReceived array:  \u001b[31m[{\"category_id\": 1, \"description\": \"Điện thoại cao cấp của Apple\", \"id\": 1, \"imageUrl\": \"https://placehold.co/300x300/png?text=iPhone+15\", \"name\": \"iPhone 15 Pro Max\", \"price\": 30000000}, {\"category_id\": 1, \"description\": \"Màn hình hiển thị xuất sắc, camera siêu zoom\", \"id\": 2, \"imageUrl\": \"https://placehold.co/300x300/png?text=Samsung+S24\", \"name\": \"Samsung Galaxy S24 Ultra\", \"price\": 28000000}, {\"category_id\": 2, \"description\": \"Laptop chuyên nghiệp mạnh mẽ\", \"id\": 3, \"imageUrl\": \"https://placehold.co/300x300/png?text=Macbook+Pro\", \"name\": \"MacBook Pro M3\", \"price\": 45000000}, {\"category_id\": 3, \"description\": \"Chống ồn chủ động xuất sắc\", \"id\": 4, \"imageUrl\": \"https://placehold.co/300x300/png?text=AirPods+Pro\", \"name\": \"Tai nghe AirPods Pro 2\", \"price\": 6000000}, {\"category_id\": 3, \"description\": \"Gõ cực sướng, thiết kế kim loại\", \"id\": 5, \"imageUrl\": \"https://placehold.co/300x300/png?text=Keychron+Q1\", \"name\": \"Bàn phím cơ Keychron Q1\", \"price\": 4000000}]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m5\u001b[39m\nReceived array:  \u001b[31m[{\"category_id\": 1, \"description\": \"Điện thoại cao cấp của Apple\", \"id\": 1, \"imageUrl\": \"https://placehold.co/300x300/png?text=iPhone+15\", \"name\": \"iPhone 15 Pro Max\", \"price\": 30000000}, {\"category_id\": 1, \"description\": \"Màn hình hiển thị xuất sắc, camera siêu zoom\", \"id\": 2, \"imageUrl\": \"https://placehold.co/300x300/png?text=Samsung+S24\", \"name\": \"Samsung Galaxy S24 Ultra\", \"price\": 28000000}, {\"category_id\": 2, \"description\": \"Laptop chuyên nghiệp mạnh mẽ\", \"id\": 3, \"imageUrl\": \"https://placehold.co/300x300/png?text=Macbook+Pro\", \"name\": \"MacBook Pro M3\", \"price\": 45000000}, {\"category_id\": 3, \"description\": \"Chống ồn chủ động xuất sắc\", \"id\": 4, \"imageUrl\": \"https://placehold.co/300x300/png?text=AirPods+Pro\", \"name\": \"Tai nghe AirPods Pro 2\", \"price\": 6000000}, {\"category_id\": 3, \"description\": \"Gõ cực sướng, thiết kế kim loại\", \"id\": 5, \"imageUrl\": \"https://placehold.co/300x300/png?text=Keychron+Q1\", \"name\": \"Bàn phím cơ Keychron Q1\", \"price\": 4000000}]\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:203:20",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                              "column": 20,
+                              "line": 203
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 201 |\u001b[39m       expect(status)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 202 |\u001b[39m       expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(json))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 203 |\u001b[39m       expect(json)\u001b[33m.\u001b[39mtoHaveLength(tautology\u001b[33m.\u001b[39mexpectedCount)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 204 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 205 |\u001b[39m\n \u001b[90m 206 |\u001b[39m     test(\u001b[32m'TC-15 - ky tu dac biet khong lam vo truy van @bug'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                                "column": 20,
+                                "line": 203
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m5\u001b[39m\nReceived array:  \u001b[31m[{\"category_id\": 1, \"description\": \"Điện thoại cao cấp của Apple\", \"id\": 1, \"imageUrl\": \"https://placehold.co/300x300/png?text=iPhone+15\", \"name\": \"iPhone 15 Pro Max\", \"price\": 30000000}, {\"category_id\": 1, \"description\": \"Màn hình hiển thị xuất sắc, camera siêu zoom\", \"id\": 2, \"imageUrl\": \"https://placehold.co/300x300/png?text=Samsung+S24\", \"name\": \"Samsung Galaxy S24 Ultra\", \"price\": 28000000}, {\"category_id\": 2, \"description\": \"Laptop chuyên nghiệp mạnh mẽ\", \"id\": 3, \"imageUrl\": \"https://placehold.co/300x300/png?text=Macbook+Pro\", \"name\": \"MacBook Pro M3\", \"price\": 45000000}, {\"category_id\": 3, \"description\": \"Chống ồn chủ động xuất sắc\", \"id\": 4, \"imageUrl\": \"https://placehold.co/300x300/png?text=AirPods+Pro\", \"name\": \"Tai nghe AirPods Pro 2\", \"price\": 6000000}, {\"category_id\": 3, \"description\": \"Gõ cực sướng, thiết kế kim loại\", \"id\": 5, \"imageUrl\": \"https://placehold.co/300x300/png?text=Keychron+Q1\", \"name\": \"Bàn phím cơ Keychron Q1\", \"price\": 4000000}]\u001b[39m\n\n  201 |       expect(status).toBe(200);\n  202 |       expect(Array.isArray(json)).toBe(true);\n> 203 |       expect(json).toHaveLength(tautology.expectedCount);\n      |                    ^\n  204 |     });\n  205 |\n  206 |     test('TC-15 - ky tu dac biet khong lam vo truy van @bug', async ({ request }) => {\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:203:20"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:31.621Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-14"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-17 - SQL injection: chuỗi nối trực tiếp vào câu LIKE, tautology bỏ qua bộ lọc"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--d2155-hong-duoc-bo-qua-bo-loc-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--d2155-hong-duoc-bo-qua-bo-loc-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                            "column": 20,
+                            "line": 203
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-08d79301dd0c8341f560",
+                  "file": "fr05-search.spec.js",
+                  "line": 192,
+                  "column": 5
+                },
+                {
+                  "title": "TC-15 - ky tu dac biet khong lam vo truy van @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug)",
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-15"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-18 - Lỗi 500 và rò rỉ thông báo lỗi SQL thô ra client"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 46,
+                          "error": {
+                            "message": "Error: special characters must not crash the query\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m500\u001b[39m",
+                            "stack": "Error: special characters must not crash the query\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:215:69",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                              "column": 69,
+                              "line": 215
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 213 |\u001b[39m       \u001b[90m// [P4] A `%'` term must be treated as literal search text, yielding a\u001b[39m\n \u001b[90m 214 |\u001b[39m       \u001b[90m// normal 200 JSON response - not a 500 SQL crash.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 215 |\u001b[39m       expect(status\u001b[33m,\u001b[39m \u001b[32m'special characters must not crash the query'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 216 |\u001b[39m       expect(contentType)\u001b[33m.\u001b[39mtoContain(\u001b[32m'application/json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 217 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 218 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                                "column": 69,
+                                "line": 215
+                              },
+                              "message": "Error: special characters must not crash the query\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n\n  213 |       // [P4] A `%'` term must be treated as literal search text, yielding a\n  214 |       // normal 200 JSON response - not a 500 SQL crash.\n> 215 |       expect(status, 'special characters must not crash the query').toBe(200);\n      |                                                                     ^\n  216 |       expect(contentType).toContain('application/json');\n  217 |     });\n  218 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:215:69"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:32.046Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-15"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-18 - Lỗi 500 và rò rỉ thông báo lỗi SQL thô ra client"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--64ac4-t-khong-lam-vo-truy-van-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--64ac4-t-khong-lam-vo-truy-van-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                            "column": 69,
+                            "line": 215
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-69263d1206b7e4cc929f",
+                  "file": "fr05-search.spec.js",
+                  "line": 206,
+                  "column": 5
+                },
+                {
+                  "title": "TC-16 - khong ro ri thong bao loi SQL tho ra client @bug",
+                  "ok": false,
+                  "tags": [
+                    "bug)",
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        },
+                        {
+                          "type": "test-case",
+                          "description": "TC-16"
+                        },
+                        {
+                          "type": "bug",
+                          "description": "BUG-18 - Lỗi 500 và rò rỉ thông báo lỗi SQL thô ra client"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 45,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: not \u001b[32m\"SQLITE_ERROR\"\u001b[39m\nReceived string:        \u001b[31m\"<h1>Database Error</h1><p>\u001b[7mSQLITE_ERROR\u001b[27m: unrecognized token: \\\"'\\\"</p>\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: not \u001b[32m\"SQLITE_ERROR\"\u001b[39m\nReceived string:        \u001b[31m\"<h1>Database Error</h1><p>\u001b[7mSQLITE_ERROR\u001b[27m: unrecognized token: \\\"'\\\"</p>\"\u001b[39m\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:227:24",
+                            "location": {
+                              "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                              "column": 24,
+                              "line": 227
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 225 |\u001b[39m       \u001b[36mconst\u001b[39m { text } \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m searchProducts(request\u001b[33m,\u001b[39m special\u001b[33m.\u001b[39mquery)\u001b[33m;\u001b[39m\n \u001b[90m 226 |\u001b[39m       \u001b[90m// [P2] Body-content assertion: internal SQL error text must never leak.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 227 |\u001b[39m       expect(text)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoContain(data\u001b[33m.\u001b[39msqlErrorLeakMarker)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 228 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 229 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 230 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                                "column": 24,
+                                "line": 227
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: not \u001b[32m\"SQLITE_ERROR\"\u001b[39m\nReceived string:        \u001b[31m\"<h1>Database Error</h1><p>\u001b[7mSQLITE_ERROR\u001b[27m: unrecognized token: \\\"'\\\"</p>\"\u001b[39m\n\n  225 |       const { text } = await searchProducts(request, special.query);\n  226 |       // [P2] Body-content assertion: internal SQL error text must never leak.\n> 227 |       expect(text).not.toContain(data.sqlErrorLeakMarker);\n      |                        ^\n  228 |     });\n  229 |   });\n  230 |\n    at D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js:227:24"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:32.467Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            },
+                            {
+                              "type": "test-case",
+                              "description": "TC-16"
+                            },
+                            {
+                              "type": "bug",
+                              "description": "BUG-18 - Lỗi 500 và rò rỉ thông báo lỗi SQL thô ra client"
+                            }
+                          ],
+                          "attachments": [
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--db0ac-o-loi-SQL-tho-ra-client-bug-firefox\\error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\test-results\\fr05-search-FR-05-Product--db0ac-o-loi-SQL-tho-ra-client-bug-firefox\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Kiem_thu\\HW4\\HW04-TESTING\\tests\\fr05-search.spec.js",
+                            "column": 24,
+                            "line": 227
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-4a85e8b29f07dfe87740",
+                  "file": "fr05-search.spec.js",
+                  "line": 219,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Nhom 5 - Bat bien tren nhieu tu khoa",
+              "file": "fr05-search.spec.js",
+              "line": 234,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC-INV \"Pro\" - moi ket qua deu chua tu khoa",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 35,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:32.901Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-65e1ce4cafebe538cb60",
+                  "file": "fr05-search.spec.js",
+                  "line": 236,
+                  "column": 7
+                },
+                {
+                  "title": "TC-INV \"iPhone\" - moi ket qua deu chua tu khoa",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 11,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:32.966Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-bfa2653090f974852930",
+                  "file": "fr05-search.spec.js",
+                  "line": 236,
+                  "column": 7
+                },
+                {
+                  "title": "TC-INV \"Galaxy\" - moi ket qua deu chua tu khoa",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 10,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:32.984Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-1cdea34ec6970757a7c9",
+                  "file": "fr05-search.spec.js",
+                  "line": 236,
+                  "column": 7
+                },
+                {
+                  "title": "TC-INV \"Tai nghe\" - moi ket qua deu chua tu khoa",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127195"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-05 Product listing and search"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 10,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-16T06:18:33.001Z",
+                          "annotations": [
+                            {
+                              "type": "run-by",
+                              "description": "23127195"
+                            },
+                            {
+                              "type": "feature",
+                              "description": "FR-05 Product listing and search"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b4178e4a1fa4d88537ec-de6716ab8404b7c48214",
+                  "file": "fr05-search.spec.js",
+                  "line": 236,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-16T06:18:04.677Z",
+    "duration": 28360.071,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

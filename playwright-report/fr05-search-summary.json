@@ -1,0 +1,39 @@
+{
+  "feature": "fr05-search",
+  "spec": "tests/fr05-search.spec.js",
+  "runBy": "23127195",
+  "executedAtISO": "2026-08-16T06:18:47.597Z",
+  "browserRuns": 3,
+  "perBrowser": [
+    {
+      "browser": "chromium",
+      "reportDir": "playwright-report/fr05-search-chromium",
+      "passed": 16,
+      "failed": 5,
+      "skipped": 0,
+      "total": 21
+    },
+    {
+      "browser": "firefox",
+      "reportDir": "playwright-report/fr05-search-firefox",
+      "passed": 16,
+      "failed": 5,
+      "skipped": 0,
+      "total": 21
+    },
+    {
+      "browser": "webkit",
+      "reportDir": "playwright-report/fr05-search-webkit",
+      "passed": 16,
+      "failed": 5,
+      "skipped": 0,
+      "total": 21
+    }
+  ],
+  "totals": {
+    "passed": 48,
+    "failed": 15,
+    "skipped": 0,
+    "total": 63
+  }
+}
