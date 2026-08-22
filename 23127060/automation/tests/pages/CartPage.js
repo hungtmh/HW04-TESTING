@@ -36,9 +36,14 @@ export class CartPage {
     await buttons.nth(index).click();
   }
 
-  /** Tên sản phẩm thứ `index` trên trang chủ — dùng để đối chiếu về sau. */
+  /** Tên sản phẩm thứ `index` trên trang chủ — dùng để đối chiếu về sau (Home.jsx:95). */
   async productNameAt(index = 0) {
     return (await this.page.getByRole('heading', { level: 2 }).nth(index).textContent())?.trim();
+  }
+
+  /** Dòng trong bảng giỏ hàng ứng với một tên sản phẩm (Cart.jsx:41). */
+  rowByProductName(name) {
+    return this.page.getByRole('row').filter({ hasText: name });
   }
 
   /** Số dòng sản phẩm đang có trong giỏ (bỏ dòng header của bảng). */

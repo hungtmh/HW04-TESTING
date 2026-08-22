@@ -48,7 +48,7 @@ function materializePrice(value) {
 
 test.describe('FR-15 Admin product CRUD', () => {
   // ---------------------------------------------------------------- luồng UI
-  test(`FR15-${byId('TC01').id} ${byId('TC01').title} @fr15`, async ({ page }) => {
+  test(`FR15-${byId('TC01').id} ${byId('TC01').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC01');
     const admin = new AdminProductPage(page);
     await admin.goto();
@@ -61,10 +61,14 @@ test.describe('FR-15 Admin product CRUD', () => {
     // A1 — vào đúng màn hình
     await expect(page.getByRole('heading', { name: c.expect.heading })).toBeVisible();
     // A4 — bảng có ít nhất số sản phẩm seed (trừ 1 dòng header)
-    expect((await page.getByRole('row').count()) - 1, 'A4').toBeGreaterThanOrEqual(
-      c.expect.minRows,
-    );
-    expect(c.expect.minRows, 'A4: mốc đối chiếu là số sản phẩm seed').toBe(SEED_PRODUCT_COUNT);
+    const uiRows = await admin.visibleRowCount();
+    expect(uiRows, 'A4').toBeGreaterThanOrEqual(c.expect.minRows);
+    expect(c.expect.minRows, 'kiểm tra dữ liệu test khớp seed của SUT').toBe(SEED_PRODUCT_COUNT);
+
+    // GAP-01 (Phase 4): assertion cũ chỉ so hằng số với hằng số nên không kiểm thử gì cả.
+    // A3 — bảng trên UI phải khớp đúng dữ liệu backend trả về.
+    const apiProducts = await getProducts(request);
+    expect(uiRows, 'A3: số dòng UI khớp số sản phẩm backend').toBe(apiProducts.length);
   });
 
   test(`FR15-${byId('TC02').id} ${byId('TC02').title} @fr15`, async ({ page }) => {
@@ -147,10 +151,14 @@ test.describe('FR-15 Admin product CRUD', () => {
 
     await admin.goto();
     await admin.openProductsTab();
-    const totalRows = (await page.getByRole('row').count()) - 1;
-    expect(totalRows, 'tiền đề: cần ≥3 sản phẩm để thấy hiệu ứng lan').toBeGreaterThanOrEqual(3);
+    await expect(admin.rowByName(targetName), 'tiền đề: bảng đã nạp xong sản phẩm mục tiêu').toHaveCount(1);
 
     await admin.startEditing(targetName);
+    // GAP-02 (Phase 4): đếm số dòng NGAY TRƯỚC khi bấm Lưu. Bản trước đếm sớm hơn nhiều thao tác,
+    // nếu một worker song song thêm/xoá sản phẩm ở giữa thì mốc so sánh sẽ lệch => flaky.
+    const totalRows = await admin.visibleRowCount();
+    expect(totalRows, 'tiền đề: cần ≥3 sản phẩm để thấy hiệu ứng lan').toBeGreaterThanOrEqual(3);
+
     const newName = `${targetName}-LAN`;
     const dialogPromise = admin.captureNextDialog();
     await admin.fillAndSave({ name: newName }, 'PUT');
@@ -222,10 +230,11 @@ test.describe('FR-15 Admin product CRUD', () => {
 
     // A1 — bảng admin render bằng {p.name} nên React escape, script KHÔNG chạy
     await expect(admin.rowByName(marker), 'A1: hiển thị dưới dạng văn bản').toHaveCount(1);
-    const executed = await page.evaluate(() => window.__xss15 === 1);
-    expect(executed, 'A1: script không được thực thi ở màn hình này').toBe(
-      !c.expect.scriptDidNotExecute,
-    );
+    // GAP-03 (Phase 4): bản trước viết `.toBe(!c.expect.scriptDidNotExecute)` — phủ định kép,
+    // rất dễ đọc nhầm thành khẳng định ngược khi review. Viết thẳng ý nghĩa ra.
+    const xssExecuted = await page.evaluate(() => window.__xss15 === 1);
+    expect(xssExecuted, 'A1: script KHÔNG được thực thi ở bảng admin (React escape)').toBe(false);
+    expect(c.expect.scriptDidNotExecute, 'kỳ vọng khai báo trong data file').toBe(true);
 
     await cleanupProduct(request, created.body.id);
   });

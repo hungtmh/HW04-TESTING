@@ -337,3 +337,55 @@ npx playwright test --project=chromium --grep @fr15 --repeat-each=2
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · bug `BUG-15-01..11`
+
+---
+
+## LOG-008 — Phase 4: AI Gap Analysis — tự phê bình 7 điểm yếu và vá lại spec
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T22:05:00+07:00
+- **Phase:** P4 — Review & fix
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- Quét anti-pattern tự động: 0 `waitForTimeout` thật, 0 selector class Tailwind, 0 `nth-child`/xpath, 0 data hardcode inline.
+- Lập bảng **7 GAP** có bằng chứng, mỗi GAP nêu rõ nguyên nhân (prompt quality / model limitation / đặc thù feature) và đã sửa:
+  - GAP-00 selector `getByRole('textbox')` khớp 2 phần tử (AI hiểu sai API Playwright)
+  - GAP-01 assertion so hằng số với hằng số (nhồi cho đủ 3 pattern)
+  - GAP-02 đếm dòng quá sớm → hở race khi chạy song song
+  - GAP-03 phủ định kép khó đọc
+  - GAP-04 mốc chờ không phụ thuộc dữ liệu → có thể đọc bảng rỗng
+  - GAP-05 happy path không kiểm tra đúng sản phẩm nào vào giỏ
+  - GAP-06 biến thể token 4 số có 1/9000 xác suất trùng token thật
+  - GAP-07 firefox/webkit chưa tải → 28 test không chạy nổi mà vẫn báo "52 passed"
+- **Phát hiện quan trọng cho AI_Critique:** AI không chỉ sai, mà còn *viết comment giải thích* cho giả định sai của mình (GAP-00) → người review dễ tin nhầm là đã kiểm chứng.
+
+**File tạo/sửa:**
+- `report/02-AI-GAP-ANALYSIS.md` (mới)
+- `automation/tests/pages/AdminProductPage.js` (sửa — chờ dòng dữ liệu, thêm `visibleRowCount()`)
+- `automation/tests/pages/CartPage.js` (sửa — thêm `rowByProductName()`)
+- `automation/tests/fr15-product-crud.spec.js` (sửa — GAP-01/02/03)
+- `automation/tests/fr08-checkout.spec.js` (sửa — GAP-05)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+npx playwright test --project=firefox        (LẦN 1, chưa cài browser)
+⇒ 28 failed, 52 passed
+  Error: browserType.launch: Executable doesn't exist at ...\firefox-1538\firefox.exe
+
+npx playwright install firefox webkit        ⇒ exit 0
+
+npx playwright test --project=chromium       ⇒ 80 passed (17.0s)
+npx playwright test --project=firefox        ⇒ 80 passed (33.3s)
+npx playwright test --project=webkit         ⇒ 80 passed (37.7s)
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · report `02-AI-GAP-ANALYSIS.md`

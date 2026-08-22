@@ -74,11 +74,22 @@ export class AdminProductPage {
     );
   }
 
-  /** Mở tab Sản phẩm và chờ bảng nạp xong (chờ response /api/products, không waitForTimeout). */
+  /**
+   * Mở tab Sản phẩm và chờ **bảng đã nạp xong dữ liệu**.
+   * GAP-04 (Phase 4): trước đây chỉ chờ nút "Lưu sản phẩm" hiện — nút đó thuộc form, có ngay
+   * lập tức, trong khi `fetchData()` vẫn đang chạy. Test nào đếm số dòng ngay sau đó có thể
+   * đọc phải bảng rỗng => flaky. Nay chờ đúng dòng dữ liệu đầu tiên (nút "Sửa") xuất hiện.
+   */
   async openProductsTab() {
     await this.productsTab.click();
     await expect(this.productsHeading).toBeVisible();
     await expect(this.saveButton).toBeVisible();
+    await expect(this.page.getByRole('button', { name: 'Sửa' }).first()).toBeVisible();
+  }
+
+  /** Số dòng sản phẩm đang hiển thị (trừ dòng header của bảng). */
+  async visibleRowCount() {
+    return (await this.page.getByRole('row').count()) - 1;
   }
 
   /** Locator dòng bảng chứa đúng tên sản phẩm. */

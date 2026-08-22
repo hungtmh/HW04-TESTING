@@ -54,8 +54,14 @@ test.describe('FR-08 Checkout', () => {
 
     const cart = new CartPage(page);
     await cart.gotoHome();
+    // GAP-05 (Phase 4): bản trước không hề kiểm tra ĐÚNG sản phẩm nào vào giỏ — chỉ kiểm tra
+    // "có tiền > 0". Nay ghi lại tên sản phẩm đã bấm và assert nó xuất hiện trong giỏ.
+    const productName = await cart.productNameAt(c.productIndex);
     await cart.addProductToCart(c.productIndex);
     await cart.cartLink.click();
+
+    // A1 — đúng sản phẩm vừa chọn nằm trong giỏ
+    await expect(cart.rowByProductName(productName), 'A1').toHaveCount(1);
 
     const subtotal = await cart.readSubtotal();
     expect(subtotal, 'tiền đề: giỏ phải có tiền').toBeGreaterThan(0);
