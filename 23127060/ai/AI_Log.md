@@ -488,3 +488,47 @@ bash bug-report/gh-issue-commands.sh
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · bug `BUG-03-01..BUG-15-11`
+
+---
+
+## LOG-011 — Phase 7: Main Report, AI Audit, AI Critique (296 từ), README, 2 kịch bản video, 9 PDF
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T23:20:00+07:00
+- **Phase:** P7 — Tài liệu
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- `report/HW04_Main_Report.md`: mọi con số lấy từ `03-RUN-SUMMARY.md`; giải thích rõ vì sao "240 passed" nghĩa là "bug vẫn còn"; nêu 5 bug nghiêm trọng nhất và 2 bug phát hiện thêm nhờ phân tích giá trị biên.
+- `ai/AI_Audit_Report.md`: bảng 11 entry + khai báo "I use AI tools for the following tasks" + bảng **10 lỗi thật của AI** kèm cách phát hiện (5 lỗi chỉ lộ khi chạy thật, 5 lỗi lộ khi đọc lại code).
+- `ai/AI_Critique.md`: viết dựa trên lỗi thật, **không** viết chung chung. Bản đầu **313 từ → vượt ngưỡng**, `count-words.mjs` exit 1; cắt 3 lần còn **296 từ** (đạt 200–300).
+- `README.md`: test summary số thật, bảng tự đánh giá, checklist 14 việc bàn giao cho Khải.
+- 2 kịch bản video có timeline theo phút, lời thoại cụ thể, checklist trước khi upload; Video 1 dành hẳn 1 phút cho phần **"một lỗi AI tôi đã tự sửa"**.
+- `md-to-pdf.mjs`: markdown→HTML tự viết (heading/bảng/code/list/blockquote/inline) rồi in PDF A4 bằng chính Chromium của Playwright — không thêm dependency ngoài.
+
+**File tạo/sửa:**
+- `report/HW04_Main_Report.md` · `ai/AI_Audit_Report.md` · `ai/AI_Critique.md` · `README.md` (mới)
+- `video-script/VIDEO_1_DEMO_SCRIPT.md` · `VIDEO_2_AGENT_SKILL_SCRIPT.md` (mới)
+- `automation/scripts/count-words.mjs` · `md-to-pdf.mjs` (mới)
+- 9 file `.pdf` sinh kèm
+
+**Lệnh đã chạy & kết quả thật:**
+```
+node scripts/count-words.mjs
+⇒ LẦN 1: AI_Critique.md: 313 từ — KHÔNG ĐẠT (exit 1)
+⇒ LẦN 2: 304 từ — KHÔNG ĐẠT
+⇒ LẦN 3: 296 từ — ĐẠT (200–300), exit 0
+
+node scripts/md-to-pdf.mjs
+⇒ Đã xuất 9/9 file PDF (Main Report, 00→03, BUG_REPORT, AI_Audit, AI_Critique, README)
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>`
