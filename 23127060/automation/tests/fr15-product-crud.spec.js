@@ -362,6 +362,41 @@ test.describe('FR-15 Admin product CRUD', () => {
     await cleanupProduct(request, res.body.id);
   });
 
+  test('FR15-TC21 list and detail endpoints disagree on the price type of the same product @fr15', async ({
+    request,
+  }) => {
+    // BUG-15-09 nhìn ở góc nguy hiểm hơn TC17: không chỉ "id chẵn khác id lẻ", mà CÙNG MỘT sản phẩm
+    // trả về hai kiểu dữ liệu khác nhau tuỳ theo client gọi endpoint nào. Frontend gọi cả hai
+    // (Home.jsx dùng danh sách, ProductDetail.jsx dùng chi tiết) nên đây là bẫy thật, không lý thuyết.
+    annotate(test.info(), {
+      bug: 'BUG-15-09',
+      source: 'server.js:158',
+      patterns: ['A3', 'A4'],
+    });
+
+    const list = await getProducts(request);
+    const evenIdProduct = list.find((p) => p.id % 2 === 0);
+    expect(evenIdProduct, 'tiền đề: cần ít nhất 1 sản phẩm có id chẵn').toBeTruthy();
+
+    const detail = await getProductById(request, evenIdProduct.id);
+
+    // A3 — cùng id, hai endpoint, hai kiểu dữ liệu
+    expect(typeof evenIdProduct.price, 'A3: GET /api/products trả number').toBe('number');
+    expect(typeof detail.body.price, 'A3: GET /api/products/:id trả string').toBe('string');
+
+    // A4 — giá trị thì bằng nhau, chỉ khác kiểu => lỗi rất dễ lọt qua review bằng mắt
+    expect(Number(detail.body.price), 'A4: giá trị giống nhau').toBe(evenIdProduct.price);
+
+    // A4 — hậu quả cụ thể: phép nhân số lượng ở client biến thành nối chuỗi
+    const quantity = 2;
+    expect(detail.body.price * quantity, 'A4: nhân thì JS tự ép kiểu, ra đúng').toBe(
+      evenIdProduct.price * quantity,
+    );
+    expect(detail.body.price + quantity, 'A4: nhưng CỘNG thì thành nối chuỗi').toBe(
+      `${evenIdProduct.price}${quantity}`,
+    );
+  });
+
   // -------------------------------------- bảng boundary trường dữ liệu (CSV)
   for (const row of fieldRows) {
     test(`FR15-${row.id} ${row.label} @fr15`, async ({ request }) => {
