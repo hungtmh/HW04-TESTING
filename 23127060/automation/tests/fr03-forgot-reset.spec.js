@@ -327,11 +327,53 @@ test.describe('FR-03 Forgot & Reset password', () => {
     const login = await request.post(`${API_BASE_URL}/login`, {
       data: { email, password: c.newPassword },
     });
+    const loginBody = await login.json();
+
+    // Soft assertion: một test bắt NHIỀU triệu chứng cùng lúc. Nếu chỉ dùng expect() thường,
+    // test dừng ở triệu chứng đầu tiên và ta không biết các triệu chứng còn lại có xảy ra không.
     // A3 — người dùng đã làm đúng mọi bước khôi phục nhưng vẫn không vào được
-    expect(login.status(), 'A3: vẫn bị khoá sau khi đổi mật khẩu').toBe(
+    expect.soft(login.status(), 'A3: vẫn bị khoá sau khi đổi mật khẩu').toBe(
       c.expect.loginAfterResetStatus,
     );
-    expect(JSON.stringify(await login.json()), 'A1').toContain(c.expect.loginError);
+    // A1 — thông điệp trả về nói rõ tài khoản bị khoá
+    expect.soft(JSON.stringify(loginBody), 'A1').toContain(c.expect.loginError);
+    // A3 — và mật khẩu CŨ cũng không dùng được, tức người dùng bị chặn hoàn toàn
+    const oldLogin = await request.post(`${API_BASE_URL}/login`, {
+      data: { email, password: ORIGINAL_PASSWORD },
+    });
+    expect.soft(oldLogin.status(), 'A3: mật khẩu cũ cũng bị chặn').toBe(403);
+  });
+
+  test('FR03-TC19 the reset token travels to the browser in the response body @fr03', async ({
+    page,
+    request,
+  }) => {
+    // BUG-03-02 nhìn từ tầng mạng: chứng minh mã bí mật thật sự rời khỏi server và tới trình duyệt,
+    // chứ không phải chỉ "tình cờ" được FE hiển thị. Đây là bằng chứng mạnh hơn TC06 (chỉ gọi API).
+    trace(test.info(), byId('TC06'), ['A3', 'A1']);
+    const email = await freshUser(request, 'fr03-tc19');
+    const fp = new ForgotPasswordPage(page);
+    await fp.goto();
+
+    const res = await fp.requestOtp(email);
+    const body = await res.json();
+
+    // A3 — response mà TRÌNH DUYỆT nhận được có chứa resetToken
+    expect(body, 'A3: token nằm trong response gửi về client').toHaveProperty('resetToken');
+
+    // A1 — và đúng token đó được in ra màn hình cho bất kỳ ai nhìn vào
+    const shown = await fp.readOtpFromScreen();
+    expect(shown, 'A1: token trên màn hình khớp token trong response').toBe(
+      String(body.resetToken),
+    );
+
+    // A3 — token này dùng được ngay: đặt lại mật khẩu thành công mà không cần vào hộp thư
+    const reset = await resetPassword(request, {
+      email,
+      resetToken: shown,
+      newPassword: FE_VALID_PASSWORD,
+    });
+    expect(reset.status, 'A3: chiếm được tài khoản chỉ bằng thông tin lộ trên màn hình').toBe(200);
   });
 
   // TC15 + TC10 (biến thể token) — bảng boundary từ CSV, layer=api
