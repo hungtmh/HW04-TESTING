@@ -215,3 +215,44 @@ node -e "<nap 6 file qua utils/data.js>"
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>`
+
+---
+
+## LOG-005 — Phase 3 (FR-03): Page Object + spec 30 test, chạy thật trên chromium
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T21:10:00+07:00
+- **Phase:** P3 — FR-03 spec generation
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- `ForgotPasswordPage.js`: bọc 2 bước của `/forgot-password`, đọc OTP bằng regex trên text, helper `captureNextDialog()` vì SUT báo kết quả bằng `alert()`.
+- `LoginPage.js`: page object tiền đề; ghi chú rõ trang login của SUT dùng nút **`Sign In`** và ô mật khẩu là `type="text"`.
+- `fr03-forgot-reset.spec.js`: **30 test**, 100% data-driven từ JSON + CSV, 0 dòng dữ liệu hardcode inline, 0 `waitForTimeout`.
+- **AI TỰ SAI VÀ TỰ SỬA (ghi lại làm bằng chứng cho AI_Critique):** giả định "Playwright không coi `input[type=password]` là role textbox" là **SAI**. Run thật báo `strict mode violation: getByRole('textbox') resolved to 2 elements` → 9 test fail. Đã sửa thành `.first()` kèm comment giải thích nguyên nhân.
+- Chống flaky có chủ đích: biến thể token `9999` trong CSV có xác suất 1/9000 trùng token thật → thêm vòng xin lại token cho tới khi khác.
+
+**File tạo/sửa:**
+- `automation/tests/pages/ForgotPasswordPage.js` (mới)
+- `automation/tests/pages/LoginPage.js` (mới)
+- `automation/tests/fr03-forgot-reset.spec.js` (mới, 30 test)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+npx playwright test --project=chromium --grep @fr03
+⇒ LẦN 1: 9 failed, 21 passed  (strict mode violation ở getByRole('textbox'))
+⇒ LẦN 2 (sau khi sửa .first()): 30 passed (7.8s)
+
+npx playwright test --project=chromium --grep @fr03 --repeat-each=2
+⇒ 60 passed (14.9s)   ← ổn định 2 lần liên tiếp theo yêu cầu §5 Phase 3
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · bug `BUG-03-01..08`
