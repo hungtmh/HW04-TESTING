@@ -21,7 +21,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23127060 – Ninh Văn Khải",
-      "Run at (ISO)": "2026-08-22T13:51:53.718Z",
+      "Run at (ISO)": "2026-08-22T14:20:27.128Z",
       "feature": "fr03-reset",
       "actualWorkers": 2
     },
@@ -33,7 +33,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:51:53.718Z",
+          "Run at (ISO)": "2026-08-22T14:20:27.128Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:51:53.718Z",
+          "Run at (ISO)": "2026-08-22T14:20:27.128Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -71,7 +71,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:51:53.718Z",
+          "Run at (ISO)": "2026-08-22T14:20:27.128Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -96,7 +96,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr03-reset-firefox",
-          "title": "Run by: 23127060 — 2026-08-22T13:51:53.718Z"
+          "title": "Run by: 23127060 — 2026-08-22T14:20:27.128Z"
         }
       ],
       [
@@ -133,7 +133,7 @@
         {
           "title": "FR-03 Forgot & Reset password",
           "file": "fr03-forgot-reset.spec.js",
-          "line": 42,
+          "line": 55,
           "column": 6,
           "specs": [
             {
@@ -145,7 +145,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:34-35"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A5, A2"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -154,13 +163,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2798,
+                      "duration": 2914,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:54.758Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:28.066Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:34-35"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A5, A2"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -169,7 +187,7 @@
               ],
               "id": "88d85392f6845fe8ceef-2cf6356c10c4946c40ff",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 44,
+              "line": 57,
               "column": 3
             },
             {
@@ -181,7 +199,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -190,13 +217,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2775,
+                      "duration": 2726,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:54.727Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:28.050Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -205,7 +241,7 @@
               ],
               "id": "88d85392f6845fe8ceef-fbf8488859c0f9799c37",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 71,
+              "line": 85,
               "column": 3
             },
             {
@@ -217,7 +253,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:92"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -226,13 +271,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1195,
+                      "duration": 1267,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:58.079Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:31.473Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:92"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -241,7 +295,7 @@
               ],
               "id": "88d85392f6845fe8ceef-924df5c43d0dcbdb42bb",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 84,
+              "line": 99,
               "column": 3
             },
             {
@@ -253,7 +307,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -262,13 +329,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1272,
+                      "duration": 1308,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:58.566Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:31.802Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -277,7 +357,7 @@
               ],
               "id": "88d85392f6845fe8ceef-e939a0970c47254c7cbd",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 106,
+              "line": 122,
               "column": 3
             },
             {
@@ -289,7 +369,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -298,13 +387,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1326,
+                      "duration": 1162,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:59.296Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:32.756Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -313,7 +411,7 @@
               ],
               "id": "88d85392f6845fe8ceef-42848c0dc9e91ac2456b",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -325,7 +423,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -334,13 +441,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1252,
+                      "duration": 1146,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:59.861Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:33.136Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -349,7 +465,7 @@
               ],
               "id": "88d85392f6845fe8ceef-65270e4c1095dc73c4cd",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -361,7 +477,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -370,13 +495,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1252,
+                      "duration": 1158,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:00.635Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:33.937Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -385,7 +519,7 @@
               ],
               "id": "88d85392f6845fe8ceef-29f0b66a0d6f2b054ebf",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -397,7 +531,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -406,13 +549,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1280,
+                      "duration": 1239,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:01.133Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:34.303Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -421,7 +573,7 @@
               ],
               "id": "88d85392f6845fe8ceef-65eda8784cc4c9ef359e",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -433,7 +585,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -442,13 +607,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1304,
+                      "duration": 1176,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:01.903Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:35.110Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -457,7 +635,7 @@
               ],
               "id": "88d85392f6845fe8ceef-d9a0a1ca275316ecc8ce",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -469,7 +647,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -478,13 +669,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1318,
+                      "duration": 1189,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:02.432Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:35.565Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -493,7 +697,7 @@
               ],
               "id": "88d85392f6845fe8ceef-e43c741f1027e8b0c319",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -505,511 +709,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
+                  "annotations": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 41,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.230Z",
-                      "annotations": [],
-                      "attachments": []
+                      "type": "bug",
+                      "description": "BUG-03-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:76-79"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-e879b3443679a4f62334",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 145,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC07 reset token is only 4 digits so brute force is feasible @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 34,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.288Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-8ca8e05af790af3caf08",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 156,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC08 forgot-password has no rate limit @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 127,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.339Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-7f095c944d3189f44b08",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 166,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC09 different status codes allow user enumeration @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 41,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.486Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-a6594707339da3cb5738",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 181,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC10 backend accepts a one-character password @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 48,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.545Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-250e108ab7533bbe646a",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 194,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC11 password is stored and returned in plaintext @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 56,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.608Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-7a9bc674479e9fd83854",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 214,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC12 requesting a second token invalidates the first @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 52,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.677Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-a3b48fe339c3dee9acbb",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 233,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC13 a consumed token cannot be reused @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 47,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.748Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-9e2efa530c1fa2768312",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 258,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC14 successful reset does not unlock a locked account @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 81,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.773Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-907d3b55caaa4c5e87d3",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 279,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC15a empty token string @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 38,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.810Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-3c74b83d097d0b0bcfb7",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15b non numeric token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 40,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.866Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-1bed649954af48f69cbc",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15c three digits below length boundary @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 41,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.872Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-56fefd0abda343b76073",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15d five digits above length boundary @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 61,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.922Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-f6f3664abef36d7230ee",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15e token of another user @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 57,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:03.933Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-ed1e75da23d6af29bda1",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15f sql injection attempt in token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -1023,21 +736,34 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:04.002Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:36.301Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:76-79"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-43fc60d0088acab6fce3",
+              "id": "88d85392f6845fe8ceef-e879b3443679a4f62334",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
+              "line": 163,
+              "column": 3
             },
             {
-              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
+              "title": "FR03-TC07 reset token is only 4 digits so brute force is feasible @fr03",
               "ok": true,
               "tags": [
                 "fr03"
@@ -1045,35 +771,61 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-03"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:70"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 34,
+                      "duration": 30,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:04.006Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:36.345Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-03"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:70"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-ddeda8e8b7a02e4ed618",
+              "id": "88d85392f6845fe8ceef-8ca8e05af790af3caf08",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
+              "line": 175,
+              "column": 3
             },
             {
-              "title": "FR03-TC10b valid token with empty password accepted by backend @fr03",
+              "title": "FR03-TC08 forgot-password has no rate limit @fr03",
               "ok": true,
               "tags": [
                 "fr03"
@@ -1081,7 +833,82 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:66-82"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 106,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.388Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:66-82"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-7f095c944d3189f44b08",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 186,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC09 different status codes allow user enumeration @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -1095,8 +922,825 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:04.046Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:36.506Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-a6594707339da3cb5738",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 202,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC10 backend accepts a one-character password @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 42,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.554Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-250e108ab7533bbe646a",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 216,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC11 password is stored and returned in plaintext @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:88"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.608Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:88"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-7a9bc674479e9fd83854",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 237,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC12 requesting a second token invalidates the first @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:72-75"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 47,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.667Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:72-75"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-a3b48fe339c3dee9acbb",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 257,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC13 a consumed token cannot be reused @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:87"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 56,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.724Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:87"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-9e2efa530c1fa2768312",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 283,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC14 successful reset does not unlock a locked account @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-08"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 80,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.777Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-08"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-907d3b55caaa4c5e87d3",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC19 the reset token travels to the browser in the response body @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:76-79"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1080,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.798Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:76-79"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-6909dcafc6d3741eb78e",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 347,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC15a empty token string @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 29,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.875Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-3c74b83d097d0b0bcfb7",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15b non numeric token @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 29,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.914Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-1bed649954af48f69cbc",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15c three digits below length boundary @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 27,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.954Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-56fefd0abda343b76073",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15d five digits above length boundary @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 31,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:36.991Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-f6f3664abef36d7230ee",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15e token of another user @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:37.034Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-ed1e75da23d6af29bda1",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15f sql injection attempt in token @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:37.079Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-43fc60d0088acab6fce3",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 36,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:37.124Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-ddeda8e8b7a02e4ed618",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC10b valid token with empty password accepted by backend @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 38,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:37.172Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1105,7 +1749,7 @@
               ],
               "id": "88d85392f6845fe8ceef-fd51124c745373c19665",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
@@ -1117,7 +1761,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
@@ -1126,13 +1779,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 55,
+                      "duration": 68,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:04.058Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:37.228Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1141,7 +1803,7 @@
               ],
               "id": "88d85392f6845fe8ceef-a87683d32d906f61e81b",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 336,
+              "line": 406,
               "column": 3
             },
             {
@@ -1159,15 +1821,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1388,
+                      "duration": 1309,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:04.098Z",
+                      "startTime": "2026-08-22T14:20:37.316Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1177,7 +1839,7 @@
               ],
               "id": "88d85392f6845fe8ceef-bfe562a173d96fadf197",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 357,
+              "line": 428,
               "column": 3
             },
             {
@@ -1195,15 +1857,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
                       "duration": 62,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:04.128Z",
+                      "startTime": "2026-08-22T14:20:37.897Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1213,7 +1875,7 @@
               ],
               "id": "88d85392f6845fe8ceef-069e2ffffdaa7cebcf76",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 376,
+              "line": 447,
               "column": 3
             }
           ]
@@ -1223,9 +1885,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-22T13:51:53.733Z",
-    "duration": 12391.001,
-    "expected": 30,
+    "startTime": "2026-08-22T14:20:27.138Z",
+    "duration": 11942.65,
+    "expected": 31,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

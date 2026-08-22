@@ -532,3 +532,61 @@ node scripts/md-to-pdf.mjs
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>`
+
+---
+
+## LOG-012 — Phase 8: Bổ sung 3 test, vá 2 lỗi flaky chỉ WebKit mới lộ, đóng gói
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T23:45:00+07:00
+- **Phase:** P8 — Đóng gói
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- **Phát hiện thiếu sót thật:** sau Phase 7 chỉ có **4 commit** chạm `*.spec.js`, trong khi rubric yêu cầu **≥8**. Không bịa commit rỗng — thay vào đó làm nốt 5 việc cải tiến thật sự có giá trị, mỗi việc 1 commit:
+  1. `refactor(specs)` — gom `freshUser` trùng lặp ở 3 spec về `utils/fixtures.js`.
+  2. `test(specs)` — gắn annotation `bug` / `source` / `assertions` cho mọi test ⇒ HTML report truy vết được test ↔ bug (41/83 test mang mã bug).
+  3. `test(fr03)` — thêm FR03-TC19 chứng minh token lộ ở **tầng mạng** (response mà trình duyệt nhận được), + `expect.soft` cho TC14.
+  4. `test(fr08)` — thêm FR08-TC20 chứng minh `/api/orders/my-orders` lọc đúng user, đối lập với IDOR ở `/api/orders/:id`; `expect.soft` gom 4 triệu chứng coupon.
+  5. `test(fr15)` — thêm FR15-TC21 chứng minh **cùng một sản phẩm** trả 2 kiểu `price` khác nhau tuỳ endpoint.
+- **2 lỗi flaky thật (GAP-08, GAP-09)** lộ ra ở lần chạy 9-run: `isVisible()` không chờ ⇒ `itemRowCount()` trả `-1`; và "alert đã đóng" ≠ "React đã render" ⇒ đếm dòng ra 0. Cả hai **pass sạch trên chromium kể cả `--repeat-each=2`**, chỉ WebKit mới làm fail. Đã vá bằng web-first assertion và kiểm chứng 18/18.
+- Đồng bộ lại toàn bộ số liệu trong Main Report / README / Gap Analysis / Audit theo lần chạy cuối (83 test · 249/249).
+
+**File tạo/sửa:**
+- `automation/tests/utils/fixtures.js` (mới)
+- `automation/tests/*.spec.js` (sửa — 3 file, +3 test, +annotation, +soft assertion)
+- `automation/tests/pages/CartPage.js` (sửa — GAP-08)
+- `report/02-AI-GAP-ANALYSIS.md` · `report/HW04_Main_Report.md` · `README.md` · `ai/AI_Audit_Report.md` (sửa)
+- `evidence/git-commit-log.txt` · `evidence/git-commit-log-files.txt`
+
+**Lệnh đã chạy & kết quả thật:**
+```
+git log --pretty=... -- '23127060/**/*.spec.js'   (TRƯỚC Phase 8)
+⇒ 4 commit — CHƯA ĐẠT yêu cầu ≥8
+
+node scripts/run-multibrowser.mjs                 (lần 1, sau khi thêm test)
+⇒ 2/9 run có FAIL:
+   FR08-TC17 (webkit): Expected: > 0, Received: -1
+   FR15-TC05 (webkit): Expected: > 1, Received: 0
+
+npx playwright test --project=webkit              (sau khi vá GAP-08/09)
+⇒ 83 passed (35.8s)
+npx playwright test --project=webkit --grep "FR08-TC17|FR15-TC05" --repeat-each=3  ×3 lượt
+⇒ 6 passed · 6 passed · 6 passed  (18/18 ổn định)
+
+node scripts/run-multibrowser.mjs                 (lần cuối)
+⇒ ✅ 9/9 run PASS toàn bộ · TỔNG 249 test · 249 passed · 0 failed · 0 flaky · 91.5s
+node scripts/verify-report-banner.mjs             ⇒ 9/9 report hợp lệ (exit 0)
+node scripts/count-words.mjs                      ⇒ AI_Critique.md: 296 từ — ĐẠT
+node scripts/md-to-pdf.mjs                        ⇒ 9/9 file PDF
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>`

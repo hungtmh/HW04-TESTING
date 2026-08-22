@@ -17,13 +17,13 @@
 
 | Chỉ tiêu | Yêu cầu | Đạt được |
 |---|---|---|
-| Test case tự động / feature | ≥ 12 | **FR-03: 30 · FR-08: 25 · FR-15: 25** |
-| Tổng test case | ≥ 36 | **80** |
-| Lần chạy multi-browser | 9 (3 feature × 3 browser) | **9/9 · 240 test · 240 passed · 0 failed · 0 flaky** |
+| Test case tự động / feature | ≥ 12 | **FR-03: 31 · FR-08: 26 · FR-15: 26** |
+| Tổng test case | ≥ 36 | **83** |
+| Lần chạy multi-browser | 9 (3 feature × 3 browser) | **9/9 · 249 test · 249 passed · 0 failed · 0 flaky** |
 | Assertion pattern khác nhau | ≥ 3 | **5** (A1–A5, §4) |
 | Data-driven | không hardcode inline | **77 record** trong 6 file JSON/CSV, 0 mảng dữ liệu inline |
 | Bug phát hiện | ≥ 3 / feature | **27 bug** (FR-03: 8 · FR-08: 9 · FR-15: 10) — trong đó **9 Critical** |
-| Commit chạm `*.spec.js` | ≥ 8 | xem `evidence/git-commit-log-files.txt` |
+| Commit chạm `*.spec.js` | ≥ 8 | **9 commit** — xem `evidence/git-commit-log-files.txt` |
 | Banner chống gian lận | mọi report | **9/9 report** có `Run by: 23127060` + ISO timestamp, verify script pass |
 
 **Số liệu chi tiết:** `report/03-RUN-SUMMARY.md` (sinh tự động từ `results.json`, không nhập tay số nào).
@@ -70,10 +70,10 @@ Test đọc URL từ ENV (`automation/tests/utils/env.js`) nên đổi port khô
 └── tests/
     ├── data/       6 file (3 JSON + 3 CSV) — 77 record
     ├── pages/      5 Page Object
-    ├── utils/      env · csv · data · api
-    ├── fr03-forgot-reset.spec.js   30 test
-    ├── fr08-checkout.spec.js       25 test
-    └── fr15-product-crud.spec.js   25 test
+    ├── utils/      env · csv · data · api · fixtures
+    ├── fr03-forgot-reset.spec.js   31 test
+    ├── fr08-checkout.spec.js       26 test
+    └── fr15-product-crud.spec.js   26 test
 ```
 
 ### 3.1 Page Object
@@ -124,18 +124,18 @@ không phải backend — điều mà một assertion đơn lẻ không thể k�
 
 | # | Report dir | Feature | Browser | Total | Passed | Failed | Flaky | Duration (s) |
 |---|---|---|---|---|---|---|---|---|
-| 1 | `fr03-reset-chromium` | FR-03 | chromium | 30 | 30 | 0 | 0 | 7.3 |
-| 2 | `fr03-reset-firefox` | FR-03 | firefox | 30 | 30 | 0 | 0 | 12.4 |
-| 3 | `fr03-reset-webkit` | FR-03 | webkit | 30 | 30 | 0 | 0 | 15.5 |
-| 4 | `fr08-checkout-chromium` | FR-08 | chromium | 25 | 25 | 0 | 0 | 6.9 |
-| 5 | `fr08-checkout-firefox` | FR-08 | firefox | 25 | 25 | 0 | 0 | 12.2 |
-| 6 | `fr08-checkout-webkit` | FR-08 | webkit | 25 | 25 | 0 | 0 | 13.8 |
-| 7 | `fr15-product-chromium` | FR-15 | chromium | 25 | 25 | 0 | 0 | 5.7 |
-| 8 | `fr15-product-firefox` | FR-15 | firefox | 25 | 25 | 0 | 0 | 10.0 |
-| 9 | `fr15-product-webkit` | FR-15 | webkit | 25 | 25 | 0 | 0 | 9.8 |
-| | **TỔNG** | | | **240** | **240** | **0** | **0** | **93.7** |
+| 1 | `fr03-reset-chromium` | FR-03 | chromium | 31 | 31 | 0 | 0 | 7.4 |
+| 2 | `fr03-reset-firefox` | FR-03 | firefox | 31 | 31 | 0 | 0 | 11.9 |
+| 3 | `fr03-reset-webkit` | FR-03 | webkit | 31 | 31 | 0 | 0 | 14.3 |
+| 4 | `fr08-checkout-chromium` | FR-08 | chromium | 26 | 26 | 0 | 0 | 6.6 |
+| 5 | `fr08-checkout-firefox` | FR-08 | firefox | 26 | 26 | 0 | 0 | 11.1 |
+| 6 | `fr08-checkout-webkit` | FR-08 | webkit | 26 | 26 | 0 | 0 | 13.4 |
+| 7 | `fr15-product-chromium` | FR-15 | chromium | 26 | 26 | 0 | 0 | 5.6 |
+| 8 | `fr15-product-firefox` | FR-15 | firefox | 26 | 26 | 0 | 0 | 10.7 |
+| 9 | `fr15-product-webkit` | FR-15 | webkit | 26 | 26 | 0 | 0 | 10.3 |
+| | **TỔNG** | | | **249** | **249** | **0** | **0** | **91.5** |
 
-> **Đọc đúng con số "240 passed":** phần lớn test được viết để **khẳng định hành vi sai hiện tại** của SUT
+> **Đọc đúng con số "249 passed":** phần lớn test được viết để **khẳng định hành vi sai hiện tại** của SUT
 > (ví dụ: *"backend chấp nhận tổng tiền âm"* — pass nghĩa là backend **thật sự** chấp nhận).
 > Test pass ⇒ **bug vẫn còn**. Khi SUT được vá, chính các test gắn mã `BUG-xx-xx` sẽ **fail** —
 > đó là tín hiệu cần cập nhật kỳ vọng, không phải test hỏng. Cách viết này biến bộ test thành
@@ -199,16 +199,16 @@ chứ không phải bản thân việc dùng AI.
 | P1 | Thiết kế 54 test case (bảng chuẩn, dẫn nguồn expected) | `report/01-TEST-CASES.md` |
 | P2 | Sinh 6 file dữ liệu, 77 record | `automation/tests/data/` |
 | P3 | 5 Page Object + 3 spec, chạy tới khi ổn định `--repeat-each=2` | `automation/tests/` |
-| P4 | Tự phê bình, tìm 7 GAP, vá lại | `report/02-AI-GAP-ANALYSIS.md` |
+| P4 | Tự phê bình, tìm GAP-00..07, vá lại | `report/02-AI-GAP-ANALYSIS.md` |
 | P5 | 9 run multi-browser + verify banner + bảng số liệu | `report/03-RUN-SUMMARY.md` |
 | P6 | 27 bug + script chụp ảnh minh chứng | `bug-report/`, `evidence/bugs/` |
 | P7 | Tài liệu | `report/`, `ai/`, `README.md` |
-| P8 | Đóng gói | `evidence/git-commit-log*.txt` |
+| P8 | Bổ sung 3 test, vá GAP-08/09, đóng gói | `evidence/git-commit-log*.txt` |
 
 Mỗi phase = 1 commit riêng + 1 entry trong `ai/AI_Log.md`.
 Toàn bộ hội thoại với AI được ghi lại trong `ai/AI_Log.md` (10 entry) và tổng hợp thành `ai/AI_Audit_Report.md`.
 
-### 7.1 Ba lỗi AI đáng chú ý nhất (chi tiết ở `report/02-AI-GAP-ANALYSIS.md`)
+### 7.1 Bốn lỗi AI đáng chú ý nhất (chi tiết ở `report/02-AI-GAP-ANALYSIS.md`)
 
 1. **AI tự tin về API mà nó nắm sai.** AI viết trong Page Object rằng *"Playwright không expose role cho
    `input[type=password]`"* — sai, và tệ hơn là nó **viết cả comment giải thích** cho giả định chưa kiểm chứng đó.
@@ -218,6 +218,10 @@ Toàn bộ hội thoại với AI được ghi lại trong `ai/AI_Log.md` (10 en
 3. **Bỏ qua trạng thái môi trường và tính đồng thời.** AI mặc định máy đã cài đủ browser (thực tế firefox/webkit
    chưa tải, kết quả "52 passed" trông như thành công một phần nhưng thực chất 28 test không chạy nổi),
    và viết test như thể chỉ có một mình nó truy cập CSDL.
+4. **Chỉ kiểm chứng trên trình duyệt nhanh nhất.** Hai lỗi chờ (GAP-08, GAP-09) pass sạch trên chromium
+   **kể cả với `--repeat-each=2`**, chỉ lộ ra khi chạy WebKit ở Phase 8. Cả hai đến từ cùng một thói quen:
+   lấy phép đọc DOM **không có cơ chế chờ** (`isVisible()`, `count()`) làm mốc thay vì web-first assertion.
+   Bài học: "ổn định 2 lần liên tiếp trên 1 browser" không đồng nghĩa với ổn định.
 
 ---
 
@@ -240,10 +244,10 @@ Toàn bộ hội thoại với AI được ghi lại trong `ai/AI_Log.md` (10 en
 
 | Tiêu chí | Điểm tối đa | Tự chấm | Căn cứ |
 |---|---|---|---|
-| FR-03 automation | 25 | 🧑 *Khải điền* | 30 test, 3 browser, 8 bug, 100% pass |
-| FR-08 automation | 25 | 🧑 *Khải điền* | 25 test, 3 browser, 9 bug (4 Critical), 100% pass |
-| FR-15 automation | 25 | 🧑 *Khải điền* | 25 test, 3 browser, 10 bug, 100% pass |
-| Báo cáo & AI Audit | 25 | 🧑 *Khải điền* | Main Report, Bug Report 27 bug, Gap Analysis 7 GAP, AI Log 10 entry, AI Critique |
+| FR-03 automation | 25 | 🧑 *Khải điền* | 31 test, 3 browser, 8 bug, 100% pass |
+| FR-08 automation | 25 | 🧑 *Khải điền* | 26 test, 3 browser, 9 bug (4 Critical), 100% pass |
+| FR-15 automation | 25 | 🧑 *Khải điền* | 26 test, 3 browser, 10 bug, 100% pass |
+| Báo cáo & AI Audit | 25 | 🧑 *Khải điền* | Main Report, Bug Report 27 bug, Gap Analysis 9 GAP, AI Log 12 entry, AI Critique 296 từ |
 
 **🧑 Việc Khải còn phải làm:** xem checklist ở `README.md` §Bàn giao.
 

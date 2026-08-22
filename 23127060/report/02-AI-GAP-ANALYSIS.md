@@ -1,7 +1,7 @@
 # 02 — AI GAP ANALYSIS (Phase 4)
 
 - **Sinh viên:** Ninh Văn Khải — MSSV **23127060**
-- **Đối tượng review:** 3 spec + 5 Page Object do AI sinh ở Phase 3 (80 test)
+- **Đối tượng review:** 3 spec + 5 Page Object do AI sinh ở Phase 3 (80 test), cập nhật thêm GAP-08/09 phát hiện ở Phase 8 (83 test)
 - **Cách làm:** chạy thật → đọc lại từng assertion → soi anti-pattern §11 SKILL → sửa → chạy lại
 
 > Nguyên tắc: chỉ ghi vấn đề **có bằng chứng** (log lỗi thật, hoặc dòng code cụ thể).
@@ -33,14 +33,17 @@ npx playwright test --list --project=chromium ⇒ Total: 80 tests in 3 files
 | **GAP-05** | FR08-TC01 chỉ kiểm tra "giỏ có tiền > 0", **không hề kiểm tra đúng sản phẩm nào** đã vào giỏ | missing edge case | **Prompt quality.** Case trong data file mô tả "happy path checkout" nên AI tối ưu cho việc đi hết luồng, bỏ qua tính đúng đắn của dữ liệu giữa chừng. | Ghi lại tên sản phẩm ở Home rồi assert dòng đó có mặt trong bảng giỏ hàng; thêm `rowByProductName()` vào `CartPage` | `fr08-checkout.spec.js:57-64` |
 | **GAP-06** | Biến thể token `9999` trong CSV có xác suất **1/9000** trùng token thật → test kỳ vọng `400` sẽ ngẫu nhiên nhận `200` | flaky wait | **Đặc thù feature.** Token của SUT chỉ 4 chữ số nên không gian trùng rất nhỏ. AI ban đầu coi "token bịa ra" là chắc chắn sai. | Xin lại token cho tới khi khác giá trị biến thể, kèm comment nêu rõ đây là chống trùng chứ không phải retry che lỗi | `fr03-forgot-reset.spec.js:315-321` |
 | **GAP-07** | Trình duyệt `firefox` / `webkit` **chưa được tải** → toàn bộ test UI fail sau 3 ms với `browserType.launch: Executable doesn't exist` | môi trường | **Model limitation.** AI mặc định môi trường đã sẵn sàng vì chromium chạy được. Kết quả "52 passed" trông như thành công một phần, thực chất là 28 test không chạy nổi. | `npx playwright install firefox webkit` trước khi vào Phase 5 | Log run firefox: `Executable doesn't exist at ...\firefox-1538\firefox.exe` |
+| **GAP-08** | `CartPage.itemRowCount()` gọi `isVisible()` ngay sau khi điều hướng — `isVisible()` **không chờ**, nên khi React chưa render xong thì hàm trả về `0 - 1 = -1` | flaky wait | **Đặc thù feature + model limitation.** AI dùng `isVisible()` như một phép kiểm tra tức thời mà quên rằng nó không có cơ chế chờ như `expect(...).toBeVisible()`. Trên chromium đủ nhanh nên không lộ; **chỉ webkit mới làm fail**. | Chờ trang chốt trạng thái bằng `expect(emptyMessage.or(cartHeading)).toBeVisible()` rồi mới đếm | Run webkit Phase 8: `FR08-TC17 … Expected: > 0, Received: -1` |
+| **GAP-09** | FR15-TC05 đếm số dòng ngay sau `await dialogPromise` — nhưng đóng alert **không** đồng nghĩa React đã render lại bảng | flaky wait | **Đặc thù feature.** AI coi "alert đã đóng" là mốc an toàn để đọc DOM. Thực tế `setProducts()` chạy trước alert nhưng React render bất đồng bộ sau đó. | Chờ `expect(rowByName(newName).first()).toBeVisible()` rồi mới đếm | Run webkit Phase 8: `FR15-TC05 … Expected: > 1, Received: 0` |
 
 ---
 
-## 3. Ba lỗi AI đáng chú ý nhất (dùng cho AI_Critique)
+## 3. Bốn lỗi AI đáng chú ý nhất (dùng cho AI_Critique)
 
 1. **AI tự tin về API mình không nắm chắc (GAP-00).** Nguy hiểm nhất không phải cái sai, mà là AI **viết comment giải thích** cho cái sai đó — làm người đọc tin rằng nó đã được kiểm chứng. Chỉ có chạy thật mới lộ ra.
 2. **Đếm số lượng assertion thay vì chất lượng (GAP-01, GAP-03).** Khi rubric nói "≥3 assertion pattern", AI có xu hướng thoả mãn con số bằng những assertion không kiểm thử gì.
 3. **Bỏ qua tính đồng thời và trạng thái môi trường (GAP-02, GAP-04, GAP-07).** AI viết test như thể chỉ có một mình nó chạy, trên một máy đã cài đặt hoàn hảo.
+4. **Chỉ kiểm chứng trên trình duyệt nhanh nhất (GAP-08, GAP-09).** Hai lỗi chờ này **pass sạch trên chromium ở cả `--repeat-each=2`**, chỉ lộ ra khi chạy webkit ở Phase 8. Bài học: "ổn định 2 lần liên tiếp trên 1 browser" **không** đồng nghĩa với ổn định. Cả hai bắt nguồn từ cùng một thói quen — lấy phép đọc DOM **không có cơ chế chờ** (`isVisible()`, `count()`) làm mốc, thay vì web-first assertion.
 
 ---
 
@@ -49,6 +52,16 @@ npx playwright test --list --project=chromium ⇒ Total: 80 tests in 3 files
 ```
 npx playwright test --project=chromium
 ⇒ 80 passed (17.0s)      ← trước khi sửa: 80 passed nhưng có 5 điểm yếu ở bảng trên
+
+# Sau khi bổ sung test ở Phase 8 và vá GAP-08 / GAP-09:
+npx playwright test --project=webkit
+⇒ 83 passed (35.8s)
+
+npx playwright test --project=webkit --grep "FR08-TC17|FR15-TC05" --repeat-each=3   (chạy 3 lượt)
+⇒ 6 passed · 6 passed · 6 passed   ← 18/18, hai test từng flaky nay ổn định
+
+node scripts/run-multibrowser.mjs
+⇒ 9/9 run PASS toàn bộ (249 test)
 ```
 
 Chi tiết số liệu 9 lần chạy multi-browser: xem `report/03-RUN-SUMMARY.md` (Phase 5).
@@ -57,6 +70,6 @@ Chi tiết số liệu 9 lần chạy multi-browser: xem `report/03-RUN-SUMMARY.
 
 ## 5. 🧑 Chờ Khải review & ký
 
-- [ ] Đọc lại 7 GAP ở §2, xác nhận cách sửa hợp lý.
+- [ ] Đọc lại 9 GAP ở §2, xác nhận cách sửa hợp lý.
 - [ ] Quyết định giữ / bỏ những assertion "đối chiếu data file" còn lại (GAP-01, GAP-03).
 - [ ] Ký xác nhận **"đã review script"**: ________________________

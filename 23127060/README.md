@@ -15,12 +15,12 @@
 
 | Feature | Tag | Test/browser | Chromium | Firefox | WebKit | Tổng |
 |---|---|---|---|---|---|---|
-| FR-03 Quên/Đặt lại mật khẩu | `@fr03` | 30 | 30 ✅ | 30 ✅ | 30 ✅ | 90 |
-| FR-08 Thanh toán | `@fr08` | 25 | 25 ✅ | 25 ✅ | 25 ✅ | 75 |
-| FR-15 Quản lý sản phẩm | `@fr15` | 25 | 25 ✅ | 25 ✅ | 25 ✅ | 75 |
-| **TỔNG** | | **80** | **80** | **80** | **80** | **240** |
+| FR-03 Quên/Đặt lại mật khẩu | `@fr03` | 31 | 31 ✅ | 31 ✅ | 31 ✅ | 93 |
+| FR-08 Thanh toán | `@fr08` | 26 | 26 ✅ | 26 ✅ | 26 ✅ | 78 |
+| FR-15 Quản lý sản phẩm | `@fr15` | 26 | 26 ✅ | 26 ✅ | 26 ✅ | 78 |
+| **TỔNG** | | **83** | **83** | **83** | **83** | **249** |
 
-**240 passed · 0 failed · 0 flaky · 0 skipped · 93.7s** — chi tiết: [`report/03-RUN-SUMMARY.md`](report/03-RUN-SUMMARY.md)
+**249 passed · 0 failed · 0 flaky · 0 skipped · 91.5s** — chi tiết: [`report/03-RUN-SUMMARY.md`](report/03-RUN-SUMMARY.md)
 
 > ⚠️ Nhiều test được viết để **khẳng định hành vi sai hiện tại** của SUT.
 > Test **pass ⇒ bug vẫn còn**. Khi SUT được vá, các test gắn mã `BUG-xx-xx` sẽ fail — đó là tín hiệu đúng.
@@ -43,7 +43,7 @@
 ├── README.md                       ← file này
 ├── agent-skill/SKILL.md            AI Skill điều phối toàn bộ quy trình
 ├── ai/
-│   ├── AI_Log.md                   11 entry — nhật ký từng lượt làm việc với AI
+│   ├── AI_Log.md                   12 entry — nhật ký từng lượt làm việc với AI
 │   ├── AI_Audit_Report.md          tổng hợp từ AI_Log + khai báo bắt buộc
 │   └── AI_Critique.md              296 từ (đếm tự động, trong khoảng 200–300)
 ├── automation/
@@ -52,10 +52,10 @@
 │   ├── tests/
 │   │   ├── data/                   3 JSON + 3 CSV — 77 record
 │   │   ├── pages/                  5 Page Object
-│   │   ├── utils/                  env · csv · data · api
-│   │   ├── fr03-forgot-reset.spec.js    30 test
-│   │   ├── fr08-checkout.spec.js        25 test
-│   │   └── fr15-product-crud.spec.js    25 test
+│   │   ├── utils/                  env · csv · data · api · fixtures
+│   │   ├── fr03-forgot-reset.spec.js    31 test
+│   │   ├── fr08-checkout.spec.js        26 test
+│   │   └── fr15-product-crud.spec.js    26 test
 │   └── playwright-report/          9 thư mục report HTML
 ├── bug-report/
 │   ├── BUG_REPORT.md               27 bug chi tiết
@@ -70,7 +70,7 @@
 │   ├── HW04_Main_Report.md         báo cáo chính
 │   ├── 00-SUT-RECON.md             bảng route ↔ selector ↔ API ↔ rủi ro
 │   ├── 01-TEST-CASES.md            54 test case đã thiết kế
-│   ├── 02-AI-GAP-ANALYSIS.md       7 điểm yếu của AI + cách sửa
+│   ├── 02-AI-GAP-ANALYSIS.md       9 điểm yếu của AI + cách sửa
 │   └── 03-RUN-SUMMARY.md           số liệu 9 run (sinh tự động)
 └── video-script/
     ├── VIDEO_1_DEMO_SCRIPT.md
@@ -103,7 +103,7 @@ cd 23127060/automation
 npm install
 npx playwright install chromium firefox webkit   # bắt buộc, nếu thiếu thì test UI fail sau 3ms
 
-npm test                    # 80 test trên project mặc định
+npm test                    # 83 test trên project mặc định
 npm run test:fr03           # chỉ FR-03
 npm run test:multibrowser   # 9 run → 9 thư mục report
 npm run verify:banner       # fail cứng nếu report thiếu banner
@@ -130,6 +130,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | `summarize-results.mjs` | Đọc `results.json` thật → sinh `report/03-RUN-SUMMARY.md` |
 | `capture-bug-evidence.mjs` | Chụp ảnh minh chứng 8 bug nặng nhất bằng Playwright thật |
 | `count-words.mjs` | Đếm từ `AI_Critique.md`, exit 1 nếu ngoài khoảng 200–300 |
+| `md-to-pdf.mjs` | Xuất 9 file `.md` bắt buộc ra PDF A4 bằng Chromium của Playwright |
 
 ---
 
@@ -137,17 +138,17 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 
 | Tiêu chí | Điểm tối đa | Tự chấm | Căn cứ |
 |---|---|---|---|
-| **FR-03** — Quên/Đặt lại mật khẩu | 25 | 🧑 *điền* | 30 test × 3 browser · 8 bug (3 Critical) · boundary regex mật khẩu 6 biến thể · 100% pass |
-| **FR-08** — Thanh toán | 25 | 🧑 *điền* | 25 test × 3 browser · 9 bug (4 Critical) · boundary coupon 3 mốc bắt được off-by-one · 100% pass |
-| **FR-15** — Quản lý sản phẩm | 25 | 🧑 *điền* | 25 test × 3 browser · 10 bug (3 Critical) · assertion kép UI+API chứng minh bug thuộc frontend · 100% pass |
-| **Báo cáo & AI Audit** | 25 | 🧑 *điền* | Main Report · Bug Report 27 bug có ảnh thật · Gap Analysis 7 GAP · AI Log 11 entry · Critique 296 từ |
+| **FR-03** — Quên/Đặt lại mật khẩu | 25 | 🧑 *điền* | 31 test × 3 browser · 8 bug (3 Critical) · boundary regex mật khẩu 6 biến thể · 100% pass |
+| **FR-08** — Thanh toán | 25 | 🧑 *điền* | 26 test × 3 browser · 9 bug (4 Critical) · boundary coupon 3 mốc bắt được off-by-one · 100% pass |
+| **FR-15** — Quản lý sản phẩm | 25 | 🧑 *điền* | 26 test × 3 browser · 10 bug (3 Critical) · assertion kép UI+API chứng minh bug thuộc frontend · 100% pass |
+| **Báo cáo & AI Audit** | 25 | 🧑 *điền* | Main Report · Bug Report 27 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 12 entry · Critique 296 từ |
 | **TỔNG** | **100** | 🧑 *điền* | |
 
 ### Điểm mạnh tự nhận
 - Mọi selector đều **đọc từ JSX thật** và có comment dẫn số dòng — không đoán.
 - Mọi expected result đều **dẫn nguồn** về một dòng cụ thể trong `server.js` / `*.jsx`.
 - 0 `waitForTimeout`, 0 selector class Tailwind, 0 dữ liệu hardcode inline trong spec.
-- Phase 4 ghi lại **7 điểm yếu thật của AI** kèm nguyên nhân và commit sửa — không tô hồng.
+- Ghi lại **9 điểm yếu thật của AI** kèm nguyên nhân và commit sửa — không tô hồng, kể cả 2 lỗi chỉ WebKit mới lộ.
 - Ảnh minh chứng bug do **script Playwright chụp**, kèm log response nguyên văn, không vẽ tay.
 
 ### Hạn chế tự nhận
@@ -168,7 +169,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | ☐ |
 | 5 | Tạo GitHub repo **public**, push toàn bộ | ☐ |
 | 6 | Tạo GitHub Issue cho 27 bug (`bash bug-report/gh-issue-commands.sh`), đính ảnh | ☐ |
-| 7 | Điền mục **Human review** + **Verdict** cho 11 entry trong `ai/AI_Log.md` | ☐ |
+| 7 | Điền mục **Human review** + **Verdict** cho 12 entry trong `ai/AI_Log.md` | ☐ |
 | 8 | Quay Video 1 (demo ≥5 phút, giọng Việt thật, có face-cam **hoặc** `whoami && hostname`) | ☐ |
 | 9 | Quay Video 2 (demo Agent Skill end-to-end) | ☐ |
 | 10 | Upload 2 video lên YouTube **Unlisted**, dán link vào §đầu README | ☐ |
@@ -188,4 +189,4 @@ Tóm tắt: AI (Claude Code CLI + Notion AI) được dùng để đọc source 
 viết Page Object + spec, viết script hạ tầng, chạy test, soạn tài liệu và chụp ảnh minh chứng.
 AI **không** được dùng cho: tạo repo/Issue, quay video, thuyết minh, chốt điểm, nộp bài, bảo vệ vấn đáp.
 
-**10 lỗi thật của AI** đã được ghi nhận và sửa — xem `report/02-AI-GAP-ANALYSIS.md` và `ai/AI_Audit_Report.md`.
+**12 lỗi thật của AI** đã được ghi nhận và sửa — xem `report/02-AI-GAP-ANALYSIS.md` và `ai/AI_Audit_Report.md`.

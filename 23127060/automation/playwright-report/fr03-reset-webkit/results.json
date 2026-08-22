@@ -21,7 +21,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23127060 – Ninh Văn Khải",
-      "Run at (ISO)": "2026-08-22T13:52:06.980Z",
+      "Run at (ISO)": "2026-08-22T14:20:39.954Z",
       "feature": "fr03-reset",
       "actualWorkers": 2
     },
@@ -33,7 +33,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:52:06.980Z",
+          "Run at (ISO)": "2026-08-22T14:20:39.954Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:52:06.980Z",
+          "Run at (ISO)": "2026-08-22T14:20:39.954Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -71,7 +71,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:52:06.980Z",
+          "Run at (ISO)": "2026-08-22T14:20:39.954Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -96,7 +96,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr03-reset-webkit",
-          "title": "Run by: 23127060 — 2026-08-22T13:52:06.980Z"
+          "title": "Run by: 23127060 — 2026-08-22T14:20:39.954Z"
         }
       ],
       [
@@ -133,7 +133,7 @@
         {
           "title": "FR-03 Forgot & Reset password",
           "file": "fr03-forgot-reset.spec.js",
-          "line": 42,
+          "line": 55,
           "column": 6,
           "specs": [
             {
@@ -145,7 +145,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:34-35"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A5, A2"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -154,13 +163,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2419,
+                      "duration": 2497,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:07.879Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:40.884Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:34-35"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A5, A2"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -169,7 +187,7 @@
               ],
               "id": "88d85392f6845fe8ceef-6114f08bc02273e735d5",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 44,
+              "line": 57,
               "column": 3
             },
             {
@@ -181,7 +199,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -190,13 +217,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1855,
+                      "duration": 1896,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:07.910Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:40.850Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -205,7 +241,7 @@
               ],
               "id": "88d85392f6845fe8ceef-b2ad8f7ca82279b254b6",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 71,
+              "line": 85,
               "column": 3
             },
             {
@@ -217,7 +253,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:92"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -226,13 +271,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2373,
+                      "duration": 2189,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:09.974Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:42.861Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:92"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -241,7 +295,7 @@
               ],
               "id": "88d85392f6845fe8ceef-995060e3edc2d36470ea",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 84,
+              "line": 99,
               "column": 3
             },
             {
@@ -253,7 +307,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -262,13 +329,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2386,
+                      "duration": 2140,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:10.398Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:43.476Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -277,7 +357,7 @@
               ],
               "id": "88d85392f6845fe8ceef-d8d8a8b167c2e112d72d",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 106,
+              "line": 122,
               "column": 3
             },
             {
@@ -289,7 +369,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -298,13 +387,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2238,
+                      "duration": 2002,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:12.364Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:45.066Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -313,7 +411,7 @@
               ],
               "id": "88d85392f6845fe8ceef-406b2d1bf8b14844fc15",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -325,7 +423,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -334,13 +441,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2126,
+                      "duration": 2051,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:12.800Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:45.629Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -349,7 +465,7 @@
               ],
               "id": "88d85392f6845fe8ceef-ee2dc6a71affd63575c4",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -361,7 +477,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -370,13 +495,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2344,
+                      "duration": 2110,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:14.618Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:47.082Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -385,7 +519,7 @@
               ],
               "id": "88d85392f6845fe8ceef-d16c3025c0716ac25613",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -397,7 +531,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -406,13 +549,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2376,
+                      "duration": 2180,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:14.941Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:47.692Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -421,7 +573,7 @@
               ],
               "id": "88d85392f6845fe8ceef-26a33291c6b7620b08eb",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -433,7 +585,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -442,13 +607,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2274,
+                      "duration": 1983,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:16.980Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:49.205Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -457,11 +635,1179 @@
               ],
               "id": "88d85392f6845fe8ceef-339f348c831d23a9212f",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
               "title": "FR03-TC05f special char rejected although message demands it @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2069,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:49.886Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-41af3fbaed064431c08e",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 146,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC06 reset token is leaked in the HTTP response body @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:76-79"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 37,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.203Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:76-79"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-4611a4d7bf01f3ce85ed",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 163,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC07 reset token is only 4 digits so brute force is feasible @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-03"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:70"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 24,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.251Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-03"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:70"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-28cd3c9a009bbabf2269",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 175,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC08 forgot-password has no rate limit @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:66-82"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.286Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:66-82"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-032fb07de1babab4c3c5",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 186,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC09 different status codes allow user enumeration @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 27,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.385Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-fea7e876f437ad72ff68",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 202,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC10 backend accepts a one-character password @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 41,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.423Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-c0e5210aa7ef8274f862",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 216,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC11 password is stored and returned in plaintext @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:88"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 41,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.474Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:88"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-8f7cd4fc959dbb1ce721",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 237,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC12 requesting a second token invalidates the first @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:72-75"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 47,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.525Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:72-75"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-651b8bd9ca97b6fb7111",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 257,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC13 a consumed token cannot be reused @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:87"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.581Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:87"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-c26f1287f9474000d98d",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 283,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC14 successful reset does not unlock a locked account @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-08"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 61,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.626Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-08"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-ddf047a45d6cc828a8e6",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC19 the reset token travels to the browser in the response body @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:76-79"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1693,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.696Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:76-79"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-f5a71ebe71288dfbef26",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 347,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC15a empty token string @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 33,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:51.967Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-0942392085cffab09a1f",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15b non numeric token @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 23,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.012Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-ffcc8f33f7632c1056bc",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15c three digits below length boundary @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 21,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.043Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-b820152b241193cec6c8",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15d five digits above length boundary @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 21,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.073Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-cbcbcaab25615211e870",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15e token of another user @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.103Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-d7a21c3b7a1d56018241",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15f sql injection attempt in token @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.133Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-b179c20706f03ddf0bc8",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 28,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.165Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-1a96fac9e7b984ce91ef",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC10b valid token with empty password accepted by backend @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 25,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.202Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-75f5ec7c4ff2e48635e3",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC16 user A token cannot reset user B password @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 36,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:52.236Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-040371d104251e35e46d",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 406,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC17 forgot password link on login page reaches the reset flow @fr03",
               "ok": true,
               "tags": [
                 "fr03"
@@ -478,12 +1824,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2439,
+                      "duration": 1950,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:17.334Z",
+                      "startTime": "2026-08-22T14:20:52.280Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -491,13 +1837,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-41af3fbaed064431c08e",
+              "id": "88d85392f6845fe8ceef-90819d5760484cb1198f",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
-              "column": 5
+              "line": 428,
+              "column": 3
             },
             {
-              "title": "FR03-TC06 reset token is leaked in the HTTP response body @fr03",
+              "title": "FR03-TC18 reset flow works end to end for a user created moments earlier @fr03",
               "ok": true,
               "tags": [
                 "fr03"
@@ -519,691 +1865,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.278Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-4611a4d7bf01f3ce85ed",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 145,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC07 reset token is only 4 digits so brute force is feasible @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 31,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.347Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-28cd3c9a009bbabf2269",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 156,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC08 forgot-password has no rate limit @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 178,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.394Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-032fb07de1babab4c3c5",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 166,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC09 different status codes allow user enumeration @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 38,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.588Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-fea7e876f437ad72ff68",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 181,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC10 backend accepts a one-character password @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 47,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.640Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-c0e5210aa7ef8274f862",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 194,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC11 password is stored and returned in plaintext @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 54,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.701Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-8f7cd4fc959dbb1ce721",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 214,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC12 requesting a second token invalidates the first @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 68,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.767Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-651b8bd9ca97b6fb7111",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 233,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC13 a consumed token cannot be reused @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 63,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.793Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-c26f1287f9474000d98d",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 258,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC14 successful reset does not unlock a locked account @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 72,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.854Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-ddf047a45d6cc828a8e6",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 279,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC15a empty token string @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 35,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.877Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-0942392085cffab09a1f",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15b non numeric token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 47,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.931Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-ffcc8f33f7632c1056bc",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15c three digits below length boundary @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 38,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.947Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-b820152b241193cec6c8",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15d five digits above length boundary @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 37,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:19.996Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-cbcbcaab25615211e870",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15e token of another user @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 36,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.003Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-d7a21c3b7a1d56018241",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15f sql injection attempt in token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 36,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.050Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-b179c20706f03ddf0bc8",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 43,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.055Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-1a96fac9e7b984ce91ef",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC10b valid token with empty password accepted by backend @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 42,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.105Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-75f5ec7c4ff2e48635e3",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC16 user A token cannot reset user B password @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 59,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.115Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-040371d104251e35e46d",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 336,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC17 forgot password link on login page reaches the reset flow @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2212,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.164Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-90819d5760484cb1198f",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 357,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC18 reset flow works end to end for a user created moments earlier @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 69,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:52:20.187Z",
+                      "startTime": "2026-08-22T14:20:53.400Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1213,7 +1875,7 @@
               ],
               "id": "88d85392f6845fe8ceef-7afa0fa3950061db328a",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 376,
+              "line": 447,
               "column": 3
             }
           ]
@@ -1223,9 +1885,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-22T13:52:07.006Z",
-    "duration": 15470.515,
-    "expected": 30,
+    "startTime": "2026-08-22T14:20:39.976Z",
+    "duration": 14331.384999999998,
+    "expected": 31,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

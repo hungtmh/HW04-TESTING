@@ -173,6 +173,11 @@ test.describe('FR-15 Admin product CRUD', () => {
     await admin.fillAndSave({ name: newName }, 'PUT');
     await dialogPromise;
 
+    // GAP-09 (phát hiện ở lần chạy webkit của Phase 8): `await dialogPromise` chỉ bảo đảm alert đã
+    // được đóng, KHÔNG bảo đảm React đã render lại bảng. Trên webkit (chậm hơn) phép đếm chạy trước
+    // khi render xong và trả về 0. Chờ dòng đầu tiên mang tên mới xuất hiện rồi mới đếm.
+    await expect(admin.rowByName(newName).first(), 'chờ bảng render lại xong').toBeVisible();
+
     // 🔴 A1 + A4 — sau khi sửa 1 sản phẩm, CẢ BẢNG mang cùng một tên
     const rowsWithNewName = await admin.countRowsWithName(newName);
     expect(rowsWithNewName, 'A4: số dòng bị đổi tên oan').toBeGreaterThan(

@@ -21,7 +21,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23127060 – Ninh Văn Khải",
-      "Run at (ISO)": "2026-08-22T13:51:45.350Z",
+      "Run at (ISO)": "2026-08-22T14:20:18.864Z",
       "feature": "fr03-reset",
       "actualWorkers": 2
     },
@@ -33,7 +33,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:51:45.350Z",
+          "Run at (ISO)": "2026-08-22T14:20:18.864Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:51:45.350Z",
+          "Run at (ISO)": "2026-08-22T14:20:18.864Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -71,7 +71,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:51:45.350Z",
+          "Run at (ISO)": "2026-08-22T14:20:18.864Z",
           "feature": "fr03-reset",
           "actualWorkers": 2
         },
@@ -96,7 +96,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr03-reset-chromium",
-          "title": "Run by: 23127060 — 2026-08-22T13:51:45.350Z"
+          "title": "Run by: 23127060 — 2026-08-22T14:20:18.864Z"
         }
       ],
       [
@@ -133,7 +133,7 @@
         {
           "title": "FR-03 Forgot & Reset password",
           "file": "fr03-forgot-reset.spec.js",
-          "line": 42,
+          "line": 55,
           "column": 6,
           "specs": [
             {
@@ -145,7 +145,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:34-35"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A5, A2"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -154,13 +163,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1044,
+                      "duration": 1086,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:46.375Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:19.806Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:34-35"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A5, A2"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -169,7 +187,7 @@
               ],
               "id": "88d85392f6845fe8ceef-22cdbe165e368bf0a834",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 44,
+              "line": 57,
               "column": 3
             },
             {
@@ -181,7 +199,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -190,13 +217,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 866,
+                      "duration": 897,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:46.360Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:19.806Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -205,7 +241,7 @@
               ],
               "id": "88d85392f6845fe8ceef-d4543bfec2fae8c65a85",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 71,
+              "line": 85,
               "column": 3
             },
             {
@@ -217,7 +253,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:92"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -226,13 +271,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 987,
+                      "duration": 949,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:47.433Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:20.923Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:92"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -241,7 +295,7 @@
               ],
               "id": "88d85392f6845fe8ceef-373da59570865e7e86bc",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 84,
+              "line": 99,
               "column": 3
             },
             {
@@ -253,7 +307,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -262,13 +329,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 954,
+                      "duration": 886,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:47.621Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:21.082Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -277,7 +357,7 @@
               ],
               "id": "88d85392f6845fe8ceef-7bb48b09af31ace6a2e7",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 106,
+              "line": 122,
               "column": 3
             },
             {
@@ -289,7 +369,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -298,13 +387,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 918,
+                      "duration": 878,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:48.435Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:21.889Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -313,7 +411,7 @@
               ],
               "id": "88d85392f6845fe8ceef-421a781feec1145c88c4",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -325,7 +423,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -334,13 +441,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 898,
+                      "duration": 838,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:48.588Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:21.982Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -349,7 +465,7 @@
               ],
               "id": "88d85392f6845fe8ceef-2b68aeee28711314bc27",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -361,7 +477,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -370,13 +495,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 851,
+                      "duration": 971,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:49.368Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:22.784Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -385,7 +519,7 @@
               ],
               "id": "88d85392f6845fe8ceef-3586b89aeb4cd3aa837d",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -397,7 +531,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -406,13 +549,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 889,
+                      "duration": 904,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:49.498Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:22.832Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -421,7 +573,7 @@
               ],
               "id": "88d85392f6845fe8ceef-c1a02c4998843a852998",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -433,22 +585,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 921,
+                      "duration": 916,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:50.236Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:23.750Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -457,7 +635,7 @@
               ],
               "id": "88d85392f6845fe8ceef-faff8504ceeae928f94d",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -469,22 +647,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "ForgotPassword.jsx:26"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 888,
+                      "duration": 894,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:50.400Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:23.771Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "ForgotPassword.jsx:26"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -493,7 +697,7 @@
               ],
               "id": "88d85392f6845fe8ceef-87b72ce0c78c2ddfc611",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 129,
+              "line": 146,
               "column": 5
             },
             {
@@ -505,7 +709,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:76-79"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -514,13 +731,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 32,
+                      "duration": 26,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.177Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.680Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:76-79"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -529,7 +759,7 @@
               ],
               "id": "88d85392f6845fe8ceef-320dabd18f2c555a7387",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 145,
+              "line": 163,
               "column": 3
             },
             {
@@ -541,22 +771,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-03"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:70"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 27,
+                      "duration": 29,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.222Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.680Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-03"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:70"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -565,7 +821,7 @@
               ],
               "id": "88d85392f6845fe8ceef-8705fa64d33b8fabe117",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 156,
+              "line": 175,
               "column": 3
             },
             {
@@ -577,7 +833,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:66-82"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -586,13 +855,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 100,
+                      "duration": 103,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.259Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.715Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:66-82"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -601,7 +883,7 @@
               ],
               "id": "88d85392f6845fe8ceef-319cc7ce0086fbcf11f7",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 166,
+              "line": 186,
               "column": 3
             },
             {
@@ -613,7 +895,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -622,13 +917,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 31,
+                      "duration": 32,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.299Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.719Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -637,7 +945,7 @@
               ],
               "id": "88d85392f6845fe8ceef-b39e2455aebaf6af0fa3",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 181,
+              "line": 202,
               "column": 3
             },
             {
@@ -649,7 +957,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -663,8 +984,21 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.342Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.760Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -673,7 +1007,7 @@
               ],
               "id": "88d85392f6845fe8ceef-d29c007f0d55dd9b0965",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 194,
+              "line": 216,
               "column": 3
             },
             {
@@ -685,22 +1019,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:88"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 42,
+                      "duration": 40,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.369Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.802Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:88"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -709,7 +1069,7 @@
               ],
               "id": "88d85392f6845fe8ceef-d8cd19e87fcaeb7bbf9e",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 214,
+              "line": 237,
               "column": 3
             },
             {
@@ -721,22 +1081,40 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:72-75"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 42,
+                      "duration": 48,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.385Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.828Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:72-75"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -745,7 +1123,7 @@
               ],
               "id": "88d85392f6845fe8ceef-0c3d895b4139893c2626",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 233,
+              "line": 257,
               "column": 3
             },
             {
@@ -757,22 +1135,40 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:87"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 32,
+                      "duration": 38,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.421Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.853Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:87"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -781,7 +1177,7 @@
               ],
               "id": "88d85392f6845fe8ceef-fed43ba767ba0f9cecf0",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 258,
+              "line": 283,
               "column": 3
             },
             {
@@ -793,22 +1189,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-08"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 49,
+                      "duration": 56,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.437Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.887Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-08"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -817,7 +1239,69 @@
               ],
               "id": "88d85392f6845fe8ceef-706830c1f6c4b5acac3b",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 279,
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "FR03-TC19 the reset token travels to the browser in the response body @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:76-79"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 761,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:24.902Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:76-79"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-20921dbeb1d7f3fa0f94",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 347,
               "column": 3
             },
             {
@@ -829,7 +1313,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -843,8 +1336,17 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.461Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.953Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -853,7 +1355,7 @@
               ],
               "id": "88d85392f6845fe8ceef-20f74b5cb028a35f01c4",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
@@ -865,22 +1367,40 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
                       "duration": 26,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.497Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:24.988Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -889,7 +1409,7 @@
               ],
               "id": "88d85392f6845fe8ceef-bb0b08b43811e42229bd",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
@@ -901,7 +1421,124 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 26,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:25.023Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-498cdc29f295d2ed5d47",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15d five digits above length boundary @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:91"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 29,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:20:25.060Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:91"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88d85392f6845fe8ceef-0cb37b33f7b7c82167fe",
+              "file": "fr03-forgot-reset.spec.js",
+              "line": 381,
+              "column": 5
+            },
+            {
+              "title": "FR03-TC15e token of another user @fr03",
+              "ok": true,
+              "tags": [
+                "fr03"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -915,21 +1552,30 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.498Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:25.099Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-498cdc29f295d2ed5d47",
+              "id": "88d85392f6845fe8ceef-5245ab6444a83c7c978b",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
-              "title": "FR03-TC15d five digits above length boundary @fr03",
+              "title": "FR03-TC15f sql injection attempt in token @fr03",
               "ok": true,
               "tags": [
                 "fr03"
@@ -937,35 +1583,53 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 27,
+                      "duration": 35,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.533Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:25.142Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-0cb37b33f7b7c82167fe",
+              "id": "88d85392f6845fe8ceef-9782e23cc8ce815f18af",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
-              "title": "FR03-TC15e token of another user @fr03",
+              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
               "ok": true,
               "tags": [
                 "fr03"
@@ -973,7 +1637,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -987,80 +1664,21 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-5245ab6444a83c7c978b",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15f sql injection attempt in token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 27,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.570Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-9782e23cc8ce815f18af",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 28,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.577Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:25.188Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1069,7 +1687,7 @@
               ],
               "id": "88d85392f6845fe8ceef-b412ff3434701676b466",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
@@ -1081,22 +1699,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-03-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:84-95"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 32,
+                      "duration": 30,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.609Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:25.223Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-03-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:84-95"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1105,7 +1749,7 @@
               ],
               "id": "88d85392f6845fe8ceef-f564b11e8e0715a7dfc9",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 312,
+              "line": 381,
               "column": 5
             },
             {
@@ -1117,7 +1761,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:86"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -1126,13 +1779,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 44,
+                      "duration": 31,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.615Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:20:25.262Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:86"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1141,7 +1803,7 @@
               ],
               "id": "88d85392f6845fe8ceef-e11e367266c36bb2a164",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 336,
+              "line": 406,
               "column": 3
             },
             {
@@ -1159,15 +1821,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 976,
+                      "duration": 894,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.650Z",
+                      "startTime": "2026-08-22T14:20:25.302Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1177,7 +1839,7 @@
               ],
               "id": "88d85392f6845fe8ceef-f621b04832048e62c627",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 357,
+              "line": 428,
               "column": 3
             },
             {
@@ -1195,15 +1857,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 52,
+                      "duration": 35,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:51:51.672Z",
+                      "startTime": "2026-08-22T14:20:25.674Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1213,7 +1875,7 @@
               ],
               "id": "88d85392f6845fe8ceef-61e824cf053d5b9bc2c0",
               "file": "fr03-forgot-reset.spec.js",
-              "line": 376,
+              "line": 447,
               "column": 3
             }
           ]
@@ -1223,9 +1885,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-22T13:51:45.381Z",
-    "duration": 7347.644999999999,
-    "expected": 30,
+    "startTime": "2026-08-22T14:20:18.883Z",
+    "duration": 7403.006,
+    "expected": 31,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -1,7 +1,7 @@
 # AI AUDIT REPORT — HW04 Automation Testing (EShop)
 
 - **Sinh viên:** Ninh Văn Khải — MSSV **23127060**
-- **Nguồn:** tổng hợp từ `ai/AI_Log.md` (10 entry, append-only, ghi ngay tại thời điểm làm việc)
+- **Nguồn:** tổng hợp từ `ai/AI_Log.md` (12 entry, append-only, ghi ngay tại thời điểm làm việc)
 - **Timezone:** Asia/Ho_Chi_Minh (+07:00)
 
 ---
@@ -41,6 +41,8 @@
 | LOG-008 | Claude Code | 2026-08-22T22:05:00 | P4 Review | Tự phê bình & vá | *(cùng prompt trên)* | `02-AI-GAP-ANALYSIS.md` — **7 GAP** có bằng chứng, đã sửa 5 GAP trong code | 🧑 **Ký xác nhận đã review script** |
 | LOG-009 | Claude Code | 2026-08-22T22:35:00 | P5 Run | 9 run multi-browser | *(cùng prompt trên)* | 4 script hạ tầng, 9 report, `03-RUN-SUMMARY.md`. **240/240 passed**, 9/9 banner hợp lệ | 🧑 **Mở 9 report, chụp màn hình banner** |
 | LOG-010 | Claude Code | 2026-08-22T23:02:00 | P6 Bug | Bug report + evidence | *(cùng prompt trên)* | `BUG_REPORT.md` 27 bug, 11 ảnh PNG thật, 28 lệnh `gh issue create` | 🧑 **Tạo GitHub Issue, đính ảnh** |
+| LOG-011 | Claude Code | 2026-08-22T23:20:00 | P7 Docs | Tài liệu | *(cùng prompt trên)* | Main Report, AI Audit, AI Critique (313→296 từ sau 3 lần cắt), README, 2 kịch bản video, 9 PDF | Khải review, chốt severity |
+| LOG-012 | Claude Code | 2026-08-22T23:45:00 | P8 Đóng gói | Bổ sung test, vá GAP-08/09, xuất git log | *(cùng prompt trên)* | +3 test (83 tổng), 9 commit chạm `*.spec.js`, 249/249 pass, 2 file git log | 🧑 **Push repo, đóng gói, nộp** |
 
 > **Ghi chú về prompt:** Khải gửi **một** prompt duy nhất yêu cầu agent thực hiện toàn bộ quy trình
 > theo SKILL.md. Agent tự chia thành 8 phase, mỗi phase 1 commit + 1 entry log để giữ nguyên tinh thần
@@ -54,10 +56,10 @@
 | Loại output | Số lượng | Nhận xét |
 |---|---|---|
 | Dùng được ngay (Accepted) | ~70% | Cấu trúc thư mục, file dữ liệu, script hạ tầng, phần lớn assertion |
-| Phải sửa mới dùng được (Accepted-with-fix) | ~30% | 7 GAP ở `02-AI-GAP-ANALYSIS.md` + 2 lỗi hạ tầng ở Phase 5 + 1 lỗi ở Phase 6 |
+| Phải sửa mới dùng được (Accepted-with-fix) | ~30% | 9 GAP ở `02-AI-GAP-ANALYSIS.md` + 2 lỗi hạ tầng ở Phase 5 + 1 lỗi ở Phase 6 |
 | Bỏ hẳn (Rejected) | 0 | Không có output nào phải vứt đi hoàn toàn |
 
-**10 lỗi thật của AI đã được ghi nhận và sửa:**
+**12 lỗi thật của AI đã được ghi nhận và sửa:**
 
 | # | Lỗi | Phát hiện nhờ | Phase |
 |---|---|---|---|
@@ -71,10 +73,16 @@
 | 8 | Mặc định firefox/webkit đã cài ⇒ 28 test không chạy nổi mà báo "52 passed" | Chạy thật | P4 |
 | 9 | `spawnSync('npx.cmd')` trên Windows ⇒ 9/9 run trả `exit=null` sau 0.0s | Chạy thật | P5 |
 | 10 | Chụp màn hình bên trong dialog handler ⇒ treo renderer, timeout 30s | Chạy thật | P6 |
+| 11 | `isVisible()` **không chờ** ⇒ `itemRowCount()` trả `-1` khi React chưa render (chỉ WebKit mới lộ) | Chạy thật trên WebKit | P8 |
+| 12 | Coi "alert đã đóng" là mốc an toàn để đọc DOM ⇒ đếm dòng bảng ra 0 (chỉ WebKit mới lộ) | Chạy thật trên WebKit | P8 |
 
-**Nhận xét:** 5/10 lỗi chỉ lộ ra khi **chạy thật** (1, 8, 9, 10 và một phần 7). 5 lỗi còn lại lộ ra khi
+**Nhận xét:** 7/12 lỗi chỉ lộ ra khi **chạy thật** (1, 8, 9, 10, 11, 12 và một phần 7). 5 lỗi còn lại lộ ra khi
 **đọc lại code với tâm thế phản biện**. Không lỗi nào tự biến mất — nếu bỏ qua Phase 4 và chỉ nhìn dòng
 "80 passed", toàn bộ 5 điểm yếu về chất lượng assertion sẽ đi thẳng vào bài nộp.
+
+Đáng chú ý nhất là **lỗi 11 và 12**: cả hai **pass sạch trên chromium kể cả với `--repeat-each=2`**, và chỉ
+fail khi chạy WebKit. Nói cách khác, tiêu chí "ổn định 2 lần liên tiếp" mà chính SKILL.md đặt ra **vẫn chưa đủ** —
+phải chạy đủ 3 trình duyệt mới phát hiện. Đây là lý do bước multi-browser không chỉ để lấy điểm rubric.
 
 ---
 

@@ -46,8 +46,16 @@ export class CartPage {
     return this.page.getByRole('row').filter({ hasText: name });
   }
 
-  /** Số dòng sản phẩm đang có trong giỏ (bỏ dòng header của bảng). */
+  /**
+   * Số dòng sản phẩm đang có trong giỏ (bỏ dòng header của bảng).
+   *
+   * GAP-08 (phát hiện ở lần chạy webkit của Phase 8): bản trước gọi `isVisible()` ngay khi vừa
+   * điều hướng sang /cart. `isVisible()` KHÔNG chờ — nếu React chưa render xong thì cả thông báo
+   * rỗng lẫn bảng đều chưa có, hàm trả về 0 - 1 = **-1** và test fail với thông điệp khó hiểu.
+   * Nay chờ trang chốt vào một trong hai trạng thái trước đã (web-first assertion, không sleep).
+   */
   async itemRowCount() {
+    await expect(this.emptyMessage.or(this.cartHeading)).toBeVisible();
     if (await this.emptyMessage.isVisible()) return 0;
     return (await this.page.getByRole('row').count()) - 1;
   }

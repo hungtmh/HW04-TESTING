@@ -21,7 +21,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23127060 – Ninh Văn Khải",
-      "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+      "Run at (ISO)": "2026-08-22T14:21:29.048Z",
       "feature": "fr15-product",
       "actualWorkers": 2
     },
@@ -33,7 +33,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+          "Run at (ISO)": "2026-08-22T14:21:29.048Z",
           "feature": "fr15-product",
           "actualWorkers": 2
         },
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+          "Run at (ISO)": "2026-08-22T14:21:29.048Z",
           "feature": "fr15-product",
           "actualWorkers": 2
         },
@@ -71,7 +71,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+          "Run at (ISO)": "2026-08-22T14:21:29.048Z",
           "feature": "fr15-product",
           "actualWorkers": 2
         },
@@ -96,7 +96,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr15-product-chromium",
-          "title": "Run by: 23127060 — 2026-08-22T13:52:58.994Z"
+          "title": "Run by: 23127060 — 2026-08-22T14:21:29.048Z"
         }
       ],
       [
@@ -133,7 +133,7 @@
         {
           "title": "FR-15 Admin product CRUD",
           "file": "fr15-product-crud.spec.js",
-          "line": 49,
+          "line": 53,
           "column": 6,
           "specs": [
             {
@@ -145,7 +145,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:339"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -154,13 +163,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1046,
+                      "duration": 1138,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:59.920Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:29.994Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:339"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -169,7 +187,7 @@
               ],
               "id": "a74475c7d49cae56f38d-12a0fa23cc1a3aa17453",
               "file": "fr15-product-crud.spec.js",
-              "line": 51,
+              "line": 55,
               "column": 3
             },
             {
@@ -181,7 +199,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:64-67"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -190,13 +217,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 857,
+                      "duration": 911,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:52:59.919Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:29.992Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:64-67"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -205,7 +241,7 @@
               ],
               "id": "a74475c7d49cae56f38d-921b67c7fed59cd510dd",
               "file": "fr15-product-crud.spec.js",
-              "line": 74,
+              "line": 79,
               "column": 3
             },
             {
@@ -217,7 +253,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:114-115"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -226,13 +271,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1220,
+                      "duration": 1096,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:00.987Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:31.117Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:114-115"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -241,7 +295,7 @@
               ],
               "id": "a74475c7d49cae56f38d-5a07cc03b9270c06f229",
               "file": "fr15-product-crud.spec.js",
-              "line": 87,
+              "line": 93,
               "column": 3
             },
             {
@@ -253,7 +307,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:113"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -262,13 +325,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1105,
+                      "duration": 1005,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:01.144Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:31.343Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:113"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -277,7 +349,7 @@
               ],
               "id": "a74475c7d49cae56f38d-d8eb80baf0b0ec17a191",
               "file": "fr15-product-crud.spec.js",
-              "line": 110,
+              "line": 117,
               "column": 3
             },
             {
@@ -289,7 +361,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "App.jsx:107-112"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -298,13 +383,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1067,
+                      "duration": 1019,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:02.222Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:32.227Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "App.jsx:107-112"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -313,7 +411,7 @@
               ],
               "id": "a74475c7d49cae56f38d-07b3583133ba17608630",
               "file": "fr15-product-crud.spec.js",
-              "line": 140,
+              "line": 148,
               "column": 3
             },
             {
@@ -325,7 +423,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:127-134"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -334,13 +441,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1026,
+                      "duration": 967,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:02.263Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:32.365Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:127-134"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -349,7 +465,7 @@
               ],
               "id": "a74475c7d49cae56f38d-ac5e9930378aced09685",
               "file": "fr15-product-crud.spec.js",
-              "line": 184,
+              "line": 198,
               "column": 3
             },
             {
@@ -361,7 +477,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-11"
+                    },
+                    {
+                      "type": "source",
+                      "description": "App.jsx:583"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -370,13 +499,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 903,
+                      "duration": 920,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:03.304Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:33.263Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-11"
+                        },
+                        {
+                          "type": "source",
+                          "description": "App.jsx:583"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -385,7 +527,7 @@
               ],
               "id": "a74475c7d49cae56f38d-e1a4f2e69db9c75bcdd4",
               "file": "fr15-product-crud.spec.js",
-              "line": 210,
+              "line": 225,
               "column": 3
             },
             {
@@ -397,7 +539,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:496"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -406,13 +557,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 942,
+                      "duration": 970,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:03.305Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:33.344Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:496"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -421,7 +581,7 @@
               ],
               "id": "a74475c7d49cae56f38d-bb67db26db57dff890ef",
               "file": "fr15-product-crud.spec.js",
-              "line": 242,
+              "line": 258,
               "column": 3
             },
             {
@@ -433,7 +593,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:161"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -447,8 +620,21 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.222Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.203Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:161"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -457,7 +643,7 @@
               ],
               "id": "a74475c7d49cae56f38d-29a48d1c7d4d1ac42c39",
               "file": "fr15-product-crud.spec.js",
-              "line": 266,
+              "line": 283,
               "column": 3
             },
             {
@@ -469,22 +655,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:173"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
                       "duration": 46,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.263Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.251Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:173"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -493,7 +705,7 @@
               ],
               "id": "a74475c7d49cae56f38d-e56bbd58b4e130f4bb84",
               "file": "fr15-product-crud.spec.js",
-              "line": 286,
+              "line": 304,
               "column": 3
             },
             {
@@ -505,7 +717,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:186"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -514,13 +739,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 32,
+                      "duration": 30,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.269Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.308Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:186"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -529,7 +767,7 @@
               ],
               "id": "a74475c7d49cae56f38d-1d5df9b41a5bbd7d803c",
               "file": "fr15-product-crud.spec.js",
-              "line": 311,
+              "line": 330,
               "column": 3
             },
             {
@@ -541,22 +779,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-03"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:161"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 62,
+                      "duration": 42,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.315Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.329Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-03"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:161"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -565,7 +829,69 @@
               ],
               "id": "a74475c7d49cae56f38d-184d7c2ec7d281658235",
               "file": "fr15-product-crud.spec.js",
-              "line": 328,
+              "line": 348,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC21 list and detail endpoints disagree on the price type of the same product @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-09"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:158"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 21,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:21:34.349Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-09"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:158"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-c534b16dd1746d932cb9",
+              "file": "fr15-product-crud.spec.js",
+              "line": 370,
               "column": 3
             },
             {
@@ -577,22 +903,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 48,
+                      "duration": 24,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.320Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.380Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -601,7 +953,7 @@
               ],
               "id": "a74475c7d49cae56f38d-a65b2e9a5615e2b05136",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -613,7 +965,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -622,13 +987,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 40,
+                      "duration": 24,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.388Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.383Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -637,7 +1015,7 @@
               ],
               "id": "a74475c7d49cae56f38d-3b02e1b370a4b8951acb",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -649,7 +1027,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -658,13 +1049,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 42,
+                      "duration": 23,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.392Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.414Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -673,7 +1077,7 @@
               ],
               "id": "a74475c7d49cae56f38d-0cf5f72d214ba7815b93",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -685,7 +1089,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -694,13 +1111,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 30,
+                      "duration": 23,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.445Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.417Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -709,7 +1139,7 @@
               ],
               "id": "a74475c7d49cae56f38d-8bf7318c1a02e00dbd61",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -721,7 +1151,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -730,13 +1173,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 34,
+                      "duration": 25,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.450Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.446Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -745,7 +1201,7 @@
               ],
               "id": "a74475c7d49cae56f38d-01bd218237c809bf7dd4",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -757,79 +1213,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "annotations": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 30,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.486Z",
-                      "annotations": [],
-                      "attachments": []
+                      "type": "bug",
+                      "description": "BUG-15-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:62-69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a74475c7d49cae56f38d-4ed9f01e63c71b4a1f1c",
-              "file": "fr15-product-crud.spec.js",
-              "line": 351,
-              "column": 5
-            },
-            {
-              "title": "FR15-TC14a price above max safe integer loses precision @fr15",
-              "ok": true,
-              "tags": [
-                "fr15"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 30,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.495Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a74475c7d49cae56f38d-3fccb15c4071c61bf1ee",
-              "file": "fr15-product-crud.spec.js",
-              "line": 351,
-              "column": 5
-            },
-            {
-              "title": "FR15-TC14b price at max safe integer is stored exactly @fr15",
-              "ok": true,
-              "tags": [
-                "fr15"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -843,8 +1240,137 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.527Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.450Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:62-69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-4ed9f01e63c71b4a1f1c",
+              "file": "fr15-product-crud.spec.js",
+              "line": 407,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14a price above max safe integer loses precision @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 24,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:21:34.481Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-3fccb15c4071c61bf1ee",
+              "file": "fr15-product-crud.spec.js",
+              "line": 407,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14b price at max safe integer is stored exactly @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 23,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:21:34.491Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -853,7 +1379,7 @@
               ],
               "id": "a74475c7d49cae56f38d-0255b1731c70583b37c2",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -865,7 +1391,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-10"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:62-69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -874,13 +1413,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 33,
+                      "duration": 26,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.534Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.514Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-10"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:62-69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -889,7 +1441,7 @@
               ],
               "id": "a74475c7d49cae56f38d-754a5c285b36889eec26",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -901,7 +1453,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:186-191"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -910,13 +1475,26 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 18,
+                      "duration": 9,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.566Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.523Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:186-191"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -925,7 +1503,7 @@
               ],
               "id": "a74475c7d49cae56f38d-7c595a217c79f89437f9",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -937,22 +1515,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-08"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:157"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 18,
+                      "duration": 11,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.580Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.543Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-08"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:157"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -961,7 +1565,7 @@
               ],
               "id": "a74475c7d49cae56f38d-1467b255a92b5102588a",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -973,22 +1577,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-09"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:158"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 17,
+                      "duration": 9,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.599Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.548Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-09"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:158"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -997,7 +1627,7 @@
               ],
               "id": "a74475c7d49cae56f38d-21b1f71c81ac0ff0240d",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -1009,22 +1639,40 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:158"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 20,
+                      "duration": 10,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:04.614Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:34.562Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:158"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1033,7 +1681,7 @@
               ],
               "id": "a74475c7d49cae56f38d-6ebee4da95e065d4278f",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             }
           ]
@@ -1043,9 +1691,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-22T13:52:59.014Z",
-    "duration": 5732.395,
-    "expected": 25,
+    "startTime": "2026-08-22T14:21:29.068Z",
+    "duration": 5598.871,
+    "expected": 26,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

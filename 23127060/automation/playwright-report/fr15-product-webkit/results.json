@@ -21,7 +21,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23127060 – Ninh Văn Khải",
-      "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+      "Run at (ISO)": "2026-08-22T14:21:47.264Z",
       "feature": "fr15-product",
       "actualWorkers": 2
     },
@@ -33,7 +33,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+          "Run at (ISO)": "2026-08-22T14:21:47.264Z",
           "feature": "fr15-product",
           "actualWorkers": 2
         },
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+          "Run at (ISO)": "2026-08-22T14:21:47.264Z",
           "feature": "fr15-product",
           "actualWorkers": 2
         },
@@ -71,7 +71,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+          "Run at (ISO)": "2026-08-22T14:21:47.264Z",
           "feature": "fr15-product",
           "actualWorkers": 2
         },
@@ -96,7 +96,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/fr15-product-webkit",
-          "title": "Run by: 23127060 — 2026-08-22T13:53:16.596Z"
+          "title": "Run by: 23127060 — 2026-08-22T14:21:47.264Z"
         }
       ],
       [
@@ -133,7 +133,7 @@
         {
           "title": "FR-15 Admin product CRUD",
           "file": "fr15-product-crud.spec.js",
-          "line": 49,
+          "line": 53,
           "column": 6,
           "specs": [
             {
@@ -145,7 +145,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:339"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -154,13 +163,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2167,
+                      "duration": 2295,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:17.513Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:48.225Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:339"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -169,7 +187,7 @@
               ],
               "id": "a74475c7d49cae56f38d-56ad2825ab3dc6ce3432",
               "file": "fr15-product-crud.spec.js",
-              "line": 51,
+              "line": 55,
               "column": 3
             },
             {
@@ -181,7 +199,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:64-67"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -190,13 +217,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1732,
+                      "duration": 1816,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:17.487Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:48.240Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:64-67"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -205,7 +241,7 @@
               ],
               "id": "a74475c7d49cae56f38d-20152cda8add2e479879",
               "file": "fr15-product-crud.spec.js",
-              "line": 74,
+              "line": 79,
               "column": 3
             },
             {
@@ -217,7 +253,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:114-115"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -226,13 +271,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2154,
+                      "duration": 2431,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:19.317Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:50.165Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:114-115"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -241,7 +295,7 @@
               ],
               "id": "a74475c7d49cae56f38d-dfce9420072f839e1787",
               "file": "fr15-product-crud.spec.js",
-              "line": 87,
+              "line": 93,
               "column": 3
             },
             {
@@ -253,7 +307,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:113"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A5, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -262,13 +325,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2304,
+                      "duration": 2443,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:19.778Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:50.612Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:113"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A5, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -277,7 +349,7 @@
               ],
               "id": "a74475c7d49cae56f38d-12ee77132e835be661e6",
               "file": "fr15-product-crud.spec.js",
-              "line": 110,
+              "line": 117,
               "column": 3
             },
             {
@@ -289,7 +361,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-01"
+                    },
+                    {
+                      "type": "source",
+                      "description": "App.jsx:107-112"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -298,13 +383,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2255,
+                      "duration": 2507,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:21.486Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:52.613Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-01"
+                        },
+                        {
+                          "type": "source",
+                          "description": "App.jsx:107-112"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -313,7 +411,7 @@
               ],
               "id": "a74475c7d49cae56f38d-4eb4ff5eab2b36a52d8a",
               "file": "fr15-product-crud.spec.js",
-              "line": 140,
+              "line": 148,
               "column": 3
             },
             {
@@ -325,7 +423,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:127-134"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -334,13 +441,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2097,
+                      "duration": 1939,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:22.099Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:53.072Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:127-134"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -349,7 +465,7 @@
               ],
               "id": "a74475c7d49cae56f38d-4898e25f1b5146f302d7",
               "file": "fr15-product-crud.spec.js",
-              "line": 184,
+              "line": 198,
               "column": 3
             },
             {
@@ -361,22 +477,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-11"
+                    },
+                    {
+                      "type": "source",
+                      "description": "App.jsx:583"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1848,
+                      "duration": 1831,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:23.756Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:55.026Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-11"
+                        },
+                        {
+                          "type": "source",
+                          "description": "App.jsx:583"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -385,7 +527,7 @@
               ],
               "id": "a74475c7d49cae56f38d-7274e37500f1766f9cc2",
               "file": "fr15-product-crud.spec.js",
-              "line": 210,
+              "line": 225,
               "column": 3
             },
             {
@@ -397,22 +539,40 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "App.jsx:496"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2111,
+                      "duration": 2173,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:24.214Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:55.134Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "App.jsx:496"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -421,7 +581,7 @@
               ],
               "id": "a74475c7d49cae56f38d-f5347b3762122001e7a7",
               "file": "fr15-product-crud.spec.js",
-              "line": 242,
+              "line": 258,
               "column": 3
             },
             {
@@ -433,22 +593,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:161"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 35,
+                      "duration": 46,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.618Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:56.872Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:161"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -457,7 +643,7 @@
               ],
               "id": "a74475c7d49cae56f38d-db2337b8a7a487464eee",
               "file": "fr15-product-crud.spec.js",
-              "line": 266,
+              "line": 283,
               "column": 3
             },
             {
@@ -469,22 +655,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:173"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 43,
+                      "duration": 45,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.667Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:56.933Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:173"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -493,7 +705,7 @@
               ],
               "id": "a74475c7d49cae56f38d-1ea1e83d865d04582bd0",
               "file": "fr15-product-crud.spec.js",
-              "line": 286,
+              "line": 304,
               "column": 3
             },
             {
@@ -505,22 +717,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:186"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 30,
+                      "duration": 33,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.726Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:56.993Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-02"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:186"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -529,7 +767,7 @@
               ],
               "id": "a74475c7d49cae56f38d-d9cdea28b95a08b2a194",
               "file": "fr15-product-crud.spec.js",
-              "line": 311,
+              "line": 330,
               "column": 3
             },
             {
@@ -541,22 +779,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-03"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:161"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 44,
+                      "duration": 43,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.769Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.042Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-03"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:161"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -565,7 +829,69 @@
               ],
               "id": "a74475c7d49cae56f38d-1a2dc4ce4af3a654152f",
               "file": "fr15-product-crud.spec.js",
-              "line": 328,
+              "line": 348,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC21 list and detail endpoints disagree on the price type of the same product @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-09"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:158"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:21:57.097Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-09"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:158"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-f6fc37d7d1ccc354f9a2",
+              "file": "fr15-product-crud.spec.js",
+              "line": 370,
               "column": 3
             },
             {
@@ -577,22 +903,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 31,
+                      "duration": 33,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.828Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.137Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -601,7 +953,7 @@
               ],
               "id": "a74475c7d49cae56f38d-d92389f5af062ffa1e76",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -613,22 +965,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
                       "duration": 30,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.871Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.183Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -637,7 +1015,7 @@
               ],
               "id": "a74475c7d49cae56f38d-525ed88a9ae99c7c0267",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -649,22 +1027,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 33,
+                      "duration": 27,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.915Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.229Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -673,7 +1077,7 @@
               ],
               "id": "a74475c7d49cae56f38d-1dfa9f974f087c411f59",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -685,22 +1089,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 35,
+                      "duration": 33,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:25.961Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.268Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -709,7 +1139,7 @@
               ],
               "id": "a74475c7d49cae56f38d-e832f042195e01d10681",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -721,22 +1151,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 41,
+                      "duration": 34,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.012Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.317Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -745,7 +1201,7 @@
               ],
               "id": "a74475c7d49cae56f38d-0fa343a8d7fa56a0c063",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -757,7 +1213,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-05"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:62-69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -766,13 +1235,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 31,
+                      "duration": 40,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.070Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.328Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-05"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:62-69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -781,7 +1263,7 @@
               ],
               "id": "a74475c7d49cae56f38d-afc2890195aa8eee9e8a",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -793,22 +1275,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-06"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 35,
+                      "duration": 33,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.116Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.367Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-06"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -817,7 +1325,7 @@
               ],
               "id": "a74475c7d49cae56f38d-2613412ecca29a0100ce",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -829,7 +1337,16 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:162-171"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -838,13 +1355,22 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 32,
+                      "duration": 34,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.164Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.387Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:162-171"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -853,7 +1379,7 @@
               ],
               "id": "a74475c7d49cae56f38d-da0f31fb53fa01b829e9",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -865,22 +1391,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-10"
+                    },
+                    {
+                      "type": "source",
+                      "description": "database.js:62-69"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 33,
+                      "duration": 36,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.210Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.413Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-10"
+                        },
+                        {
+                          "type": "source",
+                          "description": "database.js:62-69"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -889,7 +1441,7 @@
               ],
               "id": "a74475c7d49cae56f38d-83c4d05f3efb01087870",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -901,7 +1453,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:186-191"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -910,13 +1475,26 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12,
+                      "duration": 14,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.255Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.436Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:186-191"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -925,7 +1503,7 @@
               ],
               "id": "a74475c7d49cae56f38d-6f2c873f13dc39674eb2",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -937,22 +1515,48 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-15-08"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:157"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13,
+                      "duration": 19,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.278Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.461Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-08"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:157"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -961,7 +1565,7 @@
               ],
               "id": "a74475c7d49cae56f38d-dbfd522754e087fee261",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             },
             {
@@ -973,43 +1577,20 @@
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
+                  "annotations": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 15,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.302Z",
-                      "annotations": [],
-                      "attachments": []
+                      "type": "bug",
+                      "description": "BUG-15-09"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:158"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a74475c7d49cae56f38d-6ffa096a692a48170385",
-              "file": "fr15-product-crud.spec.js",
-              "line": 351,
-              "column": 5
-            },
-            {
-              "title": "FR15-TC17b odd product id returns price as number @fr15",
-              "ok": true,
-              "tags": [
-                "fr15"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
@@ -1023,8 +1604,75 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T13:53:26.329Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:21:57.470Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-15-09"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:158"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-6ffa096a692a48170385",
+              "file": "fr15-product-crud.spec.js",
+              "line": 407,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17b odd product id returns price as number @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:158"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:21:57.496Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:158"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
@@ -1033,7 +1681,7 @@
               ],
               "id": "a74475c7d49cae56f38d-d94392d81d00690eee59",
               "file": "fr15-product-crud.spec.js",
-              "line": 351,
+              "line": 407,
               "column": 5
             }
           ]
@@ -1043,9 +1691,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-22T13:53:16.626Z",
-    "duration": 9835.725999999999,
-    "expected": 25,
+    "startTime": "2026-08-22T14:21:47.272Z",
+    "duration": 10319.061000000002,
+    "expected": 26,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
