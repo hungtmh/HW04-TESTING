@@ -40,7 +40,7 @@
 | LOG-007 | Claude Code | 2026-08-22T21:44:00 | P3 FR-15 | Page Object + spec FR-15 | *(cùng prompt trên)* | `AdminProductPage.js`, spec 25 test. Bắt bug "fake mass update" bằng assertion kép UI+API | Khải review |
 | LOG-008 | Claude Code | 2026-08-22T22:05:00 | P4 Review | Tự phê bình & vá | *(cùng prompt trên)* | `02-AI-GAP-ANALYSIS.md` — **7 GAP** có bằng chứng, đã sửa 5 GAP trong code | 🧑 **Ký xác nhận đã review script** |
 | LOG-009 | Claude Code | 2026-08-22T22:35:00 | P5 Run | 9 run multi-browser | *(cùng prompt trên)* | 4 script hạ tầng, 9 report, `03-RUN-SUMMARY.md`. **240/240 passed**, 9/9 banner hợp lệ | 🧑 **Mở 9 report, chụp màn hình banner** |
-| LOG-010 | Claude Code | 2026-08-22T23:02:00 | P6 Bug | Bug report + evidence | *(cùng prompt trên)* | `BUG_REPORT.md` 27 bug, 11 ảnh PNG thật, 28 lệnh `gh issue create` | 🧑 **Tạo GitHub Issue, đính ảnh** |
+| LOG-010 | Claude Code | 2026-08-22T23:02:00 | P6 Bug | Bug report + evidence | *(cùng prompt trên)* | `BUG_REPORT.md` 28 bug, 11 ảnh PNG thật, 28 lệnh `gh issue create` (LOG-010 ghi nhầm "27 bug", đã đính chính ở LOG-013) | 🧑 **Tạo GitHub Issue, đính ảnh** |
 | LOG-011 | Claude Code | 2026-08-22T23:20:00 | P7 Docs | Tài liệu | *(cùng prompt trên)* | Main Report, AI Audit, AI Critique (313→296 từ sau 3 lần cắt), README, 2 kịch bản video, 9 PDF | Khải review, chốt severity |
 | LOG-012 | Claude Code | 2026-08-22T23:45:00 | P8 Đóng gói | Bổ sung test, vá GAP-08/09, xuất git log | *(cùng prompt trên)* | +3 test (83 tổng), 9 commit chạm `*.spec.js`, 249/249 pass, 2 file git log | 🧑 **Push repo, đóng gói, nộp** |
 
@@ -59,7 +59,7 @@
 | Phải sửa mới dùng được (Accepted-with-fix) | ~30% | 9 GAP ở `02-AI-GAP-ANALYSIS.md` + 2 lỗi hạ tầng ở Phase 5 + 1 lỗi ở Phase 6 |
 | Bỏ hẳn (Rejected) | 0 | Không có output nào phải vứt đi hoàn toàn |
 
-**12 lỗi thật của AI đã được ghi nhận và sửa:**
+**13 lỗi thật của AI đã được ghi nhận và sửa:**
 
 | # | Lỗi | Phát hiện nhờ | Phase |
 |---|---|---|---|
@@ -75,10 +75,17 @@
 | 10 | Chụp màn hình bên trong dialog handler ⇒ treo renderer, timeout 30s | Chạy thật | P6 |
 | 11 | `isVisible()` **không chờ** ⇒ `itemRowCount()` trả `-1` khi React chưa render (chỉ WebKit mới lộ) | Chạy thật trên WebKit | P8 |
 | 12 | Coi "alert đã đóng" là mốc an toàn để đọc DOM ⇒ đếm dòng bảng ra 0 (chỉ WebKit mới lộ) | Chạy thật trên WebKit | P8 |
+| 13 | **Đếm sai số bug tổng kết**: ghi 27 trong khi tài liệu có 28 mục | `grep -c` đối chiếu | P8 |
 
-**Nhận xét:** 7/12 lỗi chỉ lộ ra khi **chạy thật** (1, 8, 9, 10, 11, 12 và một phần 7). 5 lỗi còn lại lộ ra khi
-**đọc lại code với tâm thế phản biện**. Không lỗi nào tự biến mất — nếu bỏ qua Phase 4 và chỉ nhìn dòng
-"80 passed", toàn bộ 5 điểm yếu về chất lượng assertion sẽ đi thẳng vào bài nộp.
+**Nhận xét:** 7/13 lỗi chỉ lộ ra khi **chạy thật** (1, 8, 9, 10, 11, 12 và một phần 7); 5 lỗi lộ ra khi
+**đọc lại code với tâm thế phản biện**; 1 lỗi (số 13) chỉ lộ ra khi **đếm bằng lệnh thay vì bằng mắt**.
+Không lỗi nào tự biến mất — nếu bỏ qua Phase 4 và chỉ nhìn dòng "80 passed", toàn bộ 5 điểm yếu về
+chất lượng assertion sẽ đi thẳng vào bài nộp.
+
+**Lỗi 13 đáng suy nghĩ nhất trong ngữ cảnh môn Kiểm thử:** AI viết đúng 28 mục bug chi tiết, đúng 28 dòng
+trong bảng tổng quan, nhưng phần tổng kết lại ghi "27 bug". Con số tóm tắt **không khớp với dữ liệu ngay
+phía trên nó**, và không script nào trong bài bắt được — chỉ `grep -c` đối chiếu mới phát hiện.
+Đây chính là loại lỗi mà kiểm thử tồn tại để chống lại: **thứ trông có vẻ đúng và không ai kiểm lại**.
 
 Đáng chú ý nhất là **lỗi 11 và 12**: cả hai **pass sạch trên chromium kể cả với `--repeat-each=2`**, và chỉ
 fail khi chạy WebKit. Nói cách khác, tiêu chí "ổn định 2 lần liên tiếp" mà chính SKILL.md đặt ra **vẫn chưa đủ** —

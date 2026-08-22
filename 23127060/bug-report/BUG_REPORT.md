@@ -6,7 +6,7 @@
   · backend `http://localhost:3000` · web `http://localhost:5173` · admin `http://localhost:5174`
 - **Nguồn bằng chứng:** ảnh trong `evidence/bugs/` do `automation/scripts/capture-bug-evidence.mjs`
   chụp bằng Playwright thật; log response trong `evidence/bugs/capture-log.txt`;
-  test case tương ứng trong `automation/tests/*.spec.js` (240/240 pass — xem `report/03-RUN-SUMMARY.md`).
+  test case tương ứng trong `automation/tests/*.spec.js` (249/249 pass — xem `report/03-RUN-SUMMARY.md`).
 
 > ⚠️ **Cách đọc "test pass":** các test gắn mã bug được viết để khẳng định *hành vi sai hiện tại*.
 > Test **pass** ⇒ bug **vẫn còn**. Khi SUT được sửa, chính các test đó sẽ **fail** — đó là dấu hiệu cần cập nhật kỳ vọng.
@@ -49,8 +49,8 @@
 | BUG-15-10 | Chấp nhận `category_id` trỏ vào danh mục không tồn tại | FR-15 | Medium | P2 | FR15-TC18 | test log |
 | BUG-15-11 | Payload XSS lưu nguyên vẹn vào CSDL, không hề được làm sạch | FR-15 | High | P1 | FR15-TC19 | test log |
 
-**Tổng: 27 bug** — FR-03: 8 · FR-08: 9 · FR-15: 10 (+1 cross-feature).
-Theo mức độ: **Critical 9** · High 10 · Medium 8.
+**Tổng: 28 bug** — FR-03: 8 · FR-08: 9 · FR-15: 11.
+Theo mức độ: **Critical 9** · High 10 · Medium 9.
 
 ---
 
@@ -593,7 +593,7 @@ Chỉ cần một màn hình mới render tên sản phẩm bằng `dangerouslyS
 
 ## 🧑 Việc Khải cần làm với bug report này
 
-- [ ] Đọc lại 27 bug, xác nhận severity phù hợp với ngữ cảnh môn học.
+- [ ] Đọc lại 28 bug, xác nhận severity phù hợp với ngữ cảnh môn học.
 - [ ] Tạo **GitHub Issue** cho từng bug (ưu tiên 9 bug Critical) và đính kèm ảnh trong `evidence/bugs/`.
 - [ ] Lệnh soạn sẵn cho `gh` CLI: xem `bug-report/gh-issue-commands.sh`.
 - [ ] Dán link Issue vào cột "Liên kết" của `ai/AI_Log.md`.

@@ -22,7 +22,7 @@
 | Lần chạy multi-browser | 9 (3 feature × 3 browser) | **9/9 · 249 test · 249 passed · 0 failed · 0 flaky** |
 | Assertion pattern khác nhau | ≥ 3 | **5** (A1–A5, §4) |
 | Data-driven | không hardcode inline | **77 record** trong 6 file JSON/CSV, 0 mảng dữ liệu inline |
-| Bug phát hiện | ≥ 3 / feature | **27 bug** (FR-03: 8 · FR-08: 9 · FR-15: 10) — trong đó **9 Critical** |
+| Bug phát hiện | ≥ 3 / feature | **28 bug** (FR-03: 8 · FR-08: 9 · FR-15: 11) — trong đó **9 Critical** |
 | Commit chạm `*.spec.js` | ≥ 8 | **9 commit** — xem `evidence/git-commit-log-files.txt` |
 | Banner chống gian lận | mọi report | **9/9 report** có `Run by: 23127060` + ISO timestamp, verify script pass |
 
@@ -158,11 +158,11 @@ Mọi giá trị trên banner (số passed/failed/duration) lấy từ chính l�
 | Feature | Critical | High | Medium | Tổng |
 |---|---|---|---|---|
 | FR-03 | 3 | 4 | 1 | 8 |
-| FR-08 | 4 | 3 | 3 | 10* |
-| FR-15 | 3 | 3 | 5 | 11* |
-| **Tổng** | **9** | **10** | **8** | **27** |
+| FR-08 | 4 | 3 | 2 | 9 |
+| FR-15 | 2 | 3 | 6 | 11 |
+| **Tổng** | **9** | **10** | **9** | **28** |
 
-<sub>*BUG-15-11 (XSS) là lỗi cross-feature; bảng đếm theo feature nơi phát hiện.</sub>
+<sub>BUG-15-11 (XSS) là lỗi cross-feature nhưng được đếm ở FR-15 — nơi payload được đưa vào hệ thống.</sub>
 
 ### 6.1 Năm bug nghiêm trọng nhất
 
@@ -174,7 +174,7 @@ Mọi giá trị trên banner (số passed/failed/duration) lấy từ chính l�
 | **BUG-15-02** | `POST/PUT/DELETE /api/products` **không cần đăng nhập** | Bất kỳ ai cũng xoá sạch được catalogue bằng một vòng lặp. Các route khác *có* middleware ⇒ đây là thiếu sót bị bỏ quên |
 | **BUG-15-01** | Sửa 1 sản phẩm làm **cả bảng** đổi sang cùng một tên | Admin nhìn thấy dữ liệu hoàn toàn sai; rủi ro bấm **Xóa** nhầm vì mọi dòng trông giống hệt nhau |
 
-Chi tiết đầy đủ 27 bug: `bug-report/BUG_REPORT.md`. Ảnh minh chứng: `evidence/bugs/` (11 ảnh PNG thật do
+Chi tiết đầy đủ 28 bug: `bug-report/BUG_REPORT.md`. Ảnh minh chứng: `evidence/bugs/` (11 ảnh PNG thật do
 `capture-bug-evidence.mjs` chụp bằng Playwright, kèm `capture-log.txt` chứa log response nguyên văn).
 
 ### 6.2 Hai bug được phát hiện thêm so với danh sách dự kiến ban đầu
@@ -201,7 +201,7 @@ chứ không phải bản thân việc dùng AI.
 | P3 | 5 Page Object + 3 spec, chạy tới khi ổn định `--repeat-each=2` | `automation/tests/` |
 | P4 | Tự phê bình, tìm GAP-00..07, vá lại | `report/02-AI-GAP-ANALYSIS.md` |
 | P5 | 9 run multi-browser + verify banner + bảng số liệu | `report/03-RUN-SUMMARY.md` |
-| P6 | 27 bug + script chụp ảnh minh chứng | `bug-report/`, `evidence/bugs/` |
+| P6 | 28 bug + script chụp ảnh minh chứng | `bug-report/`, `evidence/bugs/` |
 | P7 | Tài liệu | `report/`, `ai/`, `README.md` |
 | P8 | Bổ sung 3 test, vá GAP-08/09, đóng gói | `evidence/git-commit-log*.txt` |
 
@@ -247,7 +247,7 @@ Toàn bộ hội thoại với AI được ghi lại trong `ai/AI_Log.md` (10 en
 | FR-03 automation | 25 | 🧑 *Khải điền* | 31 test, 3 browser, 8 bug, 100% pass |
 | FR-08 automation | 25 | 🧑 *Khải điền* | 26 test, 3 browser, 9 bug (4 Critical), 100% pass |
 | FR-15 automation | 25 | 🧑 *Khải điền* | 26 test, 3 browser, 10 bug, 100% pass |
-| Báo cáo & AI Audit | 25 | 🧑 *Khải điền* | Main Report, Bug Report 27 bug, Gap Analysis 9 GAP, AI Log 12 entry, AI Critique 296 từ |
+| Báo cáo & AI Audit | 25 | 🧑 *Khải điền* | Main Report, Bug Report 28 bug, Gap Analysis 9 GAP, AI Log 12 entry, AI Critique 296 từ |
 
 **🧑 Việc Khải còn phải làm:** xem checklist ở `README.md` §Bàn giao.
 

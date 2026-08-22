@@ -29,4 +29,4 @@ AI viết nhanh hơn tôi rất nhiều. Nhưng thứ quyết định bài này 
 
 **Số từ (đếm tự động bởi `scripts/count-words.mjs`):** **296 từ** — ✅ nằm trong khoảng 200–300 từ theo yêu cầu
 
-<sub>Đếm lúc 2026-08-22T14:05:21.642Z. Bỏ qua tiêu đề, ghi chú và inline code.</sub>
+<sub>Đếm lúc 2026-08-22T14:27:55.918Z. Bỏ qua tiêu đề, ghi chú và inline code.</sub>

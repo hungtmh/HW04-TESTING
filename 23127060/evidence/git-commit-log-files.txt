@@ -1,3 +1,9 @@
+e1dcdcd|2026-08-22 21:25:26 +0700|nvkhai238|fix(specs): eliminate two flaky waits that only WebKit exposed
+dc0ee9b|2026-08-22 21:15:52 +0700|nvkhai238|test(fr15): show list and detail endpoints disagree on the price type of one product
+7e1becf|2026-08-22 21:15:14 +0700|nvkhai238|test(fr08): add order-listing isolation case and soft-assert every coupon symptom
+193ec05|2026-08-22 21:14:25 +0700|nvkhai238|test(fr03): prove the token leak at the network layer and soft-assert the lockout
+a875ac9|2026-08-22 21:13:37 +0700|nvkhai238|test(specs): annotate every test with its bug id, source line and assertion patterns
+f832ba6|2026-08-22 21:11:40 +0700|nvkhai238|refactor(specs): extract the shared fresh-user helper into tests/utils/fixtures.js
 f2edc7a|2026-08-22 20:45:46 +0700|nvkhai238|fix(specs): phase 4 gap analysis - remove weak assertions and flaky waits
 d25692d|2026-08-22 20:39:56 +0700|nvkhai238|test(fr15): add 25 admin product CRUD cases incl. fake mass update
 4e1dd5a|2026-08-22 20:36:54 +0700|nvkhai238|test(fr08): add 25 checkout cases incl. price tampering and coupon inversion

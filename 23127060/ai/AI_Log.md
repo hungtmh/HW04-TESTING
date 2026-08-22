@@ -590,3 +590,48 @@ node scripts/md-to-pdf.mjs                        ⇒ 9/9 file PDF
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>`
+
+---
+
+## LOG-013 — Đính chính LOG-010: số bug là 28, không phải 27
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T23:58:00+07:00
+- **Phase:** P8 — Kiểm tra Definition of Done
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- Khi chạy checklist Definition of Done (§10 SKILL), lệnh đếm heading trong `BUG_REPORT.md` ra **28**, trong khi LOG-010 và các tài liệu đều ghi **27**.
+- Đối chiếu bảng tổng quan với các mục chi tiết: cả hai đều có đúng **28 mã bug duy nhất**, khớp nhau hoàn toàn ⇒ con số **28 là đúng**, "27" là AI **tự đếm sai bằng mắt** khi viết phần tổng kết.
+- Phân bố đúng: FR-03 **8** · FR-08 **9** · FR-15 **11** (trước ghi nhầm FR-15 là 10).
+- Severity đúng: Critical **9** · High **10** · Medium **9** (trước ghi nhầm Medium là 8).
+- Đã sửa con số ở `BUG_REPORT.md`, `HW04_Main_Report.md`, `README.md`, `AI_Audit_Report.md`.
+- **KHÔNG sửa LOG-010** — theo §9 SKILL, `AI_Log.md` là append-only, sai sót được đính chính bằng entry mới chứ không viết lại lịch sử.
+
+**Bài học cho AI_Critique:** đây là **lỗi thứ 13** của AI trong bài — và là lỗi thuộc loại nguy hiểm nhất trong kiểm thử: **con số tổng kết không khớp với dữ liệu bên dưới nó**. Không có script nào bắt được, chỉ lộ ra khi chạy `grep -c` để đối chiếu. Bài học: mọi con số trong báo cáo đều phải **đếm bằng lệnh**, không đếm bằng mắt.
+
+**File tạo/sửa:**
+- `bug-report/BUG_REPORT.md` (sửa — 27→28, phân bố feature, severity, 240→249)
+- `report/HW04_Main_Report.md` · `README.md` · `ai/AI_Audit_Report.md` (sửa số bug)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+grep "^## BUG-" bug-report/BUG_REPORT.md | awk '{print $2}' | sort -u | wc -l
+⇒ 28
+
+diff <(heading chi tiết) <(bảng tổng quan)
+⇒ (không khác biệt) — hai danh sách khớp hoàn toàn
+
+grep "^## BUG-" ... | sed 's/-[0-9][0-9]$//' | sort | uniq -c
+⇒ 8 BUG-03 · 9 BUG-08 · 11 BUG-15
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>`

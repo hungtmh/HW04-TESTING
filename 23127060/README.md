@@ -27,7 +27,7 @@
 
 | Hạng mục | Con số |
 |---|---|
-| Bug phát hiện | **27** (9 Critical · 10 High · 8 Medium) |
+| Bug phát hiện | **28** (9 Critical · 10 High · 9 Medium) |
 | Record dữ liệu data-driven | **77** trong 6 file JSON/CSV |
 | Assertion pattern | **5** (A1 UI · A2 URL · A3 API · A4 boundary · A5 dialog) |
 | Page Object | 5 |
@@ -58,7 +58,7 @@
 │   │   └── fr15-product-crud.spec.js    26 test
 │   └── playwright-report/          9 thư mục report HTML
 ├── bug-report/
-│   ├── BUG_REPORT.md               27 bug chi tiết
+│   ├── BUG_REPORT.md               28 bug chi tiết
 │   ├── gh-issue-commands.sh        sinh 28 lệnh `gh issue create`
 │   └── issue-bodies/               28 file body Issue
 ├── evidence/
@@ -141,7 +141,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | **FR-03** — Quên/Đặt lại mật khẩu | 25 | 🧑 *điền* | 31 test × 3 browser · 8 bug (3 Critical) · boundary regex mật khẩu 6 biến thể · 100% pass |
 | **FR-08** — Thanh toán | 25 | 🧑 *điền* | 26 test × 3 browser · 9 bug (4 Critical) · boundary coupon 3 mốc bắt được off-by-one · 100% pass |
 | **FR-15** — Quản lý sản phẩm | 25 | 🧑 *điền* | 26 test × 3 browser · 10 bug (3 Critical) · assertion kép UI+API chứng minh bug thuộc frontend · 100% pass |
-| **Báo cáo & AI Audit** | 25 | 🧑 *điền* | Main Report · Bug Report 27 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 12 entry · Critique 296 từ |
+| **Báo cáo & AI Audit** | 25 | 🧑 *điền* | Main Report · Bug Report 28 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 12 entry · Critique 296 từ |
 | **TỔNG** | **100** | 🧑 *điền* | |
 
 ### Điểm mạnh tự nhận
@@ -168,7 +168,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | 3 | **Ký xác nhận đã review script** (`report/02-AI-GAP-ANALYSIS.md` §5) | ☐ |
 | 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | ☐ |
 | 5 | Tạo GitHub repo **public**, push toàn bộ | ☐ |
-| 6 | Tạo GitHub Issue cho 27 bug (`bash bug-report/gh-issue-commands.sh`), đính ảnh | ☐ |
+| 6 | Tạo GitHub Issue cho 28 bug (`bash bug-report/gh-issue-commands.sh`), đính ảnh | ☐ |
 | 7 | Điền mục **Human review** + **Verdict** cho 12 entry trong `ai/AI_Log.md` | ☐ |
 | 8 | Quay Video 1 (demo ≥5 phút, giọng Việt thật, có face-cam **hoặc** `whoami && hostname`) | ☐ |
 | 9 | Quay Video 2 (demo Agent Skill end-to-end) | ☐ |
