@@ -6,7 +6,7 @@
       "test",
       "--project=chromium",
       "--grep",
-      "@fr03"
+      "@fr08"
     ],
     "configFile": "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\playwright.config.js",
     "rootDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
@@ -21,7 +21,7 @@
     "maxFailures": 0,
     "metadata": {
       "Run by": "23127060 – Ninh Văn Khải",
-      "Run at (ISO)": "2026-08-22T14:14:06.559Z",
+      "Run at (ISO)": "2026-08-22T14:14:53.134Z",
       "feature": "all",
       "actualWorkers": 2
     },
@@ -33,7 +33,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T14:14:06.559Z",
+          "Run at (ISO)": "2026-08-22T14:14:53.134Z",
           "feature": "all",
           "actualWorkers": 2
         },
@@ -52,7 +52,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T14:14:06.559Z",
+          "Run at (ISO)": "2026-08-22T14:14:53.134Z",
           "feature": "all",
           "actualWorkers": 2
         },
@@ -71,7 +71,7 @@
         "retries": 0,
         "metadata": {
           "Run by": "23127060 – Ninh Văn Khải",
-          "Run at (ISO)": "2026-08-22T14:14:06.559Z",
+          "Run at (ISO)": "2026-08-22T14:14:53.134Z",
           "feature": "all",
           "actualWorkers": 2
         },
@@ -96,7 +96,7 @@
         {
           "open": "never",
           "outputFolder": "playwright-report/local",
-          "title": "Run by: 23127060 — 2026-08-22T14:14:06.559Z"
+          "title": "Run by: 23127060 — 2026-08-22T14:14:53.134Z"
         }
       ],
       [
@@ -124,23 +124,23 @@
   },
   "suites": [
     {
-      "title": "fr03-forgot-reset.spec.js",
-      "file": "fr03-forgot-reset.spec.js",
+      "title": "fr08-checkout.spec.js",
+      "file": "fr08-checkout.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "FR-03 Forgot & Reset password",
-          "file": "fr03-forgot-reset.spec.js",
-          "line": 55,
+          "title": "FR-08 Checkout",
+          "file": "fr08-checkout.spec.js",
+          "line": 46,
           "column": 6,
           "specs": [
             {
-              "title": "FR03-TC01 reset password succeeds with valid OTP and FE-compliant password @fr03",
+              "title": "FR08-TC01 happy path checkout through the UI creates an order with the cart total @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -148,11 +148,11 @@
                   "annotations": [
                     {
                       "type": "source",
-                      "description": "ForgotPassword.jsx:34-35"
+                      "description": "Checkout.jsx:70"
                     },
                     {
                       "type": "assertions",
-                      "description": "A3, A5, A2"
+                      "description": "A1, A3, A4"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -163,20 +163,20 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1089,
+                      "duration": 1521,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:07.677Z",
+                      "startTime": "2026-08-22T14:14:54.368Z",
                       "annotations": [
                         {
                           "type": "source",
-                          "description": "ForgotPassword.jsx:34-35"
+                          "description": "Checkout.jsx:70"
                         },
                         {
                           "type": "assertions",
-                          "description": "A3, A5, A2"
+                          "description": "A1, A3, A4"
                         }
                       ],
                       "attachments": []
@@ -185,16 +185,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-22cdbe165e368bf0a834",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 57,
+              "id": "50d1afd0c9a44d6a7b57-4a5be0ad36da5528ab74",
+              "file": "fr08-checkout.spec.js",
+              "line": 48,
               "column": 3
             },
             {
-              "title": "FR03-TC02 unregistered email is rejected at step 1 @fr03",
+              "title": "FR08-TC02 empty cart page shows the empty state @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -202,11 +202,11 @@
                   "annotations": [
                     {
                       "type": "source",
-                      "description": "server.js:69"
+                      "description": "Cart.jsx:24"
                     },
                     {
                       "type": "assertions",
-                      "description": "A5, A1"
+                      "description": "A1, A4"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -217,20 +217,20 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 869,
+                      "duration": 866,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:07.677Z",
+                      "startTime": "2026-08-22T14:14:54.369Z",
                       "annotations": [
                         {
                           "type": "source",
-                          "description": "server.js:69"
+                          "description": "Cart.jsx:24"
                         },
                         {
                           "type": "assertions",
-                          "description": "A5, A1"
+                          "description": "A1, A4"
                         }
                       ],
                       "attachments": []
@@ -239,16 +239,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-d4543bfec2fae8c65a85",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 85,
+              "id": "50d1afd0c9a44d6a7b57-eac186df05516a63654f",
+              "file": "fr08-checkout.spec.js",
+              "line": 95,
               "column": 3
             },
             {
-              "title": "FR03-TC03 wrong OTP is rejected and old password still works @fr03",
+              "title": "FR08-TC03 anonymous user is pushed to login instead of checkout @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -256,11 +256,11 @@
                   "annotations": [
                     {
                       "type": "source",
-                      "description": "server.js:92"
+                      "description": "Cart.jsx:11-15"
                     },
                     {
                       "type": "assertions",
-                      "description": "A5, A3"
+                      "description": "A5, A2"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -271,20 +271,20 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 979,
+                      "duration": 1012,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:08.743Z",
+                      "startTime": "2026-08-22T14:14:55.454Z",
                       "annotations": [
                         {
                           "type": "source",
-                          "description": "server.js:92"
+                          "description": "Cart.jsx:11-15"
                         },
                         {
                           "type": "assertions",
-                          "description": "A5, A3"
+                          "description": "A5, A2"
                         }
                       ],
                       "attachments": []
@@ -293,16 +293,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-373da59570865e7e86bc",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 99,
+              "id": "50d1afd0c9a44d6a7b57-244bb67dfedf67b373d1",
+              "file": "fr08-checkout.spec.js",
+              "line": 109,
               "column": 3
             },
             {
-              "title": "FR03-TC04 FE blocks a genuinely strong password because regex demands whitespace @fr03",
+              "title": "FR08-TC04 editable total lets the client pay 1 VND for a 30M VND cart @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -310,15 +310,15 @@
                   "annotations": [
                     {
                       "type": "bug",
-                      "description": "BUG-03-01"
+                      "description": "BUG-08-01"
                     },
                     {
                       "type": "source",
-                      "description": "ForgotPassword.jsx:26"
+                      "description": "Checkout.jsx:96-106"
                     },
                     {
                       "type": "assertions",
-                      "description": "A5, A3"
+                      "description": "A1, A3, A4"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -329,24 +329,24 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 914,
+                      "duration": 1063,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:08.962Z",
+                      "startTime": "2026-08-22T14:14:56.106Z",
                       "annotations": [
                         {
                           "type": "bug",
-                          "description": "BUG-03-01"
+                          "description": "BUG-08-01"
                         },
                         {
                           "type": "source",
-                          "description": "ForgotPassword.jsx:26"
+                          "description": "Checkout.jsx:96-106"
                         },
                         {
                           "type": "assertions",
-                          "description": "A5, A3"
+                          "description": "A1, A3, A4"
                         }
                       ],
                       "attachments": []
@@ -355,232 +355,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-7bb48b09af31ace6a2e7",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 122,
+              "id": "50d1afd0c9a44d6a7b57-e8da753ab19653e6665b",
+              "file": "fr08-checkout.spec.js",
+              "line": 134,
               "column": 3
             },
             {
-              "title": "FR03-TC05a eight chars meets FE regex minimum @fr03",
+              "title": "FR08-TC09 cart is not cleared after a successful checkout @fr08",
               "ok": true,
               "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "ForgotPassword.jsx:26"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A5, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 929,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:09.737Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "ForgotPassword.jsx:26"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A5, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-421a781feec1145c88c4",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 146,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC05b seven chars below FE regex minimum @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "ForgotPassword.jsx:26"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A5, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 862,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:09.890Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "ForgotPassword.jsx:26"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A5, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-2b68aeee28711314bc27",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 146,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC05c no uppercase fails FE regex @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "ForgotPassword.jsx:26"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A5, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 891,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:10.680Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "ForgotPassword.jsx:26"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A5, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-3586b89aeb4cd3aa837d",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 146,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC05d no digit fails FE regex @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "ForgotPassword.jsx:26"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A5, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 902,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:10.763Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "ForgotPassword.jsx:26"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A5, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-c1a02c4998843a852998",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 146,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC05e no whitespace fails FE regex despite being strong @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -588,15 +372,15 @@
                   "annotations": [
                     {
                       "type": "bug",
-                      "description": "BUG-03-01"
+                      "description": "BUG-08-05"
                     },
                     {
                       "type": "source",
-                      "description": "ForgotPassword.jsx:26"
+                      "description": "Checkout.jsx:8"
                     },
                     {
                       "type": "assertions",
-                      "description": "A5, A4"
+                      "description": "A1, A3, A4"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -607,24 +391,24 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 922,
+                      "duration": 1282,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:11.586Z",
+                      "startTime": "2026-08-22T14:14:56.479Z",
                       "annotations": [
                         {
                           "type": "bug",
-                          "description": "BUG-03-01"
+                          "description": "BUG-08-05"
                         },
                         {
                           "type": "source",
-                          "description": "ForgotPassword.jsx:26"
+                          "description": "Checkout.jsx:8"
                         },
                         {
                           "type": "assertions",
-                          "description": "A5, A4"
+                          "description": "A1, A3, A4"
                         }
                       ],
                       "attachments": []
@@ -633,16 +417,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-faff8504ceeae928f94d",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 146,
-              "column": 5
+              "id": "50d1afd0c9a44d6a7b57-3fc4dafff98f553593fa",
+              "file": "fr08-checkout.spec.js",
+              "line": 165,
+              "column": 3
             },
             {
-              "title": "FR03-TC05f special char rejected although message demands it @fr03",
+              "title": "FR08-TC10 order is stored without any shipping address @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -650,73 +434,11 @@
                   "annotations": [
                     {
                       "type": "bug",
-                      "description": "BUG-03-01"
+                      "description": "BUG-08-06"
                     },
                     {
                       "type": "source",
-                      "description": "ForgotPassword.jsx:26"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A5, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 890,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:11.679Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-01"
-                        },
-                        {
-                          "type": "source",
-                          "description": "ForgotPassword.jsx:26"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A5, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-87b72ce0c78c2ddfc611",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 146,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC06 reset token is leaked in the HTTP response body @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-02"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:76-79"
+                      "description": "Checkout.jsx:44-48"
                     },
                     {
                       "type": "assertions",
@@ -728,23 +450,23 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 28,
+                      "duration": 1060,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.523Z",
+                      "startTime": "2026-08-22T14:14:57.186Z",
                       "annotations": [
                         {
                           "type": "bug",
-                          "description": "BUG-03-02"
+                          "description": "BUG-08-06"
                         },
                         {
                           "type": "source",
-                          "description": "server.js:76-79"
+                          "description": "Checkout.jsx:44-48"
                         },
                         {
                           "type": "assertions",
@@ -757,16 +479,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-320dabd18f2c555a7387",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 163,
+              "id": "50d1afd0c9a44d6a7b57-af1f5aa7e6cb88bc6f62",
+              "file": "fr08-checkout.spec.js",
+              "line": 197,
               "column": 3
             },
             {
-              "title": "FR03-TC07 reset token is only 4 digits so brute force is feasible @fr03",
+              "title": "FR08-TC11 percent coupon multiplies the total instead of discounting it @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -774,11 +496,171 @@
                   "annotations": [
                     {
                       "type": "bug",
-                      "description": "BUG-03-03"
+                      "description": "BUG-08-07"
                     },
                     {
                       "type": "source",
-                      "description": "server.js:70"
+                      "description": "server.js:432-434"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A3, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1149,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:57.774Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:432-434"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A3, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-436351a03026c119ae56",
+              "file": "fr08-checkout.spec.js",
+              "line": 221,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC20 my-orders only ever returns the caller own orders @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:58.264Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-7ba3f4ca297c2155b428",
+              "file": "fr08-checkout.spec.js",
+              "line": 255,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC17 cart is lost on page reload because it lives in memory only @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-08-09"
+                    },
+                    {
+                      "type": "source",
+                      "description": "CartContext.jsx:7"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A1, A4"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1049,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:58.366Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-09"
+                        },
+                        {
+                          "type": "source",
+                          "description": "CartContext.jsx:7"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A1, A4"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-cb0df9859f24cb328530",
+              "file": "fr08-checkout.spec.js",
+              "line": 283,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC05 backend accepts a negative order total @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-08-02"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:305"
                     },
                     {
                       "type": "assertions",
@@ -793,20 +675,20 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 28,
+                      "duration": 41,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.561Z",
+                      "startTime": "2026-08-22T14:14:58.937Z",
                       "annotations": [
                         {
                           "type": "bug",
-                          "description": "BUG-03-03"
+                          "description": "BUG-08-02"
                         },
                         {
                           "type": "source",
-                          "description": "server.js:70"
+                          "description": "server.js:305"
                         },
                         {
                           "type": "assertions",
@@ -819,16 +701,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-8705fa64d33b8fabe117",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 175,
+              "id": "50d1afd0c9a44d6a7b57-18814e544bd4b01b7a36",
+              "file": "fr08-checkout.spec.js",
+              "line": 304,
               "column": 3
             },
             {
-              "title": "FR03-TC08 forgot-password has no rate limit @fr03",
+              "title": "FR08-TC06 backend accepts a non numeric order total @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -836,197 +718,11 @@
                   "annotations": [
                     {
                       "type": "bug",
-                      "description": "BUG-03-04"
+                      "description": "BUG-08-02"
                     },
                     {
                       "type": "source",
-                      "description": "server.js:66-82"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 104,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.582Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-04"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:66-82"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-319cc7ce0086fbcf11f7",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 186,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC09 different status codes allow user enumeration @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-05"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:69"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 29,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.601Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-05"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:69"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-b39e2455aebaf6af0fa3",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 202,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC10 backend accepts a one-character password @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-06"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:84-95"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 37,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.640Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-06"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:84-95"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-d29c007f0d55dd9b0965",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 216,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC11 password is stored and returned in plaintext @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-07"
-                    },
-                    {
-                      "type": "source",
-                      "description": "database.js:88"
+                      "description": "database.js:71"
                     },
                     {
                       "type": "assertions",
@@ -1046,15 +742,15 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.688Z",
+                      "startTime": "2026-08-22T14:14:58.991Z",
                       "annotations": [
                         {
                           "type": "bug",
-                          "description": "BUG-03-07"
+                          "description": "BUG-08-02"
                         },
                         {
                           "type": "source",
-                          "description": "database.js:88"
+                          "description": "database.js:71"
                         },
                         {
                           "type": "assertions",
@@ -1067,78 +763,28 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-d8cd19e87fcaeb7bbf9e",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 237,
+              "id": "50d1afd0c9a44d6a7b57-e0be7edb86d5fa6b63cf",
+              "file": "fr08-checkout.spec.js",
+              "line": 317,
               "column": 3
             },
             {
-              "title": "FR03-TC12 requesting a second token invalidates the first @fr03",
+              "title": "FR08-TC07 checkout succeeds with an empty cart @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
                   "timeout": 45000,
                   "annotations": [
                     {
-                      "type": "source",
-                      "description": "server.js:72-75"
+                      "type": "bug",
+                      "description": "BUG-08-03"
                     },
                     {
-                      "type": "assertions",
-                      "description": "A3"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 45,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.696Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:72-75"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-0c3d895b4139893c2626",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 257,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC13 a consumed token cannot be reused @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
                       "type": "source",
-                      "description": "server.js:87"
+                      "description": "server.js:302-317"
                     },
                     {
                       "type": "assertions",
@@ -1152,643 +798,137 @@
                     {
                       "workerIndex": 1,
                       "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 40,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.737Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:87"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-fed43ba767ba0f9cecf0",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 283,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC14 successful reset does not unlock a locked account @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-08"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:86"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A1"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 52,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.753Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-08"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:86"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A1"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-706830c1f6c4b5acac3b",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 305,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC19 the reset token travels to the browser in the response body @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-02"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:76-79"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A1"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 777,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.788Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-02"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:76-79"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A1"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-20921dbeb1d7f3fa0f94",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 347,
-              "column": 3
-            },
-            {
-              "title": "FR03-TC15a empty token string @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:91"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 28,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.813Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:91"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-20f74b5cb028a35f01c4",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15b non numeric token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:91"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 27,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.851Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:91"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-bb0b08b43811e42229bd",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15c three digits below length boundary @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:91"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 25,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.887Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:91"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-498cdc29f295d2ed5d47",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15d five digits above length boundary @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:91"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 37,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.922Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:91"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-0cb37b33f7b7c82167fe",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15e token of another user @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:86"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 31,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:12.971Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:86"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-5245ab6444a83c7c978b",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC15f sql injection attempt in token @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:86"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 22,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:13.012Z",
-                      "annotations": [
-                        {
-                          "type": "source",
-                          "description": "server.js:86"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-9782e23cc8ce815f18af",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC10a valid token with one char password accepted by backend @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-06"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:84-95"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 24,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:13.043Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-06"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:84-95"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-b412ff3434701676b466",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC10b valid token with empty password accepted by backend @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "bug",
-                      "description": "BUG-03-06"
-                    },
-                    {
-                      "type": "source",
-                      "description": "server.js:84-95"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A4"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 23,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-22T14:14:13.076Z",
-                      "annotations": [
-                        {
-                          "type": "bug",
-                          "description": "BUG-03-06"
-                        },
-                        {
-                          "type": "source",
-                          "description": "server.js:84-95"
-                        },
-                        {
-                          "type": "assertions",
-                          "description": "A3, A4"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "88d85392f6845fe8ceef-f564b11e8e0715a7dfc9",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 381,
-              "column": 5
-            },
-            {
-              "title": "FR03-TC16 user A token cannot reset user B password @fr03",
-              "ok": true,
-              "tags": [
-                "fr03"
-              ],
-              "tests": [
-                {
-                  "timeout": 45000,
-                  "annotations": [
-                    {
-                      "type": "source",
-                      "description": "server.js:86"
-                    },
-                    {
-                      "type": "assertions",
-                      "description": "A3, A1"
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
                       "status": "passed",
                       "duration": 38,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:13.107Z",
+                      "startTime": "2026-08-22T14:14:59.045Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-03"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:302-317"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-29e262a5bb4d95d8f12f",
+              "file": "fr08-checkout.spec.js",
+              "line": 332,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC08 any anonymous request can read another user order @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-08-04"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:340"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 56,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.094Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-04"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:340"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-6876a015364ae0f24673",
+              "file": "fr08-checkout.spec.js",
+              "line": 349,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC18 checkout without a bearer token is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:97-101"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 16,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.162Z",
                       "annotations": [
                         {
                           "type": "source",
-                          "description": "server.js:86"
+                          "description": "server.js:97-101"
                         },
                         {
                           "type": "assertions",
@@ -1801,21 +941,594 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-e11e367266c36bb2a164",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 406,
+              "id": "50d1afd0c9a44d6a7b57-e661c157f46f096e8476",
+              "file": "fr08-checkout.spec.js",
+              "line": 372,
               "column": 3
             },
             {
-              "title": "FR03-TC17 forgot password link on login page reaches the reset flow @fr03",
+              "title": "FR08-TC12a fixed coupon discounts correctly on a large order @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
                   "timeout": 45000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:435-436"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 16,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.193Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:435-436"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-ab7587314ea58f6a0e97",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC12b fixed coupon discounts correctly just above threshold @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:435-436"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 17,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.220Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:435-436"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-c4034ba0217763ee3dec",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC13 expired coupon is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:427-429"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 13,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.248Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:427-429"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-e12fc30b33c3ac7b1943",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC14a unknown coupon code is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:414-418"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.271Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:414-418"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-1a523f143c64f7a09d16",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC14b empty coupon code is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:409-410"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 14,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.295Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:409-410"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-043c1ffe2296e04fc67b",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC15a order just below minimum is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:421"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.318Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:421"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-a6ea6bf96dde28df0195",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC15b order exactly at minimum is wrongly rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-08-08"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:421"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 14,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.343Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-08"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:421"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-64d983c58346a2da0a1d",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC11a percent coupon inflates a one million order tenfold @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-08-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:432-434"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 11,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.368Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:432-434"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-3d827e5327e871cdd70d",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC11b percent coupon inflates an order just above threshold @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "bug",
+                      "description": "BUG-08-07"
+                    },
+                    {
+                      "type": "source",
+                      "description": "server.js:432-434"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.391Z",
+                      "annotations": [
+                        {
+                          "type": "bug",
+                          "description": "BUG-08-07"
+                        },
+                        {
+                          "type": "source",
+                          "description": "server.js:432-434"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-1fa27fe7c588812d37dc",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC16a per user limit allows the first use @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:452-456"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 30,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T14:14:59.414Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:452-456"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-35503de3baf4d21fdda7",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC16b per user limit blocks the third use @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "source",
+                      "description": "server.js:452-456"
+                    },
+                    {
+                      "type": "assertions",
+                      "description": "A3, A4, A1"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -1824,29 +1537,38 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 942,
+                      "duration": 55,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:13.154Z",
-                      "annotations": [],
+                      "startTime": "2026-08-22T14:14:59.430Z",
+                      "annotations": [
+                        {
+                          "type": "source",
+                          "description": "server.js:452-456"
+                        },
+                        {
+                          "type": "assertions",
+                          "description": "A3, A4, A1"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-f621b04832048e62c627",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 428,
-              "column": 3
+              "id": "50d1afd0c9a44d6a7b57-47710df0eca9f6940827",
+              "file": "fr08-checkout.spec.js",
+              "line": 383,
+              "column": 5
             },
             {
-              "title": "FR03-TC18 reset flow works end to end for a user created moments earlier @fr03",
+              "title": "FR08-TC19 web app serves the checkout route only to authenticated sessions @fr08",
               "ok": true,
               "tags": [
-                "fr03"
+                "fr08"
               ],
               "tests": [
                 {
@@ -1860,12 +1582,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 59,
+                      "duration": 742,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-22T14:14:13.575Z",
+                      "startTime": "2026-08-22T14:14:59.454Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1873,9 +1595,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "88d85392f6845fe8ceef-61e824cf053d5b9bc2c0",
-              "file": "fr03-forgot-reset.spec.js",
-              "line": 447,
+              "id": "50d1afd0c9a44d6a7b57-88e64a206d3223cf4c6c",
+              "file": "fr08-checkout.spec.js",
+              "line": 434,
               "column": 3
             }
           ]
@@ -1885,9 +1607,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-22T14:14:06.585Z",
-    "duration": 7608.5199999999995,
-    "expected": 31,
+    "startTime": "2026-08-22T14:14:53.155Z",
+    "duration": 7153.048,
+    "expected": 26,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

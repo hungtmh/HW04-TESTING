@@ -237,12 +237,47 @@ test.describe('FR-08 Checkout', () => {
     const res = await checkoutPage.applyCoupon(c.coupon);
     expect(res.status(), 'A3: SUT coi đây là áp mã thành công').toBe(200);
 
+    const body = await res.json();
     const finalAmount = await checkoutPage.readCouponFinalAmount();
+
+    // Soft assertion: gom TẤT CẢ triệu chứng của BUG-08-07 vào một lần chạy.
     // A4 — "giảm 10%" nhưng thành tiền GẤP 10 LẦN
-    expect(finalAmount, 'A4: thành tiền phải nhỏ hơn tổng giỏ').toBeGreaterThan(subtotal);
-    expect(finalAmount, 'A4: đúng bằng 10 lần tổng giỏ').toBe(subtotal * c.expect.multiplier);
-    // A1 — UI vẫn khoe "Áp dụng thành công!"
-    await expect(page.getByText(/Áp dụng thành công/), 'A1').toBeVisible();
+    expect.soft(finalAmount, 'A4: thành tiền lẽ ra phải nhỏ hơn tổng giỏ').toBeGreaterThan(subtotal);
+    expect.soft(finalAmount, 'A4: đúng bằng 10 lần tổng giỏ').toBe(subtotal * c.expect.multiplier);
+    // A4 — số tiền "tiết kiệm" là số ÂM, tức là khách phải trả THÊM
+    expect.soft(body.discount_amount, 'A4: discount_amount âm').toBeLessThan(0);
+    // A1 — nhưng UI vẫn khoe "Áp dụng thành công! Giảm 10%"
+    await expect.soft(page.getByText(/Áp dụng thành công/), 'A1').toBeVisible();
+    // A1 — dòng "Tiết kiệm" hiển thị con số âm thẳng cho khách hàng nhìn thấy
+    await expect.soft(checkoutPage.couponSavedLine, 'A1: dòng Tiết kiệm hiển thị số âm').toContainText('-');
+  });
+
+  test('FR08-TC20 my-orders only ever returns the caller own orders @fr08', async ({ request }) => {
+    // Test bảo vệ (regression): /api/orders/my-orders lọc đúng theo user_id (server.js:320-329),
+    // TRÁI NGƯỢC với /api/orders/:id vốn không có middleware (BUG-08-04).
+    // Giữ test này để nếu ai sửa nhầm endpoint đúng thành sai thì phát hiện được ngay.
+    const userA = await freshUser(request, 'fr08-tc20-a');
+    const userB = await freshUser(request, 'fr08-tc20-b');
+
+    const orderA = await checkout(request, { total_amount: 111111 }, userA.token);
+    const orderB = await checkout(request, { total_amount: 222222 }, userB.token);
+    expect(orderA.status, 'tiền đề').toBe(200);
+    expect(orderB.status, 'tiền đề').toBe(200);
+
+    const listA = await getMyOrders(request, userA.token);
+    const listB = await getMyOrders(request, userB.token);
+
+    // A3 — mỗi người chỉ thấy đơn của chính mình
+    expect(listA.map((o) => o.id), 'A3: A chỉ thấy đơn của A').toEqual([orderA.body.orderId]);
+    expect(listB.map((o) => o.id), 'A3: B chỉ thấy đơn của B').toEqual([orderB.body.orderId]);
+    // A4 — số tiền không bị lẫn giữa hai người
+    expect(listA[0].total_amount, 'A4').toBe(111111);
+    expect(listB[0].total_amount, 'A4').toBe(222222);
+
+    // A3 — nhưng chính đơn đó lại đọc được bằng request ẩn danh qua endpoint kia (BUG-08-04)
+    const leaked = await getOrderById(request, orderA.body.orderId);
+    expect(leaked.status, 'A3: endpoint /orders/:id vẫn hở').toBe(200);
+    expect(leaked.body.user_id, 'A3: lộ đúng chủ đơn').toBe(userA.user.id);
   });
 
   test(`FR08-${byId('TC17').id} ${byId('TC17').title} @fr08`, async ({ page, request }) => {
