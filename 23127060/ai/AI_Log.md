@@ -169,3 +169,49 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · report `01-TEST-CASES.md`
+
+---
+
+## LOG-004 — Phase 2: Sinh 6 file dữ liệu JSON/CSV (77 record) map 1-1 với bảng test case
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T20:52:00+07:00
+- **Phase:** P2 — Test data
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- Sinh đủ 6 file theo §3 SKILL: mỗi feature 1 JSON (case phức, có nhánh `flow: ui|api`) + 1 CSV (bảng boundary).
+- Tổng **77 record dữ liệu**, phủ đúng 54 TC của Phase 1 (một số TC tách thành nhiều biến thể a/b/c).
+- Dùng sentinel `__VALID__ / __EMPTY__ / __MISSING__ / __SPACES__ / __UNIQUE__` để biểu diễn giá trị mà CSV không mã hoá trực tiếp được (chuỗi rỗng, khoảng trắng, trường không gửi, giá trị sinh runtime).
+- Mỗi record mang sẵn 2 cột truy vết: `bug` (mã bug dự kiến) và `source` (số dòng file SUT làm căn cứ expected).
+- Viết `utils/csv.js` (parser tự làm, hỗ trợ ô bọc ngoặc kép) để không thêm dependency ngoài.
+
+**File tạo/sửa:**
+- `automation/tests/data/fr03-reset-cases.json` (mới, 14 record)
+- `automation/tests/data/fr03-token-variants.csv` (mới, 14 record)
+- `automation/tests/data/fr08-checkout-cases.json` (mới, 13 record)
+- `automation/tests/data/fr08-order-totals.csv` (mới, 11 record)
+- `automation/tests/data/fr15-product-cases.json` (mới, 12 record)
+- `automation/tests/data/fr15-product-fields.csv` (mới, 13 record)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+node -e "<nap 6 file qua utils/data.js>"
+⇒ fr03-reset-cases.json      14 rows
+  fr03-token-variants.csv    14 rows
+  fr08-checkout-cases.json   13 rows
+  fr08-order-totals.csv      11 rows
+  fr15-product-cases.json    12 rows
+  fr15-product-fields.csv    13 rows
+  (parse sạch, ô chứa dấu nháy đơn "' OR '1'='1" giữ nguyên đúng)
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>`

@@ -1,0 +1,19 @@
+# FR-03 boundary table — bien the cua resetToken (layer=api) va mat khau moi (layer=ui, regex FE)
+# token_value: __VALID__ = token that vua lay duoc; __EMPTY__ = chuoi rong
+# password_value: __VALID__ = "New Pass 123" (hop le theo regex FE)
+# expected_status chi co nghia khi layer=api ; expected_dialog chi co nghia khi layer=ui
+id,variant_kind,label,token_value,password_value,layer,expected_status,expected_dialog,bug,source
+TC15a,token,empty token string,__EMPTY__,__VALID__,api,400,,,server.js:91
+TC15b,token,non numeric token,abcd,__VALID__,api,400,,,server.js:91
+TC15c,token,three digits below length boundary,123,__VALID__,api,400,,,server.js:91
+TC15d,token,five digits above length boundary,12345,__VALID__,api,400,,,server.js:91
+TC15e,token,token of another user,9999,__VALID__,api,400,,,server.js:86
+TC15f,token,sql injection attempt in token,' OR '1'='1,__VALID__,api,400,,,server.js:86
+TC10a,token,valid token with one char password accepted by backend,__VALID__,1,api,200,,BUG-03-06,server.js:84-95
+TC10b,token,valid token with empty password accepted by backend,__VALID__,__EMPTY__,api,200,,BUG-03-06,server.js:84-95
+TC05a,password,eight chars meets FE regex minimum,__VALID__,Ab 12345,ui,,Đổi mật khẩu thành công!,,ForgotPassword.jsx:26
+TC05b,password,seven chars below FE regex minimum,__VALID__,Ab 1234,ui,,Mật khẩu quá yếu,,ForgotPassword.jsx:26
+TC05c,password,no uppercase fails FE regex,__VALID__,ab 12345,ui,,Mật khẩu quá yếu,,ForgotPassword.jsx:26
+TC05d,password,no digit fails FE regex,__VALID__,Ab cdefgh,ui,,Mật khẩu quá yếu,,ForgotPassword.jsx:26
+TC05e,password,no whitespace fails FE regex despite being strong,__VALID__,Abcd1234,ui,,Mật khẩu quá yếu,BUG-03-01,ForgotPassword.jsx:26
+TC05f,password,special char rejected although message demands it,__VALID__,Ab 1234!,ui,,Mật khẩu quá yếu,BUG-03-01,ForgotPassword.jsx:26

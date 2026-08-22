@@ -1,0 +1,16 @@
+# FR-08 boundary table cho POST /api/apply-coupon (seed coupon: database.js:103-107)
+# SAVE10 percent 10 min 300000 | BIGBUY fixed 50000 min 500000 | VIP100 fixed 100000 min 300000 max 2 luot | EXPIRED percent 20 het han 2020-01-01
+# user_scope: anonymous = khong gui user_id ; fresh_user = user moi tao rieng cho case
+# pre_uses: so ban ghi coupon_usage duoc tao truoc khi goi apply-coupon
+id,label,coupon_code,total_amount,user_scope,pre_uses,expected_status,expected_final_amount,expected_error_contains,bug,source
+TC12a,fixed coupon discounts correctly on a large order,BIGBUY,30000000,anonymous,0,200,29950000,,,server.js:435-436
+TC12b,fixed coupon discounts correctly just above threshold,BIGBUY,500001,anonymous,0,200,450001,,,server.js:435-436
+TC13,expired coupon is rejected,EXPIRED,1000000,anonymous,0,400,,Mã giảm giá đã hết hạn,,server.js:427-429
+TC14a,unknown coupon code is rejected,KHONGCOMA,1000000,anonymous,0,404,,không tồn tại,,server.js:414-418
+TC14b,empty coupon code is rejected,__EMPTY__,1000000,anonymous,0,400,,Vui lòng nhập mã giảm giá,,server.js:409-410
+TC15a,order just below minimum is rejected,BIGBUY,499999,anonymous,0,400,,chưa đủ giá trị tối thiểu,,server.js:421
+TC15b,order exactly at minimum is wrongly rejected,BIGBUY,500000,anonymous,0,400,,chưa đủ giá trị tối thiểu,BUG-08-08,server.js:421
+TC11a,percent coupon inflates a one million order tenfold,SAVE10,1000000,anonymous,0,200,10000000,,BUG-08-07,server.js:432-434
+TC11b,percent coupon inflates an order just above threshold,SAVE10,300001,anonymous,0,200,3000010,,BUG-08-07,server.js:432-434
+TC16a,per user limit allows the first use,VIP100,1000000,fresh_user,0,200,900000,,,server.js:452-456
+TC16b,per user limit blocks the third use,VIP100,1000000,fresh_user,2,400,,đã sử dụng mã này 2 lần,,server.js:452-456

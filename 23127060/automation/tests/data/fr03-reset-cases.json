@@ -1,0 +1,201 @@
+[
+  {
+    "id": "TC01",
+    "title": "reset password succeeds with valid OTP and FE-compliant password",
+    "type": "positive",
+    "flow": "ui",
+    "emailKind": "registered",
+    "otpKind": "valid",
+    "newPassword": "New Pass 123",
+    "expect": {
+      "dialog": "Đổi mật khẩu thành công!",
+      "url": "/login",
+      "loginWithNewPassword": 200
+    },
+    "bug": null,
+    "source": "ForgotPassword.jsx:34-35"
+  },
+  {
+    "id": "TC02",
+    "title": "unregistered email is rejected at step 1",
+    "type": "negative",
+    "flow": "ui",
+    "emailKind": "unregistered",
+    "otpKind": "none",
+    "newPassword": null,
+    "expect": {
+      "dialog": "User not found",
+      "staysOnStep": 1
+    },
+    "bug": null,
+    "source": "server.js:69"
+  },
+  {
+    "id": "TC03",
+    "title": "wrong OTP is rejected and old password still works",
+    "type": "negative",
+    "flow": "ui",
+    "emailKind": "registered",
+    "otpKind": "wrong",
+    "newPassword": "New Pass 123",
+    "expect": {
+      "dialog": "Mã OTP không đúng",
+      "loginWithOldPassword": 200
+    },
+    "bug": null,
+    "source": "server.js:92"
+  },
+  {
+    "id": "TC04",
+    "title": "FE blocks a genuinely strong password because regex demands whitespace",
+    "type": "negative",
+    "flow": "ui",
+    "emailKind": "registered",
+    "otpKind": "valid",
+    "newPassword": "NewPass123!",
+    "expect": {
+      "dialog": "Mật khẩu quá yếu",
+      "loginWithNewPassword": 401
+    },
+    "bug": "BUG-03-01",
+    "source": "ForgotPassword.jsx:26"
+  },
+  {
+    "id": "TC06",
+    "title": "reset token is leaked in the HTTP response body",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "expect": {
+      "status": 200,
+      "bodyHasResetToken": true
+    },
+    "bug": "BUG-03-02",
+    "source": "server.js:76-79"
+  },
+  {
+    "id": "TC07",
+    "title": "reset token is only 4 digits so brute force is feasible",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "expect": {
+      "tokenPattern": "^\\d{4}$",
+      "maxKeyspace": 9000
+    },
+    "bug": "BUG-03-03",
+    "source": "server.js:70"
+  },
+  {
+    "id": "TC08",
+    "title": "forgot-password has no rate limit",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "repeat": 10,
+    "expect": {
+      "allStatuses": 200
+    },
+    "bug": "BUG-03-04",
+    "source": "server.js:66-82"
+  },
+  {
+    "id": "TC09",
+    "title": "different status codes allow user enumeration",
+    "type": "security",
+    "flow": "api",
+    "expect": {
+      "registeredStatus": 200,
+      "unregisteredStatus": 404
+    },
+    "bug": "BUG-03-05",
+    "source": "server.js:69"
+  },
+  {
+    "id": "TC10",
+    "title": "backend accepts a one-character password",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "otpKind": "valid",
+    "newPassword": "1",
+    "expect": {
+      "status": 200,
+      "loginWithNewPassword": 200
+    },
+    "bug": "BUG-03-06",
+    "source": "server.js:84-95"
+  },
+  {
+    "id": "TC11",
+    "title": "password is stored and returned in plaintext",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "otpKind": "valid",
+    "newPassword": "Plain Text 99",
+    "expect": {
+      "meReturnsPlaintextPassword": true
+    },
+    "bug": "BUG-03-07",
+    "source": "database.js:88"
+  },
+  {
+    "id": "TC12",
+    "title": "requesting a second token invalidates the first",
+    "type": "edge",
+    "flow": "api",
+    "emailKind": "registered",
+    "newPassword": "Rotate Me 12",
+    "expect": {
+      "statusWithFirstToken": 400,
+      "statusWithSecondToken": 200
+    },
+    "bug": null,
+    "source": "server.js:72-75"
+  },
+  {
+    "id": "TC13",
+    "title": "a consumed token cannot be reused",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "otpKind": "valid",
+    "newPassword": "Reuse Test 1",
+    "expect": {
+      "firstResetStatus": 200,
+      "secondResetStatus": 400
+    },
+    "bug": null,
+    "source": "server.js:87"
+  },
+  {
+    "id": "TC14",
+    "title": "successful reset does not unlock a locked account",
+    "type": "security",
+    "flow": "api",
+    "emailKind": "registered",
+    "failedLoginAttempts": 2,
+    "newPassword": "Unlock Me 12",
+    "expect": {
+      "resetStatus": 200,
+      "loginAfterResetStatus": 403,
+      "loginError": "Tài khoản đã bị khóa"
+    },
+    "bug": "BUG-03-08",
+    "source": "server.js:86"
+  },
+  {
+    "id": "TC16",
+    "title": "user A token cannot reset user B password",
+    "type": "security",
+    "flow": "api",
+    "newPassword": "Cross User 1",
+    "expect": {
+      "status": 400,
+      "error": "Invalid token or email"
+    },
+    "bug": null,
+    "source": "server.js:86"
+  }
+]

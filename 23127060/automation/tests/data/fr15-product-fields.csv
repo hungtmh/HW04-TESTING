@@ -1,0 +1,17 @@
+# FR-15 boundary table — validate truong du lieu san pham qua POST/GET/DELETE /api/products
+# name_value / price_value: __UNIQUE__ = ten duy nhat sinh runtime ; __EMPTY__ = chuoi rong ; __SPACES__ = ba dau cach ; __MISSING__ = khong gui truong
+# check: created = tao duoc va doc lai duoc ; get_missing = GET id khong ton tai ; get_even = GET id chan ; delete_missing = DELETE id khong ton tai
+id,label,check,name_value,price_value,category_id,probe_id,expected_status,expected_note,bug,source
+TC11a,empty product name is accepted,created,__EMPTY__,100000,1,,200,name luu chuoi rong,BUG-15-04,server.js:162-171
+TC11b,missing product name is accepted,created,__MISSING__,100000,1,,200,name luu null,BUG-15-04,server.js:162-171
+TC11c,whitespace only product name is accepted,created,__SPACES__,100000,1,,200,name chi co khoang trang,BUG-15-04,server.js:162-171
+TC12a,negative price is accepted,created,__UNIQUE__,-5000,1,,200,price doc lai bang -5000,BUG-15-05,server.js:162-171
+TC12b,zero price is accepted,created,__UNIQUE__,0,1,,200,price doc lai bang 0,BUG-15-05,server.js:162-171
+TC13,alphabetic price is accepted,created,__UNIQUE__,abc,1,,200,price luu nguyen chuoi abc trong cot INTEGER,BUG-15-05,database.js:62-69
+TC14a,price above max safe integer loses precision,created,__UNIQUE__,9007199254740993,1,,200,gia tri doc lai khac gia tri gui len,BUG-15-06,server.js:162-171
+TC14b,price at max safe integer is stored exactly,created,__UNIQUE__,9007199254740991,1,,200,gia tri doc lai bang gia tri gui len,,server.js:162-171
+TC18,unknown category id is accepted,created,__UNIQUE__,100000,999999,,200,khong co FOREIGN KEY nen van insert,BUG-15-10,database.js:62-69
+TC15,delete on a missing id reports success,delete_missing,,,,99999999,200,tra ve Product deleted du khong xoa gi,BUG-15-07,server.js:186-191
+TC16,get on a missing id returns an empty object,get_missing,,,,99999999,200,tra ve 200 rong thay vi 404,BUG-15-08,server.js:157
+TC17a,even product id returns price as string,get_even,,,,2,200,typeof price la string,BUG-15-09,server.js:158
+TC17b,odd product id returns price as number,get_even,,,,1,200,typeof price la number,,server.js:158

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "TC01",
+    "title": "admin can log in through the UI and reach the product tab",
+    "type": "positive",
+    "flow": "ui",
+    "account": "admin",
+    "expect": {
+      "heading": "Quản lý Sản phẩm",
+      "minRows": 5
+    },
+    "bug": null,
+    "source": "App.jsx:339"
+  },
+  {
+    "id": "TC02",
+    "title": "a non admin account is refused by the admin console",
+    "type": "negative",
+    "flow": "ui",
+    "account": "user",
+    "expect": {
+      "dialog": "Bạn không phải là admin!",
+      "staysOnLogin": true
+    },
+    "bug": null,
+    "source": "App.jsx:64-67"
+  },
+  {
+    "id": "TC03",
+    "title": "creating a product through the UI persists it",
+    "type": "positive",
+    "flow": "ui",
+    "product": { "price": "1234000", "description": "Tao boi Playwright 23127060", "imageUrl": "https://placehold.co/300" },
+    "expect": {
+      "rowVisible": true,
+      "apiHasProduct": true
+    },
+    "bug": null,
+    "source": "App.jsx:114-115"
+  },
+  {
+    "id": "TC04",
+    "title": "editing a product through the UI updates it in the database",
+    "type": "positive",
+    "flow": "ui",
+    "product": { "price": "2222000", "description": "Truoc khi sua", "imageUrl": "https://placehold.co/300" },
+    "expect": {
+      "dialog": "Cập nhật thành công!",
+      "apiNameUpdated": true
+    },
+    "bug": null,
+    "source": "App.jsx:113"
+  },
+  {
+    "id": "TC05",
+    "title": "editing one product renames every row in the admin table",
+    "type": "security",
+    "flow": "ui",
+    "product": { "price": "3333000", "description": "Fake mass update probe", "imageUrl": "https://placehold.co/300" },
+    "expect": {
+      "rowsWithNewNameGreaterThan": 1,
+      "apiRowsWithNewName": 1
+    },
+    "bug": "BUG-15-01",
+    "source": "App.jsx:107-112"
+  },
+  {
+    "id": "TC06",
+    "title": "deleting a product through the UI removes it everywhere",
+    "type": "positive",
+    "flow": "ui",
+    "product": { "price": "4444000", "description": "Se bi xoa", "imageUrl": "https://placehold.co/300" },
+    "expect": {
+      "rowGone": true,
+      "apiProductGone": true
+    },
+    "bug": null,
+    "source": "App.jsx:127-134"
+  },
+  {
+    "id": "TC07",
+    "title": "product can be created without any authorization header",
+    "type": "security",
+    "flow": "api",
+    "tokenKind": "none",
+    "method": "POST",
+    "expect": { "status": 200, "message": "Product created" },
+    "bug": "BUG-15-02",
+    "source": "server.js:161"
+  },
+  {
+    "id": "TC08",
+    "title": "product can be updated without any authorization header",
+    "type": "security",
+    "flow": "api",
+    "tokenKind": "none",
+    "method": "PUT",
+    "expect": { "status": 200, "message": "Product updated" },
+    "bug": "BUG-15-02",
+    "source": "server.js:173"
+  },
+  {
+    "id": "TC09",
+    "title": "product can be deleted without any authorization header",
+    "type": "security",
+    "flow": "api",
+    "tokenKind": "none",
+    "method": "DELETE",
+    "expect": { "status": 200, "message": "Product deleted", "goneFromList": true },
+    "bug": "BUG-15-02",
+    "source": "server.js:186"
+  },
+  {
+    "id": "TC10",
+    "title": "a plain user token can create products",
+    "type": "security",
+    "flow": "api",
+    "tokenKind": "user",
+    "method": "POST",
+    "expect": { "status": 200, "message": "Product created" },
+    "bug": "BUG-15-03",
+    "source": "server.js:161"
+  },
+  {
+    "id": "TC19",
+    "title": "xss payload in the product name is stored verbatim",
+    "type": "security",
+    "flow": "ui",
+    "payload": "<img src=x onerror=window.__xss15=1>",
+    "expect": {
+      "storedVerbatim": true,
+      "scriptDidNotExecute": true
+    },
+    "bug": "BUG-15-11",
+    "source": "App.jsx:583"
+  },
+  {
+    "id": "TC20",
+    "title": "empty product name is blocked by the HTML5 required attribute only",
+    "type": "edge",
+    "flow": "ui",
+    "expect": {
+      "noRequestSent": true,
+      "formStillVisible": true
+    },
+    "bug": null,
+    "source": "App.jsx:496"
+  }
+]

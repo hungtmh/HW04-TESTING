@@ -1,0 +1,170 @@
+[
+  {
+    "id": "TC01",
+    "title": "happy path checkout through the UI creates an order with the cart total",
+    "type": "positive",
+    "flow": "ui",
+    "productIndex": 0,
+    "tamperTotal": null,
+    "expect": {
+      "heading": "Thanh toán thành công!",
+      "orderTotalEqualsCartTotal": true
+    },
+    "bug": null,
+    "source": "Checkout.jsx:70"
+  },
+  {
+    "id": "TC02",
+    "title": "empty cart page shows the empty state",
+    "type": "negative",
+    "flow": "ui",
+    "expect": {
+      "text": "Giỏ hàng của bạn đang trống"
+    },
+    "bug": null,
+    "source": "Cart.jsx:24"
+  },
+  {
+    "id": "TC03",
+    "title": "anonymous user is pushed to login instead of checkout",
+    "type": "negative",
+    "flow": "ui",
+    "productIndex": 0,
+    "expect": {
+      "dialog": "Bạn cần đăng nhập để thanh toán!",
+      "url": "/login"
+    },
+    "bug": null,
+    "source": "Cart.jsx:11-15"
+  },
+  {
+    "id": "TC04",
+    "title": "editable total lets the client pay 1 VND for a 30M VND cart",
+    "type": "security",
+    "flow": "ui",
+    "productIndex": 0,
+    "tamperTotal": 1,
+    "expect": {
+      "heading": "Thanh toán thành công!",
+      "orderTotal": 1
+    },
+    "bug": "BUG-08-01",
+    "source": "Checkout.jsx:96-106"
+  },
+  {
+    "id": "TC05",
+    "title": "backend accepts a negative order total",
+    "type": "security",
+    "flow": "api",
+    "totalAmount": -1000000,
+    "expect": {
+      "status": 200,
+      "storedTotal": -1000000
+    },
+    "bug": "BUG-08-02",
+    "source": "server.js:305"
+  },
+  {
+    "id": "TC06",
+    "title": "backend accepts a non numeric order total",
+    "type": "negative",
+    "flow": "api",
+    "totalAmount": "abc",
+    "expect": {
+      "status": 200,
+      "storedTotalIsNotANumber": true
+    },
+    "bug": "BUG-08-02",
+    "source": "database.js:71"
+  },
+  {
+    "id": "TC07",
+    "title": "checkout succeeds with an empty cart",
+    "type": "security",
+    "flow": "api",
+    "totalAmount": 0,
+    "expect": {
+      "status": 200,
+      "orderCreated": true
+    },
+    "bug": "BUG-08-03",
+    "source": "server.js:302-317"
+  },
+  {
+    "id": "TC08",
+    "title": "any anonymous request can read another user order",
+    "type": "security",
+    "flow": "api",
+    "totalAmount": 777777,
+    "expect": {
+      "anonymousStatus": 200,
+      "otherUserStatus": 200,
+      "leaksUserId": true
+    },
+    "bug": "BUG-08-04",
+    "source": "server.js:340"
+  },
+  {
+    "id": "TC09",
+    "title": "cart is not cleared after a successful checkout",
+    "type": "edge",
+    "flow": "ui",
+    "productIndex": 0,
+    "expect": {
+      "cartStillHasItemsAfterCheckout": true
+    },
+    "bug": "BUG-08-05",
+    "source": "Checkout.jsx:8"
+  },
+  {
+    "id": "TC10",
+    "title": "order is stored without any shipping address",
+    "type": "edge",
+    "flow": "ui",
+    "productIndex": 0,
+    "expect": {
+      "shippingAddress": null
+    },
+    "bug": "BUG-08-06",
+    "source": "Checkout.jsx:44-48"
+  },
+  {
+    "id": "TC11",
+    "title": "percent coupon multiplies the total instead of discounting it",
+    "type": "security",
+    "flow": "ui",
+    "productIndex": 0,
+    "coupon": "SAVE10",
+    "expect": {
+      "finalAmountGreaterThanCartTotal": true,
+      "multiplier": 10
+    },
+    "bug": "BUG-08-07",
+    "source": "server.js:432-434"
+  },
+  {
+    "id": "TC17",
+    "title": "cart is lost on page reload because it lives in memory only",
+    "type": "edge",
+    "flow": "ui",
+    "productIndex": 0,
+    "expect": {
+      "text": "Giỏ hàng của bạn đang trống"
+    },
+    "bug": "BUG-08-09",
+    "source": "CartContext.jsx:7"
+  },
+  {
+    "id": "TC18",
+    "title": "checkout without a bearer token is rejected",
+    "type": "security",
+    "flow": "api",
+    "totalAmount": 500000,
+    "expect": {
+      "status": 401,
+      "error": "Unauthorized"
+    },
+    "bug": null,
+    "source": "server.js:97-101"
+  }
+]
