@@ -1,0 +1,21 @@
+{
+  "name": "hw04-eshop-automation-23127060",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HW04 - Automation Testing for EShop SUT - 23127060 Ninh Van Khai (FR-03, FR-08, FR-15)",
+  "scripts": {
+    "test": "playwright test",
+    "test:fr03": "playwright test --grep @fr03",
+    "test:fr08": "playwright test --grep @fr08",
+    "test:fr15": "playwright test --grep @fr15",
+    "test:multibrowser": "node scripts/run-multibrowser.mjs",
+    "verify:banner": "node scripts/verify-report-banner.mjs",
+    "summarize": "node scripts/summarize-results.mjs",
+    "evidence:bugs": "node scripts/capture-bug-evidence.mjs",
+    "docs:pdf": "node scripts/md-to-pdf.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}
