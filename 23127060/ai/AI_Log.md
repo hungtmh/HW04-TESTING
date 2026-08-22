@@ -389,3 +389,55 @@ npx playwright test --project=webkit         ⇒ 80 passed (37.7s)
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · report `02-AI-GAP-ANALYSIS.md`
+
+---
+
+## LOG-009 — Phase 5: 9 run multi-browser + banner chống gian lận + bảng số liệu thật
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T22:35:00+07:00
+- **Phase:** P5 — Multi-browser run
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- `run-multibrowser.mjs`: 3 feature × 3 browser = 9 run, mỗi run 1 thư mục report riêng qua `PW_REPORT_DIR`.
+- `verify-report-banner.mjs`: FAIL CỨNG nếu index.html thiếu banner / ISO timestamp.
+- `summarize-results.mjs`: đọc `results.json` thật → sinh `report/03-RUN-SUMMARY.md`, không con số nào nhập tay.
+- **2 lỗi thật gặp phải và cách sửa:**
+  1. `spawnSync('npx.cmd', …)` trên Windows trả `exit=null` sau 0.0s cho cả 9 run (Node không phân giải `.cmd` khi không có `shell:true`). Sửa: gọi thẳng `process.execPath` + `node_modules/@playwright/test/cli.js`.
+  2. **Option `title` của html reporter KHÔNG còn tác dụng ở Playwright 1.62** — kiểm chứng bằng cách giải nén blob base64 trong index.html: `report.json` có `title: null`, `<title>` vẫn là "Playwright Test Report", `grep 23127060 index.html` ⇒ 0. Sửa: viết reporter tuỳ biến `banner-reporter.mjs` chạy sau html reporter, đóng dấu banner vào `<title>` + một `<div>` hiển thị ngay đầu report. Mọi số liệu trên banner lấy từ chính lần chạy đó.
+
+**File tạo/sửa:**
+- `automation/scripts/run-multibrowser.mjs` (mới)
+- `automation/scripts/verify-report-banner.mjs` (mới)
+- `automation/scripts/summarize-results.mjs` (mới)
+- `automation/scripts/banner-reporter.mjs` (mới)
+- `automation/playwright.config.js` (sửa — đăng ký banner-reporter)
+- `report/03-RUN-SUMMARY.md` (sinh tự động)
+- `automation/playwright-report/` — 9 thư mục report
+
+**Lệnh đã chạy & kết quả thật:**
+```
+node scripts/run-multibrowser.mjs
+⇒ fr03-reset  × chromium/firefox/webkit : 30 / 30 / 30 passed
+  fr08-checkout × chromium/firefox/webkit : 25 / 25 / 25 passed
+  fr15-product  × chromium/firefox/webkit : 25 / 25 / 25 passed
+  ✅ 9/9 run PASS toàn bộ
+
+node scripts/verify-report-banner.mjs
+⇒ 9/9 report hợp lệ · exit 0
+  ví dụ: fr03-reset-chromium banner OK · timestamp 2026-08-22T13:51:45.350Z
+
+node scripts/summarize-results.mjs
+⇒ TỔNG 240 test · 240 passed · 0 failed · 0 flaky · 0 skipped · 93.7s · pass rate 100.0%
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · report `03-RUN-SUMMARY.md`

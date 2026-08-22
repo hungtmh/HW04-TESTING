@@ -29,6 +29,11 @@ export default defineConfig({
       },
     ],
     ['json', { outputFile: `${REPORT_DIR}/results.json` }],
+    // Đăng ký SAU html reporter: onEnd của nó chạy sau khi index.html đã được ghi xong,
+    // nhờ đó đóng dấu được banner "Run by: 23127060" + ISO timestamp vào file.
+    // (Option `title` của html reporter không còn tác dụng ở Playwright 1.62 — xem
+    //  ghi chú đầu file scripts/banner-reporter.mjs.)
+    ['./scripts/banner-reporter.mjs'],
   ],
 
   metadata: {

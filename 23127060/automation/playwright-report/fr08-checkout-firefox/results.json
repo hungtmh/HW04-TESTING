@@ -1,0 +1,1053 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=firefox",
+      "--grep",
+      "@fr08"
+    ],
+    "configFile": "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\playwright.config.js",
+    "rootDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127060 – Ninh Văn Khải",
+      "Run at (ISO)": "2026-08-22T13:52:31.122Z",
+      "feature": "fr08-checkout",
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:52:31.122Z",
+          "feature": "fr08-checkout",
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:52:31.122Z",
+          "feature": "fr08-checkout",
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:52:31.122Z",
+          "feature": "fr08-checkout",
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr08-checkout-firefox",
+          "title": "Run by: 23127060 — 2026-08-22T13:52:31.122Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr08-checkout-firefox/results.json"
+        }
+      ],
+      [
+        "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\scripts\\banner-reporter.mjs",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr08-checkout.spec.js",
+      "file": "fr08-checkout.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-08 Checkout",
+          "file": "fr08-checkout.spec.js",
+          "line": 41,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR08-TC01 happy path checkout through the UI creates an order with the cart total @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3511,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:32.122Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-1f9c870a91bb770c2489",
+              "file": "fr08-checkout.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC02 empty cart page shows the empty state @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2335,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:32.154Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-270647d1443ec0d6ef92",
+              "file": "fr08-checkout.spec.js",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC03 anonymous user is pushed to login instead of checkout @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1430,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:35.585Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-00ffb4cace1b2b6bc081",
+              "file": "fr08-checkout.spec.js",
+              "line": 102,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC04 editable total lets the client pay 1 VND for a 30M VND cart @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1480,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:36.206Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-245535e72ace5b561ca7",
+              "file": "fr08-checkout.spec.js",
+              "line": 126,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC09 cart is not cleared after a successful checkout @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1828,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:37.034Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-566a54b2b287c0ce5a32",
+              "file": "fr08-checkout.spec.js",
+              "line": 156,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC10 order is stored without any shipping address @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1402,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:37.706Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-ac14b7e97ac3168a8dd3",
+              "file": "fr08-checkout.spec.js",
+              "line": 187,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC11 percent coupon multiplies the total instead of discounting it @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1852,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:38.878Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-5e1b328392dc2e2e3958",
+              "file": "fr08-checkout.spec.js",
+              "line": 210,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC17 cart is lost on page reload because it lives in memory only @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1640,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:39.125Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-695d6e65def86c47fb49",
+              "file": "fr08-checkout.spec.js",
+              "line": 236,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC05 backend accepts a negative order total @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 80,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.749Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-e1d9f546ef18f75ed450",
+              "file": "fr08-checkout.spec.js",
+              "line": 256,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC06 backend accepts a non numeric order total @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 76,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.786Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-68efd79ee40d517b11da",
+              "file": "fr08-checkout.spec.js",
+              "line": 268,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC07 checkout succeeds with an empty cart @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 69,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.854Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-e5111add00b56d2cf249",
+              "file": "fr08-checkout.spec.js",
+              "line": 282,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC08 any anonymous request can read another user order @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.883Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-d8501395d2e5a0166202",
+              "file": "fr08-checkout.spec.js",
+              "line": 298,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC18 checkout without a bearer token is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 21,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.944Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-6a6b84df5dad4b6a1330",
+              "file": "fr08-checkout.spec.js",
+              "line": 320,
+              "column": 3
+            },
+            {
+              "title": "FR08-TC12a fixed coupon discounts correctly on a large order @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 19,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.986Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-feaf856e21b1cc6c93e2",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC12b fixed coupon discounts correctly just above threshold @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:40.991Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-ae2dcfb5c98f77b9f539",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC13 expired coupon is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 19,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.023Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-b46099419cfdecd978bd",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC14a unknown coupon code is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 20,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.026Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-12bc768b249cd41370a0",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC14b empty coupon code is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 20,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.060Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-e5060f22f3640c608a68",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC15a order just below minimum is rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 18,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.062Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-6482ab511b80c2150284",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC15b order exactly at minimum is wrongly rejected @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 19,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.095Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-b3a22938bce2f94f43f1",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC11a percent coupon inflates a one million order tenfold @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 18,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.097Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-b582c9ac164bc1862db3",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC11b percent coupon inflates an order just above threshold @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 17,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.132Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-39fd61fca27610e8988e",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC16a per user limit allows the first use @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.132Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-26e8e128c85a9bfdc505",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC16b per user limit blocks the third use @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 58,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.167Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-cf0a949539490d009826",
+              "file": "fr08-checkout.spec.js",
+              "line": 330,
+              "column": 5
+            },
+            {
+              "title": "FR08-TC19 web app serves the checkout route only to authenticated sessions @fr08",
+              "ok": true,
+              "tags": [
+                "fr08"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1363,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:41.184Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50d1afd0c9a44d6a7b57-9662289e8dc3352fcb7d",
+              "file": "fr08-checkout.spec.js",
+              "line": 380,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-22T13:52:31.138Z",
+    "duration": 12150.359999999999,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

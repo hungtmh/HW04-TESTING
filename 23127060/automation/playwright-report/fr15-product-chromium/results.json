@@ -1,0 +1,1053 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=chromium",
+      "--grep",
+      "@fr15"
+    ],
+    "configFile": "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\playwright.config.js",
+    "rootDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127060 – Ninh Văn Khải",
+      "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+      "feature": "fr15-product",
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:52:58.994Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr15-product-chromium",
+          "title": "Run by: 23127060 — 2026-08-22T13:52:58.994Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr15-product-chromium/results.json"
+        }
+      ],
+      [
+        "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\scripts\\banner-reporter.mjs",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr15-product-crud.spec.js",
+      "file": "fr15-product-crud.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-15 Admin product CRUD",
+          "file": "fr15-product-crud.spec.js",
+          "line": 49,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR15-TC01 admin can log in through the UI and reach the product tab @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1046,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:59.920Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-12a0fa23cc1a3aa17453",
+              "file": "fr15-product-crud.spec.js",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC02 a non admin account is refused by the admin console @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 857,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:52:59.919Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-921b67c7fed59cd510dd",
+              "file": "fr15-product-crud.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC03 creating a product through the UI persists it @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1220,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:00.987Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-5a07cc03b9270c06f229",
+              "file": "fr15-product-crud.spec.js",
+              "line": 87,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC04 editing a product through the UI updates it in the database @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1105,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:01.144Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-d8eb80baf0b0ec17a191",
+              "file": "fr15-product-crud.spec.js",
+              "line": 110,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC05 editing one product renames every row in the admin table @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1067,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:02.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-07b3583133ba17608630",
+              "file": "fr15-product-crud.spec.js",
+              "line": 140,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC06 deleting a product through the UI removes it everywhere @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1026,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:02.263Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-ac5e9930378aced09685",
+              "file": "fr15-product-crud.spec.js",
+              "line": 184,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC19 xss payload in the product name is stored verbatim @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 903,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:03.304Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-e1a4f2e69db9c75bcdd4",
+              "file": "fr15-product-crud.spec.js",
+              "line": 210,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC20 empty product name is blocked by the HTML5 required attribute only @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 942,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:03.305Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-bb67db26db57dff890ef",
+              "file": "fr15-product-crud.spec.js",
+              "line": 242,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC07 product can be created without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-29a48d1c7d4d1ac42c39",
+              "file": "fr15-product-crud.spec.js",
+              "line": 266,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC08 product can be updated without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 46,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.263Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-e56bbd58b4e130f4bb84",
+              "file": "fr15-product-crud.spec.js",
+              "line": 286,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC09 product can be deleted without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 32,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.269Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-1d5df9b41a5bbd7d803c",
+              "file": "fr15-product-crud.spec.js",
+              "line": 311,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC10 a plain user token can create products @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 62,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.315Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-184d7c2ec7d281658235",
+              "file": "fr15-product-crud.spec.js",
+              "line": 328,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC11a empty product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.320Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-a65b2e9a5615e2b05136",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC11b missing product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 40,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.388Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-3b02e1b370a4b8951acb",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC11c whitespace only product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 42,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.392Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-0cf5f72d214ba7815b93",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC12a negative price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 30,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.445Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-8bf7318c1a02e00dbd61",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC12b zero price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.450Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-01bd218237c809bf7dd4",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC13 alphabetic price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 30,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.486Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-4ed9f01e63c71b4a1f1c",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14a price above max safe integer loses precision @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 30,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.495Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-3fccb15c4071c61bf1ee",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14b price at max safe integer is stored exactly @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 29,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.527Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-0255b1731c70583b37c2",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC18 unknown category id is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 33,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.534Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-754a5c285b36889eec26",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC15 delete on a missing id reports success @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 18,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.566Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-7c595a217c79f89437f9",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC16 get on a missing id returns an empty object @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 18,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.580Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-1467b255a92b5102588a",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17a even product id returns price as string @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 17,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.599Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-21b1f71c81ac0ff0240d",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17b odd product id returns price as number @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 20,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:04.614Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-6ebee4da95e065d4278f",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-22T13:52:59.014Z",
+    "duration": 5732.395,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

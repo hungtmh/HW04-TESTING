@@ -1,0 +1,1053 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=webkit",
+      "--grep",
+      "@fr15"
+    ],
+    "configFile": "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\playwright.config.js",
+    "rootDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127060 – Ninh Văn Khải",
+      "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+      "feature": "fr15-product",
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:53:16.596Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr15-product-webkit",
+          "title": "Run by: 23127060 — 2026-08-22T13:53:16.596Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr15-product-webkit/results.json"
+        }
+      ],
+      [
+        "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\scripts\\banner-reporter.mjs",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr15-product-crud.spec.js",
+      "file": "fr15-product-crud.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-15 Admin product CRUD",
+          "file": "fr15-product-crud.spec.js",
+          "line": 49,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR15-TC01 admin can log in through the UI and reach the product tab @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2167,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:17.513Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-56ad2825ab3dc6ce3432",
+              "file": "fr15-product-crud.spec.js",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC02 a non admin account is refused by the admin console @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1732,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:17.487Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-20152cda8add2e479879",
+              "file": "fr15-product-crud.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC03 creating a product through the UI persists it @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2154,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:19.317Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-dfce9420072f839e1787",
+              "file": "fr15-product-crud.spec.js",
+              "line": 87,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC04 editing a product through the UI updates it in the database @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2304,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:19.778Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-12ee77132e835be661e6",
+              "file": "fr15-product-crud.spec.js",
+              "line": 110,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC05 editing one product renames every row in the admin table @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2255,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:21.486Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-4eb4ff5eab2b36a52d8a",
+              "file": "fr15-product-crud.spec.js",
+              "line": 140,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC06 deleting a product through the UI removes it everywhere @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2097,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:22.099Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-4898e25f1b5146f302d7",
+              "file": "fr15-product-crud.spec.js",
+              "line": 184,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC19 xss payload in the product name is stored verbatim @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1848,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:23.756Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-7274e37500f1766f9cc2",
+              "file": "fr15-product-crud.spec.js",
+              "line": 210,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC20 empty product name is blocked by the HTML5 required attribute only @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2111,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:24.214Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-f5347b3762122001e7a7",
+              "file": "fr15-product-crud.spec.js",
+              "line": 242,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC07 product can be created without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.618Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-db2337b8a7a487464eee",
+              "file": "fr15-product-crud.spec.js",
+              "line": 266,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC08 product can be updated without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 43,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.667Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-1ea1e83d865d04582bd0",
+              "file": "fr15-product-crud.spec.js",
+              "line": 286,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC09 product can be deleted without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 30,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.726Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-d9cdea28b95a08b2a194",
+              "file": "fr15-product-crud.spec.js",
+              "line": 311,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC10 a plain user token can create products @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 44,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.769Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-1a2dc4ce4af3a654152f",
+              "file": "fr15-product-crud.spec.js",
+              "line": 328,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC11a empty product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 31,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.828Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-d92389f5af062ffa1e76",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC11b missing product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 30,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.871Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-525ed88a9ae99c7c0267",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC11c whitespace only product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 33,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.915Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-1dfa9f974f087c411f59",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC12a negative price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:25.961Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-e832f042195e01d10681",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC12b zero price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 41,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.012Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-0fa343a8d7fa56a0c063",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC13 alphabetic price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 31,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.070Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-afc2890195aa8eee9e8a",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14a price above max safe integer loses precision @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.116Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-2613412ecca29a0100ce",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14b price at max safe integer is stored exactly @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 32,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.164Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-da0f31fb53fa01b829e9",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC18 unknown category id is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 33,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.210Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-83c4d05f3efb01087870",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC15 delete on a missing id reports success @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.255Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-6f2c873f13dc39674eb2",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC16 get on a missing id returns an empty object @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 13,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.278Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-dbfd522754e087fee261",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17a even product id returns price as string @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 15,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.302Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-6ffa096a692a48170385",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17b odd product id returns price as number @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 18,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:26.329Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-d94392d81d00690eee59",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-22T13:53:16.626Z",
+    "duration": 9835.725999999999,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

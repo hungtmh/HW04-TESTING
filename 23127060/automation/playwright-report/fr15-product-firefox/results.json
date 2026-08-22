@@ -1,0 +1,1053 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=firefox",
+      "--grep",
+      "@fr15"
+    ],
+    "configFile": "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\playwright.config.js",
+    "rootDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127060 – Ninh Văn Khải",
+      "Run at (ISO)": "2026-08-22T13:53:05.659Z",
+      "feature": "fr15-product",
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:53:05.659Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:53:05.659Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127060 – Ninh Văn Khải",
+          "Run at (ISO)": "2026-08-22T13:53:05.659Z",
+          "feature": "fr15-product",
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Lenovo/Documents/Tester/HW04/HW04-TESTING/23127060/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr15-product-firefox",
+          "title": "Run by: 23127060 — 2026-08-22T13:53:05.659Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr15-product-firefox/results.json"
+        }
+      ],
+      [
+        "C:\\Users\\Lenovo\\Documents\\Tester\\HW04\\HW04-TESTING\\23127060\\automation\\scripts\\banner-reporter.mjs",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr15-product-crud.spec.js",
+      "file": "fr15-product-crud.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-15 Admin product CRUD",
+          "file": "fr15-product-crud.spec.js",
+          "line": 49,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR15-TC01 admin can log in through the UI and reach the product tab @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3109,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:06.587Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-38682923b1cfdcc1ee1b",
+              "file": "fr15-product-crud.spec.js",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC02 a non admin account is refused by the admin console @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2557,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:06.604Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-4926828593e9844ed770",
+              "file": "fr15-product-crud.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC03 creating a product through the UI persists it @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1716,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:09.693Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-8b43c0f6fb470293f807",
+              "file": "fr15-product-crud.spec.js",
+              "line": 87,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC04 editing a product through the UI updates it in the database @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1633,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:10.749Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-a9cc6aae913eebb832e0",
+              "file": "fr15-product-crud.spec.js",
+              "line": 110,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC05 editing one product renames every row in the admin table @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1583,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:11.436Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-20d6c85be7ef8cd7f837",
+              "file": "fr15-product-crud.spec.js",
+              "line": 140,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC06 deleting a product through the UI removes it everywhere @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1321,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:12.406Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-0288faf774365f7c4e48",
+              "file": "fr15-product-crud.spec.js",
+              "line": 184,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC19 xss payload in the product name is stored verbatim @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1095,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:13.038Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-5f801b7ca13d695205ff",
+              "file": "fr15-product-crud.spec.js",
+              "line": 210,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC20 empty product name is blocked by the HTML5 required attribute only @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1234,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:13.742Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-0566aefe770a1efc8b4d",
+              "file": "fr15-product-crud.spec.js",
+              "line": 242,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC07 product can be created without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 45,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.154Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-dc0b25662bbb7c12370b",
+              "file": "fr15-product-crud.spec.js",
+              "line": 266,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC08 product can be updated without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 55,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.219Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-feeb461653da438066c7",
+              "file": "fr15-product-crud.spec.js",
+              "line": 286,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC09 product can be deleted without any authorization header @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 39,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.295Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-f3d0568494daea65d4fd",
+              "file": "fr15-product-crud.spec.js",
+              "line": 311,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC10 a plain user token can create products @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 53,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.355Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-7636d4cd9caf710c7687",
+              "file": "fr15-product-crud.spec.js",
+              "line": 328,
+              "column": 3
+            },
+            {
+              "title": "FR15-TC11a empty product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 38,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.424Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-641140d7b3a1e3d598a7",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC11b missing product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.477Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-f637c9d90a716587040a",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC11c whitespace only product name is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 38,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.531Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-f39161e45a7cb166633e",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC12a negative price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 37,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.587Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-09b2e12379c8a10f5470",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC12b zero price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 36,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.643Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-627dfb46d20d1582293b",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC13 alphabetic price is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.696Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-374cba8c2e2f15de556e",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14a price above max safe integer loses precision @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.748Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-aa23c9073751f9f16b65",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC14b price at max safe integer is stored exactly @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 36,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.798Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-9bafd355d04f3393f3fd",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC18 unknown category id is accepted @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 40,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.850Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-7ea7a6eabd467dc62378",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC15 delete on a missing id reports success @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 14,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.906Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-abe3f1ac0e4e651ebcd5",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC16 get on a missing id returns an empty object @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 19,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.935Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-e61f27ea45c5f9495910",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17a even product id returns price as string @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 20,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.971Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-cae289934e6bf365d226",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            },
+            {
+              "title": "FR15-TC17b odd product id returns price as number @fr15",
+              "ok": true,
+              "tags": [
+                "fr15"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-22T13:53:14.995Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a74475c7d49cae56f38d-4672999a911692f63641",
+              "file": "fr15-product-crud.spec.js",
+              "line": 351,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-22T13:53:05.687Z",
+    "duration": 10019.833999999999,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
