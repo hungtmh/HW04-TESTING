@@ -296,3 +296,44 @@ npx playwright test --project=chromium --grep @fr08 --repeat-each=2
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · bug `BUG-08-01..09`
+
+---
+
+## LOG-007 — Phase 3 (FR-15): AdminProductPage + spec 25 test
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T21:44:00+07:00
+- **Phase:** P3 — FR-15 spec generation
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- Khởi động `frontend-admin` (`npx vite --port 5174 --strictPort`) — xác nhận `Local: http://localhost:5174/`, `curl` trả 200.
+- `AdminProductPage.js`: sidebar là `<li>` nên dùng `getByText('Sản phẩm', { exact: true })`; định vị dòng bảng bằng `getByRole('row').filter({ hasText })`; `loginUi()` trả về message alert (hoặc `null`) để test phân quyền assert được cả 2 nhánh.
+- `fr15-product-crud.spec.js`: **25 test**. TC01/TC02 dùng login UI thật; các test khác bơm `adminToken`.
+- **Bắt được bug "fake mass update" bằng assertion kép:** UI có N dòng cùng tên mới, trong khi `GET /api/products` chỉ có 1 → chứng minh dứt khoát đây là lỗi FE chứ không phải backend.
+- TC20 đếm số request `POST /api/products` rời trình duyệt (= 0) để chứng minh `required` của HTML5 là lớp chặn **duy nhất**.
+
+**File tạo/sửa:**
+- `automation/tests/pages/AdminProductPage.js` (mới)
+- `automation/tests/fr15-product-crud.spec.js` (mới, 25 test)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+curl -o /dev/null -w "%{http_code}" http://localhost:5174/   ⇒ 200
+
+npx playwright test --project=chromium --grep @fr15 --workers=1
+⇒ 25 passed (9.1s)
+
+npx playwright test --project=chromium --grep @fr15 --repeat-each=2
+⇒ 50 passed (11.6s)   ← ổn định 2 lần liên tiếp, chạy song song 2 worker
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · bug `BUG-15-01..11`
