@@ -5,7 +5,7 @@ import { test, expect } from '@playwright/test';
 import { ForgotPasswordPage } from './pages/ForgotPasswordPage.js';
 import { loadJson, loadCsv, uniqueEmail } from './utils/data.js';
 import { API_BASE_URL, FE_VALID_PASSWORD } from './utils/env.js';
-import { freshUser as makeUser } from './utils/fixtures.js';
+import { annotate, freshUser as makeUser } from './utils/fixtures.js';
 import {
   createAndLoginUser,
   loginUser,
@@ -24,6 +24,13 @@ const byId = (id) => {
   if (!c) throw new Error(`Không có case ${id} trong fr03-reset-cases.json`);
   return c;
 };
+
+/**
+ * Gắn mã bug + dòng source vào test để HTML report truy vết được test <-> bug.
+ * Dữ liệu lấy thẳng từ file data, không viết lại bằng tay ở spec.
+ */
+const trace = (info, c, patterns) =>
+  annotate(info, { bug: c.bug, source: c.source, patterns });
 
 /**
  * Tạo 1 user riêng cho mỗi test và chỉ trả về email (FR-03 chủ yếu thao tác qua UI, chưa cần token).
@@ -49,6 +56,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
   // ---------------------------------------------------------------- luồng UI
   test(`FR03-${byId('TC01').id} ${byId('TC01').title} @fr03`, async ({ page, request }) => {
     const c = byId('TC01');
+    trace(test.info(), c, ['A3','A5','A2']);
     const email = await freshUser(request, 'fr03-tc01');
     const fp = new ForgotPasswordPage(page);
 
@@ -76,6 +84,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC02').id} ${byId('TC02').title} @fr03`, async ({ page }) => {
     const c = byId('TC02');
+    trace(test.info(), c, ['A5','A1']);
     const fp = new ForgotPasswordPage(page);
     await fp.goto();
 
@@ -89,6 +98,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC03').id} ${byId('TC03').title} @fr03`, async ({ page, request }) => {
     const c = byId('TC03');
+    trace(test.info(), c, ['A5','A3']);
     const email = await freshUser(request, 'fr03-tc03');
     const fp = new ForgotPasswordPage(page);
 
@@ -111,6 +121,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC04').id} ${byId('TC04').title} @fr03`, async ({ page, request }) => {
     const c = byId('TC04'); // BUG-03-01
+    trace(test.info(), c, ['A5','A3']);
     const email = await freshUser(request, 'fr03-tc04');
     const fp = new ForgotPasswordPage(page);
 
@@ -133,6 +144,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
   // TC05 — bảng boundary cho regex mật khẩu của FE (CSV, layer=ui)
   for (const v of variants.filter((r) => r.layer === 'ui')) {
     test(`FR03-${v.id} ${v.label} @fr03`, async ({ page, request }) => {
+      trace(test.info(), v, ['A5', 'A4']);
       const email = await freshUser(request, `fr03-${v.id.toLowerCase()}`);
       const fp = new ForgotPasswordPage(page);
 
@@ -150,6 +162,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
   // --------------------------------------------------------------- luồng API
   test(`FR03-${byId('TC06').id} ${byId('TC06').title} @fr03`, async ({ request }) => {
     const c = byId('TC06'); // BUG-03-02
+    trace(test.info(), c, ['A3']);
     const email = await freshUser(request, 'fr03-tc06');
 
     const { status, body } = await requestResetToken(request, email);
@@ -161,6 +174,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC07').id} ${byId('TC07').title} @fr03`, async ({ request }) => {
     const c = byId('TC07'); // BUG-03-03
+    trace(test.info(), c, ['A3','A4']);
     const email = await freshUser(request, 'fr03-tc07');
 
     const { body } = await requestResetToken(request, email);
@@ -171,6 +185,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC08').id} ${byId('TC08').title} @fr03`, async ({ request }) => {
     const c = byId('TC08'); // BUG-03-04
+    trace(test.info(), c, ['A3']);
     const email = await freshUser(request, 'fr03-tc08');
 
     const statuses = [];
@@ -186,6 +201,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC09').id} ${byId('TC09').title} @fr03`, async ({ request }) => {
     const c = byId('TC09'); // BUG-03-05
+    trace(test.info(), c, ['A3']);
     const known = await freshUser(request, 'fr03-tc09');
 
     const hit = await requestResetToken(request, known);
@@ -199,6 +215,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC10').id} ${byId('TC10').title} @fr03`, async ({ request }) => {
     const c = byId('TC10'); // BUG-03-06
+    trace(test.info(), c, ['A3']);
     const email = await freshUser(request, 'fr03-tc10');
     const { body } = await requestResetToken(request, email);
 
@@ -219,6 +236,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC11').id} ${byId('TC11').title} @fr03`, async ({ request }) => {
     const c = byId('TC11'); // BUG-03-07
+    trace(test.info(), c, ['A3']);
     const email = await freshUser(request, 'fr03-tc11');
     const { body } = await requestResetToken(request, email);
     await resetPassword(request, {
@@ -238,6 +256,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC12').id} ${byId('TC12').title} @fr03`, async ({ request }) => {
     const c = byId('TC12');
+    trace(test.info(), c, ['A3']);
     const email = await freshUser(request, 'fr03-tc12');
 
     const first = await requestResetToken(request, email);
@@ -263,6 +282,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC13').id} ${byId('TC13').title} @fr03`, async ({ request }) => {
     const c = byId('TC13');
+    trace(test.info(), c, ['A3']);
     const email = await freshUser(request, 'fr03-tc13');
     const { body } = await requestResetToken(request, email);
 
@@ -284,6 +304,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC14').id} ${byId('TC14').title} @fr03`, async ({ request }) => {
     const c = byId('TC14'); // BUG-03-08
+    trace(test.info(), c, ['A3','A1']);
     const email = await freshUser(request, 'fr03-tc14');
 
     // Khoá tài khoản: mỗi lần sai, login_attempts += 2 (server.js:53) -> 2 lần là đủ ngưỡng 3.
@@ -316,6 +337,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
   // TC15 + TC10 (biến thể token) — bảng boundary từ CSV, layer=api
   for (const v of variants.filter((r) => r.layer === 'api')) {
     test(`FR03-${v.id} ${v.label} @fr03`, async ({ request }) => {
+      trace(test.info(), v, ['A3', 'A4']);
       const email = await freshUser(request, `fr03-${v.id.toLowerCase()}`);
       let { body } = await requestResetToken(request, email);
 
@@ -341,6 +363,7 @@ test.describe('FR-03 Forgot & Reset password', () => {
 
   test(`FR03-${byId('TC16').id} ${byId('TC16').title} @fr03`, async ({ request }) => {
     const c = byId('TC16');
+    trace(test.info(), c, ['A3','A1']);
     const emailA = await freshUser(request, 'fr03-tc16a');
     const emailB = await freshUser(request, 'fr03-tc16b');
 

@@ -6,7 +6,7 @@ import { test, expect } from '@playwright/test';
 import { AdminProductPage } from './pages/AdminProductPage.js';
 import { loadJson, loadCsv, uniqueEmail, uniqueProductName } from './utils/data.js';
 import { API_BASE_URL, SEED_ACCOUNTS, SEED_PRODUCT_COUNT } from './utils/env.js';
-import { freshUser as makeUser } from './utils/fixtures.js';
+import { annotate, freshUser as makeUser } from './utils/fixtures.js';
 import {
   cleanupProduct,
   createProduct,
@@ -25,6 +25,10 @@ const byId = (id) => {
   if (!c) throw new Error(`Không có case ${id} trong fr15-product-cases.json`);
   return c;
 };
+
+/** Gắn mã bug + dòng source vào test để HTML report truy vết được test <-> bug. */
+const trace = (info, c, patterns) =>
+  annotate(info, { bug: c.bug, source: c.source, patterns });
 
 /** Token admin — lấy qua API để bơm thẳng vào localStorage, tránh login UI lặp lại 10 lần. */
 async function adminToken(request) {
@@ -50,6 +54,7 @@ test.describe('FR-15 Admin product CRUD', () => {
   // ---------------------------------------------------------------- luồng UI
   test(`FR15-${byId('TC01').id} ${byId('TC01').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC01');
+    trace(test.info(), c, ['A1','A3','A4']);
     const admin = new AdminProductPage(page);
     await admin.goto();
 
@@ -73,6 +78,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC02').id} ${byId('TC02').title} @fr15`, async ({ page }) => {
     const c = byId('TC02');
+    trace(test.info(), c, ['A5','A1']);
     const admin = new AdminProductPage(page);
     await admin.goto();
 
@@ -86,6 +92,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC03').id} ${byId('TC03').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC03');
+    trace(test.info(), c, ['A1','A3','A4']);
     const admin = new AdminProductPage(page);
     await admin.signInViaToken(await adminToken(request));
     await admin.goto();
@@ -109,6 +116,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC04').id} ${byId('TC04').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC04');
+    trace(test.info(), c, ['A5','A3']);
     const admin = new AdminProductPage(page);
     await admin.signInViaToken(await adminToken(request));
 
@@ -139,6 +147,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC05').id} ${byId('TC05').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC05'); // BUG-15-01 — fake mass update
+    trace(test.info(), c, ['A1','A3','A4']);
     const admin = new AdminProductPage(page);
     await admin.signInViaToken(await adminToken(request));
 
@@ -183,6 +192,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC06').id} ${byId('TC06').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC06');
+    trace(test.info(), c, ['A1','A3']);
     const admin = new AdminProductPage(page);
     await admin.signInViaToken(await adminToken(request));
 
@@ -209,6 +219,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC19').id} ${byId('TC19').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC19'); // BUG-15-11
+    trace(test.info(), c, ['A1','A3']);
     const admin = new AdminProductPage(page);
     await admin.signInViaToken(await adminToken(request));
 
@@ -241,6 +252,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC20').id} ${byId('TC20').title} @fr15`, async ({ page, request }) => {
     const c = byId('TC20');
+    trace(test.info(), c, ['A1','A3']);
     const admin = new AdminProductPage(page);
     await admin.signInViaToken(await adminToken(request));
     await admin.goto();
@@ -265,6 +277,7 @@ test.describe('FR-15 Admin product CRUD', () => {
   // --------------------------------------------------------------- luồng API
   test(`FR15-${byId('TC07').id} ${byId('TC07').title} @fr15`, async ({ request }) => {
     const c = byId('TC07'); // BUG-15-02
+    trace(test.info(), c, ['A3','A1']);
     const name = uniqueProductName('TC07');
 
     // KHÔNG gửi Authorization
@@ -285,6 +298,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC08').id} ${byId('TC08').title} @fr15`, async ({ request }) => {
     const c = byId('TC08'); // BUG-15-02
+    trace(test.info(), c, ['A3','A1']);
     const created = await createProduct(
       request,
       { name: uniqueProductName('TC08'), price: 222000, category_id: 1 },
@@ -310,6 +324,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC09').id} ${byId('TC09').title} @fr15`, async ({ request }) => {
     const c = byId('TC09'); // BUG-15-02
+    trace(test.info(), c, ['A3','A1']);
     const created = await createProduct(
       request,
       { name: uniqueProductName('TC09'), price: 444000, category_id: 1 },
@@ -327,6 +342,7 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC10').id} ${byId('TC10').title} @fr15`, async ({ request }) => {
     const c = byId('TC10'); // BUG-15-03
+    trace(test.info(), c, ['A3','A1']);
     const plainUser = await makeUser(request, {
       prefix: 'fr15-tc10',
       password: 'Plain User 12',
@@ -349,6 +365,7 @@ test.describe('FR-15 Admin product CRUD', () => {
   // -------------------------------------- bảng boundary trường dữ liệu (CSV)
   for (const row of fieldRows) {
     test(`FR15-${row.id} ${row.label} @fr15`, async ({ request }) => {
+      trace(test.info(), row, ['A3', 'A4']);
       const expectedStatus = Number(row.expected_status);
 
       if (row.check === 'created') {

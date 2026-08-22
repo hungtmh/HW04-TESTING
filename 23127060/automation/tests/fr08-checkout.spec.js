@@ -8,7 +8,7 @@ import { LoginPage } from './pages/LoginPage.js';
 import { loadJson, loadCsv, uniqueEmail } from './utils/data.js';
 import { API_BASE_URL, WEB_BASE_URL } from './utils/env.js';
 import { checkout, getMyOrders, getOrderById } from './utils/api.js';
-import { freshUser as makeUser } from './utils/fixtures.js';
+import { annotate, freshUser as makeUser } from './utils/fixtures.js';
 
 const cases = loadJson('fr08-checkout-cases.json');
 const couponRows = loadCsv('fr08-order-totals.csv');
@@ -20,6 +20,10 @@ const byId = (id) => {
   if (!c) throw new Error(`Không có case ${id} trong fr08-checkout-cases.json`);
   return c;
 };
+
+/** Gắn mã bug + dòng source vào test để HTML report truy vết được test <-> bug. */
+const trace = (info, c, patterns) =>
+  annotate(info, { bug: c.bug, source: c.source, patterns });
 
 /** Tạo user riêng cho mỗi test + trả token. Test không bao giờ dùng chung dữ liệu. */
 async function freshUser(request, prefix = 'fr08') {
@@ -43,6 +47,7 @@ test.describe('FR-08 Checkout', () => {
   // ---------------------------------------------------------------- luồng UI
   test(`FR08-${byId('TC01').id} ${byId('TC01').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC01');
+    trace(test.info(), c, ['A1','A3','A4']);
     const email = uniqueEmail('fr08-tc01');
     await request.post(`${API_BASE_URL}/register`, {
       data: { name: 'FR08 User', email, password: PASSWORD },
@@ -89,6 +94,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC02').id} ${byId('TC02').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC02');
+    trace(test.info(), c, ['A1','A4']);
     const user = await freshUser(request, 'fr08-tc02');
     await signInViaToken(page, user.token);
 
@@ -102,6 +108,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC03').id} ${byId('TC03').title} @fr08`, async ({ page }) => {
     const c = byId('TC03');
+    trace(test.info(), c, ['A5','A2']);
     // KHÔNG đăng nhập.
     const cart = new CartPage(page);
     await cart.gotoHome();
@@ -126,6 +133,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC04').id} ${byId('TC04').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC04'); // BUG-08-01
+    trace(test.info(), c, ['A1','A3','A4']);
     const user = await freshUser(request, 'fr08-tc04');
     await signInViaToken(page, user.token);
 
@@ -156,6 +164,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC09').id} ${byId('TC09').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC09'); // BUG-08-05
+    trace(test.info(), c, ['A1','A3','A4']);
     const user = await freshUser(request, 'fr08-tc09');
     await signInViaToken(page, user.token);
 
@@ -187,6 +196,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC10').id} ${byId('TC10').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC10'); // BUG-08-06
+    trace(test.info(), c, ['A3']);
     const user = await freshUser(request, 'fr08-tc10');
     await signInViaToken(page, user.token);
 
@@ -210,6 +220,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC11').id} ${byId('TC11').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC11'); // BUG-08-07
+    trace(test.info(), c, ['A1','A3','A4']);
     const user = await freshUser(request, 'fr08-tc11');
     await signInViaToken(page, user.token);
 
@@ -236,6 +247,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC17').id} ${byId('TC17').title} @fr08`, async ({ page, request }) => {
     const c = byId('TC17'); // BUG-08-09
+    trace(test.info(), c, ['A1','A4']);
     const user = await freshUser(request, 'fr08-tc17');
     await signInViaToken(page, user.token);
 
@@ -256,6 +268,7 @@ test.describe('FR-08 Checkout', () => {
   // --------------------------------------------------------------- luồng API
   test(`FR08-${byId('TC05').id} ${byId('TC05').title} @fr08`, async ({ request }) => {
     const c = byId('TC05'); // BUG-08-02
+    trace(test.info(), c, ['A3','A4']);
     const user = await freshUser(request, 'fr08-tc05');
 
     const res = await checkout(request, { total_amount: c.totalAmount }, user.token);
@@ -268,6 +281,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC06').id} ${byId('TC06').title} @fr08`, async ({ request }) => {
     const c = byId('TC06'); // BUG-08-02
+    trace(test.info(), c, ['A3']);
     const user = await freshUser(request, 'fr08-tc06');
 
     const res = await checkout(request, { total_amount: c.totalAmount }, user.token);
@@ -282,6 +296,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC07').id} ${byId('TC07').title} @fr08`, async ({ request }) => {
     const c = byId('TC07'); // BUG-08-03
+    trace(test.info(), c, ['A3']);
     const user = await freshUser(request, 'fr08-tc07');
 
     // Giỏ hàng phía server hoàn toàn rỗng
@@ -298,6 +313,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC08').id} ${byId('TC08').title} @fr08`, async ({ request }) => {
     const c = byId('TC08'); // BUG-08-04 (IDOR)
+    trace(test.info(), c, ['A3']);
     const victim = await freshUser(request, 'fr08-tc08-victim');
     const attacker = await freshUser(request, 'fr08-tc08-attacker');
 
@@ -320,6 +336,7 @@ test.describe('FR-08 Checkout', () => {
 
   test(`FR08-${byId('TC18').id} ${byId('TC18').title} @fr08`, async ({ request }) => {
     const c = byId('TC18');
+    trace(test.info(), c, ['A3','A1']);
     // A3 — checkout có kiểm soát token (đối lập với product CRUD của FR-15)
     const res = await checkout(request, { total_amount: c.totalAmount }, undefined);
     expect(res.status, 'A3').toBe(c.expect.status);
@@ -329,6 +346,7 @@ test.describe('FR-08 Checkout', () => {
   // ------------------------------------------- bảng boundary coupon (CSV)
   for (const row of couponRows) {
     test(`FR08-${row.id} ${row.label} @fr08`, async ({ request }) => {
+      trace(test.info(), row, ['A3', 'A4', 'A1']);
       const code = row.coupon_code === '__EMPTY__' ? '' : row.coupon_code;
       const totalAmount = Number(row.total_amount);
       let userId;
