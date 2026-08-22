@@ -5,10 +5,10 @@ import { test, expect } from '@playwright/test';
 import { ForgotPasswordPage } from './pages/ForgotPasswordPage.js';
 import { loadJson, loadCsv, uniqueEmail } from './utils/data.js';
 import { API_BASE_URL, FE_VALID_PASSWORD } from './utils/env.js';
+import { freshUser as makeUser } from './utils/fixtures.js';
 import {
   createAndLoginUser,
   loginUser,
-  registerUser,
   requestResetToken,
   resetPassword,
 } from './utils/api.js';
@@ -25,10 +25,16 @@ const byId = (id) => {
   return c;
 };
 
-/** Tạo 1 user riêng cho mỗi test (DB bị DROP mỗi lần restart backend nên không cần cleanup). */
+/**
+ * Tạo 1 user riêng cho mỗi test và chỉ trả về email (FR-03 chủ yếu thao tác qua UI, chưa cần token).
+ * Dùng helper chung ở utils/fixtures.js để 3 spec có cùng một cách tạo dữ liệu tiền đề.
+ */
 async function freshUser(request, prefix = 'fr03') {
-  const email = uniqueEmail(prefix);
-  await registerUser(request, { name: 'FR03 User', email, password: ORIGINAL_PASSWORD });
+  const { email } = await makeUser(request, {
+    prefix,
+    password: ORIGINAL_PASSWORD,
+    login: false,
+  });
   return email;
 }
 

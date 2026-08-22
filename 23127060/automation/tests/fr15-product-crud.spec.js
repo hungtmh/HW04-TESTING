@@ -6,9 +6,9 @@ import { test, expect } from '@playwright/test';
 import { AdminProductPage } from './pages/AdminProductPage.js';
 import { loadJson, loadCsv, uniqueEmail, uniqueProductName } from './utils/data.js';
 import { API_BASE_URL, SEED_ACCOUNTS, SEED_PRODUCT_COUNT } from './utils/env.js';
+import { freshUser as makeUser } from './utils/fixtures.js';
 import {
   cleanupProduct,
-  createAndLoginUser,
   createProduct,
   deleteProduct,
   getProductById,
@@ -327,8 +327,8 @@ test.describe('FR-15 Admin product CRUD', () => {
 
   test(`FR15-${byId('TC10').id} ${byId('TC10').title} @fr15`, async ({ request }) => {
     const c = byId('TC10'); // BUG-15-03
-    const plainUser = await createAndLoginUser(request, {
-      email: uniqueEmail('fr15-tc10'),
+    const plainUser = await makeUser(request, {
+      prefix: 'fr15-tc10',
       password: 'Plain User 12',
     });
     expect(plainUser.user.role, 'tiền đề: đúng là user thường').toBe('user');

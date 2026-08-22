@@ -7,7 +7,8 @@ import { CheckoutPage } from './pages/CheckoutPage.js';
 import { LoginPage } from './pages/LoginPage.js';
 import { loadJson, loadCsv, uniqueEmail } from './utils/data.js';
 import { API_BASE_URL, WEB_BASE_URL } from './utils/env.js';
-import { checkout, createAndLoginUser, getMyOrders, getOrderById } from './utils/api.js';
+import { checkout, getMyOrders, getOrderById } from './utils/api.js';
+import { freshUser as makeUser } from './utils/fixtures.js';
 
 const cases = loadJson('fr08-checkout-cases.json');
 const couponRows = loadCsv('fr08-order-totals.csv');
@@ -22,7 +23,7 @@ const byId = (id) => {
 
 /** Tạo user riêng cho mỗi test + trả token. Test không bao giờ dùng chung dữ liệu. */
 async function freshUser(request, prefix = 'fr08') {
-  return createAndLoginUser(request, { email: uniqueEmail(prefix), password: PASSWORD });
+  return makeUser(request, { prefix, password: PASSWORD });
 }
 
 /**

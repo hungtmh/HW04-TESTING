@@ -1,0 +1,4 @@
+f2edc7a|2026-08-22 20:45:46 +0700|nvkhai238|fix(specs): phase 4 gap analysis - remove weak assertions and flaky waits
+d25692d|2026-08-22 20:39:56 +0700|nvkhai238|test(fr15): add 25 admin product CRUD cases incl. fake mass update
+4e1dd5a|2026-08-22 20:36:54 +0700|nvkhai238|test(fr08): add 25 checkout cases incl. price tampering and coupon inversion
+3bd7e82|2026-08-22 20:33:43 +0700|nvkhai238|test(fr03): add 30 data-driven forgot/reset password cases

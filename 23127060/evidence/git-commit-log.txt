@@ -1,0 +1,10 @@
+87bdf9a|2026-08-22 21:09:53 +0700|nvkhai238|docs: phase 7 - main report, AI audit, critique (296 words), README, video scripts
+9ae21c4|2026-08-22 21:00:43 +0700|nvkhai238|docs(bugs): phase 6 - report 27 defects with Playwright-captured evidence
+d6ffec9|2026-08-22 20:53:59 +0700|nvkhai238|chore(report): phase 5 - 9 multi-browser runs with verified anti-cheat banner
+f2edc7a|2026-08-22 20:45:46 +0700|nvkhai238|fix(specs): phase 4 gap analysis - remove weak assertions and flaky waits
+d25692d|2026-08-22 20:39:56 +0700|nvkhai238|test(fr15): add 25 admin product CRUD cases incl. fake mass update
+4e1dd5a|2026-08-22 20:36:54 +0700|nvkhai238|test(fr08): add 25 checkout cases incl. price tampering and coupon inversion
+3bd7e82|2026-08-22 20:33:43 +0700|nvkhai238|test(fr03): add 30 data-driven forgot/reset password cases
+27780ab|2026-08-22 20:28:00 +0700|nvkhai238|test(data): phase 2 - add 77 data-driven records for FR-03/FR-08/FR-15
+78b5dc7|2026-08-22 20:25:02 +0700|nvkhai238|docs(23127060): phase 1 - design 54 test cases across FR-03/FR-08/FR-15
+6697018|2026-08-22 20:21:51 +0700|nvkhai238|chore(23127060): phase 0 recon - SUT map, playwright config, test utils
