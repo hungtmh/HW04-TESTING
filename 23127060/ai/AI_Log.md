@@ -134,3 +134,38 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · report `00-SUT-RECON.md`
+
+---
+
+## LOG-003 — Phase 1: Thiết kế 54 test case cho FR-03 / FR-08 / FR-15
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T20:38:00+07:00
+- **Phase:** P1 — Test case design
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- Sinh `report/01-TEST-CASES.md`: **54 test case** (FR-03: 16, FR-08: 18, FR-15: 20) — vượt mốc 12 TC/feature.
+- Mỗi TC có: ID · loại (P/N/E/S) · tiền đề · bước · dữ liệu · expected **dẫn số dòng source** · assertion pattern · cờ automate được.
+- Khai báo 5 assertion pattern A1–A5 (thêm A5 = dialog vì SUT dùng `alert()` thay toast).
+- Liệt kê 12 case **không automate được** kèm lý do kỹ thuật cụ thể (không có email service, không có cột stock, không có order_items, token không có expiry…).
+- Phát hiện thêm 2 bug chưa có trong danh sách candidate của SKILL: **coupon percent nghịch dấu** (`server.js:432`) và **boundary `min_order_amount` dùng `>` thay vì `>=`** (`server.js:421`).
+
+**File tạo/sửa:**
+- `23127060/report/01-TEST-CASES.md` (mới, 54 TC)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+(Phase thiết kế — chưa chạy test. Expected của mọi TC được đối chiếu trực tiếp với
+ source đã đọc ở Phase 0 và với kết quả curl đã ghi trong LOG-002.)
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · report `01-TEST-CASES.md`
