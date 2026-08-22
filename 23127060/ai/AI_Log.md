@@ -256,3 +256,43 @@ npx playwright test --project=chromium --grep @fr03 --repeat-each=2
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · bug `BUG-03-01..08`
+
+---
+
+## LOG-006 — Phase 3 (FR-08): CartPage + CheckoutPage + spec 25 test
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T21:26:00+07:00
+- **Phase:** P3 — FR-08 spec generation
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- `CartPage.js` + `CheckoutPage.js`: ô tổng tiền sửa được định vị bằng `getByRole('spinbutton')`; thêm hàng vào giỏ từ **Home** chứ không qua ProductDetail (nút ở đó cố tình nuốt click đầu tiên → nguồn flaky).
+- `fr08-checkout.spec.js`: **25 test**. TC01 đăng nhập bằng **UI thật**; các test còn lại bơm JWT qua `addInitScript` để chạy nhanh.
+- Xử lý đúng đặc thù giỏ hàng in-memory: TC09 điều hướng bằng **link SPA** (không `page.goto`) để giữ React Context; TC17 chủ động `reload()` để chứng minh giỏ bị mất.
+- Bảng boundary coupon từ CSV tra `coupon_id` động qua `GET /api/coupons` thay vì hardcode id.
+- Xác nhận bằng test thật: `SAVE10` trên giỏ 30.000.000 ₫ cho **Thành tiền 300.000.000 ₫** trong khi UI vẫn hiện "Áp dụng thành công! Giảm 10%".
+
+**File tạo/sửa:**
+- `automation/tests/pages/CartPage.js` (mới)
+- `automation/tests/pages/CheckoutPage.js` (mới)
+- `automation/tests/fr08-checkout.spec.js` (mới, 25 test)
+
+**Lệnh đã chạy & kết quả thật:**
+```
+npx playwright test --project=chromium --grep @fr08
+⇒ 25 passed (9.2s)
+
+npx playwright test --project=chromium --grep @fr08 --repeat-each=2
+⇒ 50 passed (13.6s)   ← ổn định 2 lần liên tiếp
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · bug `BUG-08-01..09`
