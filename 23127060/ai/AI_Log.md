@@ -441,3 +441,50 @@ node scripts/summarize-results.mjs
 
 **Verdict:** <Accepted / Accepted-with-fix / Rejected>
 **Liên kết:** commit `<hash>` · report `03-RUN-SUMMARY.md`
+
+---
+
+## LOG-010 — Phase 6: BUG_REPORT 27 bug + script chụp ảnh minh chứng thật + lệnh gh issue
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-22T23:02:00+07:00
+- **Phase:** P6 — Bug report
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+> Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
+
+**AI output (tóm tắt):**
+- `capture-bug-evidence.mjs`: tái hiện 8 bug nặng nhất bằng Playwright thật → **11 ảnh PNG** + `capture-log.txt` chứa log response nguyên văn.
+- **Lỗi thật gặp phải:** chụp màn hình *bên trong* dialog handler làm treo renderer (`page.screenshot: Timeout 30000ms`) vì `alert()` chặn tiến trình render. Sửa: chụp trước khi bấm, lấy nội dung alert ra làm log, chụp lại sau khi đóng alert.
+- `BUG_REPORT.md`: **27 bug** (FR-03: 8 · FR-08: 9 · FR-15: 10), mỗi bug có Severity/Priority · Component (số dòng) · Test case · Precondition · Steps · Expected · Actual (log thật) · Nguyên nhân code · Đề xuất sửa.
+- `gh-issue-commands.sh`: sinh 28 file body riêng bằng `awk` cắt từ BUG_REPORT.md và in ra 28 lệnh `gh issue create` — **không tự chạy**, để Khải kiểm rồi tự tạo Issue.
+
+**File tạo/sửa:**
+- `automation/scripts/capture-bug-evidence.mjs` (mới)
+- `bug-report/BUG_REPORT.md` (mới, 27 bug)
+- `bug-report/gh-issue-commands.sh` (mới) + `bug-report/issue-bodies/*.md` (28 file sinh tự động)
+- `evidence/bugs/*.png` (11 ảnh thật) + `evidence/bugs/capture-log.txt`
+
+**Lệnh đã chạy & kết quả thật:**
+```
+node scripts/capture-bug-evidence.mjs
+⇒ 8/8 bug chụp thành công. Trích log:
+  [BUG-03-08] POST /api/login (mật khẩu MỚI) ⇒ 403 {"error":"Tài khoản đã bị khóa..."}
+  [BUG-08-01] Đơn hàng trong CSDL: {"id":118,"total_amount":1,...} (giỏ 30.000.000 ₫)
+  [BUG-08-04] GET /api/orders/119 KHÔNG token ⇒ 200 {..."shipping_address":"Địa chỉ riêng tư..."}
+  [BUG-08-07] apply-coupon SAVE10 ⇒ {"discount_amount":-270000000,"final_amount":300000000}
+  [BUG-15-01] UI: 6 dòng mang tên mới · CSDL: 1 bản ghi ⇒ lỗi nằm ở FRONTEND
+  [BUG-15-02] POST/PUT/DELETE /api/products KHÔNG token ⇒ 200 / 200 / 200
+  [BUG-15-02] DELETE /api/products/99999999 ⇒ 200 {"message":"Product deleted"}
+
+bash bug-report/gh-issue-commands.sh
+⇒ in ra 28 lệnh gh issue create · sinh 28 file body (591 dòng)
+```
+
+**Human review (Khải):**
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Liên kết:** commit `<hash>` · bug `BUG-03-01..BUG-15-11`
