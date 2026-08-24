@@ -1,5 +1,7 @@
 # AI Audit Report
 
+**Sinh viên:** Nguyễn Tấn Thắng - **MSSV:** 23127259
+
 ## 1. Declaration
 
 I use AI tools for planning, generating, reviewing, and repairing the Playwright automation for FR-02, FR-07, and FR-16. I remain responsible for comparing every assertion with the SRS and for executing the final suite.

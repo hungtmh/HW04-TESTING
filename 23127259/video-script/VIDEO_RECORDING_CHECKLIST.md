@@ -1,5 +1,7 @@
 # Checklist quay và nộp video - Đã hoàn thành
 
+**Sinh viên:** Nguyễn Tấn Thắng - **MSSV:** 23127259
+
 | Video | Link | Thời lượng | Trạng thái |
 |---|---|---:|---|
 | Demo automation FR-07 | https://youtu.be/RRAYnyt3cJ0 | 12:02 | Truy cập được |

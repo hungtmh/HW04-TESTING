@@ -1,5 +1,7 @@
 # EShop Automation Checklist
 
+**Sinh viên:** Nguyễn Tấn Thắng - **MSSV:** 23127259
+
 ## FR-02 - Login and Account Lockout
 
 - Email uses HTML5 `type="email"`; password uses `type="password"`.

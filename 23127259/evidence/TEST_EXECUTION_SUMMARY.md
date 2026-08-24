@@ -1,5 +1,7 @@
 # Verified Test Execution Summary
 
+**Sinh viên:** Nguyễn Tấn Thắng - **MSSV:** 23127259
+
 Executed at 2026-08-24 (UTC timestamps are recorded in each report).
 
 | Feature | Chromium | Firefox | WebKit | Matrix total |
