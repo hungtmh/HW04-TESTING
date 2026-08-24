@@ -93,7 +93,7 @@ Chi tiết từng bug (steps, expected, actual, evidence, đề xuất sửa) n�
 |-- agent-skill/
 |   |-- AGENT_SKILL.md / .pdf
 |   `-- SKILL.md / .pdf
-`-- video-script/                    # script Markdown + PDF
+`-- video-script/VIDEO_LINKS.md      # hai link YouTube đã xác minh
 ```
 
 Mã nguồn test nằm ở gốc repository: `tests/`, `scripts/`, `playwright.config.js`; chín report nằm trong `playwright-report/fr02-*`, `fr07-*`, `fr16-*`.
