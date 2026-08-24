@@ -25,7 +25,7 @@ const lines = [
   '| Video Agent Skill | [FR16 - Agent Skill](https://youtu.be/ZEHdd4JB9dw) - 8:27 |',
   '| Tên file nộp | `23127259_HW04_AI_Automation_100.zip` |',
   '| Ngày | 2026-08-24 |', '',
-  '> Hai video do tôi - sinh viên Nguyễn Tấn Thắng - tự quay và thuyết minh bằng tiếng Việt; thông tin tác giả được thể hiện bằng face-cam hoặc `whoami` + `hostname`.', '',
+  '> Hai video do em - sinh viên Nguyễn Tấn Thắng - tự quay và thuyết minh bằng tiếng Việt; thông tin tác giả được thể hiện bằng face-cam hoặc `whoami` + `hostname`.', '',
   '---', '',
   '## 1. Test Summary Report', '',
   '| Chỉ số | Giá trị |', '|---|---|',

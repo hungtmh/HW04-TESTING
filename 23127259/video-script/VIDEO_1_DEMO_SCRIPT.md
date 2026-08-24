@@ -89,7 +89,7 @@ pwd
 
 ### Lời thoại đọc gần như nguyên văn
 
-> Xin chào thầy. Tôi là sinh viên Nguyễn Tấn Thắng, mã số sinh viên 23127259. Đây là video demo bài HW04 Automation Testing của tôi. Tôi trình bày bằng tiếng Việt theo yêu cầu đề bài. Trên màn hình là kết quả lệnh whoami, hostname và đường dẫn repository để chứng minh môi trường tôi đang sử dụng. Hệ thống kiểm thử là EShop gồm Backend Node.js, Frontend Web và Frontend Admin.
+> Xin chào thầy. Em là sinh viên Nguyễn Tấn Thắng, mã số sinh viên 23127259. Đây là video demo bài HW04 Automation Testing của em. Em trình bày bằng tiếng Việt theo yêu cầu đề bài. Trên màn hình là kết quả lệnh whoami, hostname và đường dẫn repository để chứng minh môi trường em đang sử dụng. Hệ thống kiểm thử là EShop gồm Backend Node.js, Frontend Web và Frontend Admin.
 
 ## Mục 2 - Phạm vi bài làm và số liệu tổng quan (0:50-1:50)
 
@@ -99,7 +99,7 @@ Chuyển sang `23127259/README.md`, chỉ vào bảng thông tin và Test Summar
 
 ### Lời thoại
 
-> Tôi chọn đúng ba feature, mỗi pool một feature: FR-02 Login và Account Lockout thuộc Pool A, FR-07 Shopping Cart thuộc Pool B, và FR-16 Product Import CSV thuộc Pool C. Bộ test có 45 test case duy nhất. Chạy trên ba browser tạo thành 135 lượt thực thi: 72 lượt pass, 63 lượt fail có chủ đích từ các test gắn tag @bug, và không có unexpected failure. Tổng cộng có chín browser run và chín HTML report riêng.
+> Em chọn đúng ba feature, mỗi pool một feature: FR-02 Login và Account Lockout thuộc Pool A, FR-07 Shopping Cart thuộc Pool B, và FR-16 Product Import CSV thuộc Pool C. Bộ test có 45 test case duy nhất. Chạy trên ba browser tạo thành 135 lượt thực thi: 72 lượt pass, 63 lượt fail có chủ đích từ các test gắn tag @bug, và không có unexpected failure. Tổng cộng có chín browser run và chín HTML report riêng.
 
 Chỉ tiếp vào bảng chi tiết:
 
@@ -139,7 +139,7 @@ Sau đó mở lịch sử hoặc Main Report tại R-02.
 
 > Đây là một lỗi quan trọng trong bản AI sinh ban đầu. Sau khi thêm sản phẩm, AI dùng page.goto('/cart'). Tuy nhiên giỏ hàng của SUT chỉ nằm trong React Context. page.goto gây full reload, khởi tạo lại CartProvider và làm mất toàn bộ sản phẩm. Kết quả là nhiều test đỏ vì giỏ trống chứ không phải do FR-07 bị lỗi.
 
-> Tôi đã sửa bằng cách click link giỏ hàng trong header thông qua React Router. Đây là client-side navigation nên giữ nguyên state. Sau khi sửa, toàn bộ 11 case bình thường của FR-07 pass trên cả ba engine; chỉ sáu assertion bám SRS còn đỏ. Tôi cũng thay assertion yếu chỉ kiểm tra ký hiệu tiền bằng việc parse và so sánh exact subtotal và total từ CSV.
+> Em đã sửa bằng cách click link giỏ hàng trong header thông qua React Router. Đây là client-side navigation nên giữ nguyên state. Sau khi sửa, toàn bộ 11 case bình thường của FR-07 pass trên cả ba engine; chỉ sáu assertion bám SRS còn đỏ. Em cũng thay assertion yếu chỉ kiểm tra ký hiệu tiền bằng việc parse và so sánh exact subtotal và total từ CSV.
 
 ## Mục 5 - Chạy live trên ba browser (4:35-6:25)
 
@@ -197,7 +197,7 @@ Trình duyệt mở report. Thực hiện:
 
 ### Lời thoại
 
-> Tôi đối chiếu failure với SRS chứ không chỉ đọc source. FR-07 ghi rõ thêm cùng sản phẩm phải tăng số lượng và không tạo dòng mới. BUG-10 trong báo cáo có steps, expected, actual, severity, đề xuất sửa và evidence. GitHub Issue số 25 được tạo bằng tài khoản thangak18 và đính kèm cùng evidence. Toàn bài có 20 root defect tương ứng Issues số 16 đến 35.
+> Em đối chiếu failure với SRS chứ không chỉ đọc source. FR-07 ghi rõ thêm cùng sản phẩm phải tăng số lượng và không tạo dòng mới. BUG-10 trong báo cáo có steps, expected, actual, severity, đề xuất sửa và evidence. GitHub Issue số 25 được tạo bằng tài khoản thangak18 và đính kèm cùng evidence. Toàn bài có 20 root defect tương ứng Issues số 16 đến 35.
 
 ## Mục 8 - Git workflow và kết luận (8:45-9:35)
 
@@ -213,7 +213,7 @@ Chỉ trạng thái `Merged`, author/merger `thangak18` và commit history.
 
 > Mã nguồn được làm trên branch riêng, commit theo từng feature, sau đó mở và merge Pull Request số 36 bằng tài khoản thangak18. Repository hiện có ít nhất tám commit chạm file spec theo yêu cầu.
 
-> Tôi xin tổng kết: 45 test case, chín browser run, 72 pass, 63 bug failure có chủ đích, không có unexpected failure, 20 bug có evidence và GitHub Issue. Phần quan trọng nhất tôi học được là phải xác định đúng nguyên nhân test fail; không được làm yếu assertion chỉ để report chuyển sang màu xanh. Tôi cảm ơn thầy đã theo dõi.
+> Em xin tổng kết: 45 test case, chín browser run, 72 pass, 63 bug failure có chủ đích, không có unexpected failure, 20 bug có evidence và GitHub Issue. Phần quan trọng nhất em học được là phải xác định đúng nguyên nhân test fail; không được làm yếu assertion chỉ để report chuyển sang màu xanh. Em cảm ơn thầy đã theo dõi.
 
 ---
 

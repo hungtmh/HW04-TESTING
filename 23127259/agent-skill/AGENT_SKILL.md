@@ -26,7 +26,7 @@ Khi xây bộ test ban đầu, các lỗi không nằm ở Playwright syntax mà
 
 FR-16 là minh chứng rõ nhất cho giá trị của skill. Bản nháp AI dùng selector `input[type=email]` và nút “Đăng Nhập”, trong khi DOM admin thực tế không có `type=email` và nút ghi `Login`. Sau khi login, AI cũng không mở tab Sản phẩm; selector table lại match cả preview và product table.
 
-Làm theo skill, tôi đã:
+Làm theo skill, em đã:
 
 - Probe DOM và chuyển selector sang placeholder thật.
 - Click tab Sản phẩm trước khi thao tác import.
@@ -62,4 +62,4 @@ Evidence cho buổi demo:
 
 ## 4. Video demonstration
 
-Video Agent Skill do tôi trực tiếp thao tác và thuyết minh đã được upload: [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw). YouTube metadata xác nhận video có tiêu đề **FR16 - Agent Skill**, tác giả **Thắng Nguyễn**, thời lượng 8:27. Kịch bản quay nằm trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
+Video Agent Skill do em trực tiếp thao tác và thuyết minh đã được upload: [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw). YouTube metadata xác nhận video có tiêu đề **FR16 - Agent Skill**, tác giả **Thắng Nguyễn**, thời lượng 8:27. Kịch bản quay nằm trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
