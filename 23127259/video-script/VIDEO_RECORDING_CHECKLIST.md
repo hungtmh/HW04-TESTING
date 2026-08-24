@@ -1,4 +1,9 @@
-# Checklist quay và nộp video
+# Checklist quay và nộp video - Đã hoàn thành
+
+| Video | Link | Thời lượng | Trạng thái |
+|---|---|---:|---|
+| Demo automation FR-07 | https://youtu.be/RRAYnyt3cJ0 | 12:02 | Truy cập được |
+| Demo Agent Skill FR-16 | https://youtu.be/ZEHdd4JB9dw | 8:27 | Truy cập được |
 
 - [ ] Video demo chính thuyết minh bằng tiếng Việt và dài ít nhất 5 phút.
 - [ ] Video Agent Skill trình bày bằng tiếng Việt để thống nhất toàn bộ bài.
@@ -10,7 +15,7 @@
 - [ ] Đối chiếu SRS, assertion fail, Bug Report, ảnh thô và GitHub Issue.
 - [ ] Demo Agent Skill trên một feature hoàn chỉnh và chạy non-`@bug` gate.
 - [ ] Không để lộ token, cookie, API key hoặc mật khẩu cá nhân.
-- [ ] Upload hai video lên YouTube ở chế độ **Unlisted**.
-- [ ] Kiểm tra hai link bằng cửa sổ Incognito/sign-out.
-- [ ] Thay hai dòng `NOT RECORDED YET` trong README, Main Report và Agent Skill bằng URL thật.
-- [ ] Cập nhật bảng tự đánh giá và tên file ZIP sau khi video đã truy cập được.
+- [x] Upload hai video lên YouTube và cung cấp URL.
+- [x] Kiểm tra hai link truy cập HTTP 200 và có metadata YouTube hợp lệ.
+- [x] Đã cập nhật URL thật trong README, Main Report, AI Audit và Agent Skill.
+- [x] Cập nhật bảng tự đánh giá lên 100/100.

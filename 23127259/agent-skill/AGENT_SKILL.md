@@ -6,7 +6,7 @@
 | Skill | `eshop-automation-23127259` |
 | Bản nộp | `23127259/agent-skill/SKILL.md` |
 | Bản Codex đã validate | `23127259/agent-skill/eshop-automation/SKILL.md` |
-| Video demo | **NOT RECORDED YET** |
+| Video demo | [FR16 - Agent Skill](https://youtu.be/ZEHdd4JB9dw) - 8:27 |
 | Feature demo | FR-16 - Product Import from CSV |
 
 ## 1. Skill này làm gì
@@ -60,6 +60,6 @@ Evidence cho buổi demo:
 - `evidence/report-screenshots/fr16-import-csv-*.png`
 - `evidence/bugs/BUG-16...BUG-20*.png`
 
-## 4. Phần còn thiếu
+## 4. Video demonstration
 
-Video Agent Skill phải do sinh viên tự thao tác và thuyết minh. Kịch bản quay đã nằm trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`; chỉ được thay `NOT RECORDED YET` sau khi link Unlisted thật truy cập được.
+Video Agent Skill do sinh viên thao tác và thuyết minh đã được upload: [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw). YouTube metadata xác nhận video có tiêu đề **FR16 - Agent Skill**, tác giả **Thắng Nguyễn**, thời lượng 8:27. Kịch bản quay nằm trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.

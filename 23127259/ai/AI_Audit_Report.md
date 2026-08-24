@@ -44,8 +44,4 @@ I use AI tools for planning, generating, reviewing, and repairing the Playwright
 - **Date/time:** 2026-08-24 17:10-19:22 +07:00
 - **Prompt:** "Bạn check xem thành viên Trần Mạnh Hùng làm xong chưa, rồi bạn làm theo tương tự cách trình bày như bạn Hùng nhé, làm bằng acc github thangak18 nhé."
 - **AI output:** Verified Hùng's two YouTube links and 15 Issues; restructured README/Main/Bug Report/Agent Skill like the evidence-first reference; created Issues #16-#35; opened and merged PR #36; added detailed Vietnamese video scripts through PR #38; replaced all generated evidence cards with 20 raw Playwright HTML-report screenshots without text overlays and merged that correction through PR #39 (`dbdbc3d1df431b02910a7576da11f8cc7bbf03ba`); regenerated and visually checked the PDF package.
-- **Human review:** Issue author, image accessibility, PR author/merge state, report totals, and PDF rendering were checked. The two video fields remain `NOT RECORDED YET` because authorship evidence must come from the student.
-
-## 3. Verification Evidence
-
-Verification after the final repair: the Chromium non-`@bug` gate passed 24/24; the full three-browser matrix recorded 72 passed, 63 intentional `@bug` failures, and zero unexpected failures; all nine HTML reports visibly passed the student-ID/ISO metadata check.
+- **Human review:** Verified Issue/PR authorship, raw-image accessibility, PDF rendering, the 24/24 non-`@bug` gate, the 72/63/0 test matrix, and 9/9 report metadata. YouTube metadata for the two supplied links confirmed author `Thắng Nguyễn`, HTTP accessibility, and durations of 12:02 and 8:27 before final publication.
