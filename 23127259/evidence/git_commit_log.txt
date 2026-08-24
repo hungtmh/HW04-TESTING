@@ -53,4 +53,9 @@ git log --graph --decorate --oneline --all
 
 External PR status
 ==================
-The completion branch exists locally. A real GitHub Pull Request is still pending and must be pushed/opened/merged by the student; this file does not claim that an external PR already exists.
+PR #36: https://github.com/hungtmh/HW04-TESTING/pull/36
+State: MERGED
+Author / merger: thangak18
+Merge commit: 555baf91a72a8edc23246ae96b1e297ecbec56e2
+Head: codex/23127259-hw04-completion
+Base: main
