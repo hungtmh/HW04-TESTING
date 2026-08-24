@@ -6,5 +6,19 @@
   "messages": {
     "noData": "Không có dữ liệu để import",
     "successPrefix": "Import hoàn tất:"
+  },
+  "apiPayloads": {
+    "nonAdmin": [{ "name": "Unauthorized Product", "price": 100, "category_id": 1 }],
+    "mixedRows": [
+      { "name": "Rollback Candidate", "price": 1000, "category_id": 1 },
+      { "name": "", "price": 1000, "category_id": 1 }
+    ],
+    "negativePrice": [{ "name": "Negative Price Product", "price": -500, "category_id": 1 }]
+  },
+  "expected": {
+    "templateDownload": "template_import.csv",
+    "quotedName": "Product, with comma",
+    "quotedPrice": "100000",
+    "acceptAttribute": ".csv"
   }
 }
