@@ -5,6 +5,8 @@ description: Build, repair, and audit SRS-driven Playwright suites for the EShop
 
 # EShop Automation
 
+**Owner:** Nguyễn Tấn Thắng (23127259)
+
 Create evidence that distinguishes SUT defects from automation defects.
 
 ## Workflow

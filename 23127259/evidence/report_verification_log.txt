@@ -1,3 +1,6 @@
+Student: Nguyễn Tấn Thắng (23127259)
+Verification: Playwright HTML report attribution and ISO timestamp
+
 OK fr02-login-chromium runBy=true iso=2026-08-24T10:02:17.705Z
 OK fr02-login-firefox runBy=true iso=2026-08-24T10:02:48.424Z
 OK fr02-login-webkit runBy=true iso=2026-08-24T10:03:27.361Z
