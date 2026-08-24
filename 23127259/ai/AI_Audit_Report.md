@@ -1,29 +1,46 @@
 # AI Audit Report
 
-## 1. Tuyên bố sử dụng AI
-Tôi có sử dụng AI (Gemini 3.1 Pro) cho các công việc sau:
-- Lên kế hoạch kiểm thử (Implementation Plan) cho FR-02, FR-07, FR-16.
-- Tạo Page Object Model (POM) bằng Playwright.
-- Sinh test data dạng `.csv` và `.json`.
-- Viết 38 test cases tự động (automation scripts).
-- Hỗ trợ format báo cáo Markdown.
+## 1. Declaration
 
-## 2. Chi tiết các lần tương tác AI
+I use AI tools for planning, generating, reviewing, and repairing the Playwright automation for FR-02, FR-07, and FR-16. I remain responsible for comparing every assertion with the SRS and for executing the final suite.
 
-### Tương tác 1: Khởi tạo POM và Test Data
-- **AI Tool:** Gemini 3.1 Pro
-- **Date/Time:** 2026-08-16 20:47:00
-- **Prompt:** Lên kế hoạch test cho 3 tính năng FR-02, FR-07, FR-16 dựa theo SUT README, tạo thư mục và POM.
-- **AI Output:** Đã generate ra `LoginPage.js`, `CartPage.js`, `AdminImportPage.js` và các file `fr*-cases.json`, `fr*-data.csv`.
+## 2. Interaction Log
 
-### Tương tác 2: Generate Automation Scripts
-- **AI Tool:** Gemini 3.1 Pro
-- **Date/Time:** 2026-08-16 20:48:00
-- **Prompt:** Sinh script `.spec.js` sử dụng ít nhất 3 assertion patterns, cover các bug phát hiện từ source.
-- **AI Output:** Đã sinh ra 3 file `fr02-login.spec.js`, `fr07-cart.spec.js`, `fr16-import-csv.spec.js` đáp ứng đầy đủ yêu cầu, mỗi tính năng ≥ 12 test cases.
+### Interaction 1 - Initial architecture
 
-### Tương tác 3: Cấu hình Multi-browser & HTML Reporter
-- **AI Tool:** Gemini 3.1 Pro
-- **Date/Time:** 2026-08-16 20:50:00
-- **Prompt:** Cấu hình `playwright.config.js` để có metadata "Run by: 23127259" và thêm admin webServer.
-- **AI Output:** Đã cập nhật `playwright.config.js` và `package.json` thành công.
+- **Tool:** Gemini 3.1 Pro
+- **Date/time:** 2026-08-16 20:47 +07:00
+- **Prompt:** "Lên kế hoạch test cho FR-02, FR-07, FR-16 dựa trên SUT README; tạo Page Object Model và tách test data CSV/JSON."
+- **AI output:** Proposed `LoginPage`, `CartPage`, `AdminImportPage`, JSON messages, credential/product CSV files, and Playwright specs.
+- **Human review:** The generated POM and fixtures were retained as a starting point, but the first implementation only imported some CSV files without iterating them.
+
+### Interaction 2 - Test generation
+
+- **Tool:** Gemini 3.1 Pro
+- **Date/time:** 2026-08-16 20:48 +07:00
+- **Prompt:** "Sinh ít nhất 12 test cho mỗi feature, dùng tối thiểu ba assertion pattern và giữ assertion theo SRS cho các case @bug."
+- **AI output:** Generated three specs with 38 initial tests and UI/API assertions.
+- **Human review:** Weak total assertions, hardcoded payloads, and incomplete lockout checks were identified. Several red results were automation failures rather than SUT defects.
+
+### Interaction 3 - Multi-browser configuration
+
+- **Tool:** Gemini 3.1 Pro
+- **Date/time:** 2026-08-16 20:50 +07:00
+- **Prompt:** "Cấu hình Playwright cho Chromium, Firefox, WebKit; tự khởi động backend/web/admin và hiển thị Run by: 23127259 cùng ISO timestamp."
+- **AI output:** Added three projects, three web servers, metadata, HTML/JSON reporters, and a multi-browser runner.
+- **Human review:** The runner originally ignored process failures and Firefox/WebKit were not installed, so the generated reports were not valid browser evidence.
+
+### Interaction 4 - Repository audit and repair
+
+- **Tool:** OpenAI Codex
+- **Date/time:** 2026-08-24 16:45-17:07 +07:00
+- **Prompt:** "Hãy đọc kĩ đề rồi từ đó bổ sung những cái còn thiếu và chưa làm cho tôi."
+- **AI output:** Re-read the eight-page assignment; repaired POM navigation/selectors; converted fixtures to real DDT; expanded the suite to 45 cases; separated `@bug` and unexpected failures; installed browser engines; generated nine reports; verified metadata visually; created and validated an Agent Skill; completed Markdown/PDF deliverables.
+- **Human review required:** The student must inspect the diffs and reports, record both videos with their own identity/voice, create GitHub Issues, and open/merge a real Pull Request. AI did not claim or fabricate those external artefacts.
+
+## 3. Verification Evidence
+
+- Non-bug Chromium gate: 24/24 passed.
+- Full matrix: 72 passed, 63 intentional `@bug` failures, zero unexpected failures.
+- Visible metadata verification: nine of nine HTML reports passed.
+- Agent Skill validation: `Skill is valid!` from `quick_validate.py`.

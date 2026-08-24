@@ -1,32 +1,46 @@
-# VIDEO 2: KỊCH BẢN AGENT SKILL (Thời lượng dự kiến: 2-3 phút)
+# Video 2 - Agent Skill Demonstration
 
-**Người trình bày:** Nguyễn Tấn Thắng (23127259)
-**Mục tiêu:** Thể hiện việc biết cách ứng dụng AI (Gemini) làm trợ lý ảo (Agent) phối hợp giải quyết các task phức tạp trong quá trình làm tự động hóa.
+**Target duration:** 5-7 minutes  
+**Skill:** `23127259/agent-skill/eshop-automation`
 
----
+## 0:00-0:45 - Identity and skill purpose
 
-## Phần 1: Giới thiệu Agent Skill (0:00 - 0:45)
-- **Hành động:** Mở khung chat với AI (Gemini Antigravity hoặc tương đương) bên cạnh source code.
-- **Thoại:** 
-  > "Tiếp theo, mình xin trình bày quá trình sử dụng AI dưới vai trò là một Agentic Coding Assistant. Trong project này, thay vì chỉ hỏi đáp đơn giản, mình đã sử dụng hệ thống AI Antigravity tích hợp với IDE."
-  > "AI có khả năng đọc toàn bộ thư mục SUT, phân tích tài liệu `README.md` (SRS) và mã nguồn của ứng dụng để tự hiểu context hệ thống trước khi bắt đầu code."
+Show face-cam or `whoami` and `hostname`. Introduce the reusable skill: it creates or repairs SRS-driven Playwright suites with POM, external DDT, intentional `@bug` cases, and independent browser reports.
 
-## Phần 2: Demo Khả Năng Lên Kế Hoạch & Viết Script (0:45 - 1:45)
-- **Hành động:** 
-  1. Mở file `implementation_plan.md` do AI generate.
-  2. Cuộn qua các bước giải quyết.
-  3. Mở file CSV test data và POM.
-- **Thoại:** 
-  > "Đầu tiên, mình giao cho AI phân tích 3 features FR-02, FR-07, FR-16. AI đã tự động sử dụng tool tìm kiếm file để rà soát thư mục backend và frontend. Sau đó, nó vạch ra `implementation_plan.md` cực kỳ chi tiết bao gồm những lỗi nó tìm thấy ngay cả trước khi chạy."
-  > "Khi được cấp quyền thực thi, AI tự động tạo các Page Object Model như `CartPage.js`, sau đó chia tách Test Data ra các file CSV, JSON theo chuẩn DDT (Data-Driven Testing)."
+## 0:45-1:30 - Validate the skill
 
-## Phần 3: Phối Hợp Human-in-the-Loop (1:45 - 2:30)
-- **Hành động:** Mở file `tests/fr16-import-csv.spec.js` đoạn test với RFC 4180.
-- **Thoại:** 
-  > "Trong quá trình làm việc, không phải lúc nào AI cũng đúng. Mình đã đóng vai trò duyệt code (Reviewer). Chẳng hạn ở tính năng Import CSV, ban đầu AI quên mất kiểm thử edge case về RFC4180 (dấu phẩy nằm trong chuỗi). Mình đã nhắc nhở và yêu cầu AI tạo riêng file `fr16-rfc4180-quoted.csv` để phát hiện ra lỗi split chuỗi bằng dấu phẩy thông thường trên SUT."
-  > "Quá trình hợp tác này giúp tiết kiệm 80% thời gian code, đồng thời giữ được chất lượng kiểm thử ở mức độ chuyên gia."
+Show `SKILL.md`, its trigger description, workflow, and stop conditions. Run:
 
-## Phần 4: Kết luận (2:30 - end)
-- **Hành động:** Mở qua folder report.
-- **Thoại:** 
-  > "Toàn bộ đánh giá về ưu/nhược điểm và lịch sử tương tác AI đã được lưu trữ tại file `AI_Critique.md` và `AI_Audit_Report.md`. Cảm ơn thầy và các bạn đã lắng nghe!"
+```bash
+python3 /Users/thangnhi/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
+  23127259/agent-skill/eshop-automation
+```
+
+Show the `Skill is valid!` output.
+
+## 1:30-3:30 - Invoke on a complete feature
+
+In the AI tool, invoke the skill with a scoped request such as:
+
+> Use the EShop Automation skill to audit FR-16. Verify that the spec is truly data-driven, that all non-@bug tests pass on Chromium, and that each red case maps to FR-16 or SEC-03. Do not edit the SUT.
+
+Show the agent reading SRS, fixtures, Page Object and spec. Explain the skill's key guardrail: browser errors, wrong selectors, and lost SPA state must never be reported as product bugs.
+
+## 3:30-4:45 - Demonstrate the gate
+
+Run:
+
+```bash
+npx playwright test tests/fr16-import-csv.spec.js \
+  --project=chromium --grep-invert @bug
+```
+
+Show that seven normal FR-16 cases pass. Then open one `@bug` test and explain why keeping the assertion red is correct.
+
+## 4:45-5:45 - Evidence and reuse
+
+Show the multi-browser summary and metadata screenshot. Explain how the same skill can be reused for another EShop feature by changing the SRS mapping, POM and external dataset while retaining the evidence gate.
+
+## 5:45-6:15 - Conclusion
+
+State what AI generated, what you reviewed, and which corrections you made. Add the final unlisted YouTube URL to README only after upload succeeds.

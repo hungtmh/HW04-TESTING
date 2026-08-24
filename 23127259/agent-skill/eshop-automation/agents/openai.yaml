@@ -1,0 +1,4 @@
+interface:
+  display_name: "EShop Automation"
+  short_description: "Build and maintain SRS-driven Playwright suites"
+  default_prompt: "Create or repair a data-driven, multi-browser Playwright suite for the selected EShop feature."
