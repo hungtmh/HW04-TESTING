@@ -67,7 +67,7 @@ Automation đọc kỳ vọng từ FR-02, FR-22 và so sánh với hành vi th�
 
 ![BUG-01 evidence](../evidence/bugs/BUG-01-email-login-khong-dung-type-email-va-label-sai-l.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -105,7 +105,7 @@ login_attempts tăng từ 0 lên 2 sau một request sai mật khẩu.
 
 ![BUG-02 evidence](../evidence/bugs/BUG-02-mot-lan-ang-nhap-sai-lam-bo-em-tang-2-thay-vi-1.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -143,7 +143,7 @@ Chuỗi status là 401, 401, 403 vì tài khoản đã khóa sau hai lần sai.
 
 ![BUG-03 evidence](../evidence/bugs/BUG-03-tai-khoan-bi-khoa-som-truoc-lan-ang-nhap-sai-thu.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -181,7 +181,7 @@ locked_until cách thời điểm khóa khoảng 180 giây.
 
 ![BUG-04 evidence](../evidence/bugs/BUG-04-thoi-gian-khoa-tai-khoan-la-180-giay-thay-vi-30-.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -219,7 +219,7 @@ Không có H1; heading H2 hiển thị Đăng Ký.
 
 ![BUG-05 evidence](../evidence/bugs/BUG-05-trang-login-khong-co-h1-va-hien-thi-sai-tieu-e-a.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -257,7 +257,7 @@ Automation đọc kỳ vọng từ FR-22, SEC-01 và so sánh với hành vi th�
 
 ![BUG-06 evidence](../evidence/bugs/BUG-06-o-mat-khau-login-dung-type-text-va-lam-lo-ky-tu.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -295,7 +295,7 @@ Nút submit có nhãn Sign In.
 
 ![BUG-07 evidence](../evidence/bugs/BUG-07-nut-ang-nhap-dung-tieng-anh-sign-in-thay-vi-tien.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -333,7 +333,7 @@ Banner lỗi được render sau form và nằm dưới nút submit.
 
 ![BUG-08 evidence](../evidence/bugs/BUG-08-thong-bao-loi-login-nam-duoi-nut-submit.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -371,7 +371,7 @@ response.user.password chứa nguyên văn mật khẩu Password 123.
 
 ![BUG-09 evidence](../evidence/bugs/BUG-09-api-login-tra-lai-mat-khau-plaintext-trong-respo.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -409,7 +409,7 @@ Giỏ có hai dòng độc lập, mỗi dòng quantity=1.
 
 ![BUG-10 evidence](../evidence/bugs/BUG-10-them-cung-san-pham-hai-lan-tao-hai-dong-thay-vi-.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -447,7 +447,7 @@ Không có dialog và item bị xóa ngay lập tức.
 
 ![BUG-11 evidence](../evidence/bugs/BUG-11-xoa-san-pham-khoi-gio-khong-co-dialog-xac-nhan.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -485,7 +485,7 @@ UI hiển thị Tổng tạm tính.
 
 ![BUG-12 evidence](../evidence/bugs/BUG-12-nhan-tong-tien-hien-thi-tong-tam-tinh-thay-vi-to.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -523,7 +523,7 @@ Mỗi dòng có hai nút + và - để chỉnh quantity.
 
 ![BUG-13 evidence](../evidence/bugs/BUG-13-gio-hang-thieu-nut-tang-giam-so-luong.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -561,7 +561,7 @@ Chỉ có text và link, không có img hoặc svg.
 
 ![BUG-14 evidence](../evidence/bugs/BUG-14-empty-state-cua-gio-hang-khong-co-icon-hoac-hinh.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -599,7 +599,7 @@ Link hiển thị ← Mua tiếp.
 
 ![BUG-15 evidence](../evidence/bugs/BUG-15-link-tiep-tuc-mua-sam-o-gio-co-nhan-sai.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -637,7 +637,7 @@ Token customer import sản phẩm thành công với status 200.
 
 ![BUG-16 evidence](../evidence/bugs/BUG-16-user-thuong-co-the-goi-api-admin-import-san-pham.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -675,7 +675,7 @@ Dòng hợp lệ vẫn được insert, số sản phẩm tăng 1.
 
 ![BUG-17 evidence](../evidence/bugs/BUG-17-import-csv-khong-rollback-toan-bo-khi-mot-dong-l.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -713,7 +713,7 @@ Sản phẩm giá -500 được insert với status 200.
 
 ![BUG-18 evidence](../evidence/bugs/BUG-18-import-chap-nhan-san-pham-co-gia-am.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -751,7 +751,7 @@ Frontend split(','); cell đầu thành "Product và các cột bị lệch.
 
 ![BUG-19 evidence](../evidence/bugs/BUG-19-csv-parser-khong-ho-tro-dau-phay-trong-truong-uo.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
@@ -789,7 +789,7 @@ Thuộc tính accept không tồn tại.
 
 ![BUG-20 evidence](../evidence/bugs/BUG-20-file-picker-import-khong-gioi-han-uoi-csv.png)
 
-Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.
+Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.
 
 ### Đề xuất sửa
 
