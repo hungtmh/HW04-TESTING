@@ -4,7 +4,7 @@
 
 ## 1. Declaration
 
-I use AI tools for planning, generating, reviewing, and repairing the Playwright automation for FR-02, FR-07, and FR-16. I remain responsible for comparing every assertion with the SRS and for executing the final suite.
+Em sử dụng các công cụ AI để lập kế hoạch, sinh mã, review và sửa bộ Playwright automation cho FR-02, FR-07 và FR-16. Em chịu trách nhiệm đối chiếu từng assertion với SRS và thực thi bộ test cuối.
 
 ## 2. Interaction Log
 
@@ -38,7 +38,7 @@ I use AI tools for planning, generating, reviewing, and repairing the Playwright
 - **Date/time:** 2026-08-24 16:45-17:07 +07:00
 - **Prompt:** "Hãy đọc kĩ đề rồi từ đó bổ sung những cái còn thiếu và chưa làm cho tôi."
 - **AI output:** Re-read the eight-page assignment; repaired POM navigation/selectors; converted fixtures to real DDT; expanded the suite to 45 cases; separated `@bug` and unexpected failures; installed browser engines; generated nine reports; verified metadata visually; created and validated an Agent Skill; completed Markdown/PDF deliverables.
-- **Human review required:** At that stage, I still had to inspect the diffs/reports and record both videos with my own identity and voice. I subsequently completed the videos, while GitHub Issues and Pull Requests were created through my authenticated `thangak18` account; AI did not fabricate authorship evidence.
+- **Human review required:** Ở giai đoạn đó, em vẫn phải tự kiểm tra diff/report và quay hai video bằng danh tính, giọng nói của em. Sau đó em đã hoàn thành video; GitHub Issues và Pull Requests được tạo bằng tài khoản `thangak18` đã xác thực. AI không tạo giả evidence tác giả.
 
 ### Interaction 5 - Match the completed teammate presentation and publish evidence
 
