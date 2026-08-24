@@ -7,6 +7,7 @@
 | SUT | EShop (`eshop-sut`): frontend-web, frontend-admin, backend API |
 | GitHub repository | https://github.com/hungtmh/HW04-TESTING |
 | Nhánh bài làm | `codex/23127259-hw04-completion` |
+| Pull Request | [#36 - MERGED](https://github.com/hungtmh/HW04-TESTING/pull/36), author/merger `thangak18` |
 | GitHub Issues | 20 bug, xem bảng mục 2 |
 | Video demo (Task 2) | **NOT RECORDED YET** |
 | Video Agent Skill | **NOT RECORDED YET** |

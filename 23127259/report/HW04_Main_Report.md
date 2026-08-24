@@ -7,6 +7,7 @@
 | **SUT** | EShop: frontend-web `:5173`, frontend-admin `:5174`, backend API `:3000` |
 | **Repository** | https://github.com/hungtmh/HW04-TESTING |
 | **Nhánh** | `codex/23127259-hw04-completion` |
+| **Pull Request** | [#36 - MERGED](https://github.com/hungtmh/HW04-TESTING/pull/36), author/merger `thangak18` |
 | **Công cụ** | Playwright Test + HTML/JSON Reporter, Node.js |
 | **Trình duyệt** | Chromium / Firefox / WebKit - 3 engine độc lập |
 | **Video demo** | NOT RECORDED YET |

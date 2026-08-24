@@ -36,7 +36,15 @@ I use AI tools for planning, generating, reviewing, and repairing the Playwright
 - **Date/time:** 2026-08-24 16:45-17:07 +07:00
 - **Prompt:** "Hãy đọc kĩ đề rồi từ đó bổ sung những cái còn thiếu và chưa làm cho tôi."
 - **AI output:** Re-read the eight-page assignment; repaired POM navigation/selectors; converted fixtures to real DDT; expanded the suite to 45 cases; separated `@bug` and unexpected failures; installed browser engines; generated nine reports; verified metadata visually; created and validated an Agent Skill; completed Markdown/PDF deliverables.
-- **Human review required:** The student must inspect the diffs and reports, record both videos with their own identity/voice, create GitHub Issues, and open/merge a real Pull Request. AI did not claim or fabricate those external artefacts.
+- **Human review required:** The student must inspect the diffs/reports and record both videos with their own identity/voice. GitHub Issues and the Pull Request were subsequently created through the authenticated `thangak18` account; AI did not fabricate video evidence.
+
+### Interaction 5 - Match the completed teammate presentation and publish evidence
+
+- **Tool:** OpenAI Codex + GitHub CLI authenticated as `thangak18`
+- **Date/time:** 2026-08-24 17:10-17:33 +07:00
+- **Prompt:** "Bạn check xem thành viên Trần Mạnh Hùng làm xong chưa, rồi bạn làm theo tương tự cách trình bày như bạn Hùng nhé, làm bằng acc github thangak18 nhé."
+- **AI output:** Verified Hùng's two YouTube links and 15 Issues; restructured README/Main/Bug Report/Agent Skill like the evidence-first reference; generated 20 defect evidence cards; created Issues #16-#35; opened and merged PR #36 with merge commit `555baf91a72a8edc23246ae96b1e297ecbec56e2`; regenerated the PDF package.
+- **Human review:** Issue author, image accessibility, PR author/merge state, report totals, and PDF rendering were checked. The two video fields remain `NOT RECORDED YET` because authorship evidence must come from the student.
 
 ## 3. Verification Evidence
 
