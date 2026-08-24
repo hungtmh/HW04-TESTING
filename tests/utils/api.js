@@ -38,6 +38,14 @@ async function loginAdmin(request, { email, password }) {
   return (await auth.json()).token;
 }
 
+async function listAdminUsers(request, token) {
+  const res = await request.get(`${API_BASE_URL}/api/admin/users`, {
+    headers: authHeaders(token),
+  });
+  expect(res.ok(), `admin users request must succeed (status ${res.status()})`).toBeTruthy();
+  return res.json();
+}
+
 /**
  * Builds the auth header, or no header at all when no token is supplied.
  * Sending the literal string "Bearer undefined" would make the server answer
@@ -150,6 +158,7 @@ async function resetLoginAttempts(request, email, password) {
 module.exports = {
   createCustomer,
   loginAdmin,
+  listAdminUsers,
   authHeaders,
   applyCoupon,
   recordCouponUsage,

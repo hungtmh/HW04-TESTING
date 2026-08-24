@@ -1,22 +1,14 @@
-const { expect } = require('@playwright/test');
-
 class LoginPage {
   constructor(page) {
     this.page = page;
-    // Theo phân tích SUT: label là "Username", type="text"
-    this.emailInput = page.locator('text=Username').locator('..').locator('input');
-    
-    // Theo phân tích SUT: label là "Mật khẩu", type="text" (bug)
-    this.passwordInput = page.locator('text=Mật khẩu').locator('..').locator('input');
-    
-    // Nút submit nhãn "Sign In"
-    this.submitButton = page.locator('button[type="submit"]');
-    
-    // Thông báo lỗi
+    this.form = page.locator('form');
+    this.emailInput = this.form.locator('input').nth(0);
+    this.passwordInput = this.form.locator('input').nth(1);
+    this.emailLabel = this.form.locator('label').nth(0);
+    this.passwordLabel = this.form.locator('label').nth(1);
+    this.submitButton = this.form.locator('button[type="submit"]');
     this.errorMessage = page.locator('.bg-red-100.text-red-700');
-    
-    // Heading trang
-    this.heading = page.locator('h2');
+    this.heading = page.locator('h1, h2').first();
   }
 
   async goto() {
@@ -31,6 +23,12 @@ class LoginPage {
       await this.passwordInput.fill(password);
     }
     await this.submitButton.click();
+  }
+
+  async isErrorAboveSubmit() {
+    const errorBox = await this.errorMessage.boundingBox();
+    const submitBox = await this.submitButton.boundingBox();
+    return Boolean(errorBox && submitBox && errorBox.y < submitBox.y);
   }
 }
 
