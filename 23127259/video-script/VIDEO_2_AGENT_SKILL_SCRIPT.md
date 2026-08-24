@@ -93,7 +93,7 @@ pwd
 
 ### Lời thoại
 
-> Xin chào thầy cô. Em là Nguyễn Tấn Thắng, mã số sinh viên 23127259. Đây là video thứ hai của bài HW04, trình bày Agent Skill `eshop-automation-23127259`. Skill này đóng gói quy trình tạo và kiểm tra automation theo SRS, POM, data-driven và multi-browser. Em sẽ áp dụng skill trên một feature hoàn chỉnh là FR-16 Product Import from CSV.
+> Xin chào thầy. Tôi là sinh viên Nguyễn Tấn Thắng, mã số sinh viên 23127259. Đây là video thứ hai của bài HW04, trình bày Agent Skill `eshop-automation-23127259`. Skill này đóng gói quy trình tạo và kiểm tra automation theo SRS, POM, data-driven và multi-browser. Tôi sẽ áp dụng skill trên một feature hoàn chỉnh là FR-16 Product Import from CSV.
 
 ## Mục 2 - Giới thiệu cấu trúc và mục tiêu của skill (0:45-2:00)
 
@@ -119,7 +119,7 @@ Chạy lệnh validator đã chuẩn bị.
 
 ### Lời thoại
 
-> Đây là validator của Skill Creator. Kết quả Skill is valid xác nhận frontmatter, tên skill và cấu trúc không còn placeholder chưa hoàn thiện. Validator không thay thế việc chạy test, nên tiếp theo em sẽ dùng skill để audit FR-16 thực tế.
+> Đây là validator của Skill Creator. Kết quả Skill is valid xác nhận frontmatter, tên skill và cấu trúc không còn placeholder chưa hoàn thiện. Validator không thay thế việc chạy test, nên tiếp theo tôi sẽ dùng skill để audit FR-16 thực tế.
 
 ## Mục 4 - Gọi skill trong AI tool (2:30-3:35)
 
@@ -129,7 +129,7 @@ Dán prompt chuẩn bị ở phần A2 và gửi. Khi AI đọc file, chỉ vào
 
 ### Lời thoại trong lúc AI làm việc
 
-> Prompt yêu cầu AI đọc FR-16, FR-12 và SEC-03 trước; kiểm tra POM, DDT, non-bug gate, ba summary và metadata. Em giới hạn rõ không được sửa SUT và không được làm yếu assertion. Đây là cách dùng AI có kiểm soát thay vì chỉ yêu cầu chung chung là viết test cho feature này.
+> Prompt yêu cầu AI đọc FR-16, FR-12 và SEC-03 trước; kiểm tra POM, DDT, non-bug gate, ba summary và metadata. Tôi giới hạn rõ không được sửa SUT và không được làm yếu assertion. Đây là cách dùng AI có kiểm soát thay vì chỉ yêu cầu chung chung là viết test cho feature này.
 
 Khi AI trả audit, chỉ vào kết luận và evidence paths.
 
@@ -150,7 +150,7 @@ Mở JSON payload và spec TC06, TC09, TC10.
 
 > Bản AI ban đầu sai selector vì giả định admin login giống một form chuẩn: dùng input type email và nút Đăng Nhập. DOM thật lại không có type email và nút ghi Login. AI cũng quên mở tab Sản phẩm và dùng selector table quá rộng, làm preview nhận cả product table.
 
-> Theo skill, em probe DOM rồi sửa POM theo placeholder thật, click đúng tab và scope mọi locator trong import panel. Các payload non-admin, mixed rows và negative price được đưa sang JSON. Spec chỉ tham chiếu data ngoài, không hardcode mảng payload.
+> Theo skill, tôi probe DOM rồi sửa POM theo placeholder thật, click đúng tab và scope mọi locator trong import panel. Các payload non-admin, mixed rows và negative price được đưa sang JSON. Spec chỉ tham chiếu data ngoài, không hardcode mảng payload.
 
 ## Mục 6 - Chạy non-bug gate (4:55-5:40)
 
@@ -163,7 +163,7 @@ npx playwright test tests/fr16-import-csv.spec.js \
 
 ### Lời thoại
 
-> Đây là cổng quan trọng nhất của skill. Lệnh loại các case @bug và chỉ chạy case bình thường. Kết quả phải là bảy trên bảy pass. Nếu có một case đỏ ở đây thì em phải sửa test harness trước, chưa được tạo Bug Report.
+> Đây là cổng quan trọng nhất của skill. Lệnh loại các case @bug và chỉ chạy case bình thường. Kết quả phải là bảy trên bảy pass. Nếu có một case đỏ ở đây thì tôi phải sửa test harness trước, chưa được tạo Bug Report.
 
 Khi hiện `7 passed`, phóng to kết quả.
 
@@ -209,7 +209,7 @@ Quay lại `SKILL.md`, chỉ deliverables checklist và `AGENT_SKILL.md`.
 
 ### Lời thoại
 
-> Skill có thể tái sử dụng cho feature khác bằng cách đổi mapping SRS, Page Object và dataset. Quy tắc non-bug gate, ba browser, phân loại root cause và evidence vẫn giữ nguyên. Qua bài này em học được rằng AI giúp tăng tốc nhưng con người phải kiểm tra DOM thật, nguyên nhân failure và tính đúng của assertion. Em cảm ơn thầy cô đã theo dõi phần Agent Skill.
+> Skill có thể tái sử dụng cho feature khác bằng cách đổi mapping SRS, Page Object và dataset. Quy tắc non-bug gate, ba browser, phân loại root cause và evidence vẫn giữ nguyên. Qua bài này tôi học được rằng AI giúp tăng tốc nhưng con người phải kiểm tra DOM thật, nguyên nhân failure và tính đúng của assertion. Tôi cảm ơn thầy đã theo dõi phần Agent Skill.
 
 ---
 
