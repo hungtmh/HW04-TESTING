@@ -38,7 +38,7 @@ I use AI tools for planning, generating, reviewing, and repairing the Playwright
 - **Date/time:** 2026-08-24 16:45-17:07 +07:00
 - **Prompt:** "Hãy đọc kĩ đề rồi từ đó bổ sung những cái còn thiếu và chưa làm cho tôi."
 - **AI output:** Re-read the eight-page assignment; repaired POM navigation/selectors; converted fixtures to real DDT; expanded the suite to 45 cases; separated `@bug` and unexpected failures; installed browser engines; generated nine reports; verified metadata visually; created and validated an Agent Skill; completed Markdown/PDF deliverables.
-- **Human review required:** The student must inspect the diffs/reports and record both videos with their own identity/voice. GitHub Issues and the Pull Request were subsequently created through the authenticated `thangak18` account; AI did not fabricate video evidence.
+- **Human review required:** At that stage, I still had to inspect the diffs/reports and record both videos with my own identity and voice. I subsequently completed the videos, while GitHub Issues and Pull Requests were created through my authenticated `thangak18` account; AI did not fabricate authorship evidence.
 
 ### Interaction 5 - Match the completed teammate presentation and publish evidence
 
