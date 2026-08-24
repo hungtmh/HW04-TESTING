@@ -2,5 +2,10 @@
   "messages": {
     "emptyState": "Giỏ hàng của bạn đang trống",
     "loginRequired": "Bạn cần đăng nhập để thanh toán!"
+  },
+  "expected": {
+    "totalLabel": "Tổng cộng",
+    "continueShopping": "Tiếp tục mua sắm",
+    "quantityButtonCount": 2
   }
 }

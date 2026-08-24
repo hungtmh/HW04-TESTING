@@ -3,7 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 /**
  * HW04 - Automation Testing | EShop SUT
- * Student: 23127195
+ * Student: 23127259
  *
  * Anti-AI-cheat requirement: every HTML report must visibly show
  * "Run by: {StudentID}" together with an ISO timestamp. We inject both
@@ -33,7 +33,7 @@ module.exports = defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 0,
   timeout: 45_000,
-  expect: { timeout: 10_000 },
+  expect: { timeout: 5_000 },
 
   metadata: {
     'Run by': STUDENT_ID,
@@ -49,7 +49,7 @@ module.exports = defineConfig({
     ['html', {
       open: 'never',
       outputFolder: REPORT_DIR,
-      title: `HW04 EShop Automation - FR-01 | Run by: ${STUDENT_ID} | ${RUN_STARTED_AT}`,
+      title: `HW04 EShop Automation | Run by: ${STUDENT_ID} | ${RUN_STARTED_AT}`,
     }],
     ['json', { outputFile: `${REPORT_DIR}/results.json` }],
   ],

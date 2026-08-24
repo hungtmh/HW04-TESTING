@@ -1,0 +1,10 @@
+OK fr02-login-chromium runBy=true iso=2026-08-24T10:02:17.705Z
+OK fr02-login-firefox runBy=true iso=2026-08-24T10:02:48.424Z
+OK fr02-login-webkit runBy=true iso=2026-08-24T10:03:27.361Z
+OK fr07-cart-chromium runBy=true iso=2026-08-24T10:04:01.874Z
+OK fr07-cart-firefox runBy=true iso=2026-08-24T10:04:39.799Z
+OK fr07-cart-webkit runBy=true iso=2026-08-24T10:05:26.328Z
+OK fr16-import-csv-chromium runBy=true iso=2026-08-24T10:06:07.186Z
+OK fr16-import-csv-firefox runBy=true iso=2026-08-24T10:06:25.369Z
+OK fr16-import-csv-webkit runBy=true iso=2026-08-24T10:06:47.120Z
+All reports display the required attribution.

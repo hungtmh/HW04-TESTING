@@ -8,7 +8,7 @@
  *
  * Usage:
  *   node scripts/md-to-pdf.mjs <file.md> [more.md ...]
- *   node scripts/md-to-pdf.mjs --all        # every .md under 23127195/
+ *   STUDENT_ID=23127259 node scripts/md-to-pdf.mjs --all
  */
 import { chromium } from '@playwright/test';
 import { marked } from 'marked';
@@ -51,6 +51,9 @@ const CSS = `
   h2 + p, h2 + ul, h2 + table, h3 + p, h3 + ul, h3 + blockquote { page-break-before: avoid; }
 `;
 
+const STUDENT_ID = process.env.STUDENT_ID || '23127259';
+const SUBMISSION_DIR = process.env.SUBMISSION_DIR || STUDENT_ID;
+
 function collectMarkdown(dir) {
   const out = [];
   for (const entry of readdirSync(dir)) {
@@ -62,7 +65,7 @@ function collectMarkdown(dir) {
 }
 
 const args = process.argv.slice(2);
-const files = args.includes('--all') ? collectMarkdown('23127195') : args;
+const files = args.includes('--all') ? collectMarkdown(SUBMISSION_DIR) : args;
 
 if (!files.length) {
   console.error('Usage: node scripts/md-to-pdf.mjs <file.md> [...] | --all');
@@ -95,7 +98,7 @@ for (const file of files) {
     footerTemplate:
       '<div style="width:100%;font-size:8pt;color:#718096;padding:0 14mm;' +
       'display:flex;justify-content:space-between;">' +
-      '<span>23127195 — HW04 Automation Testing</span>' +
+      `<span>${STUDENT_ID} - HW04 Automation Testing</span>` +
       '<span class="pageNumber"></span>/<span class="totalPages"></span></div>',
     margin: { top: '16mm', bottom: '16mm', left: '14mm', right: '14mm' },
   });

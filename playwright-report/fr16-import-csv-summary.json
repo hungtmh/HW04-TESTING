@@ -1,0 +1,43 @@
+{
+  "feature": "fr16-import-csv",
+  "spec": "tests/fr16-import-csv.spec.js",
+  "runBy": "23127259",
+  "executedAtISO": "2026-08-24T10:07:05.940Z",
+  "browserRuns": 3,
+  "perBrowser": [
+    {
+      "browser": "chromium",
+      "reportDir": "playwright-report/fr16-import-csv-chromium",
+      "passed": 7,
+      "bugFailures": 5,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 12
+    },
+    {
+      "browser": "firefox",
+      "reportDir": "playwright-report/fr16-import-csv-firefox",
+      "passed": 7,
+      "bugFailures": 5,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 12
+    },
+    {
+      "browser": "webkit",
+      "reportDir": "playwright-report/fr16-import-csv-webkit",
+      "passed": 7,
+      "bugFailures": 5,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 12
+    }
+  ],
+  "totals": {
+    "passed": 21,
+    "bugFailures": 15,
+    "unexpectedFailures": 0,
+    "skipped": 0,
+    "total": 36
+  }
+}

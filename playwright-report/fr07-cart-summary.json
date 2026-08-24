@@ -1,0 +1,43 @@
+{
+  "feature": "fr07-cart",
+  "spec": "tests/fr07-cart.spec.js",
+  "runBy": "23127259",
+  "executedAtISO": "2026-08-24T10:06:06.412Z",
+  "browserRuns": 3,
+  "perBrowser": [
+    {
+      "browser": "chromium",
+      "reportDir": "playwright-report/fr07-cart-chromium",
+      "passed": 11,
+      "bugFailures": 6,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 17
+    },
+    {
+      "browser": "firefox",
+      "reportDir": "playwright-report/fr07-cart-firefox",
+      "passed": 11,
+      "bugFailures": 6,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 17
+    },
+    {
+      "browser": "webkit",
+      "reportDir": "playwright-report/fr07-cart-webkit",
+      "passed": 11,
+      "bugFailures": 6,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 17
+    }
+  ],
+  "totals": {
+    "passed": 33,
+    "bugFailures": 18,
+    "unexpectedFailures": 0,
+    "skipped": 0,
+    "total": 51
+  }
+}

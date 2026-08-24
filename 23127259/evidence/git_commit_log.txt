@@ -1,5 +1,35 @@
-6653078 Merge branch 'Thang' into main
-c7011d0 docs: finalize reporting and documentation for 23127259
+HW04 Git Commit Evidence - Student 23127259
+Generated: 2026-08-24
+Repository: https://github.com/hungtmh/HW04-TESTING
+Working branch: codex/23127259-hw04-completion
+
+Meaningful completion commits
+=============================
+cfbab3e test(fr02): repair lockout coverage and external DDT
+  - tests/fr02-login.spec.js
+  - tests/pages/LoginPage.js
+  - tests/data/fr02-login-cases.json
+  - tests/data/fr02-login-credentials.csv
+
+7e7ea61 test(fr07): preserve SPA cart state and assert exact totals
+  - tests/fr07-cart.spec.js
+  - tests/pages/CartPage.js
+  - tests/data/fr07-cart-cases.json
+  - tests/data/fr07-cart-products.csv
+
+d98b4e3 test(fr16): fix admin import flow and externalize payloads
+  - tests/fr16-import-csv.spec.js
+  - tests/pages/AdminImportPage.js
+  - tests/data/fr16-import-cases.json
+
+a0506a1 chore(test): verify attributed multi-browser reports
+  - playwright.config.js
+  - scripts/run-multibrowser.mjs
+  - scripts/verify-report-banner.mjs
+  - package.json
+
+Earlier commits touching the selected spec files
+================================================
 6cc435a Add bug tags to FR-16 import spec (Commit 9/8)
 b0f36c1 Update FR-16 import spec scenarios (Commit 8/8)
 3309f2c Add FR-16 import CSV spec (Commit 7/8)
@@ -9,32 +39,18 @@ a8fd570 Add edge cases to FR-07 cart spec (Commit 6/8)
 e92d385 Add negative cases to FR-02 login spec (Commit 3/8)
 a2d9402 Update FR-02 login spec test data (Commit 2/8)
 45fe997 Add FR-02 login spec (Commit 1/8)
+
+Branch and merge evidence already in repository
+===============================================
+6653078 Merge branch 'Thang' into main
+c7011d0 docs: finalize reporting and documentation for 23127259
 c2f7971 Setup configuration and test data for HW04
-3de2230 docs: refresh git commit log for the final submission
-439da11 docs: finalize submission for grading
-abfb8a3 test: regenerate multi-browser HTML reports and add FR-05 evidence capture
-d1f6ea0 test(fr14): wait for the created row to render before reading the table
-16f751b test(fr14): stamp run provenance into every test result
-662ad31 test(fr09): validate a missing coupon code at the API (TC-19)
-f0f4795 test(fr01): stamp run provenance into every test result
-4cc816a test(fr05): add data-driven product-search suite for the Agent Skill demo
-0a8dedd docs: expand the video scripts into full read-aloud narration
-3971d4a docs: shorten the video scripts and add a Markdown-to-PDF converter
-787daff docs: add narration scripts for both demo videos
-53e20a6 docs: refresh git commit log after all three features
-94898dc feat(skill): add reusable eshop-automation Agent Skill
-c819a76 chore(sut): reset seeded database after the full test matrix
-cb11c7e docs(23127195): extend report to all three features
-1e22622 test: add nine multi-browser HTML reports and bug evidence
-c19eb77 test(fr14): add 17 data-driven category management test cases
-7272c8a test(fr09): add 18 data-driven coupon test cases
-79fee15 docs: add git commit log and ignore transient SQLite journal
-94ea79c docs(23127195): add HW04 submission folder for FR-01
-3380ee0 test(fr01): add multi-browser HTML reports for the registration suite
-e81b4f5 chore(test): add bug evidence capture script
-0ecb2f7 chore(test): add multi-browser runner and report attribution verifier
-234db10 test(fr01): add 27 data-driven registration test cases
-ce0449d test(fr01): add RegisterPage page object
-33488ec test(fr01): add external test data for account registration
-8b4f386 chore(test): scaffold Playwright suite for HW04
-756fa65 chore: import EShop SUT source into HW04 repo
+
+Verification commands
+=====================
+git log --all --oneline -- tests/fr02-login.spec.js tests/fr07-cart.spec.js tests/fr16-import-csv.spec.js
+git log --graph --decorate --oneline --all
+
+External PR status
+==================
+The completion branch exists locally. A real GitHub Pull Request is still pending and must be pushed/opened/merged by the student; this file does not claim that an external PR already exists.

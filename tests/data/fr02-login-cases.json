@@ -6,5 +6,13 @@
   "messages": {
     "invalidCredentials": "Đăng nhập thất bại. Vui lòng kiểm tra lại.",
     "lockedAccount": "Tài khoản đã bị khóa. Vui lòng thử lại sau."
+  },
+  "wrongPassword": "WrongPassword123!",
+  "expected": {
+    "loginHeading": "Đăng Nhập",
+    "emailLabel": "Email",
+    "submitLabel": "Đăng nhập",
+    "lockThreshold": 3,
+    "lockDurationSeconds": 30
   }
 }

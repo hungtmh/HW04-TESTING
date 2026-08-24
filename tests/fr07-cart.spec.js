@@ -2,11 +2,12 @@ const { test, expect } = require('@playwright/test');
 const { CartPage } = require('./pages/CartPage');
 const { LoginPage } = require('./pages/LoginPage');
 const { readCsv, readJson } = require('./utils/csv');
-const { API_BASE_URL, stampRun } = require('./utils/env');
-const { createCustomer, addToCart } = require('./utils/api');
+const { stampRun } = require('./utils/env');
+const { createCustomer } = require('./utils/api');
 
-const csvProducts = readCsv('fr07-cart-products.csv');
+const products = readCsv('fr07-cart-products.csv');
 const data = readJson('fr07-cart-cases.json');
+const parseMoney = text => Number(text.replace(/[^0-9]/g, ''));
 
 test.describe('FR-07: Shopping Cart', () => {
   let customer;
@@ -16,240 +17,139 @@ test.describe('FR-07: Shopping Cart', () => {
     customer = await createCustomer(request);
   });
 
-  // TC01: Empty cart state
-  test('TC01: Empty cart shows empty state and link to shop', async ({ page }) => {
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    // [P1] Web-first element/text
-    await expect(cartPage.emptyStateHeading).toHaveText(data.messages.emptyState);
-    await expect(cartPage.continueShoppingLink).toBeVisible();
+  test('TC01: Empty cart shows a friendly message and shopping link', async ({ page }) => {
+    const cart = new CartPage(page);
+    await cart.goto();
+    await expect(cart.emptyStateHeading).toHaveText(data.messages.emptyState);
+    await expect(cart.continueShoppingLink).toBeVisible();
   });
 
-  // TC02: Empty cart continue shopping redirects to home
-  test('TC02: Empty cart continue shopping redirects to home', async ({ page }) => {
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    await cartPage.continueShoppingLink.click();
-    
-    // [P2] Navigation assertion
+  test('TC02: Empty-cart shopping link returns to home', async ({ page }) => {
+    const cart = new CartPage(page);
+    await cart.goto();
+    await cart.continueShoppingLink.click();
     await expect(page).toHaveURL('/');
   });
 
-  // TC03: Single product shows correctly
-  test('TC03: Single product shows correctly in cart', async ({ page }) => {
-    // Navigate and add product via UI (simulate adding a product, though we can't easily on home page without clicking)
-    // Actually it's easier to inject state via API or LocalStorage. But Cart is in React context only on frontend.
-    // We can add via UI: Go to home, click 'Thêm vào giỏ'
+  for (const [index, product] of products.entries()) {
+    test(`TC${String(index + 3).padStart(2, '0')}: CSV product ${product.productName} has correct quantity and subtotal`, async ({ page }) => {
+      const cart = new CartPage(page);
+      await page.goto('/');
+      await cart.addProductByName(product.productName, Number(product.quantity));
+      await cart.openFromHeader();
+      await expect(cart.tableRows).toHaveCount(1);
+      const row = cart.getProductRow(0);
+      await expect(row.name).toContainText(product.productName);
+      await expect(row.quantity).toHaveText(product.quantity);
+      expect(parseMoney(await row.subtotal.innerText())).toBe(Number(product.expectedSubtotal));
+    });
+  }
+
+  test('TC07: Multiple products produce the exact total', async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    // Add the first product we see on home page
-    const addBtn = page.locator('button', { hasText: 'Thêm vào giỏ' }).first();
-    await addBtn.click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    // [P3] Element-count assertion
-    await expect(cartPage.tableRows).toHaveCount(1);
-    
-    const row = await cartPage.getProductRow(0);
-    await expect(row.quantity).toHaveText('1');
+    await cart.addProductByName(products[0].productName, 1);
+    await cart.addProductByName(products[1].productName, 1);
+    await cart.openFromHeader();
+    const expectedTotal = Number(products[0].price) + Number(products[1].price);
+    expect(parseMoney(await cart.totalAmount.innerText())).toBe(expectedTotal);
   });
 
-  // TC04: Multiple products sum total correctly
-  test('TC04: Multiple products sum total correctly', async ({ page }) => {
+  test('TC08: Removing one item updates the cart', async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0); // Ensure loaded
-    await addBtns.nth(0).click();
-    await addBtns.nth(1).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    await expect(cartPage.tableRows).toHaveCount(2);
-    
-    // Extract totals
-    const totalText = await cartPage.totalAmount.innerText();
-    expect(totalText).toContain('₫'); // Just check format
-  });
-
-  // TC05: Remove product from cart updates UI
-  test('TC05: Remove product from cart updates UI', async ({ page }) => {
-    await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    await addBtns.nth(1).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    await expect(cartPage.tableRows).toHaveCount(2);
-    
-    const row = await cartPage.getProductRow(0);
-    
-    // SUT BUG: It deletes without confirm, but here we just test the delete action works
-    page.on('dialog', dialog => dialog.accept()); // In case the bug is fixed
-    await row.removeBtn.click();
-    
-    await expect(cartPage.tableRows).toHaveCount(1);
-  });
-
-  // TC06: Remove all products shows empty state
-  test('TC06: Remove all products shows empty state', async ({ page }) => {
-    await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    await expect(cartPage.tableRows).toHaveCount(1);
-    
-    const row = await cartPage.getProductRow(0);
+    await cart.addFirstProducts(2);
+    await cart.openFromHeader();
+    await expect(cart.tableRows).toHaveCount(2);
     page.on('dialog', dialog => dialog.accept());
-    await row.removeBtn.click();
-    
-    await expect(cartPage.emptyStateHeading).toHaveText(data.messages.emptyState);
+    await cart.getProductRow(0).removeBtn.click();
+    await expect(cart.tableRows).toHaveCount(1);
   });
 
-  // TC07: Unauthenticated checkout redirects to login
-  test('TC07: Unauthenticated checkout redirects to login', async ({ page }) => {
+  test('TC09: Removing the last item returns to empty state', async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    page.on('dialog', dialog => {
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    page.on('dialog', dialog => dialog.accept());
+    await cart.getProductRow(0).removeBtn.click();
+    await expect(cart.emptyStateHeading).toHaveText(data.messages.emptyState);
+  });
+
+  test('TC10: Unauthenticated checkout shows warning and redirects to login', async ({ page }) => {
+    const cart = new CartPage(page);
+    await page.goto('/');
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    page.once('dialog', async dialog => {
       expect(dialog.message()).toBe(data.messages.loginRequired);
-      dialog.accept();
+      await dialog.accept();
     });
-    
-    await cartPage.checkoutButton.click();
-    await expect(page).toHaveURL(/.*login/);
+    await cart.checkoutButton.click();
+    await expect(page).toHaveURL(/\/login$/);
   });
 
-  // TC08: Authenticated checkout proceeds to checkout page
-  test('TC08: Authenticated checkout proceeds to checkout page', async ({ page }) => {
-    // Login first
-    const loginPage = new LoginPage(page);
-    await loginPage.goto();
-    await loginPage.login(customer.email, customer.password);
-    
-    // Add product
+  test('TC11: Authenticated checkout opens the checkout page', async ({ page }) => {
+    const login = new LoginPage(page);
+    await login.goto();
+    await login.login(customer.email, customer.password);
+    const cart = new CartPage(page);
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    await cart.checkoutButton.click();
+    await expect(page).toHaveURL(/\/checkout$/);
+  });
+
+  test('TC12: @bug Re-adding a product increases quantity without a duplicate row', { tag: '@bug' }, async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    // Go to cart & checkout
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    await cartPage.checkoutButton.click();
-    
-    await expect(page).toHaveURL(/.*checkout/);
+    await cart.addProductByName(products[0].productName, 1);
+    await cart.addProductByName(products[0].productName, 1);
+    await cart.openFromHeader();
+    await expect(cart.tableRows).toHaveCount(1);
+    await expect(cart.getProductRow(0).quantity).toHaveText('2');
   });
 
-  // TC09: @bug Adding same product duplicates row instead of increasing quantity
-  test('TC09: @bug Adding same product should increase quantity, not duplicate row', async ({ page }) => {
+  test('TC13: @bug Removing an item requires confirmation', { tag: '@bug' }, async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    
-    // Click same product twice
-    await addBtns.nth(0).click();
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    // SUT BUG: Creates 2 rows
-    // SRS Expectation: Should have 1 row with quantity 2
-    // [P5] Soft assertion used here, we expect 1 but the bug makes it 2
-    expect.soft(await cartPage.tableRows.count()).toBe(1);
-    // Force fail to report bug:
-    await expect(cartPage.tableRows).toHaveCount(1);
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    const dialogPromise = page.waitForEvent('dialog', { timeout: 2_000 });
+    await cart.getProductRow(0).removeBtn.click();
+    const dialog = await dialogPromise;
+    expect(dialog.type()).toBe('confirm');
+    await dialog.dismiss();
+    await expect(cart.tableRows).toHaveCount(1);
   });
 
-  // TC10: @bug No confirmation dialog when deleting item
-  test('TC10: @bug No confirmation dialog when deleting item', async ({ page }) => {
+  test('TC14: @bug Cart total uses the required label', { tag: '@bug' }, async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    let dialogFired = false;
-    page.on('dialog', dialog => {
-      dialogFired = true;
-      dialog.accept();
-    });
-    
-    const row = await cartPage.getProductRow(0);
-    await row.removeBtn.click();
-    
-    // It should have fired a confirm dialog
-    expect(dialogFired).toBeTruthy();
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    await expect(cart.totalLabel).toContainText(data.expected.totalLabel);
   });
 
-  // TC11: @bug Total label is incorrect
-  test('TC11: @bug Total label should be "Tổng cộng"', async ({ page }) => {
+  test('TC15: @bug Every item has plus and minus quantity controls', { tag: '@bug' }, async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    const totalText = await cartPage.totalLabel.innerText();
-    expect(totalText).toContain('Tổng cộng:'); // Currently it is "Tổng tạm tính:"
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    await expect(cart.getProductRow(0).quantity.locator('button')).toHaveCount(data.expected.quantityButtonCount);
   });
 
-  // TC12: @bug Missing quantity adjusters (+/-)
-  test('TC12: @bug Missing quantity adjusters (+/-)', async ({ page }) => {
+  test('TC16: @bug Empty state includes an illustration', { tag: '@bug' }, async ({ page }) => {
+    const cart = new CartPage(page);
+    await cart.goto();
+    await expect(page.locator('.text-center img, .text-center svg')).toHaveCount(1);
+  });
+
+  test('TC17: @bug Non-empty cart uses the exact continue-shopping label', { tag: '@bug' }, async ({ page }) => {
+    const cart = new CartPage(page);
     await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    const row = await cartPage.getProductRow(0);
-    // Should have buttons to increase/decrease quantity
-    const btnCount = await row.quantity.locator('button').count();
-    expect(btnCount).toBeGreaterThan(0);
+    await cart.addFirstProducts(1);
+    await cart.openFromHeader();
+    await expect(cart.continueShoppingLink).toHaveText(data.expected.continueShopping);
   });
-
-  // TC13: @bug Empty state lacks illustration
-  test('TC13: @bug Empty state lacks illustration image', async ({ page }) => {
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    // Look for an image in the empty state container
-    const imgCount = await page.locator('.text-center img').count();
-    expect(imgCount).toBeGreaterThan(0);
-  });
-
-  // TC14: @bug Continue shopping label is incorrect
-  test('TC14: @bug Continue shopping button label should be "Tiếp tục mua sắm"', async ({ page }) => {
-    await page.goto('/');
-    const addBtns = page.locator('button', { hasText: 'Thêm vào giỏ' });
-    await expect(addBtns).not.toHaveCount(0);
-    await addBtns.nth(0).click();
-    
-    const cartPage = new CartPage(page);
-    await cartPage.goto();
-    
-    const link = page.locator('a.border.text-gray-600');
-    await expect(link).toHaveText('Tiếp tục mua sắm'); // Currently "← Mua tiếp"
-  });
-
 });
-// Minor update to FR-07
-// Added edge cases for FR-07

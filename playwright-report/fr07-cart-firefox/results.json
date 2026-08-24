@@ -1,0 +1,1302 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.2.1/bin/node",
+      "/Volumes/Thang/HW04/HW04-TESTING/node_modules/.bin/playwright",
+      "test",
+      "tests/fr07-cart.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "/Volumes/Thang/HW04/HW04-TESTING/playwright.config.js",
+    "rootDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127259",
+      "Student ID": "23127259",
+      "Executed at (ISO)": "2026-08-24T10:04:39.799Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+      "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:04:39.799Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:04:39.799Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:04:39.799Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr07-cart-firefox",
+          "title": "HW04 EShop Automation | Run by: 23127259 | 2026-08-24T10:04:39.799Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr07-cart-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr07-cart.spec.js",
+      "file": "fr07-cart.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-07: Shopping Cart",
+          "file": "fr07-cart.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC01: Empty cart shows a friendly message and shopping link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 871,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:42.530Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-d26c91c3ec80f2060f64",
+              "file": "fr07-cart.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC02: Empty-cart shopping link returns to home",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 401,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:44.036Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-e8da18fff2881e0c083c",
+              "file": "fr07-cart.spec.js",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC03: CSV product iPhone 15 Pro Max has correct quantity and subtotal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 372,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:44.444Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-0bb2a707c5a8c5c7cf8f",
+              "file": "fr07-cart.spec.js",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "TC04: CSV product Samsung Galaxy S24 Ultra has correct quantity and subtotal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 338,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:44.821Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-c22813234219a9464a55",
+              "file": "fr07-cart.spec.js",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "TC05: CSV product MacBook Pro M3 has correct quantity and subtotal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 341,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:45.165Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-53e7a78591351e0682ea",
+              "file": "fr07-cart.spec.js",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "TC06: CSV product Tai nghe AirPods Pro 2 has correct quantity and subtotal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 374,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:45.511Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-ed1b664e02fc5b3ec40f",
+              "file": "fr07-cart.spec.js",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "TC07: Multiple products produce the exact total",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 477,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:45.890Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-97877a992440c086fff2",
+              "file": "fr07-cart.spec.js",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "TC08: Removing one item updates the cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 527,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:46.372Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-3ebb83cde7f9b69a9a63",
+              "file": "fr07-cart.spec.js",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "TC09: Removing the last item returns to empty state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 399,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:46.905Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-ab141b8961e45b138dee",
+              "file": "fr07-cart.spec.js",
+              "line": 69,
+              "column": 3
+            },
+            {
+              "title": "TC10: Unauthenticated checkout shows warning and redirects to login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 967,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:47.308Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-af1423e5ba219224c995",
+              "file": "fr07-cart.spec.js",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "TC11: Authenticated checkout opens the checkout page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 594,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:48.279Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-5dd83ff2a3e4646e483a",
+              "file": "fr07-cart.spec.js",
+              "line": 92,
+              "column": 3
+            },
+            {
+              "title": "TC12: @bug Re-adding a product increases quantity without a duplicate row",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5466,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tbody tr')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr')\u001b[22m\n\u001b[2m    14 × locator resolved to 2 elements\u001b[22m\n\u001b[2m       - unexpected value \"2\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tbody tr')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr')\u001b[22m\n\u001b[2m    14 × locator resolved to 2 elements\u001b[22m\n\u001b[2m       - unexpected value \"2\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:109:34",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                          "column": 34,
+                          "line": 109
+                        },
+                        "snippet": "  107 |     await cart.addProductByName(products[0].productName, 1);\n  108 |     await cart.openFromHeader();\n> 109 |     await expect(cart.tableRows).toHaveCount(1);\n      |                                  ^\n  110 |     await expect(cart.getProductRow(0).quantity).toHaveText('2');\n  111 |   });\n  112 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                            "column": 34,
+                            "line": 109
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tbody tr')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr')\u001b[22m\n\u001b[2m    14 × locator resolved to 2 elements\u001b[22m\n\u001b[2m       - unexpected value \"2\"\u001b[22m\n\n\n  107 |     await cart.addProductByName(products[0].productName, 1);\n  108 |     await cart.openFromHeader();\n> 109 |     await expect(cart.tableRows).toHaveCount(1);\n      |                                  ^\n  110 |     await expect(cart.getProductRow(0).quantity).toHaveText('2');\n  111 |   });\n  112 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:109:34"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:48.876Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-89e18-ity-without-a-duplicate-row-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-89e18-ity-without-a-duplicate-row-firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-89e18-ity-without-a-duplicate-row-firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                        "column": 34,
+                        "line": 109
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-350750932ba4cd7e1f1b",
+              "file": "fr07-cart.spec.js",
+              "line": 103,
+              "column": 3
+            },
+            {
+              "title": "TC13: @bug Removing an item requires confirmation",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2887,
+                      "error": {
+                        "message": "TimeoutError: page.waitForEvent: Timeout 2000ms exceeded while waiting for event \"dialog\"\n=========================== logs ===========================\nwaiting for event \"dialog\"\n============================================================",
+                        "stack": "TimeoutError: page.waitForEvent: Timeout 2000ms exceeded while waiting for event \"dialog\"\n=========================== logs ===========================\nwaiting for event \"dialog\"\n============================================================\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:118:32",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                          "column": 32,
+                          "line": 118
+                        },
+                        "snippet": "  116 |     await cart.addFirstProducts(1);\n  117 |     await cart.openFromHeader();\n> 118 |     const dialogPromise = page.waitForEvent('dialog', { timeout: 2_000 });\n      |                                ^\n  119 |     await cart.getProductRow(0).removeBtn.click();\n  120 |     const dialog = await dialogPromise;\n  121 |     expect(dialog.type()).toBe('confirm');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                            "column": 32,
+                            "line": 118
+                          },
+                          "message": "TimeoutError: page.waitForEvent: Timeout 2000ms exceeded while waiting for event \"dialog\"\n=========================== logs ===========================\nwaiting for event \"dialog\"\n============================================================\n\n  116 |     await cart.addFirstProducts(1);\n  117 |     await cart.openFromHeader();\n> 118 |     const dialogPromise = page.waitForEvent('dialog', { timeout: 2_000 });\n      |                                ^\n  119 |     await cart.getProductRow(0).removeBtn.click();\n  120 |     const dialog = await dialogPromise;\n  121 |     expect(dialog.type()).toBe('confirm');\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:118:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:54.867Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-69f47--item-requires-confirmation-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-69f47--item-requires-confirmation-firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-69f47--item-requires-confirmation-firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                        "column": 32,
+                        "line": 118
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-ba65713f3f3d2b8323d5",
+              "file": "fr07-cart.spec.js",
+              "line": 113,
+              "column": 3
+            },
+            {
+              "title": "TC14: @bug Cart total uses the required label",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5920,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.text-xl.font-bold')\nExpected substring: \u001b[32m\"Tổng \u001b[7mcộng\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"Tổng \u001b[7mtạm tính: 30,000,000 ₫\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.text-xl.font-bold')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"text-xl font-bold\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng tạm tính: 30,000,000 ₫\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.text-xl.font-bold')\nExpected substring: \u001b[32m\"Tổng \u001b[7mcộng\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"Tổng \u001b[7mtạm tính: 30,000,000 ₫\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.text-xl.font-bold')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"text-xl font-bold\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng tạm tính: 30,000,000 ₫\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:131:35",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                          "column": 35,
+                          "line": 131
+                        },
+                        "snippet": "  129 |     await cart.addFirstProducts(1);\n  130 |     await cart.openFromHeader();\n> 131 |     await expect(cart.totalLabel).toContainText(data.expected.totalLabel);\n      |                                   ^\n  132 |   });\n  133 |\n  134 |   test('TC15: @bug Every item has plus and minus quantity controls', { tag: '@bug' }, async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                            "column": 35,
+                            "line": 131
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.text-xl.font-bold')\nExpected substring: \u001b[32m\"Tổng \u001b[7mcộng\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"Tổng \u001b[7mtạm tính: 30,000,000 ₫\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.text-xl.font-bold')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"text-xl font-bold\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng tạm tính: 30,000,000 ₫\"\u001b[22m\n\n\n  129 |     await cart.addFirstProducts(1);\n  130 |     await cart.openFromHeader();\n> 131 |     await expect(cart.totalLabel).toContainText(data.expected.totalLabel);\n      |                                   ^\n  132 |   });\n  133 |\n  134 |   test('TC15: @bug Every item has plus and minus quantity controls', { tag: '@bug' }, async ({ page }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:131:35"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:04:58.732Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-42422-tal-uses-the-required-label-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-42422-tal-uses-the-required-label-firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-42422-tal-uses-the-required-label-firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                        "column": 35,
+                        "line": 131
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-ed8a2d3f0cc588901b62",
+              "file": "fr07-cart.spec.js",
+              "line": 126,
+              "column": 3
+            },
+            {
+              "title": "TC15: @bug Every item has plus and minus quantity controls",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5973,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tbody tr').first().locator('td').nth(2).locator('button')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr').first().locator('td').nth(2).locator('button')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tbody tr').first().locator('td').nth(2).locator('button')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr').first().locator('td').nth(2).locator('button')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:139:68",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                          "column": 68,
+                          "line": 139
+                        },
+                        "snippet": "  137 |     await cart.addFirstProducts(1);\n  138 |     await cart.openFromHeader();\n> 139 |     await expect(cart.getProductRow(0).quantity.locator('button')).toHaveCount(data.expected.quantityButtonCount);\n      |                                                                    ^\n  140 |   });\n  141 |\n  142 |   test('TC16: @bug Empty state includes an illustration', { tag: '@bug' }, async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                            "column": 68,
+                            "line": 139
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tbody tr').first().locator('td').nth(2).locator('button')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr').first().locator('td').nth(2).locator('button')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  137 |     await cart.addFirstProducts(1);\n  138 |     await cart.openFromHeader();\n> 139 |     await expect(cart.getProductRow(0).quantity.locator('button')).toHaveCount(data.expected.quantityButtonCount);\n      |                                                                    ^\n  140 |   });\n  141 |\n  142 |   test('TC16: @bug Empty state includes an illustration', { tag: '@bug' }, async ({ page }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:139:68"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:05:05.591Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-2eea4-and-minus-quantity-controls-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-2eea4-and-minus-quantity-controls-firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-2eea4-and-minus-quantity-controls-firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                        "column": 68,
+                        "line": 139
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-b2d19a07e03391a1f23a",
+              "file": "fr07-cart.spec.js",
+              "line": 134,
+              "column": 3
+            },
+            {
+              "title": "TC16: @bug Empty state includes an illustration",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5676,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.text-center img, .text-center svg')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.text-center img, .text-center svg')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.text-center img, .text-center svg')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.text-center img, .text-center svg')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:145:70",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                          "column": 70,
+                          "line": 145
+                        },
+                        "snippet": "  143 |     const cart = new CartPage(page);\n  144 |     await cart.goto();\n> 145 |     await expect(page.locator('.text-center img, .text-center svg')).toHaveCount(1);\n      |                                                                      ^\n  146 |   });\n  147 |\n  148 |   test('TC17: @bug Non-empty cart uses the exact continue-shopping label', { tag: '@bug' }, async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                            "column": 70,
+                            "line": 145
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.text-center img, .text-center svg')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.text-center img, .text-center svg')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  143 |     const cart = new CartPage(page);\n  144 |     await cart.goto();\n> 145 |     await expect(page.locator('.text-center img, .text-center svg')).toHaveCount(1);\n      |                                                                      ^\n  146 |   });\n  147 |\n  148 |   test('TC17: @bug Non-empty cart uses the exact continue-shopping label', { tag: '@bug' }, async ({ page }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:145:70"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:05:12.447Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-47a34-te-includes-an-illustration-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-47a34-te-includes-an-illustration-firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-47a34-te-includes-an-illustration-firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                        "column": 70,
+                        "line": 145
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-f7dad93a1f4dffdeedfd",
+              "file": "fr07-cart.spec.js",
+              "line": 142,
+              "column": 3
+            },
+            {
+              "title": "TC17: @bug Non-empty cart uses the exact continue-shopping label",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-07 Shopping Cart"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5908,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('a[href=\"/\"]').filter({ hasText: /Mua tiếp|Tiếp tục mua sắm/ })\nExpected: \u001b[32m\"Tiếp tục mua sắm\"\u001b[39m\nReceived: \u001b[31m\"← Mua tiếp\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a[href=\"/\"]').filter({ hasText: /Mua tiếp|Tiếp tục mua sắm/ })\u001b[22m\n\u001b[2m    14 × locator resolved to <a href=\"/\" data-discover=\"true\" class=\"border px-4 py-2 rounded text-gray-600 hover:bg-gray-50\">← Mua tiếp</a>\u001b[22m\n\u001b[2m       - unexpected value \"← Mua tiếp\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('a[href=\"/\"]').filter({ hasText: /Mua tiếp|Tiếp tục mua sắm/ })\nExpected: \u001b[32m\"Tiếp tục mua sắm\"\u001b[39m\nReceived: \u001b[31m\"← Mua tiếp\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a[href=\"/\"]').filter({ hasText: /Mua tiếp|Tiếp tục mua sắm/ })\u001b[22m\n\u001b[2m    14 × locator resolved to <a href=\"/\" data-discover=\"true\" class=\"border px-4 py-2 rounded text-gray-600 hover:bg-gray-50\">← Mua tiếp</a>\u001b[22m\n\u001b[2m       - unexpected value \"← Mua tiếp\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:153:45",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                          "column": 45,
+                          "line": 153
+                        },
+                        "snippet": "  151 |     await cart.addFirstProducts(1);\n  152 |     await cart.openFromHeader();\n> 153 |     await expect(cart.continueShoppingLink).toHaveText(data.expected.continueShopping);\n      |                                             ^\n  154 |   });\n  155 | });\n  156 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                            "column": 45,
+                            "line": 153
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('a[href=\"/\"]').filter({ hasText: /Mua tiếp|Tiếp tục mua sắm/ })\nExpected: \u001b[32m\"Tiếp tục mua sắm\"\u001b[39m\nReceived: \u001b[31m\"← Mua tiếp\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a[href=\"/\"]').filter({ hasText: /Mua tiếp|Tiếp tục mua sắm/ })\u001b[22m\n\u001b[2m    14 × locator resolved to <a href=\"/\" data-discover=\"true\" class=\"border px-4 py-2 rounded text-gray-600 hover:bg-gray-50\">← Mua tiếp</a>\u001b[22m\n\u001b[2m       - unexpected value \"← Mua tiếp\"\u001b[22m\n\n\n  151 |     await cart.addFirstProducts(1);\n  152 |     await cart.openFromHeader();\n> 153 |     await expect(cart.continueShoppingLink).toHaveText(data.expected.continueShopping);\n      |                                             ^\n  154 |   });\n  155 | });\n  156 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js:153:45"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:05:19.022Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-07 Shopping Cart"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-cfd09-act-continue-shopping-label-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-cfd09-act-continue-shopping-label-firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr07-cart-FR-07-Shopping-C-cfd09-act-continue-shopping-label-firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr07-cart.spec.js",
+                        "column": 45,
+                        "line": 153
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b94ac45756c09d7723b4-305308ba8ae0f26c83c3",
+              "file": "fr07-cart.spec.js",
+              "line": 148,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-24T10:04:39.800Z",
+    "duration": 45780.511,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

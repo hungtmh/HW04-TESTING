@@ -1,0 +1,1402 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.2.1/bin/node",
+      "/Volumes/Thang/HW04/HW04-TESTING/node_modules/.bin/playwright",
+      "test",
+      "tests/fr02-login.spec.js",
+      "--project=chromium"
+    ],
+    "configFile": "/Volumes/Thang/HW04/HW04-TESTING/playwright.config.js",
+    "rootDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127259",
+      "Student ID": "23127259",
+      "Executed at (ISO)": "2026-08-24T10:02:17.705Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+      "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:02:17.705Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:02:17.705Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:02:17.705Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr02-login-chromium",
+          "title": "HW04 EShop Automation | Run by: 23127259 | 2026-08-24T10:02:17.705Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr02-login-chromium/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr02-login.spec.js",
+      "file": "fr02-login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-02: Login and Account Lockout",
+          "file": "fr02-login.spec.js",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC01: Valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 580,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:21.158Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-8d769a99f1976a795b7a",
+              "file": "fr02-login.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC02: Wrong password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 261,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:21.986Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-06d8f9469b54e86979e3",
+              "file": "fr02-login.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC03: Non-existent email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 260,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:22.252Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-28db2d990525ddb07494",
+              "file": "fr02-login.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC04: Empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 195,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:22.516Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-e97e01027682357af67e",
+              "file": "fr02-login.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC05: @bug Malformed email must be rejected by HTML5 validation",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 238,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mtrue\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mtrue\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:35:68",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 68,
+                          "line": 35
+                        },
+                        "snippet": "  33 |           ? loginPage.emailInput\n  34 |           : loginPage.passwordInput;\n> 35 |         expect(await input.evaluate(node => node.checkValidity())).toBeFalsy();\n     |                                                                    ^\n  36 |         await expect(page).toHaveURL(/\\/login$/);\n  37 |       }\n  38 |     });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 68,
+                            "line": 35
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mtrue\u001b[39m\n\n  33 |           ? loginPage.emailInput\n  34 |           : loginPage.passwordInput;\n> 35 |         expect(await input.evaluate(node => node.checkValidity())).toBeFalsy();\n     |                                                                    ^\n  36 |         await expect(page).toHaveURL(/\\/login$/);\n  37 |       }\n  38 |     });\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:35:68"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:22.715Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-5b74a-ejected-by-HTML5-validation-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-5b74a-ejected-by-HTML5-validation-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-5b74a-ejected-by-HTML5-validation-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 68,
+                        "line": 35
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-a459928c738b18f413ac",
+              "file": "fr02-login.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC06: Empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 249,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:23.212Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-00e9c1fa83af0417166a",
+              "file": "fr02-login.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC07: @bug A failed login increments the counter by exactly one",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 25,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:47:78",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 78,
+                          "line": 47
+                        },
+                        "snippet": "  45 |     const adminToken = await loginAdmin(request, data.adminAccount);\n  46 |     const users = await listAdminUsers(request, adminToken);\n> 47 |     expect(users.find(user => user.email === customer.email).login_attempts).toBe(1);\n     |                                                                              ^\n  48 |   });\n  49 |\n  50 |   test('TC08: @bug Account is not locked before the third failed attempt', { tag: '@bug' }, async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 78,
+                            "line": 47
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  45 |     const adminToken = await loginAdmin(request, data.adminAccount);\n  46 |     const users = await listAdminUsers(request, adminToken);\n> 47 |     expect(users.find(user => user.email === customer.email).login_attempts).toBe(1);\n     |                                                                              ^\n  48 |   });\n  49 |\n  50 |   test('TC08: @bug Account is not locked before the third failed attempt', { tag: '@bug' }, async ({ request }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:47:78"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:23.566Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-bae0f--the-counter-by-exactly-one-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-bae0f--the-counter-by-exactly-one-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 78,
+                        "line": 47
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-e37c3df05f835f04c767",
+              "file": "fr02-login.spec.js",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "TC08: @bug Account is not locked before the third failed attempt",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 37,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[2m    401,\u001b[22m\n\u001b[2m    401,\u001b[22m\n\u001b[32m-   401,\u001b[39m\n\u001b[31m+   403,\u001b[39m\n\u001b[2m  ]\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[2m    401,\u001b[22m\n\u001b[2m    401,\u001b[22m\n\u001b[32m-   401,\u001b[39m\n\u001b[31m+   403,\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:58:22",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 22,
+                          "line": 58
+                        },
+                        "snippet": "  56 |       statuses.push(response.status());\n  57 |     }\n> 58 |     expect(statuses).toEqual([401, 401, 401]);\n     |                      ^\n  59 |   });\n  60 |\n  61 |   test('TC09: @bug Temporary lock duration is 30 seconds', { tag: '@bug' }, async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 22,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[2m    401,\u001b[22m\n\u001b[2m    401,\u001b[22m\n\u001b[32m-   401,\u001b[39m\n\u001b[31m+   403,\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n  56 |       statuses.push(response.status());\n  57 |     }\n> 58 |     expect(statuses).toEqual([401, 401, 401]);\n     |                      ^\n  59 |   });\n  60 |\n  61 |   test('TC09: @bug Temporary lock duration is 30 seconds', { tag: '@bug' }, async ({ request }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:58:22"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:23.840Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-e8aaf-re-the-third-failed-attempt-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-e8aaf-re-the-third-failed-attempt-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 22,
+                        "line": 58
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-3c695a487622f2125755",
+              "file": "fr02-login.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "TC09: @bug Temporary lock duration is 30 seconds",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 39,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m35\u001b[39m\nReceived:    \u001b[31m179.996\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m35\u001b[39m\nReceived:    \u001b[31m179.996\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:72:30",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 30,
+                          "line": 72
+                        },
+                        "snippet": "  70 |     const remainingSeconds = (new Date(current.locked_until).getTime() - Date.now()) / 1000;\n  71 |     expect(remainingSeconds).toBeGreaterThan(25);\n> 72 |     expect(remainingSeconds).toBeLessThanOrEqual(data.expected.lockDurationSeconds + 5);\n     |                              ^\n  73 |   });\n  74 |\n  75 |   test('TC10: Successful login resets attempts and lock state', async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 30,
+                            "line": 72
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m35\u001b[39m\nReceived:    \u001b[31m179.996\u001b[39m\n\n  70 |     const remainingSeconds = (new Date(current.locked_until).getTime() - Date.now()) / 1000;\n  71 |     expect(remainingSeconds).toBeGreaterThan(25);\n> 72 |     expect(remainingSeconds).toBeLessThanOrEqual(data.expected.lockDurationSeconds + 5);\n     |                              ^\n  73 |   });\n  74 |\n  75 |   test('TC10: Successful login resets attempts and lock state', async ({ request }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:72:30"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:24.128Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-caa58-lock-duration-is-30-seconds-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-caa58-lock-duration-is-30-seconds-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 30,
+                        "line": 72
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-966e33f87cd1879330b5",
+              "file": "fr02-login.spec.js",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "TC10: Successful login resets attempts and lock state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:24.418Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-74cf8c97abb00882842a",
+              "file": "fr02-login.spec.js",
+              "line": 75,
+              "column": 3
+            },
+            {
+              "title": "TC11: @bug Login page has one H1 with the correct Vietnamese title",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5273,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:91:38",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 38,
+                          "line": 91
+                        },
+                        "snippet": "  89 |   test('TC11: @bug Login page has one H1 with the correct Vietnamese title', { tag: '@bug' }, async ({ page }) => {\n  90 |     await page.goto('/login');\n> 91 |     await expect(page.locator('h1')).toHaveCount(1);\n     |                                      ^\n  92 |     await expect(page.locator('h1')).toHaveText(data.expected.loginHeading);\n  93 |   });\n  94 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 38,
+                            "line": 91
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  89 |   test('TC11: @bug Login page has one H1 with the correct Vietnamese title', { tag: '@bug' }, async ({ page }) => {\n  90 |     await page.goto('/login');\n> 91 |     await expect(page.locator('h1')).toHaveCount(1);\n     |                                      ^\n  92 |     await expect(page.locator('h1')).toHaveText(data.expected.loginHeading);\n  93 |   });\n  94 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:91:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:24.470Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-21087-he-correct-Vietnamese-title-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-21087-he-correct-Vietnamese-title-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-21087-he-correct-Vietnamese-title-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 38,
+                        "line": 91
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-bba8f318c4ec09445ffd",
+              "file": "fr02-login.spec.js",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "TC12: @bug Email field uses type email and label Email",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5222,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('input').first()\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('input').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('input').first()\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('input').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:98:40",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 40,
+                          "line": 98
+                        },
+                        "snippet": "   96 |     const loginPage = new LoginPage(page);\n   97 |     await loginPage.goto();\n>  98 |     await expect(loginPage.emailInput).toHaveAttribute('type', 'email');\n      |                                        ^\n   99 |     await expect(loginPage.emailLabel).toHaveText(data.expected.emailLabel);\n  100 |   });\n  101 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 40,
+                            "line": 98
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('input').first()\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('input').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n\n   96 |     const loginPage = new LoginPage(page);\n   97 |     await loginPage.goto();\n>  98 |     await expect(loginPage.emailInput).toHaveAttribute('type', 'email');\n      |                                        ^\n   99 |     await expect(loginPage.emailLabel).toHaveText(data.expected.emailLabel);\n  100 |   });\n  101 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:98:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:30.139Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-0da61--type-email-and-label-Email-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-0da61--type-email-and-label-Email-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-0da61--type-email-and-label-Email-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 40,
+                        "line": 98
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-715a8248db733fb898d7",
+              "file": "fr02-login.spec.js",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "TC13: @bug Password field masks its value",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5272,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('input').nth(1)\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('input').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('input').nth(1)\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('input').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:105:43",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 43,
+                          "line": 105
+                        },
+                        "snippet": "  103 |     const loginPage = new LoginPage(page);\n  104 |     await loginPage.goto();\n> 105 |     await expect(loginPage.passwordInput).toHaveAttribute('type', 'password');\n      |                                           ^\n  106 |   });\n  107 |\n  108 |   test('TC14: @bug Submit button is Vietnamese', { tag: '@bug' }, async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 43,
+                            "line": 105
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('input').nth(1)\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('input').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n\n  103 |     const loginPage = new LoginPage(page);\n  104 |     await loginPage.goto();\n> 105 |     await expect(loginPage.passwordInput).toHaveAttribute('type', 'password');\n      |                                           ^\n  106 |   });\n  107 |\n  108 |   test('TC14: @bug Submit button is Vietnamese', { tag: '@bug' }, async ({ page }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:105:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:35.745Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-c5750-sword-field-masks-its-value-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-c5750-sword-field-masks-its-value-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-c5750-sword-field-masks-its-value-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 43,
+                        "line": 105
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-72a0dfa2b6be8944c806",
+              "file": "fr02-login.spec.js",
+              "line": 102,
+              "column": 3
+            },
+            {
+              "title": "TC14: @bug Submit button is Vietnamese",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5199,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('button[type=\"submit\"]')\nExpected: \u001b[32m\"Đăng nhập\"\u001b[39m\nReceived: \u001b[31m\"Sign In\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('button[type=\"submit\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <button tabindex=\"1\" type=\"submit\" class=\"w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700\">Sign In</button>\u001b[22m\n\u001b[2m       - unexpected value \"Sign In\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('button[type=\"submit\"]')\nExpected: \u001b[32m\"Đăng nhập\"\u001b[39m\nReceived: \u001b[31m\"Sign In\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('button[type=\"submit\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <button tabindex=\"1\" type=\"submit\" class=\"w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700\">Sign In</button>\u001b[22m\n\u001b[2m       - unexpected value \"Sign In\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:111:42",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 42,
+                          "line": 111
+                        },
+                        "snippet": "  109 |     const loginPage = new LoginPage(page);\n  110 |     await loginPage.goto();\n> 111 |     await expect(loginPage.submitButton).toHaveText(data.expected.submitLabel);\n      |                                          ^\n  112 |   });\n  113 |\n  114 |   test('TC15: @bug Login error is rendered above the submit button', { tag: '@bug' }, async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 42,
+                            "line": 111
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').locator('button[type=\"submit\"]')\nExpected: \u001b[32m\"Đăng nhập\"\u001b[39m\nReceived: \u001b[31m\"Sign In\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').locator('button[type=\"submit\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <button tabindex=\"1\" type=\"submit\" class=\"w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700\">Sign In</button>\u001b[22m\n\u001b[2m       - unexpected value \"Sign In\"\u001b[22m\n\n\n  109 |     const loginPage = new LoginPage(page);\n  110 |     await loginPage.goto();\n> 111 |     await expect(loginPage.submitButton).toHaveText(data.expected.submitLabel);\n      |                                          ^\n  112 |   });\n  113 |\n  114 |   test('TC15: @bug Login error is rendered above the submit button', { tag: '@bug' }, async ({ page }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:111:42"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:41.405Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-db6fb-Submit-button-is-Vietnamese-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-db6fb-Submit-button-is-Vietnamese-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-db6fb-Submit-button-is-Vietnamese-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 42,
+                        "line": 111
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-1708fe84e68c8c0ef3cd",
+              "file": "fr02-login.spec.js",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "TC15: @bug Login error is rendered above the submit button",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 332,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:119:50",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 50,
+                          "line": 119
+                        },
+                        "snippet": "  117 |     await loginPage.login(customer.email, data.wrongPassword);\n  118 |     await expect(loginPage.errorMessage).toBeVisible();\n> 119 |     expect(await loginPage.isErrorAboveSubmit()).toBeTruthy();\n      |                                                  ^\n  120 |   });\n  121 |\n  122 |   test('TC16: @bug Login response must not expose the stored password', { tag: '@bug' }, async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 50,
+                            "line": 119
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  117 |     await loginPage.login(customer.email, data.wrongPassword);\n  118 |     await expect(loginPage.errorMessage).toBeVisible();\n> 119 |     expect(await loginPage.isErrorAboveSubmit()).toBeTruthy();\n      |                                                  ^\n  120 |   });\n  121 |\n  122 |   test('TC16: @bug Login response must not expose the stored password', { tag: '@bug' }, async ({ request }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:119:50"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:46.962Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-64493-red-above-the-submit-button-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-64493-red-above-the-submit-button-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-64493-red-above-the-submit-button-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 50,
+                        "line": 119
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-13468ab1506bd1478543",
+              "file": "fr02-login.spec.js",
+              "line": 114,
+              "column": 3
+            },
+            {
+              "title": "TC16: @bug Login response must not expose the stored password",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-02 Login"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: not \u001b[32m\"password\"\u001b[39m\n\nReceived value: \u001b[31m\"Password 123\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: not \u001b[32m\"password\"\u001b[39m\n\nReceived value: \u001b[31m\"Password 123\"\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:126:46",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                          "column": 46,
+                          "line": 126
+                        },
+                        "snippet": "  124 |       data: { email: customer.email, password: customer.password },\n  125 |     });\n> 126 |     expect((await response.json()).user).not.toHaveProperty('password');\n      |                                              ^\n  127 |   });\n  128 | });\n  129 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                            "column": 46,
+                            "line": 126
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: not \u001b[32m\"password\"\u001b[39m\n\nReceived value: \u001b[31m\"Password 123\"\u001b[39m\n\n  124 |       data: { email: customer.email, password: customer.password },\n  125 |     });\n> 126 |     expect((await response.json()).user).not.toHaveProperty('password');\n      |                                              ^\n  127 |   });\n  128 | });\n  129 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js:126:46"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:02:47.656Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-02 Login"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-88042--expose-the-stored-password-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr02-login-FR-02-Login-and-88042--expose-the-stored-password-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr02-login.spec.js",
+                        "column": 46,
+                        "line": 126
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-51215be6d07e159565ab",
+              "file": "fr02-login.spec.js",
+              "line": 122,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-24T10:02:17.706Z",
+    "duration": 30024.261,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 10,
+    "flaky": 0
+  }
+}
