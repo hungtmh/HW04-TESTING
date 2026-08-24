@@ -6,10 +6,8 @@
  * Usage:  node scripts/run-multibrowser.mjs [specFile]
  * Example: node scripts/run-multibrowser.mjs tests/fr01-register.spec.js
  *
- * Exit code is always 0: some specs are tagged @bug and fail on purpose to
- * expose genuine defects, so a non-zero runner exit would be misleading.
- * Read the per-browser summary printed at the end (and the JSON results) for
- * the real pass/fail counts.
+ * Known SUT defects remain red and are classified as @bug failures. The runner
+ * exits non-zero only for infrastructure failures or non-@bug test failures.
  */
 import { spawnSync } from 'node:child_process';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -21,19 +19,20 @@ const feature = path.basename(spec).replace(/\.spec\.js$/, '');
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
 const summary = [];
+let runnerFailure = false;
 
 for (const browser of BROWSERS) {
   const reportDir = `playwright-report/${feature}-${browser}`;
   console.log(`\n=== Running ${spec} on ${browser} -> ${reportDir} ===`);
 
-  spawnSync(npx, ['playwright', 'test', spec, `--project=${browser}`], {
+  const run = spawnSync(npx, ['playwright', 'test', spec, `--project=${browser}`], {
     stdio: 'inherit',
     env: { ...process.env, PW_REPORT_DIR: reportDir },
     shell: process.platform === 'win32',
   });
 
   const resultsFile = path.join(reportDir, 'results.json');
-  let passed = 0, failed = 0, skipped = 0;
+  let passed = 0, bugFailures = 0, unexpectedFailures = 0, skipped = 0;
 
   if (existsSync(resultsFile)) {
     const json = JSON.parse(readFileSync(resultsFile, 'utf8'));
@@ -42,9 +41,11 @@ for (const browser of BROWSERS) {
         for (const spec of s.specs ?? []) {
           for (const t of spec.tests ?? []) {
             const status = t.results?.at(-1)?.status ?? 'unknown';
+            const isBug = (spec.tags ?? []).includes('@bug') || spec.title.includes('@bug');
             if (status === 'passed') passed++;
             else if (status === 'skipped') skipped++;
-            else failed++;
+            else if (isBug) bugFailures++;
+            else unexpectedFailures++;
           }
         }
         walk(s.suites);
@@ -53,7 +54,16 @@ for (const browser of BROWSERS) {
     walk(json.suites);
   }
 
-  summary.push({ browser, reportDir, passed, failed, skipped, total: passed + failed + skipped });
+  if (!existsSync(resultsFile) || unexpectedFailures > 0 || run.error) runnerFailure = true;
+  summary.push({
+    browser,
+    reportDir,
+    passed,
+    bugFailures,
+    unexpectedFailures,
+    skipped,
+    total: passed + bugFailures + unexpectedFailures + skipped,
+  });
 }
 
 console.log('\n================ MULTI-BROWSER SUMMARY ================');
@@ -70,13 +80,15 @@ const out = {
   totals: summary.reduce(
     (acc, r) => ({
       passed: acc.passed + r.passed,
-      failed: acc.failed + r.failed,
+      bugFailures: acc.bugFailures + r.bugFailures,
+      unexpectedFailures: acc.unexpectedFailures + r.unexpectedFailures,
       skipped: acc.skipped + r.skipped,
       total: acc.total + r.total,
     }),
-    { passed: 0, failed: 0, skipped: 0, total: 0 },
+    { passed: 0, bugFailures: 0, unexpectedFailures: 0, skipped: 0, total: 0 },
   ),
 };
 const outFile = `playwright-report/${feature}-summary.json`;
 writeFileSync(outFile, JSON.stringify(out, null, 2));
 console.log(`Summary written to ${outFile}`);
+process.exitCode = runnerFailure ? 1 : 0;

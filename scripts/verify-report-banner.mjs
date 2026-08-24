@@ -14,13 +14,19 @@ import { readdirSync, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-const STUDENT_ID = '23127195';
+const STUDENT_ID = process.env.STUDENT_ID || '23127259';
 const reportRoot = 'playwright-report';
-const shotDir = path.join('23127195', 'evidence', 'report-screenshots');
+const shotDir = process.env.REPORT_SCREENSHOT_DIR
+  || path.join(STUDENT_ID, 'evidence', 'report-screenshots');
+const reportPattern = process.env.REPORT_FILTER
+  ? new RegExp(process.env.REPORT_FILTER)
+  : /^(fr02-login|fr07-cart|fr16-import-csv)-(chromium|firefox|webkit)$/;
 mkdirSync(shotDir, { recursive: true });
 
 const dirs = readdirSync(reportRoot, { withFileTypes: true })
-  .filter(d => d.isDirectory() && existsSync(path.join(reportRoot, d.name, 'index.html')))
+  .filter(d => d.isDirectory()
+    && reportPattern.test(d.name)
+    && existsSync(path.join(reportRoot, d.name, 'index.html')))
   .map(d => d.name);
 
 const browser = await chromium.launch();
