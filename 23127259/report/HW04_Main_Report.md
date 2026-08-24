@@ -10,8 +10,8 @@
 | **Pull Request** | [#36 - MERGED](https://github.com/hungtmh/HW04-TESTING/pull/36), author/merger `thangak18` |
 | **Công cụ** | Playwright Test + HTML/JSON Reporter, Node.js |
 | **Trình duyệt** | Chromium / Firefox / WebKit - 3 engine độc lập |
-| **Video demo** | NOT RECORDED YET |
-| **Video Agent Skill** | NOT RECORDED YET |
+| **Video demo** | [FR07 - Shopping Cart - Automation Test](https://youtu.be/RRAYnyt3cJ0) - 12:02 |
+| **Video Agent Skill** | [FR16 - Agent Skill](https://youtu.be/ZEHdd4JB9dw) - 8:27 |
 | **Ngày** | 2026-08-24 |
 
 ---
@@ -171,10 +171,10 @@ node scripts/verify-report-banner.mjs
 | Student ID + ISO trong report | Đạt: 9/9, có screenshot |
 | Human review | Đạt: R-01 -> R-10 |
 | Bug report/Issue/evidence | Đạt: #16-#35, author `thangak18`, kèm 20 evidence image |
-| Video >= 5 phút | Chưa: sinh viên phải tự quay |
+| Video >= 5 phút | Đạt: main demo 12:02, Agent Skill 8:27 |
 
 ## 9. Video và Agent Skill
 
-- **Main demo:** `NOT RECORDED YET`; kịch bản trong `video-script/VIDEO_1_DEMO_SCRIPT.md`.
-- **Agent Skill demo:** `NOT RECORDED YET`; kịch bản trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
+- **Main demo:** [https://youtu.be/RRAYnyt3cJ0](https://youtu.be/RRAYnyt3cJ0) - FR07 Shopping Cart, 12:02; kịch bản trong `video-script/VIDEO_1_DEMO_SCRIPT.md`.
+- **Agent Skill demo:** [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw) - FR16 Agent Skill, 8:27; kịch bản trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
 - **Skill:** `agent-skill/SKILL.md`; bản giải trình trong `agent-skill/AGENT_SKILL.md`. Không có test case nào còn chưa tự động hóa; hai video là phần duy nhất còn cần danh tính/giọng nói sinh viên.
