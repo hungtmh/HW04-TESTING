@@ -1,0 +1,182 @@
+[
+  {
+    "id": "BUG-01", "feature": "FR-02", "severity": "High",
+    "title": "Email login không dùng type=email và label sai, làm mất HTML5 validation",
+    "tests": "TC05, TC12", "srs": "FR-02, FR-22",
+    "expected": "Ô email có type=email, label Email và trình duyệt từ chối chuỗi invalid-email.",
+    "actual": "Ô email có type=text, label Username; invalid-email vẫn vượt qua checkValidity().",
+    "steps": ["Mở /login", "Nhập invalid-email và một mật khẩu bất kỳ", "Quan sát form vẫn cho submit và kiểm tra thuộc tính DOM"],
+    "fix": "Đổi input sang type=email, dùng label Email liên kết bằng htmlFor/id và giữ required."
+  },
+  {
+    "id": "BUG-02", "feature": "FR-02", "severity": "Critical",
+    "title": "Một lần đăng nhập sai làm bộ đếm tăng 2 thay vì 1",
+    "tests": "TC07", "srs": "FR-02",
+    "expected": "login_attempts tăng từ 0 lên đúng 1.",
+    "actual": "login_attempts tăng từ 0 lên 2 sau một request sai mật khẩu.",
+    "steps": ["Tạo tài khoản mới", "Gọi POST /api/login một lần với mật khẩu sai", "Đọc login_attempts qua API admin"],
+    "fix": "Thay user.login_attempts + 2 bằng + 1 và bổ sung unit/integration test cho bộ đếm."
+  },
+  {
+    "id": "BUG-03", "feature": "FR-02", "severity": "Critical",
+    "title": "Tài khoản bị khóa sớm trước lần đăng nhập sai thứ ba",
+    "tests": "TC08", "srs": "FR-02",
+    "expected": "Ba request sai đầu tiên trả 401; trạng thái khóa áp dụng sau lần sai thứ ba.",
+    "actual": "Chuỗi status là 401, 401, 403 vì tài khoản đã khóa sau hai lần sai.",
+    "steps": ["Tạo tài khoản mới", "Gửi liên tiếp ba request login sai", "Ghi lại status của từng response"],
+    "fix": "Tăng counter đúng một đơn vị và chỉ thiết lập locked_until khi counter mới đạt ngưỡng 3."
+  },
+  {
+    "id": "BUG-04", "feature": "FR-02", "severity": "High",
+    "title": "Thời gian khóa tài khoản là 180 giây thay vì 30 giây",
+    "tests": "TC09", "srs": "FR-02",
+    "expected": "locked_until cách thời điểm khóa khoảng 30 giây.",
+    "actual": "locked_until cách thời điểm khóa khoảng 180 giây.",
+    "steps": ["Kích hoạt trạng thái khóa", "Đọc locked_until qua API admin", "So sánh với thời gian hiện tại"],
+    "fix": "Đổi 180000 ms thành 30000 ms và đưa thời lượng vào hằng số cấu hình."
+  },
+  {
+    "id": "BUG-05", "feature": "FR-21", "severity": "Medium",
+    "title": "Trang Login không có H1 và hiển thị sai tiêu đề Đăng Ký",
+    "tests": "TC11", "srs": "FR-21",
+    "expected": "Trang có đúng một H1 mô tả Đăng Nhập.",
+    "actual": "Không có H1; heading H2 hiển thị Đăng Ký.",
+    "steps": ["Mở /login", "Kiểm tra số phần tử h1", "Đọc nội dung heading đang hiển thị"],
+    "fix": "Đổi heading thành một thẻ h1 với nội dung Đăng Nhập."
+  },
+  {
+    "id": "BUG-06", "feature": "FR-22", "severity": "Critical",
+    "title": "Ô mật khẩu Login dùng type=text và làm lộ ký tự",
+    "tests": "TC13", "srs": "FR-22, SEC-01",
+    "expected": "Ô mật khẩu dùng type=password và che giá trị nhập.",
+    "actual": "Ô mật khẩu dùng type=text, ký tự hiển thị rõ.",
+    "steps": ["Mở /login", "Nhập mật khẩu", "Kiểm tra thuộc tính type và phần hiển thị"],
+    "fix": "Đổi input sang type=password và không log/echo giá trị mật khẩu."
+  },
+  {
+    "id": "BUG-07", "feature": "FR-21", "severity": "Low",
+    "title": "Nút đăng nhập dùng tiếng Anh Sign In thay vì tiếng Việt",
+    "tests": "TC14", "srs": "FR-21",
+    "expected": "Nút submit có nhãn Đăng nhập.",
+    "actual": "Nút submit có nhãn Sign In.",
+    "steps": ["Mở /login", "Quan sát nút submit", "So sánh nội dung với yêu cầu ngôn ngữ"],
+    "fix": "Đổi nhãn nút thành Đăng nhập và rà soát tính nhất quán tiếng Việt."
+  },
+  {
+    "id": "BUG-08", "feature": "FR-22", "severity": "Medium",
+    "title": "Thông báo lỗi Login nằm dưới nút submit",
+    "tests": "TC15", "srs": "FR-22",
+    "expected": "Banner lỗi xuất hiện phía trên nút submit.",
+    "actual": "Banner lỗi được render sau form và nằm dưới nút submit.",
+    "steps": ["Mở /login", "Đăng nhập bằng mật khẩu sai", "So sánh tọa độ banner lỗi và nút submit"],
+    "fix": "Đưa error block vào trong form, trước nút submit và thêm aria-live."
+  },
+  {
+    "id": "BUG-09", "feature": "SEC-01", "severity": "Critical",
+    "title": "API Login trả lại mật khẩu plaintext trong response",
+    "tests": "TC16", "srs": "SEC-01",
+    "expected": "Response login không có thuộc tính password; mật khẩu được hash khi lưu.",
+    "actual": "response.user.password chứa nguyên văn mật khẩu Password 123.",
+    "steps": ["Đăng ký tài khoản mới", "Gọi POST /api/login bằng thông tin hợp lệ", "Kiểm tra object user trong JSON response"],
+    "fix": "Hash mật khẩu bằng bcrypt/argon2 và dùng SELECT/DTO không bao gồm password."
+  },
+  {
+    "id": "BUG-10", "feature": "FR-07", "severity": "High",
+    "title": "Thêm cùng sản phẩm hai lần tạo hai dòng thay vì tăng số lượng",
+    "tests": "TC12", "srs": "FR-07",
+    "expected": "Giỏ có một dòng với quantity=2.",
+    "actual": "Giỏ có hai dòng độc lập, mỗi dòng quantity=1.",
+    "steps": ["Mở trang chủ", "Bấm Thêm vào giỏ hai lần trên cùng sản phẩm", "Mở giỏ hàng bằng link header"],
+    "fix": "Trong addToCart, tìm item theo product id và cộng quantity thay vì luôn append."
+  },
+  {
+    "id": "BUG-11", "feature": "FR-07", "severity": "High",
+    "title": "Xóa sản phẩm khỏi giỏ không có dialog xác nhận",
+    "tests": "TC13", "srs": "FR-07, FR-24",
+    "expected": "Phát sinh confirm dialog; dismiss giữ nguyên item.",
+    "actual": "Không có dialog và item bị xóa ngay lập tức.",
+    "steps": ["Thêm một sản phẩm", "Mở giỏ hàng", "Bấm Xóa và theo dõi sự kiện dialog"],
+    "fix": "Hiển thị dialog xác nhận trước khi gọi removeFromCart; chỉ xóa khi người dùng đồng ý."
+  },
+  {
+    "id": "BUG-12", "feature": "FR-07", "severity": "Low",
+    "title": "Nhãn tổng tiền hiển thị Tổng tạm tính thay vì Tổng cộng",
+    "tests": "TC14", "srs": "FR-07",
+    "expected": "Nhãn chính xác là Tổng cộng.",
+    "actual": "UI hiển thị Tổng tạm tính.",
+    "steps": ["Thêm một sản phẩm", "Mở giỏ hàng", "Đọc nhãn cạnh tổng tiền"],
+    "fix": "Đổi copy UI thành Tổng cộng và thêm assertion component."
+  },
+  {
+    "id": "BUG-13", "feature": "FR-07", "severity": "High",
+    "title": "Giỏ hàng thiếu nút tăng giảm số lượng +/-",
+    "tests": "TC15", "srs": "FR-07",
+    "expected": "Mỗi dòng có hai nút + và - để chỉnh quantity.",
+    "actual": "Ô số lượng chỉ là text tĩnh, không có button.",
+    "steps": ["Thêm một sản phẩm", "Mở giỏ hàng", "Đếm button trong ô Số lượng"],
+    "fix": "Bổ sung increment/decrement handlers, giới hạn quantity tối thiểu 1 và cập nhật tổng tiền."
+  },
+  {
+    "id": "BUG-14", "feature": "FR-24", "severity": "Low",
+    "title": "Empty state của giỏ hàng không có icon hoặc hình minh họa",
+    "tests": "TC16", "srs": "FR-07, FR-24",
+    "expected": "Empty state có icon/hình minh họa và thông báo thân thiện.",
+    "actual": "Chỉ có text và link, không có img hoặc svg.",
+    "steps": ["Mở /cart trong context mới", "Xác nhận giỏ trống", "Tìm img hoặc svg trong empty state"],
+    "fix": "Thêm illustration có alt text và giữ thông báo hiện tại."
+  },
+  {
+    "id": "BUG-15", "feature": "FR-07", "severity": "Low",
+    "title": "Link tiếp tục mua sắm ở giỏ có nhãn sai",
+    "tests": "TC17", "srs": "FR-07",
+    "expected": "Link có nhãn Tiếp tục mua sắm.",
+    "actual": "Link hiển thị ← Mua tiếp.",
+    "steps": ["Thêm một sản phẩm", "Mở giỏ hàng", "Đọc text của link quay về trang chủ"],
+    "fix": "Đổi nhãn thành Tiếp tục mua sắm."
+  },
+  {
+    "id": "BUG-16", "feature": "FR-16", "severity": "Critical",
+    "title": "User thường có thể gọi API admin import sản phẩm",
+    "tests": "TC06", "srs": "FR-12, SEC-03",
+    "expected": "Token customer bị từ chối 403.",
+    "actual": "Token customer import sản phẩm thành công với status 200.",
+    "steps": ["Tạo customer và lấy JWT", "Gọi POST /api/admin/import-products bằng token customer", "Kiểm tra status và dữ liệu được insert"],
+    "fix": "Thêm middleware requireAdmin kiểm tra req.user.role === admin."
+  },
+  {
+    "id": "BUG-17", "feature": "FR-16", "severity": "Critical",
+    "title": "Import CSV không rollback toàn bộ khi một dòng lỗi",
+    "tests": "TC09", "srs": "FR-16",
+    "expected": "Số sản phẩm không đổi nếu bất kỳ dòng nào invalid.",
+    "actual": "Dòng hợp lệ vẫn được insert, số sản phẩm tăng 1.",
+    "steps": ["Ghi nhận số sản phẩm", "Import batch có một dòng hợp lệ và một dòng thiếu name", "Đếm lại sản phẩm"],
+    "fix": "Validate toàn bộ batch trước, sau đó insert trong transaction BEGIN/ROLLBACK/COMMIT."
+  },
+  {
+    "id": "BUG-18", "feature": "FR-16", "severity": "Critical",
+    "title": "Import chấp nhận sản phẩm có giá âm",
+    "tests": "TC10", "srs": "FR-15, FR-16",
+    "expected": "API trả 400 và error cho price <= 0.",
+    "actual": "Sản phẩm giá -500 được insert với status 200.",
+    "steps": ["Đăng nhập admin", "Import payload có price=-500", "Kiểm tra response và danh sách sản phẩm"],
+    "fix": "Chuyển price sang number hữu hạn và từ chối khi <= 0 trước transaction."
+  },
+  {
+    "id": "BUG-19", "feature": "FR-16", "severity": "High",
+    "title": "CSV parser không hỗ trợ dấu phẩy trong trường được quote theo RFC 4180",
+    "tests": "TC11", "srs": "FR-16",
+    "expected": "Cell name giữ nguyên Product, with comma và price nằm ở cột tiếp theo.",
+    "actual": "Frontend split(','); cell đầu thành \"Product và các cột bị lệch.",
+    "steps": ["Đăng nhập admin và mở tab Sản phẩm", "Chọn fr16-rfc4180-quoted.csv", "Kiểm tra preview row đầu"],
+    "fix": "Dùng csv-parse/Papa Parse hoặc parser RFC 4180 thay cho String.split."
+  },
+  {
+    "id": "BUG-20", "feature": "FR-16", "severity": "Low",
+    "title": "File picker Import không giới hạn đuôi .csv",
+    "tests": "TC12", "srs": "FR-16",
+    "expected": "Input file có accept=.csv và backend vẫn kiểm tra định dạng.",
+    "actual": "Thuộc tính accept không tồn tại.",
+    "steps": ["Đăng nhập admin", "Mở tab Sản phẩm", "Kiểm tra thuộc tính accept của input file"],
+    "fix": "Thêm accept=.csv ở frontend và validate MIME/extension ở backend."
+  }
+]

@@ -1,47 +1,104 @@
-# Homework 04 - AI Automation Testing
+# HW04 - Automation Testing | 23127259
 
-- **Sinh viên:** Nguyễn Tấn Thắng
-- **MSSV:** 23127259
-- **Nhóm:** 08
-- **Repository:** https://github.com/hungtmh/HW04-TESTING
-- **SUT:** EShop - React Web, React Admin, Node/SQLite API
+| | |
+|---|---|
+| Sinh viên | Nguyễn Tấn Thắng - 23127259 |
+| Bài tập | HW04-AI - Automation Testing |
+| SUT | EShop (`eshop-sut`): frontend-web, frontend-admin, backend API |
+| GitHub repository | https://github.com/hungtmh/HW04-TESTING |
+| Nhánh bài làm | `codex/23127259-hw04-completion` |
+| GitHub Issues | Pending - chưa tạo đủ 20 Issue |
+| Video demo (Task 2) | **NOT RECORDED YET** |
+| Video Agent Skill | **NOT RECORDED YET** |
+| Ngày | 2026-08-24 |
 
-## Self-Assessment Grade
+> Hai video bắt buộc phải do sinh viên tự quay, nói tiếng Việt và có face-cam hoặc `whoami` + `hostname`. Repository không khai khống link video.
 
-| No. | Criteria | Maximum | Current self-assessment | Evidence |
-|---|---|---:|---:|---|
-| 1 | Task 1 - Feature A: FR-02 | 25 | 25 | `tests/fr02-login.spec.js`, 3 browser reports |
-| 1 | Task 1 - Feature B: FR-07 | 25 | 25 | `tests/fr07-cart.spec.js`, 3 browser reports |
-| 1 | Task 1 - Feature C: FR-16 | 25 | 25 | `tests/fr16-import-csv.spec.js`, 3 browser reports |
-| 2 | Task 2 - Demo video | 15 | 0 | Chưa quay/upload; kịch bản và checklist đã sẵn sàng |
-| 3 | Agent Skill | 10 | 7 | Skill hợp lệ và đã validate; chưa có video demo skill |
-| | **Total** | **100** | **82** | Không khai 100 khi chưa có video thật |
+---
 
-## Verified Test Summary
+## 1. Test Summary Report
 
-Kết quả được lấy từ ba file `playwright-report/*-summary.json` sau lần chạy ngày 2026-08-24.
+| Chỉ số | Giá trị |
+|---|---|
+| Feature đã tự động hoá | 3 (FR-02, FR-07, FR-16) |
+| Test case đã tự động hoá | 45 |
+| Lượt thực thi | 135 (45 x 3 browser) |
+| Passed | 72 |
+| Failed có chủ đích | 63 (21 `@bug` x 3 browser) |
+| Unexpected failure | 0 |
+| Browser run | 9 (3 feature x 3 engine) |
+| Root defect phát hiện | 20 |
+| Human-review corrections | 10 (R-01 -> R-10) |
 
-| Feature | Unique cases | Normal Pass/browser | Intentional `@bug` Fail/browser | Browsers | Unexpected failures |
-|---|---:|---:|---:|---|---:|
-| FR-02 Login/Lockout | 16 | 6 | 10 | Chromium, Firefox, WebKit | 0 |
-| FR-07 Shopping Cart | 17 | 11 | 6 | Chromium, Firefox, WebKit | 0 |
-| FR-16 Admin Import CSV | 12 | 7 | 5 | Chromium, Firefox, WebKit | 0 |
-| **Total** | **45** | **24** | **21** | **9 browser runs** | **0** |
+Toàn bộ 63 lượt fail đến từ 21 test gắn `@bug` viết theo SRS. Ba summary JSON xác nhận **không có test fail ngoài nhóm `@bug`**; Chromium, Firefox và WebKit cho kết quả trùng khớp.
 
-Across the complete browser matrix: **135 executions = 72 Passed + 63 intentional `@bug` Failed + 0 unexpected Failed**. The 21 failing test cases map to **20 unique SUT defects** because the malformed-email and wrong-email-type assertions share one root cause.
+### Chi tiết theo feature
 
-## Deliverable Map
+| Feature | Test case | Chromium | Firefox | WebKit |
+|---|---:|---:|---:|---:|
+| FR-02 Login & Lockout | 16 | 6/10 | 6/10 | 6/10 |
+| FR-07 Shopping Cart | 17 | 11/6 | 11/6 | 11/6 |
+| FR-16 Import CSV | 12 | 7/5 | 7/5 | 7/5 |
 
-- Main report: `report/HW04_Main_Report.md` and `.pdf`
-- Bug report: `bug-report/BUG_REPORT.md` and `.pdf`
-- AI audit and critique: `ai/` in Markdown and PDF
-- Git log: `evidence/git_commit_log.txt`
-- Report screenshots: `evidence/report-screenshots/`
-- Multi-browser reports: `playwright-report/fr02-*`, `fr07-*`, `fr16-*`
-- Agent Skill: `agent-skill/eshop-automation/`
-- Video scripts and recording checklist: `video-script/`
+*(định dạng pass/fail; ba feature thuộc ba Pool A/B/C)*
 
-## Reproduction Commands
+Chín HTML report đều hiển thị `Run by: 23127259` cùng ISO timestamp. Ảnh kiểm chứng nằm trong [evidence/report-screenshots/](evidence/report-screenshots/).
+
+---
+
+## 2. Bug đã phát hiện (20)
+
+| ID | Feature | Mức độ | Tóm tắt | Issue |
+|---|---|---|---|---|
+| BUG-01 | FR-02 | High | Email login không dùng type=email và label sai, làm mất HTML5 validation | Pending |
+| BUG-02 | FR-02 | Critical | Một lần đăng nhập sai làm bộ đếm tăng 2 thay vì 1 | Pending |
+| BUG-03 | FR-02 | Critical | Tài khoản bị khóa sớm trước lần đăng nhập sai thứ ba | Pending |
+| BUG-04 | FR-02 | High | Thời gian khóa tài khoản là 180 giây thay vì 30 giây | Pending |
+| BUG-05 | FR-21 | Medium | Trang Login không có H1 và hiển thị sai tiêu đề Đăng Ký | Pending |
+| BUG-06 | FR-22 | Critical | Ô mật khẩu Login dùng type=text và làm lộ ký tự | Pending |
+| BUG-07 | FR-21 | Low | Nút đăng nhập dùng tiếng Anh Sign In thay vì tiếng Việt | Pending |
+| BUG-08 | FR-22 | Medium | Thông báo lỗi Login nằm dưới nút submit | Pending |
+| BUG-09 | SEC-01 | Critical | API Login trả lại mật khẩu plaintext trong response | Pending |
+| BUG-10 | FR-07 | High | Thêm cùng sản phẩm hai lần tạo hai dòng thay vì tăng số lượng | Pending |
+| BUG-11 | FR-07 | High | Xóa sản phẩm khỏi giỏ không có dialog xác nhận | Pending |
+| BUG-12 | FR-07 | Low | Nhãn tổng tiền hiển thị Tổng tạm tính thay vì Tổng cộng | Pending |
+| BUG-13 | FR-07 | High | Giỏ hàng thiếu nút tăng giảm số lượng +/- | Pending |
+| BUG-14 | FR-24 | Low | Empty state của giỏ hàng không có icon hoặc hình minh họa | Pending |
+| BUG-15 | FR-07 | Low | Link tiếp tục mua sắm ở giỏ có nhãn sai | Pending |
+| BUG-16 | FR-16 | Critical | User thường có thể gọi API admin import sản phẩm | Pending |
+| BUG-17 | FR-16 | Critical | Import CSV không rollback toàn bộ khi một dòng lỗi | Pending |
+| BUG-18 | FR-16 | Critical | Import chấp nhận sản phẩm có giá âm | Pending |
+| BUG-19 | FR-16 | High | CSV parser không hỗ trợ dấu phẩy trong trường được quote theo RFC 4180 | Pending |
+| BUG-20 | FR-16 | Low | File picker Import không giới hạn đuôi .csv | Pending |
+
+Chi tiết từng bug (steps, expected, actual, evidence, đề xuất sửa) nằm trong [bug-report/BUG_REPORT.md](bug-report/BUG_REPORT.md).
+
+---
+
+## 3. Cấu trúc bài nộp
+
+```text
+23127259/
+|-- README.md / README.pdf
+|-- report/HW04_Main_Report.md / .pdf
+|-- ai/AI_Audit_Report.md / .pdf
+|-- ai/AI_Critique.md / .pdf
+|-- bug-report/BUG_REPORT.md / .pdf
+|-- evidence/
+|   |-- bugs/                         # 20 evidence image + catalog
+|   |-- report-screenshots/           # 9 report attribution image
+|   `-- git_commit_log.txt
+|-- agent-skill/
+|   |-- AGENT_SKILL.md / .pdf
+|   `-- SKILL.md / .pdf
+`-- video-script/                    # script Markdown + PDF
+```
+
+Mã nguồn test nằm ở gốc repository: `tests/`, `scripts/`, `playwright.config.js`; chín report nằm trong `playwright-report/fr02-*`, `fr07-*`, `fr16-*`.
+
+---
+
+## 4. Cách chạy lại
 
 ```bash
 npm install
@@ -50,14 +107,38 @@ npm run test:multibrowser:all
 node scripts/verify-report-banner.mjs
 ```
 
-## Items Requiring Student Authorship
+`playwright.config.js` tự khởi động backend, frontend-web và frontend-admin. Runner phân loại riêng `bugFailures` và `unexpectedFailures`; chỉ infrastructure/non-bug failure mới làm command thất bại.
 
-The homework prohibits fabricated execution evidence. The following must be completed by Nguyễn Tấn Thắng personally before submission:
+---
 
-1. Record the Vietnamese demo with voice and face-cam or visible `whoami` + `hostname`.
-2. Upload it as an unlisted YouTube video of at least five minutes and add the URL here.
-3. Record the Agent Skill demonstration and add its URL here.
-4. Create GitHub Issues with screenshots for the confirmed defects and open/merge a real Pull Request for these changes.
+## 5. Agent Skill
 
-- **Main demo video:** NOT RECORDED YET
-- **Agent Skill video:** NOT RECORDED YET
+Skill `eshop-automation` gói quy trình: đọc SRS trước, probe DOM/state thật, tách CSV/JSON, dùng POM, chạy non-bug gate, chạy ba engine, phân loại nguyên nhân fail và tạo evidence. Skill đã qua `quick_validate.py`; xem [agent-skill/AGENT_SKILL.md](agent-skill/AGENT_SKILL.md).
+
+---
+
+## 6. Bảng tự đánh giá
+
+| No. | Tiêu chí | Điểm tối đa | Tự chấm hiện tại |
+|---|---|---:|---:|
+| 1 | Feature A - FR-02 | 25 | 25 |
+| 1 | Feature B - FR-07 | 25 | 25 |
+| 1 | Feature C - FR-16 | 25 | 25 |
+| 2 | Demo video | 15 | 0 |
+| 3 | Agent Skill | 10 | 7 |
+| | **Tổng** | **100** | **82** |
+
+Bài chỉ có thể tự chấm 100 sau khi sinh viên tự quay/upload hai video và thay hai dòng `NOT RECORDED YET` bằng link Unlisted thật.
+
+### Căn cứ tự chấm Task 1
+
+| Yêu cầu | Ngưỡng | Đạt được |
+|---|---|---|
+| Test case tự động hoá | >= 12/feature | 16 / 17 / 12 |
+| Dữ liệu ngoài spec | CSV / JSON | dùng cả hai, không import thừa |
+| Assertion pattern | >= 3 | 8 pattern |
+| Browser | >= 3 | Chromium / Firefox / WebKit |
+| HTML report có student + ISO | 9/9 | 9/9, kèm screenshot |
+| Fail ngoài `@bug` | 0 | 0 |
+| Commit chạm `.spec.js` | >= 8 | 12 |
+| GitHub Issues kèm evidence | 20 | 0/20 |

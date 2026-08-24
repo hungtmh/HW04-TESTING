@@ -1,0 +1,107 @@
+#!/usr/bin/env node
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import path from 'node:path';
+
+const studentId = '23127259';
+const bugRoot = path.resolve(studentId, 'evidence/bugs');
+const bugs = JSON.parse(readFileSync(path.join(bugRoot, 'bug_catalog.json'), 'utf8'));
+const issueFile = path.join(bugRoot, 'github_issues.json');
+const issues = existsSync(issueFile)
+  ? Object.fromEntries(JSON.parse(readFileSync(issueFile, 'utf8')).map(item => [item.id, item]))
+  : {};
+const issueLink = bug => issues[bug.id]?.url ? `[#${issues[bug.id].number}](${issues[bug.id].url})` : 'Pending';
+
+const lines = [
+  '# HW04 - Automation Testing | 23127259', '',
+  '| | |', '|---|---|',
+  '| Sinh viên | Nguyễn Tấn Thắng - 23127259 |',
+  '| Bài tập | HW04-AI - Automation Testing |',
+  '| SUT | EShop (`eshop-sut`): frontend-web, frontend-admin, backend API |',
+  '| GitHub repository | https://github.com/hungtmh/HW04-TESTING |',
+  '| Nhánh bài làm | `codex/23127259-hw04-completion` |',
+  `| GitHub Issues | ${Object.keys(issues).length === bugs.length ? '20 bug, xem bảng mục 2' : 'Pending - chưa tạo đủ 20 Issue'} |`,
+  '| Video demo (Task 2) | **NOT RECORDED YET** |',
+  '| Video Agent Skill | **NOT RECORDED YET** |',
+  '| Ngày | 2026-08-24 |', '',
+  '> Hai video bắt buộc phải do sinh viên tự quay, nói tiếng Việt và có face-cam hoặc `whoami` + `hostname`. Repository không khai khống link video.', '',
+  '---', '',
+  '## 1. Test Summary Report', '',
+  '| Chỉ số | Giá trị |', '|---|---|',
+  '| Feature đã tự động hoá | 3 (FR-02, FR-07, FR-16) |',
+  '| Test case đã tự động hoá | 45 |',
+  '| Lượt thực thi | 135 (45 x 3 browser) |',
+  '| Passed | 72 |',
+  '| Failed có chủ đích | 63 (21 `@bug` x 3 browser) |',
+  '| Unexpected failure | 0 |',
+  '| Browser run | 9 (3 feature x 3 engine) |',
+  '| Root defect phát hiện | 20 |',
+  '| Human-review corrections | 10 (R-01 -> R-10) |', '',
+  'Toàn bộ 63 lượt fail đến từ 21 test gắn `@bug` viết theo SRS. Ba summary JSON xác nhận **không có test fail ngoài nhóm `@bug`**; Chromium, Firefox và WebKit cho kết quả trùng khớp.', '',
+  '### Chi tiết theo feature', '',
+  '| Feature | Test case | Chromium | Firefox | WebKit |', '|---|---:|---:|---:|---:|',
+  '| FR-02 Login & Lockout | 16 | 6/10 | 6/10 | 6/10 |',
+  '| FR-07 Shopping Cart | 17 | 11/6 | 11/6 | 11/6 |',
+  '| FR-16 Import CSV | 12 | 7/5 | 7/5 | 7/5 |', '',
+  '*(định dạng pass/fail; ba feature thuộc ba Pool A/B/C)*', '',
+  'Chín HTML report đều hiển thị `Run by: 23127259` cùng ISO timestamp. Ảnh kiểm chứng nằm trong [evidence/report-screenshots/](evidence/report-screenshots/).', '',
+  '---', '',
+  '## 2. Bug đã phát hiện (20)', '',
+  '| ID | Feature | Mức độ | Tóm tắt | Issue |', '|---|---|---|---|---|',
+  ...bugs.map(bug => `| ${bug.id} | ${bug.feature} | ${bug.severity} | ${bug.title} | ${issueLink(bug)} |`), '',
+  'Chi tiết từng bug (steps, expected, actual, evidence, đề xuất sửa) nằm trong [bug-report/BUG_REPORT.md](bug-report/BUG_REPORT.md).', '',
+  '---', '',
+  '## 3. Cấu trúc bài nộp', '',
+  '```text',
+  '23127259/',
+  '|-- README.md / README.pdf',
+  '|-- report/HW04_Main_Report.md / .pdf',
+  '|-- ai/AI_Audit_Report.md / .pdf',
+  '|-- ai/AI_Critique.md / .pdf',
+  '|-- bug-report/BUG_REPORT.md / .pdf',
+  '|-- evidence/',
+  '|   |-- bugs/                         # 20 evidence image + catalog',
+  '|   |-- report-screenshots/           # 9 report attribution image',
+  '|   `-- git_commit_log.txt',
+  '|-- agent-skill/',
+  '|   |-- AGENT_SKILL.md / .pdf',
+  '|   `-- SKILL.md / .pdf',
+  '`-- video-script/                    # script Markdown + PDF',
+  '```', '',
+  'Mã nguồn test nằm ở gốc repository: `tests/`, `scripts/`, `playwright.config.js`; chín report nằm trong `playwright-report/fr02-*`, `fr07-*`, `fr16-*`.', '',
+  '---', '',
+  '## 4. Cách chạy lại', '',
+  '```bash',
+  'npm install',
+  'npx playwright install chromium firefox webkit',
+  'npm run test:multibrowser:all',
+  'node scripts/verify-report-banner.mjs',
+  '```', '',
+  '`playwright.config.js` tự khởi động backend, frontend-web và frontend-admin. Runner phân loại riêng `bugFailures` và `unexpectedFailures`; chỉ infrastructure/non-bug failure mới làm command thất bại.', '',
+  '---', '',
+  '## 5. Agent Skill', '',
+  'Skill `eshop-automation` gói quy trình: đọc SRS trước, probe DOM/state thật, tách CSV/JSON, dùng POM, chạy non-bug gate, chạy ba engine, phân loại nguyên nhân fail và tạo evidence. Skill đã qua `quick_validate.py`; xem [agent-skill/AGENT_SKILL.md](agent-skill/AGENT_SKILL.md).', '',
+  '---', '',
+  '## 6. Bảng tự đánh giá', '',
+  '| No. | Tiêu chí | Điểm tối đa | Tự chấm hiện tại |', '|---|---|---:|---:|',
+  '| 1 | Feature A - FR-02 | 25 | 25 |',
+  '| 1 | Feature B - FR-07 | 25 | 25 |',
+  '| 1 | Feature C - FR-16 | 25 | 25 |',
+  '| 2 | Demo video | 15 | 0 |',
+  '| 3 | Agent Skill | 10 | 7 |',
+  '| | **Tổng** | **100** | **82** |', '',
+  'Bài chỉ có thể tự chấm 100 sau khi sinh viên tự quay/upload hai video và thay hai dòng `NOT RECORDED YET` bằng link Unlisted thật.', '',
+  '### Căn cứ tự chấm Task 1', '',
+  '| Yêu cầu | Ngưỡng | Đạt được |', '|---|---|---|',
+  '| Test case tự động hoá | >= 12/feature | 16 / 17 / 12 |',
+  '| Dữ liệu ngoài spec | CSV / JSON | dùng cả hai, không import thừa |',
+  '| Assertion pattern | >= 3 | 8 pattern |',
+  '| Browser | >= 3 | Chromium / Firefox / WebKit |',
+  '| HTML report có student + ISO | 9/9 | 9/9, kèm screenshot |',
+  '| Fail ngoài `@bug` | 0 | 0 |',
+  '| Commit chạm `.spec.js` | >= 8 | 12 |',
+  '| GitHub Issues kèm evidence | 20 | ' + (Object.keys(issues).length === bugs.length ? '20/20' : `${Object.keys(issues).length}/20`) + ' |'
+];
+
+const output = path.resolve(studentId, 'README.md');
+writeFileSync(output, `${lines.join('\n')}\n`, 'utf8');
+console.log(`OK ${output}`);
