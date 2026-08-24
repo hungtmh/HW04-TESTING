@@ -48,7 +48,7 @@ for (const bug of bugs) {
     '### Actual', '', bug.actual, '',
     '### Bằng chứng', '',
     `![${bug.id} evidence](../evidence/bugs/${evidenceName(bug)})`, '',
-    'Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright Chromium đã verify; report Firefox/WebKit cho cùng kết quả.', '',
+    'Ảnh trên là screenshot trực tiếp trang chi tiết Playwright HTML report Chromium: có test title, annotation sinh viên, assertion error, test steps và screenshot SUT nếu case có giao diện. Ảnh không được chèn thêm Expected/Actual; phần chú thích nằm ngoài ảnh. Firefox/WebKit cho cùng kết quả.', '',
     '### Đề xuất sửa', '', bug.fix, ''
   );
 }

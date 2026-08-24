@@ -43,7 +43,7 @@ I use AI tools for planning, generating, reviewing, and repairing the Playwright
 - **Tool:** OpenAI Codex + GitHub CLI authenticated as `thangak18`
 - **Date/time:** 2026-08-24 17:10-17:33 +07:00
 - **Prompt:** "Bạn check xem thành viên Trần Mạnh Hùng làm xong chưa, rồi bạn làm theo tương tự cách trình bày như bạn Hùng nhé, làm bằng acc github thangak18 nhé."
-- **AI output:** Verified Hùng's two YouTube links and 15 Issues; restructured README/Main/Bug Report/Agent Skill like the evidence-first reference; generated 20 defect evidence cards; created Issues #16-#35; opened and merged PR #36 with merge commit `555baf91a72a8edc23246ae96b1e297ecbec56e2`; regenerated the PDF package.
+- **AI output:** Verified Hùng's two YouTube links and 15 Issues; restructured README/Main/Bug Report/Agent Skill like the evidence-first reference; captured 20 raw Playwright HTML-report screenshots without text overlays; created Issues #16-#35; opened and merged PR #36 with merge commit `555baf91a72a8edc23246ae96b1e297ecbec56e2`; regenerated the PDF package.
 - **Human review:** Issue author, image accessibility, PR author/merge state, report totals, and PDF rendering were checked. The two video fields remain `NOT RECORDED YET` because authorship evidence must come from the student.
 
 ## 3. Verification Evidence
