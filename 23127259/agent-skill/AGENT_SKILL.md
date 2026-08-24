@@ -62,4 +62,4 @@ Evidence cho buổi demo:
 
 ## 4. Video demonstration
 
-Video Agent Skill do em trực tiếp thao tác và thuyết minh đã được upload: [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw). YouTube metadata xác nhận video có tiêu đề **FR16 - Agent Skill**, tác giả **Thắng Nguyễn**, thời lượng 8:27. Kịch bản quay nằm trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
+Video Agent Skill do em trực tiếp thao tác và thuyết minh đã được upload: [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw). YouTube metadata xác nhận video có tiêu đề **FR16 - Agent Skill**, tác giả **Thắng Nguyễn**, thời lượng 8:27. Hai link video cuối được lưu trong `video-script/VIDEO_LINKS.md`.

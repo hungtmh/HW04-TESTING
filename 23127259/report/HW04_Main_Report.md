@@ -175,6 +175,7 @@ node scripts/verify-report-banner.mjs
 
 ## 9. Video và Agent Skill
 
-- **Main demo:** [https://youtu.be/RRAYnyt3cJ0](https://youtu.be/RRAYnyt3cJ0) - FR07 Shopping Cart, 12:02; kịch bản trong `video-script/VIDEO_1_DEMO_SCRIPT.md`.
-- **Agent Skill demo:** [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw) - FR16 Agent Skill, 8:27; kịch bản trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
+- **Main demo:** [https://youtu.be/RRAYnyt3cJ0](https://youtu.be/RRAYnyt3cJ0) - FR07 Shopping Cart, 12:02.
+- **Agent Skill demo:** [https://youtu.be/ZEHdd4JB9dw](https://youtu.be/ZEHdd4JB9dw) - FR16 Agent Skill, 8:27.
+- **Danh sách link:** `video-script/VIDEO_LINKS.md`.
 - **Skill:** `agent-skill/SKILL.md`; bản giải trình trong `agent-skill/AGENT_SKILL.md`. Em đã hoàn thành toàn bộ test case và tự quay, thuyết minh hai video bằng tiếng Việt.
