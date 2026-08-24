@@ -1,0 +1,43 @@
+{
+  "feature": "fr02-login",
+  "spec": "tests/fr02-login.spec.js",
+  "runBy": "23127259",
+  "executedAtISO": "2026-08-24T10:04:01.109Z",
+  "browserRuns": 3,
+  "perBrowser": [
+    {
+      "browser": "chromium",
+      "reportDir": "playwright-report/fr02-login-chromium",
+      "passed": 6,
+      "bugFailures": 10,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 16
+    },
+    {
+      "browser": "firefox",
+      "reportDir": "playwright-report/fr02-login-firefox",
+      "passed": 6,
+      "bugFailures": 10,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 16
+    },
+    {
+      "browser": "webkit",
+      "reportDir": "playwright-report/fr02-login-webkit",
+      "passed": 6,
+      "bugFailures": 10,
+      "unexpectedFailures": 0,
+      "skipped": 0,
+      "total": 16
+    }
+  ],
+  "totals": {
+    "passed": 18,
+    "bugFailures": 30,
+    "unexpectedFailures": 0,
+    "skipped": 0,
+    "total": 48
+  }
+}

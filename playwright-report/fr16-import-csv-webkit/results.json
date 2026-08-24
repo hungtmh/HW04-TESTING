@@ -1,0 +1,984 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.2.1/bin/node",
+      "/Volumes/Thang/HW04/HW04-TESTING/node_modules/.bin/playwright",
+      "test",
+      "tests/fr16-import-csv.spec.js",
+      "--project=webkit"
+    ],
+    "configFile": "/Volumes/Thang/HW04/HW04-TESTING/playwright.config.js",
+    "rootDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23127259",
+      "Student ID": "23127259",
+      "Executed at (ISO)": "2026-08-24T10:06:47.120Z",
+      "Homework": "HW04 - Automation Testing",
+      "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+      "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:06:47.120Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:06:47.120Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Volumes/Thang/HW04/HW04-TESTING/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23127259",
+          "Student ID": "23127259",
+          "Executed at (ISO)": "2026-08-24T10:06:47.120Z",
+          "Homework": "HW04 - Automation Testing",
+          "SUT": "EShop (eshop-sut) - frontend-web + frontend-admin + backend API",
+          "Features under test": "FR-02 Login, FR-07 Cart, FR-16 CSV Import",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Volumes/Thang/HW04/HW04-TESTING/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report/fr16-import-csv-webkit",
+          "title": "HW04 EShop Automation | Run by: 23127259 | 2026-08-24T10:06:47.120Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/fr16-import-csv-webkit/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr16-import-csv.spec.js",
+      "file": "fr16-import-csv.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-16: Product Import from CSV",
+          "file": "fr16-import-csv.spec.js",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC01: Valid CSV imports every previewed row",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1133,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:49.894Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-cb257a4f38653bde41b7",
+              "file": "fr16-import-csv.spec.js",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "TC02: Preview renders CSV data before import",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 423,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:51.241Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-8d2e246a94b50b8fa232",
+              "file": "fr16-import-csv.spec.js",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "TC03: Download template exposes the required CSV filename",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 389,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:51.672Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-8ce815c7b21871adf36f",
+              "file": "fr16-import-csv.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC04: Selecting a CSV enables the import action",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 408,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:52.069Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-19d96b5abfe68530b916",
+              "file": "fr16-import-csv.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC05: Invalid CSV reports the row-level reason",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 477,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:52.484Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-7951ae372f5f9bd4ab23",
+              "file": "fr16-import-csv.spec.js",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "TC06: @bug Non-admin token cannot call the admin import API",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 20,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:67:29",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                          "column": 29,
+                          "line": 67
+                        },
+                        "snippet": "  65 |     const customer = await createCustomer(request);\n  66 |     const response = await importProductsCSV(request, customer.token, data.apiPayloads.nonAdmin);\n> 67 |     expect(response.status).toBe(403);\n     |                             ^\n  68 |   });\n  69 |\n  70 |   test('TC07: Missing token is rejected', async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                            "column": 29,
+                            "line": 67
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  65 |     const customer = await createCustomer(request);\n  66 |     const response = await importProductsCSV(request, customer.token, data.apiPayloads.nonAdmin);\n> 67 |     expect(response.status).toBe(403);\n     |                             ^\n  68 |   });\n  69 |\n  70 |   test('TC07: Missing token is rejected', async ({ request }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:67:29"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:52.969Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-4442c-t-call-the-admin-import-API-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-4442c-t-call-the-admin-import-API-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                        "column": 29,
+                        "line": 67
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-9fab160be1fb143527c3",
+              "file": "fr16-import-csv.spec.js",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "TC07: Missing token is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:53.240Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-9e045014bf2e0bc0e571",
+              "file": "fr16-import-csv.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "TC08: Empty product array is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:53.273Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-5d7c1440ee51b2d2348b",
+              "file": "fr16-import-csv.spec.js",
+              "line": 75,
+              "column": 3
+            },
+            {
+              "title": "TC09: @bug Any invalid row rolls back the complete import",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 19,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:85:19",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                          "column": 19,
+                          "line": 85
+                        },
+                        "snippet": "  83 |     await importProductsCSV(request, adminToken, data.apiPayloads.mixedRows);\n  84 |     const after = (await listProducts(request)).length;\n> 85 |     expect(after).toBe(before);\n     |                   ^\n  86 |   });\n  87 |\n  88 |   test('TC10: @bug Price must be strictly positive', { tag: '@bug' }, async ({ request }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                            "column": 19,
+                            "line": 85
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m11\u001b[39m\nReceived: \u001b[31m12\u001b[39m\n\n  83 |     await importProductsCSV(request, adminToken, data.apiPayloads.mixedRows);\n  84 |     const after = (await listProducts(request)).length;\n> 85 |     expect(after).toBe(before);\n     |                   ^\n  86 |   });\n  87 |\n  88 |   test('TC10: @bug Price must be strictly positive', { tag: '@bug' }, async ({ request }) => {\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:85:19"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:53.284Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-981a3-ls-back-the-complete-import-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-981a3-ls-back-the-complete-import-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                        "column": 19,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-51930c1c39ef7d914b0a",
+              "file": "fr16-import-csv.spec.js",
+              "line": 81,
+              "column": 3
+            },
+            {
+              "title": "TC10: @bug Price must be strictly positive",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 29,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:90:29",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                          "column": 29,
+                          "line": 90
+                        },
+                        "snippet": "  88 |   test('TC10: @bug Price must be strictly positive', { tag: '@bug' }, async ({ request }) => {\n  89 |     const response = await importProductsCSV(request, adminToken, data.apiPayloads.negativePrice);\n> 90 |     expect(response.status).toBe(400);\n     |                             ^\n  91 |     expect(response.body.errors).toHaveLength(1);\n  92 |   });\n  93 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                            "column": 29,
+                            "line": 90
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  88 |   test('TC10: @bug Price must be strictly positive', { tag: '@bug' }, async ({ request }) => {\n  89 |     const response = await importProductsCSV(request, adminToken, data.apiPayloads.negativePrice);\n> 90 |     expect(response.status).toBe(400);\n     |                             ^\n  91 |     expect(response.body.errors).toHaveLength(1);\n  92 |   });\n  93 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:90:29"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:53.546Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-637ad-e-must-be-strictly-positive-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-637ad-e-must-be-strictly-positive-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                        "column": 29,
+                        "line": 90
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-cf667dbce639acaa45b9",
+              "file": "fr16-import-csv.spec.js",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "TC11: @bug RFC 4180 quoted commas remain in one field",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5688,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('table tbody tr').first().locator('td').first()\nExpected: \u001b[32m\"Product\u001b[7m, with comma\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m\\\"\u001b[27mProduct\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('table tbody tr').first().locator('td').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <td class=\"p-1 border\">\"Product</td>\u001b[22m\n\u001b[2m       - unexpected value \"\"Product\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('table tbody tr').first().locator('td').first()\nExpected: \u001b[32m\"Product\u001b[7m, with comma\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m\\\"\u001b[27mProduct\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('table tbody tr').first().locator('td').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <td class=\"p-1 border\">\"Product</td>\u001b[22m\n\u001b[2m       - unexpected value \"\"Product\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:100:32",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                          "column": 32,
+                          "line": 100
+                        },
+                        "snippet": "   98 |     await importPage.selectFile(dataFile('fr16-rfc4180-quoted.csv'));\n   99 |     const cells = importPage.previewTableRows.first().locator('td');\n> 100 |     await expect(cells.nth(0)).toHaveText(data.expected.quotedName);\n      |                                ^\n  101 |     await expect(cells.nth(1)).toHaveText(data.expected.quotedPrice);\n  102 |   });\n  103 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                            "column": 32,
+                            "line": 100
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('table tbody tr').first().locator('td').first()\nExpected: \u001b[32m\"Product\u001b[7m, with comma\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m\\\"\u001b[27mProduct\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('table tbody tr').first().locator('td').first()\u001b[22m\n\u001b[2m    14 × locator resolved to <td class=\"p-1 border\">\"Product</td>\u001b[22m\n\u001b[2m       - unexpected value \"\"Product\"\u001b[22m\n\n\n   98 |     await importPage.selectFile(dataFile('fr16-rfc4180-quoted.csv'));\n   99 |     const cells = importPage.previewTableRows.first().locator('td');\n> 100 |     await expect(cells.nth(0)).toHaveText(data.expected.quotedName);\n      |                                ^\n  101 |     await expect(cells.nth(1)).toHaveText(data.expected.quotedPrice);\n  102 |   });\n  103 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:100:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:53.843Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-f8864--commas-remain-in-one-field-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-f8864--commas-remain-in-one-field-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-f8864--commas-remain-in-one-field-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                        "column": 32,
+                        "line": 100
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-2e5d3e3f8640c6dfa9d6",
+              "file": "fr16-import-csv.spec.js",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "TC12: @bug File picker restricts selection to CSV",
+              "ok": false,
+              "tags": [
+                "bug",
+                "bug"
+              ],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "run-by",
+                      "description": "23127259"
+                    },
+                    {
+                      "type": "feature",
+                      "description": "FR-16 CSV Import"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5652,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('input[type=\"file\"]')\nExpected: \u001b[32m\".csv\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('input[type=\"file\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"file\" class=\"border p-2 rounded bg-white flex-1 text-sm\"/>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('input[type=\"file\"]')\nExpected: \u001b[32m\".csv\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('input[type=\"file\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"file\" class=\"border p-2 rounded bg-white flex-1 text-sm\"/>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:108:40",
+                        "location": {
+                          "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                          "column": 40,
+                          "line": 108
+                        },
+                        "snippet": "  106 |     await importPage.goto();\n  107 |     await importPage.login(data.adminAccount.email, data.adminAccount.password);\n> 108 |     await expect(importPage.fileInput).toHaveAttribute('accept', data.expected.acceptAttribute);\n      |                                        ^\n  109 |   });\n  110 | });\n  111 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                            "column": 40,
+                            "line": 108
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('input[type=\"file\"]')\nExpected: \u001b[32m\".csv\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h3').filter({ hasText: 'Import sản phẩm từ CSV' }).locator('../..').locator('input[type=\"file\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"file\" class=\"border p-2 rounded bg-white flex-1 text-sm\"/>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  106 |     await importPage.goto();\n  107 |     await importPage.login(data.adminAccount.email, data.adminAccount.password);\n> 108 |     await expect(importPage.fileInput).toHaveAttribute('accept', data.expected.acceptAttribute);\n      |                                        ^\n  109 |   });\n  110 | });\n  111 |\n    at /Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js:108:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-24T10:06:59.958Z",
+                      "annotations": [
+                        {
+                          "type": "run-by",
+                          "description": "23127259"
+                        },
+                        {
+                          "type": "feature",
+                          "description": "FR-16 CSV Import"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-acf82--restricts-selection-to-CSV-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-acf82--restricts-selection-to-CSV-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Volumes/Thang/HW04/HW04-TESTING/test-results/fr16-import-csv-FR-16-Prod-acf82--restricts-selection-to-CSV-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Volumes/Thang/HW04/HW04-TESTING/tests/fr16-import-csv.spec.js",
+                        "column": 40,
+                        "line": 108
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ed314b09ca79d6ead87-5d361942eeedc98a3461",
+              "file": "fr16-import-csv.spec.js",
+              "line": 104,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-24T10:06:47.122Z",
+    "duration": 18710.298,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}
