@@ -59,3 +59,18 @@ Author / merger: thangak18
 Merge commit: 555baf91a72a8edc23246ae96b1e297ecbec56e2
 Head: codex/23127259-hw04-completion
 Base: main
+
+Final publication and correction history
+========================================
+PR #37: https://github.com/hungtmh/HW04-TESTING/pull/37 (MERGED)
+  - Synchronised the merged PR/Issue audit into README, Main Report, AI Audit, Git log and PDFs.
+
+PR #38: https://github.com/hungtmh/HW04-TESTING/pull/38 (MERGED)
+  - Added complete Vietnamese operation/narration scripts and verified 8-page PDFs for both videos.
+
+PR #39: https://github.com/hungtmh/HW04-TESTING/pull/39 (MERGED)
+  - Replaced 20 generated evidence cards with raw Playwright HTML-report screenshots.
+  - Updated Issues #16-#35 so Expected/Actual captions remain outside each image.
+
+Final audited main commit before this log refresh:
+dbdbc3d1df431b02910a7576da11f8cc7bbf03ba Merge PR #39: raw Playwright evidence for 23127259
