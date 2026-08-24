@@ -169,13 +169,11 @@ node scripts/verify-report-banner.mjs
 | 3 browser/feature | Đạt: 9 report |
 | Student ID + ISO trong report | Đạt: 9/9, có screenshot |
 | Human review | Đạt: R-01 -> R-10 |
-| Bug report/Issue/evidence | Đạt sau khi 20 Issue được tạo |
+| Bug report/Issue/evidence | Đạt: #16-#35, author `thangak18`, kèm 20 evidence image |
 | Video >= 5 phút | Chưa: sinh viên phải tự quay |
 
 ## 9. Video và Agent Skill
 
 - **Main demo:** `NOT RECORDED YET`; kịch bản trong `video-script/VIDEO_1_DEMO_SCRIPT.md`.
 - **Agent Skill demo:** `NOT RECORDED YET`; kịch bản trong `video-script/VIDEO_2_AGENT_SKILL_SCRIPT.md`.
-- **Skill:** `agent-skill/SKILL.md`; bản giải trình trong `agent-skill/AGENT_SKILL.md`.
-
-Không có test case nào còn chưa tự động hóa. Hai video là phần duy nhất còn cần danh tính/giọng nói sinh viên và không thể được AI khai khống.
+- **Skill:** `agent-skill/SKILL.md`; bản giải trình trong `agent-skill/AGENT_SKILL.md`. Không có test case nào còn chưa tự động hóa; hai video là phần duy nhất còn cần danh tính/giọng nói sinh viên.

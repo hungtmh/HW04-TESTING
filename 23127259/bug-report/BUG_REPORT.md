@@ -12,26 +12,26 @@
 
 | ID | Feature | Mức độ | Tóm tắt | Test | Issue |
 |---|---|---|---|---|---|
-| BUG-01 | FR-02 | High | Email login không dùng type=email và label sai, làm mất HTML5 validation | TC05, TC12 | Pending |
-| BUG-02 | FR-02 | Critical | Một lần đăng nhập sai làm bộ đếm tăng 2 thay vì 1 | TC07 | Pending |
-| BUG-03 | FR-02 | Critical | Tài khoản bị khóa sớm trước lần đăng nhập sai thứ ba | TC08 | Pending |
-| BUG-04 | FR-02 | High | Thời gian khóa tài khoản là 180 giây thay vì 30 giây | TC09 | Pending |
-| BUG-05 | FR-21 | Medium | Trang Login không có H1 và hiển thị sai tiêu đề Đăng Ký | TC11 | Pending |
-| BUG-06 | FR-22 | Critical | Ô mật khẩu Login dùng type=text và làm lộ ký tự | TC13 | Pending |
-| BUG-07 | FR-21 | Low | Nút đăng nhập dùng tiếng Anh Sign In thay vì tiếng Việt | TC14 | Pending |
-| BUG-08 | FR-22 | Medium | Thông báo lỗi Login nằm dưới nút submit | TC15 | Pending |
-| BUG-09 | SEC-01 | Critical | API Login trả lại mật khẩu plaintext trong response | TC16 | Pending |
-| BUG-10 | FR-07 | High | Thêm cùng sản phẩm hai lần tạo hai dòng thay vì tăng số lượng | TC12 | Pending |
-| BUG-11 | FR-07 | High | Xóa sản phẩm khỏi giỏ không có dialog xác nhận | TC13 | Pending |
-| BUG-12 | FR-07 | Low | Nhãn tổng tiền hiển thị Tổng tạm tính thay vì Tổng cộng | TC14 | Pending |
-| BUG-13 | FR-07 | High | Giỏ hàng thiếu nút tăng giảm số lượng +/- | TC15 | Pending |
-| BUG-14 | FR-24 | Low | Empty state của giỏ hàng không có icon hoặc hình minh họa | TC16 | Pending |
-| BUG-15 | FR-07 | Low | Link tiếp tục mua sắm ở giỏ có nhãn sai | TC17 | Pending |
-| BUG-16 | FR-16 | Critical | User thường có thể gọi API admin import sản phẩm | TC06 | Pending |
-| BUG-17 | FR-16 | Critical | Import CSV không rollback toàn bộ khi một dòng lỗi | TC09 | Pending |
-| BUG-18 | FR-16 | Critical | Import chấp nhận sản phẩm có giá âm | TC10 | Pending |
-| BUG-19 | FR-16 | High | CSV parser không hỗ trợ dấu phẩy trong trường được quote theo RFC 4180 | TC11 | Pending |
-| BUG-20 | FR-16 | Low | File picker Import không giới hạn đuôi .csv | TC12 | Pending |
+| BUG-01 | FR-02 | High | Email login không dùng type=email và label sai, làm mất HTML5 validation | TC05, TC12 | [#16](https://github.com/hungtmh/HW04-TESTING/issues/16) |
+| BUG-02 | FR-02 | Critical | Một lần đăng nhập sai làm bộ đếm tăng 2 thay vì 1 | TC07 | [#17](https://github.com/hungtmh/HW04-TESTING/issues/17) |
+| BUG-03 | FR-02 | Critical | Tài khoản bị khóa sớm trước lần đăng nhập sai thứ ba | TC08 | [#18](https://github.com/hungtmh/HW04-TESTING/issues/18) |
+| BUG-04 | FR-02 | High | Thời gian khóa tài khoản là 180 giây thay vì 30 giây | TC09 | [#19](https://github.com/hungtmh/HW04-TESTING/issues/19) |
+| BUG-05 | FR-21 | Medium | Trang Login không có H1 và hiển thị sai tiêu đề Đăng Ký | TC11 | [#20](https://github.com/hungtmh/HW04-TESTING/issues/20) |
+| BUG-06 | FR-22 | Critical | Ô mật khẩu Login dùng type=text và làm lộ ký tự | TC13 | [#21](https://github.com/hungtmh/HW04-TESTING/issues/21) |
+| BUG-07 | FR-21 | Low | Nút đăng nhập dùng tiếng Anh Sign In thay vì tiếng Việt | TC14 | [#22](https://github.com/hungtmh/HW04-TESTING/issues/22) |
+| BUG-08 | FR-22 | Medium | Thông báo lỗi Login nằm dưới nút submit | TC15 | [#23](https://github.com/hungtmh/HW04-TESTING/issues/23) |
+| BUG-09 | SEC-01 | Critical | API Login trả lại mật khẩu plaintext trong response | TC16 | [#24](https://github.com/hungtmh/HW04-TESTING/issues/24) |
+| BUG-10 | FR-07 | High | Thêm cùng sản phẩm hai lần tạo hai dòng thay vì tăng số lượng | TC12 | [#25](https://github.com/hungtmh/HW04-TESTING/issues/25) |
+| BUG-11 | FR-07 | High | Xóa sản phẩm khỏi giỏ không có dialog xác nhận | TC13 | [#26](https://github.com/hungtmh/HW04-TESTING/issues/26) |
+| BUG-12 | FR-07 | Low | Nhãn tổng tiền hiển thị Tổng tạm tính thay vì Tổng cộng | TC14 | [#27](https://github.com/hungtmh/HW04-TESTING/issues/27) |
+| BUG-13 | FR-07 | High | Giỏ hàng thiếu nút tăng giảm số lượng +/- | TC15 | [#28](https://github.com/hungtmh/HW04-TESTING/issues/28) |
+| BUG-14 | FR-24 | Low | Empty state của giỏ hàng không có icon hoặc hình minh họa | TC16 | [#29](https://github.com/hungtmh/HW04-TESTING/issues/29) |
+| BUG-15 | FR-07 | Low | Link tiếp tục mua sắm ở giỏ có nhãn sai | TC17 | [#30](https://github.com/hungtmh/HW04-TESTING/issues/30) |
+| BUG-16 | FR-16 | Critical | User thường có thể gọi API admin import sản phẩm | TC06 | [#31](https://github.com/hungtmh/HW04-TESTING/issues/31) |
+| BUG-17 | FR-16 | Critical | Import CSV không rollback toàn bộ khi một dòng lỗi | TC09 | [#32](https://github.com/hungtmh/HW04-TESTING/issues/32) |
+| BUG-18 | FR-16 | Critical | Import chấp nhận sản phẩm có giá âm | TC10 | [#33](https://github.com/hungtmh/HW04-TESTING/issues/33) |
+| BUG-19 | FR-16 | High | CSV parser không hỗ trợ dấu phẩy trong trường được quote theo RFC 4180 | TC11 | [#34](https://github.com/hungtmh/HW04-TESTING/issues/34) |
+| BUG-20 | FR-16 | Low | File picker Import không giới hạn đuôi .csv | TC12 | [#35](https://github.com/hungtmh/HW04-TESTING/issues/35) |
 
 > 21 test case `@bug` ánh xạ tới 20 root defects vì TC05 và TC12 của FR-02 cùng bắt nguồn từ email input sai `type`/label nhưng kiểm tra hai acceptance criteria khác nhau.
 
@@ -42,12 +42,12 @@
 - **Mức độ:** High
 - **Feature / SRS:** FR-02 / FR-02, FR-22
 - **Automation test:** TC05, TC12
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#16](https://github.com/hungtmh/HW04-TESTING/issues/16)
 - **Evidence:** `../evidence/bugs/BUG-01-email-login-khong-dung-type-email-va-label-sai-l.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-02, FR-22 và so sánh với hành vi thực tế. Case TC05, TC12 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-02, FR-22 và so sánh với hành vi thực tế. Case TC05, TC12 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -80,12 +80,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Critical
 - **Feature / SRS:** FR-02 / FR-02
 - **Automation test:** TC07
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#17](https://github.com/hungtmh/HW04-TESTING/issues/17)
 - **Evidence:** `../evidence/bugs/BUG-02-mot-lan-ang-nhap-sai-lam-bo-em-tang-2-thay-vi-1.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-02 và so sánh với hành vi thực tế. Case TC07 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-02 và so sánh với hành vi thực tế. Case TC07 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -118,12 +118,12 @@ Thay user.login_attempts + 2 bằng + 1 và bổ sung unit/integration test cho 
 - **Mức độ:** Critical
 - **Feature / SRS:** FR-02 / FR-02
 - **Automation test:** TC08
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#18](https://github.com/hungtmh/HW04-TESTING/issues/18)
 - **Evidence:** `../evidence/bugs/BUG-03-tai-khoan-bi-khoa-som-truoc-lan-ang-nhap-sai-thu.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-02 và so sánh với hành vi thực tế. Case TC08 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-02 và so sánh với hành vi thực tế. Case TC08 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -156,12 +156,12 @@ Tăng counter đúng một đơn vị và chỉ thiết lập locked_until khi c
 - **Mức độ:** High
 - **Feature / SRS:** FR-02 / FR-02
 - **Automation test:** TC09
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#19](https://github.com/hungtmh/HW04-TESTING/issues/19)
 - **Evidence:** `../evidence/bugs/BUG-04-thoi-gian-khoa-tai-khoan-la-180-giay-thay-vi-30-.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-02 và so sánh với hành vi thực tế. Case TC09 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-02 và so sánh với hành vi thực tế. Case TC09 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -194,12 +194,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Medium
 - **Feature / SRS:** FR-21 / FR-21
 - **Automation test:** TC11
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#20](https://github.com/hungtmh/HW04-TESTING/issues/20)
 - **Evidence:** `../evidence/bugs/BUG-05-trang-login-khong-co-h1-va-hien-thi-sai-tieu-e-a.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-21 và so sánh với hành vi thực tế. Case TC11 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-21 và so sánh với hành vi thực tế. Case TC11 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -232,12 +232,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Critical
 - **Feature / SRS:** FR-22 / FR-22, SEC-01
 - **Automation test:** TC13
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#21](https://github.com/hungtmh/HW04-TESTING/issues/21)
 - **Evidence:** `../evidence/bugs/BUG-06-o-mat-khau-login-dung-type-text-va-lam-lo-ky-tu.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-22, SEC-01 và so sánh với hành vi thực tế. Case TC13 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-22, SEC-01 và so sánh với hành vi thực tế. Case TC13 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -270,12 +270,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Low
 - **Feature / SRS:** FR-21 / FR-21
 - **Automation test:** TC14
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#22](https://github.com/hungtmh/HW04-TESTING/issues/22)
 - **Evidence:** `../evidence/bugs/BUG-07-nut-ang-nhap-dung-tieng-anh-sign-in-thay-vi-tien.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-21 và so sánh với hành vi thực tế. Case TC14 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-21 và so sánh với hành vi thực tế. Case TC14 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -308,12 +308,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Medium
 - **Feature / SRS:** FR-22 / FR-22
 - **Automation test:** TC15
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#23](https://github.com/hungtmh/HW04-TESTING/issues/23)
 - **Evidence:** `../evidence/bugs/BUG-08-thong-bao-loi-login-nam-duoi-nut-submit.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-22 và so sánh với hành vi thực tế. Case TC15 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-22 và so sánh với hành vi thực tế. Case TC15 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -346,12 +346,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Critical
 - **Feature / SRS:** SEC-01 / SEC-01
 - **Automation test:** TC16
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#24](https://github.com/hungtmh/HW04-TESTING/issues/24)
 - **Evidence:** `../evidence/bugs/BUG-09-api-login-tra-lai-mat-khau-plaintext-trong-respo.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ SEC-01 và so sánh với hành vi thực tế. Case TC16 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ SEC-01 và so sánh với hành vi thực tế. Case TC16 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -384,12 +384,12 @@ Hash mật khẩu bằng bcrypt/argon2 và dùng SELECT/DTO không bao gồm pas
 - **Mức độ:** High
 - **Feature / SRS:** FR-07 / FR-07
 - **Automation test:** TC12
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#25](https://github.com/hungtmh/HW04-TESTING/issues/25)
 - **Evidence:** `../evidence/bugs/BUG-10-them-cung-san-pham-hai-lan-tao-hai-dong-thay-vi-.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC12 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC12 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -422,12 +422,12 @@ Trong addToCart, tìm item theo product id và cộng quantity thay vì luôn ap
 - **Mức độ:** High
 - **Feature / SRS:** FR-07 / FR-07, FR-24
 - **Automation test:** TC13
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#26](https://github.com/hungtmh/HW04-TESTING/issues/26)
 - **Evidence:** `../evidence/bugs/BUG-11-xoa-san-pham-khoi-gio-khong-co-dialog-xac-nhan.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-07, FR-24 và so sánh với hành vi thực tế. Case TC13 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-07, FR-24 và so sánh với hành vi thực tế. Case TC13 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -460,12 +460,12 @@ Hiển thị dialog xác nhận trước khi gọi removeFromCart; chỉ xóa kh
 - **Mức độ:** Low
 - **Feature / SRS:** FR-07 / FR-07
 - **Automation test:** TC14
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#27](https://github.com/hungtmh/HW04-TESTING/issues/27)
 - **Evidence:** `../evidence/bugs/BUG-12-nhan-tong-tien-hien-thi-tong-tam-tinh-thay-vi-to.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC14 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC14 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -498,12 +498,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** High
 - **Feature / SRS:** FR-07 / FR-07
 - **Automation test:** TC15
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#28](https://github.com/hungtmh/HW04-TESTING/issues/28)
 - **Evidence:** `../evidence/bugs/BUG-13-gio-hang-thieu-nut-tang-giam-so-luong.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC15 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC15 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -536,12 +536,12 @@ Bổ sung increment/decrement handlers, giới hạn quantity tối thiểu 1 v�
 - **Mức độ:** Low
 - **Feature / SRS:** FR-24 / FR-07, FR-24
 - **Automation test:** TC16
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#29](https://github.com/hungtmh/HW04-TESTING/issues/29)
 - **Evidence:** `../evidence/bugs/BUG-14-empty-state-cua-gio-hang-khong-co-icon-hoac-hinh.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-07, FR-24 và so sánh với hành vi thực tế. Case TC16 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-07, FR-24 và so sánh với hành vi thực tế. Case TC16 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -574,12 +574,12 @@ Thêm illustration có alt text và giữ thông báo hiện tại.
 - **Mức độ:** Low
 - **Feature / SRS:** FR-07 / FR-07
 - **Automation test:** TC17
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#30](https://github.com/hungtmh/HW04-TESTING/issues/30)
 - **Evidence:** `../evidence/bugs/BUG-15-link-tiep-tuc-mua-sam-o-gio-co-nhan-sai.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC17 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-07 và so sánh với hành vi thực tế. Case TC17 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -612,12 +612,12 @@ Bằng chứng trên được sinh từ mapping SRS và kết quả Playwright C
 - **Mức độ:** Critical
 - **Feature / SRS:** FR-16 / FR-12, SEC-03
 - **Automation test:** TC06
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#31](https://github.com/hungtmh/HW04-TESTING/issues/31)
 - **Evidence:** `../evidence/bugs/BUG-16-user-thuong-co-the-goi-api-admin-import-san-pham.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-12, SEC-03 và so sánh với hành vi thực tế. Case TC06 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-12, SEC-03 và so sánh với hành vi thực tế. Case TC06 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -650,12 +650,12 @@ Thêm middleware requireAdmin kiểm tra req.user.role === admin.
 - **Mức độ:** Critical
 - **Feature / SRS:** FR-16 / FR-16
 - **Automation test:** TC09
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#32](https://github.com/hungtmh/HW04-TESTING/issues/32)
 - **Evidence:** `../evidence/bugs/BUG-17-import-csv-khong-rollback-toan-bo-khi-mot-dong-l.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-16 và so sánh với hành vi thực tế. Case TC09 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-16 và so sánh với hành vi thực tế. Case TC09 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -688,12 +688,12 @@ Validate toàn bộ batch trước, sau đó insert trong transaction BEGIN/ROLL
 - **Mức độ:** Critical
 - **Feature / SRS:** FR-16 / FR-15, FR-16
 - **Automation test:** TC10
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#33](https://github.com/hungtmh/HW04-TESTING/issues/33)
 - **Evidence:** `../evidence/bugs/BUG-18-import-chap-nhan-san-pham-co-gia-am.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-15, FR-16 và so sánh với hành vi thực tế. Case TC10 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-15, FR-16 và so sánh với hành vi thực tế. Case TC10 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -726,12 +726,12 @@ Chuyển price sang number hữu hạn và từ chối khi <= 0 trước transac
 - **Mức độ:** High
 - **Feature / SRS:** FR-16 / FR-16
 - **Automation test:** TC11
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#34](https://github.com/hungtmh/HW04-TESTING/issues/34)
 - **Evidence:** `../evidence/bugs/BUG-19-csv-parser-khong-ho-tro-dau-phay-trong-truong-uo.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-16 và so sánh với hành vi thực tế. Case TC11 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-16 và so sánh với hành vi thực tế. Case TC11 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -764,12 +764,12 @@ Dùng csv-parse/Papa Parse hoặc parser RFC 4180 thay cho String.split.
 - **Mức độ:** Low
 - **Feature / SRS:** FR-16 / FR-16
 - **Automation test:** TC12
-- **GitHub Issue:** Pending
+- **GitHub Issue:** [#35](https://github.com/hungtmh/HW04-TESTING/issues/35)
 - **Evidence:** `../evidence/bugs/BUG-20-file-picker-import-khong-gioi-han-uoi-csv.png`
 
 ### Mô tả
 
-Automation đọc kỳ vọng từ FR-16 và so sánh với hành vi thực tế. Case TC12 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoà nhóm `@bug`.
+Automation đọc kỳ vọng từ FR-16 và so sánh với hành vi thực tế. Case TC12 fail nhất quán trên cả ba browser engine; summary JSON ghi nhận không có failure nào ngoài nhóm `@bug`.
 
 ### Steps to reproduce
 
@@ -801,25 +801,25 @@ Thêm accept=.csv ở frontend và validate MIME/extension ở backend.
 
 | Bug | Issue |
 |---|---|
-| BUG-01 | Pending |
-| BUG-02 | Pending |
-| BUG-03 | Pending |
-| BUG-04 | Pending |
-| BUG-05 | Pending |
-| BUG-06 | Pending |
-| BUG-07 | Pending |
-| BUG-08 | Pending |
-| BUG-09 | Pending |
-| BUG-10 | Pending |
-| BUG-11 | Pending |
-| BUG-12 | Pending |
-| BUG-13 | Pending |
-| BUG-14 | Pending |
-| BUG-15 | Pending |
-| BUG-16 | Pending |
-| BUG-17 | Pending |
-| BUG-18 | Pending |
-| BUG-19 | Pending |
-| BUG-20 | Pending |
+| BUG-01 | [#16](https://github.com/hungtmh/HW04-TESTING/issues/16) |
+| BUG-02 | [#17](https://github.com/hungtmh/HW04-TESTING/issues/17) |
+| BUG-03 | [#18](https://github.com/hungtmh/HW04-TESTING/issues/18) |
+| BUG-04 | [#19](https://github.com/hungtmh/HW04-TESTING/issues/19) |
+| BUG-05 | [#20](https://github.com/hungtmh/HW04-TESTING/issues/20) |
+| BUG-06 | [#21](https://github.com/hungtmh/HW04-TESTING/issues/21) |
+| BUG-07 | [#22](https://github.com/hungtmh/HW04-TESTING/issues/22) |
+| BUG-08 | [#23](https://github.com/hungtmh/HW04-TESTING/issues/23) |
+| BUG-09 | [#24](https://github.com/hungtmh/HW04-TESTING/issues/24) |
+| BUG-10 | [#25](https://github.com/hungtmh/HW04-TESTING/issues/25) |
+| BUG-11 | [#26](https://github.com/hungtmh/HW04-TESTING/issues/26) |
+| BUG-12 | [#27](https://github.com/hungtmh/HW04-TESTING/issues/27) |
+| BUG-13 | [#28](https://github.com/hungtmh/HW04-TESTING/issues/28) |
+| BUG-14 | [#29](https://github.com/hungtmh/HW04-TESTING/issues/29) |
+| BUG-15 | [#30](https://github.com/hungtmh/HW04-TESTING/issues/30) |
+| BUG-16 | [#31](https://github.com/hungtmh/HW04-TESTING/issues/31) |
+| BUG-17 | [#32](https://github.com/hungtmh/HW04-TESTING/issues/32) |
+| BUG-18 | [#33](https://github.com/hungtmh/HW04-TESTING/issues/33) |
+| BUG-19 | [#34](https://github.com/hungtmh/HW04-TESTING/issues/34) |
+| BUG-20 | [#35](https://github.com/hungtmh/HW04-TESTING/issues/35) |
 
 Tất cả Issue được tạo bằng tài khoản GitHub `thangak18` và gắn evidence từ nhánh bài làm.

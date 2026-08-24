@@ -7,7 +7,7 @@
 | SUT | EShop (`eshop-sut`): frontend-web, frontend-admin, backend API |
 | GitHub repository | https://github.com/hungtmh/HW04-TESTING |
 | Nhánh bài làm | `codex/23127259-hw04-completion` |
-| GitHub Issues | Pending - chưa tạo đủ 20 Issue |
+| GitHub Issues | 20 bug, xem bảng mục 2 |
 | Video demo (Task 2) | **NOT RECORDED YET** |
 | Video Agent Skill | **NOT RECORDED YET** |
 | Ngày | 2026-08-24 |
@@ -50,26 +50,26 @@ Chín HTML report đều hiển thị `Run by: 23127259` cùng ISO timestamp. �
 
 | ID | Feature | Mức độ | Tóm tắt | Issue |
 |---|---|---|---|---|
-| BUG-01 | FR-02 | High | Email login không dùng type=email và label sai, làm mất HTML5 validation | Pending |
-| BUG-02 | FR-02 | Critical | Một lần đăng nhập sai làm bộ đếm tăng 2 thay vì 1 | Pending |
-| BUG-03 | FR-02 | Critical | Tài khoản bị khóa sớm trước lần đăng nhập sai thứ ba | Pending |
-| BUG-04 | FR-02 | High | Thời gian khóa tài khoản là 180 giây thay vì 30 giây | Pending |
-| BUG-05 | FR-21 | Medium | Trang Login không có H1 và hiển thị sai tiêu đề Đăng Ký | Pending |
-| BUG-06 | FR-22 | Critical | Ô mật khẩu Login dùng type=text và làm lộ ký tự | Pending |
-| BUG-07 | FR-21 | Low | Nút đăng nhập dùng tiếng Anh Sign In thay vì tiếng Việt | Pending |
-| BUG-08 | FR-22 | Medium | Thông báo lỗi Login nằm dưới nút submit | Pending |
-| BUG-09 | SEC-01 | Critical | API Login trả lại mật khẩu plaintext trong response | Pending |
-| BUG-10 | FR-07 | High | Thêm cùng sản phẩm hai lần tạo hai dòng thay vì tăng số lượng | Pending |
-| BUG-11 | FR-07 | High | Xóa sản phẩm khỏi giỏ không có dialog xác nhận | Pending |
-| BUG-12 | FR-07 | Low | Nhãn tổng tiền hiển thị Tổng tạm tính thay vì Tổng cộng | Pending |
-| BUG-13 | FR-07 | High | Giỏ hàng thiếu nút tăng giảm số lượng +/- | Pending |
-| BUG-14 | FR-24 | Low | Empty state của giỏ hàng không có icon hoặc hình minh họa | Pending |
-| BUG-15 | FR-07 | Low | Link tiếp tục mua sắm ở giỏ có nhãn sai | Pending |
-| BUG-16 | FR-16 | Critical | User thường có thể gọi API admin import sản phẩm | Pending |
-| BUG-17 | FR-16 | Critical | Import CSV không rollback toàn bộ khi một dòng lỗi | Pending |
-| BUG-18 | FR-16 | Critical | Import chấp nhận sản phẩm có giá âm | Pending |
-| BUG-19 | FR-16 | High | CSV parser không hỗ trợ dấu phẩy trong trường được quote theo RFC 4180 | Pending |
-| BUG-20 | FR-16 | Low | File picker Import không giới hạn đuôi .csv | Pending |
+| BUG-01 | FR-02 | High | Email login không dùng type=email và label sai, làm mất HTML5 validation | [#16](https://github.com/hungtmh/HW04-TESTING/issues/16) |
+| BUG-02 | FR-02 | Critical | Một lần đăng nhập sai làm bộ đếm tăng 2 thay vì 1 | [#17](https://github.com/hungtmh/HW04-TESTING/issues/17) |
+| BUG-03 | FR-02 | Critical | Tài khoản bị khóa sớm trước lần đăng nhập sai thứ ba | [#18](https://github.com/hungtmh/HW04-TESTING/issues/18) |
+| BUG-04 | FR-02 | High | Thời gian khóa tài khoản là 180 giây thay vì 30 giây | [#19](https://github.com/hungtmh/HW04-TESTING/issues/19) |
+| BUG-05 | FR-21 | Medium | Trang Login không có H1 và hiển thị sai tiêu đề Đăng Ký | [#20](https://github.com/hungtmh/HW04-TESTING/issues/20) |
+| BUG-06 | FR-22 | Critical | Ô mật khẩu Login dùng type=text và làm lộ ký tự | [#21](https://github.com/hungtmh/HW04-TESTING/issues/21) |
+| BUG-07 | FR-21 | Low | Nút đăng nhập dùng tiếng Anh Sign In thay vì tiếng Việt | [#22](https://github.com/hungtmh/HW04-TESTING/issues/22) |
+| BUG-08 | FR-22 | Medium | Thông báo lỗi Login nằm dưới nút submit | [#23](https://github.com/hungtmh/HW04-TESTING/issues/23) |
+| BUG-09 | SEC-01 | Critical | API Login trả lại mật khẩu plaintext trong response | [#24](https://github.com/hungtmh/HW04-TESTING/issues/24) |
+| BUG-10 | FR-07 | High | Thêm cùng sản phẩm hai lần tạo hai dòng thay vì tăng số lượng | [#25](https://github.com/hungtmh/HW04-TESTING/issues/25) |
+| BUG-11 | FR-07 | High | Xóa sản phẩm khỏi giỏ không có dialog xác nhận | [#26](https://github.com/hungtmh/HW04-TESTING/issues/26) |
+| BUG-12 | FR-07 | Low | Nhãn tổng tiền hiển thị Tổng tạm tính thay vì Tổng cộng | [#27](https://github.com/hungtmh/HW04-TESTING/issues/27) |
+| BUG-13 | FR-07 | High | Giỏ hàng thiếu nút tăng giảm số lượng +/- | [#28](https://github.com/hungtmh/HW04-TESTING/issues/28) |
+| BUG-14 | FR-24 | Low | Empty state của giỏ hàng không có icon hoặc hình minh họa | [#29](https://github.com/hungtmh/HW04-TESTING/issues/29) |
+| BUG-15 | FR-07 | Low | Link tiếp tục mua sắm ở giỏ có nhãn sai | [#30](https://github.com/hungtmh/HW04-TESTING/issues/30) |
+| BUG-16 | FR-16 | Critical | User thường có thể gọi API admin import sản phẩm | [#31](https://github.com/hungtmh/HW04-TESTING/issues/31) |
+| BUG-17 | FR-16 | Critical | Import CSV không rollback toàn bộ khi một dòng lỗi | [#32](https://github.com/hungtmh/HW04-TESTING/issues/32) |
+| BUG-18 | FR-16 | Critical | Import chấp nhận sản phẩm có giá âm | [#33](https://github.com/hungtmh/HW04-TESTING/issues/33) |
+| BUG-19 | FR-16 | High | CSV parser không hỗ trợ dấu phẩy trong trường được quote theo RFC 4180 | [#34](https://github.com/hungtmh/HW04-TESTING/issues/34) |
+| BUG-20 | FR-16 | Low | File picker Import không giới hạn đuôi .csv | [#35](https://github.com/hungtmh/HW04-TESTING/issues/35) |
 
 Chi tiết từng bug (steps, expected, actual, evidence, đề xuất sửa) nằm trong [bug-report/BUG_REPORT.md](bug-report/BUG_REPORT.md).
 
@@ -141,4 +141,4 @@ Bài chỉ có thể tự chấm 100 sau khi sinh viên tự quay/upload hai vid
 | HTML report có student + ISO | 9/9 | 9/9, kèm screenshot |
 | Fail ngoài `@bug` | 0 | 0 |
 | Commit chạm `.spec.js` | >= 8 | 12 |
-| GitHub Issues kèm evidence | 20 | 0/20 |
+| GitHub Issues kèm evidence | 20 | 20/20 |
