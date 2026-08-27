@@ -1,7 +1,7 @@
 # AI AUDIT REPORT — HW04 Automation Testing (EShop)
 
 - **Sinh viên:** Ninh Văn Khải — MSSV **23127060**
-- **Nguồn:** tổng hợp từ `ai/AI_Log.md` (16 entry, append-only, ghi ngay tại thời điểm làm việc)
+- **Nguồn:** tổng hợp từ `ai/AI_Log.md` (19 entry, append-only, ghi ngay tại thời điểm làm việc)
 - **Timezone:** Asia/Ho_Chi_Minh (+07:00)
 
 ---
@@ -13,17 +13,17 @@
 | # | Công việc | AI có làm | Người làm |
 |---|---|---|---|
 | 1 | Đọc source SUT, lập bảng route ↔ selector ↔ API ↔ rủi ro | ✅ Claude Code | Khải xác minh lại port bằng cách chạy server |
-| 2 | Thiết kế bảng 54 test case | ✅ Claude Code | 🧑 Khải **duyệt & ký** (Phase 1) |
+| 2 | Thiết kế bảng 54 test case | ✅ Claude Code | ✅ Khải đã **duyệt & ký** (`01-TEST-CASES.md` §5, 2026-08-27) |
 | 3 | Sinh 6 file dữ liệu JSON/CSV (77 record) | ✅ Claude Code | Khải kiểm tra độ phủ edge case |
-| 4 | Viết 5 Page Object + 3 spec (80 test) | ✅ Claude Code | 🧑 Khải **review selector & assertion** (Phase 4) |
+| 4 | Viết 5 Page Object + 3 spec (80 test) | ✅ Claude Code | ✅ Khải đã **review selector & assertion** và ký (`02-AI-GAP-ANALYSIS.md` §5, 2026-08-27) |
 | 5 | Chạy test, đọc `results.json`, phân tích fail | ✅ Claude Code | — |
 | 6 | Viết script hạ tầng (multibrowser, banner, summarize, evidence) | ✅ Claude Code | — |
-| 7 | Soạn BUG_REPORT, Main Report, Audit, Critique, README | ✅ Claude Code | 🧑 Khải review nội dung, chốt severity |
+| 7 | Soạn BUG_REPORT, Main Report, Audit, Critique, README | ✅ Claude Code | ✅ Khải đã review nội dung và chốt severity (giữ 9 Critical) |
 | 8 | Chụp ảnh minh chứng bug | ✅ Claude Code (Playwright thật) | — |
-| 9 | **Tạo GitHub repo, push, tạo Issue** | ❌ | 🧑 **Khải** |
-| 10 | **Quay video demo, thuyết minh giọng thật, upload YouTube** | ❌ | 🧑 **Khải** |
-| 11 | **Chốt điểm tự đánh giá, đóng gói, nộp Moodle** | ❌ | 🧑 **Khải** |
-| 12 | **Bảo vệ vấn đáp** | ❌ | 🧑 **Khải** |
+| 9 | **Tạo GitHub repo, push, tạo Issue** | ❌ | 🧑 **Khải** — ✅ đã xong: branch `nvk`, issue #46–#73 |
+| 10 | **Quay video demo, thuyết minh giọng thật, upload YouTube** | ❌ | 🧑 **Khải** — ✅ đã xong: video 2-trong-1 https://youtu.be/P_8rnOMATfw |
+| 11 | **Chốt điểm tự đánh giá, đóng gói, nộp Moodle** | ❌ | 🧑 **Khải** — ✅ đã chốt **100/100**; còn đóng gói + nộp |
+| 12 | **Bảo vệ vấn đáp** | ❌ | 🧑 **Khải** — còn lại |
 
 ---
 
@@ -33,20 +33,22 @@
 |---|---|---|---|---|---|---|---|
 | LOG-001 | Notion AI | 2026-08-22T15:40:12 | P-init | Phân tích đề, thiết kế quy trình | *"…phân tích đề bài, thiết kế ra SKILL.md để guideline AI agent làm việc, chia task từng bước… phần nào cần human verified thì để tui…"* | `agent-skill/SKILL.md` (9 phase, luật scope, chuẩn data-driven, quy tắc ghi AI Log), `ai/AI_Log.md` khởi tạo | Khải đọc & chấp nhận quy trình |
 | LOG-002 | Claude Code | 2026-08-22T20:24:00 | P0 Recon | Khảo sát SUT, dựng khung | *"Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase"* | `00-SUT-RECON.md`, `playwright.config.js`, 4 file utils. Xác minh **9 hành vi lỗi bằng curl thật** | Khải xác nhận port thật khi chạy `run_servers.sh` |
-| LOG-003 | Claude Code | 2026-08-22T20:38:00 | P1 Test case | Thiết kế test case | *(cùng prompt trên)* | `01-TEST-CASES.md` — 54 TC, 12 case không automate được kèm lý do | 🧑 **Duyệt & ký bảng test case** |
+| LOG-003 | Claude Code | 2026-08-22T20:38:00 | P1 Test case | Thiết kế test case | *(cùng prompt trên)* | `01-TEST-CASES.md` — 54 TC, 12 case không automate được kèm lý do | ✅ Đã duyệt & ký (2026-08-27) |
 | LOG-004 | Claude Code | 2026-08-22T20:52:00 | P2 Data | Sinh dữ liệu test | *(cùng prompt trên)* | 6 file JSON/CSV, 77 record (đếm nhầm — thực tế **88**, đã đính chính ở LOG-014), có cột `bug` + `source` truy vết | Khải kiểm độ phủ edge case |
 | LOG-005 | Claude Code | 2026-08-22T21:10:00 | P3 FR-03 | Page Object + spec FR-03 | *(cùng prompt trên)* | `ForgotPasswordPage.js`, `LoginPage.js`, spec 30 test. **Lần 1 fail 9 test** do hiểu sai role của `input[type=password]`; đã sửa | Khải review selector |
 | LOG-006 | Claude Code | 2026-08-22T21:26:00 | P3 FR-08 | Page Object + spec FR-08 | *(cùng prompt trên)* | `CartPage.js`, `CheckoutPage.js`, spec 25 test. Xác nhận `SAVE10` làm tổng tiền ×10 | Khải review assertion |
 | LOG-007 | Claude Code | 2026-08-22T21:44:00 | P3 FR-15 | Page Object + spec FR-15 | *(cùng prompt trên)* | `AdminProductPage.js`, spec 25 test. Bắt bug "fake mass update" bằng assertion kép UI+API | Khải review |
-| LOG-008 | Claude Code | 2026-08-22T22:05:00 | P4 Review | Tự phê bình & vá | *(cùng prompt trên)* | `02-AI-GAP-ANALYSIS.md` — **7 GAP** có bằng chứng, đã sửa 5 GAP trong code | 🧑 **Ký xác nhận đã review script** |
-| LOG-009 | Claude Code | 2026-08-22T22:35:00 | P5 Run | 9 run multi-browser | *(cùng prompt trên)* | 4 script hạ tầng, 9 report, `03-RUN-SUMMARY.md`. **240/240 passed**, 9/9 banner hợp lệ | 🧑 **Mở 9 report, chụp màn hình banner** |
-| LOG-010 | Claude Code | 2026-08-22T23:02:00 | P6 Bug | Bug report + evidence | *(cùng prompt trên)* | `BUG_REPORT.md` 28 bug, 11 ảnh PNG thật, 28 lệnh `gh issue create` (LOG-010 ghi nhầm "27 bug", đã đính chính ở LOG-013) | 🧑 **Tạo GitHub Issue, đính ảnh** |
+| LOG-008 | Claude Code | 2026-08-22T22:05:00 | P4 Review | Tự phê bình & vá | *(cùng prompt trên)* | `02-AI-GAP-ANALYSIS.md` — **7 GAP** có bằng chứng, đã sửa 5 GAP trong code | ✅ Đã ký xác nhận review script (2026-08-27) |
+| LOG-009 | Claude Code | 2026-08-22T22:35:00 | P5 Run | 9 run multi-browser | *(cùng prompt trên)* | 4 script hạ tầng, 9 report, `03-RUN-SUMMARY.md`. **240/240 passed**, 9/9 banner hợp lệ | ✅ Đã mở 9 report và chụp banner (9/9 ảnh) |
+| LOG-010 | Claude Code | 2026-08-22T23:02:00 | P6 Bug | Bug report + evidence | *(cùng prompt trên)* | `BUG_REPORT.md` 28 bug, 11 ảnh PNG thật, 28 lệnh `gh issue create` (LOG-010 ghi nhầm "27 bug", đã đính chính ở LOG-013) | ✅ Đã tạo 28 Issue #46–#73 kèm ảnh |
 | LOG-011 | Claude Code | 2026-08-22T23:20:00 | P7 Docs | Tài liệu | *(cùng prompt trên)* | Main Report, AI Audit, AI Critique (313→296 từ sau 3 lần cắt), README, 2 kịch bản video, 9 PDF | Khải review, chốt severity |
-| LOG-012 | Claude Code | 2026-08-22T23:45:00 | P8 Đóng gói | Bổ sung test, vá GAP-08/09, xuất git log | *(cùng prompt trên)* | +3 test (83 tổng), 9 commit chạm `*.spec.js`, 249/249 pass, 2 file git log | 🧑 **Push repo, đóng gói, nộp** |
+| LOG-012 | Claude Code | 2026-08-22T23:45:00 | P8 Đóng gói | Bổ sung test, vá GAP-08/09, xuất git log | *(cùng prompt trên)* | +3 test (83 tổng), 9 commit chạm `*.spec.js`, 249/249 pass, 2 file git log | ✅ Đã push repo · 🧑 còn đóng gói + nộp Moodle |
 | LOG-013 | Claude Code | 2026-08-22T23:58:00 | P8 DoD | Đính chính số bug | *(cùng prompt trên)* | Chạy checklist Definition of Done, phát hiện `BUG_REPORT.md` có **28** bug chứ không phải 27; sửa số ở 4 tài liệu, **không** sửa LOG-010 (append-only) | Khải xác nhận con số |
-| LOG-014 | Claude Code | 2026-08-27T20:05:00 | P8 Hậu kiểm | Đối chiếu Task 1, tạo Issue, push repo | *"Kiem tra thu muc 23127060 va cho toi biet task 1 da hoan thanh 100% chua va task 2 toi can quay video nhu the nao, quay nhung gi ?… Neu da thuc hien day du roi thi giup toi tao issue tren Github."* | Verify từng tiêu chí Task 1 **bằng lệnh** thay vì tin README; push branch `nvk`; tạo **28 GitHub Issue #46–#73** có ảnh nhúng qua raw URL; **đính chính 77→88 record** | 🧑 Điền Human review · chốt điểm tự chấm |
-| LOG-015 | Claude Code | 2026-08-27T20:36:00 | P8 Minh chứng | Verify ảnh chụp HTML report | *"…Toi da cap nhat (them anh trong @23127060/evidence/report-screenshots/. Hay giup toi match bao cao."* | Đọc **9 ảnh PNG**, đối chiếu từng con số với `results.json`: **9/9 khớp tuyệt đối** kể cả ISO timestamp ⇒ report chưa chạy lại, **không** chạy `summarize-results.mjs` | 🧑 Khải tự chụp ảnh — agent bị cấm sinh ảnh |
-| LOG-016 | Claude Code | 2026-08-27T20:50:00 | P8 Hồ sơ AI | Bổ sung AI_Log | *"@23127060/ai/AI_Log.md Giup toi bo sung cac phan con thieu trong file nay."* | Điền **13 commit hash thật** vào mục Liên kết, append LOG-014/015/016, đồng bộ số entry ở README + Audit. **Không** tự điền Human review | 🧑 **Điền Human review + Verdict cho 16 entry** |
+| LOG-014 | Claude Code | 2026-08-27T20:05:00 | P8 Hậu kiểm | Đối chiếu Task 1, tạo Issue, push repo | *"Kiem tra thu muc 23127060 va cho toi biet task 1 da hoan thanh 100% chua va task 2 toi can quay video nhu the nao, quay nhung gi ?… Neu da thuc hien day du roi thi giup toi tao issue tren Github."* | Verify từng tiêu chí Task 1 **bằng lệnh** thay vì tin README; push branch `nvk`; tạo **28 GitHub Issue #46–#73** có ảnh nhúng qua raw URL; **đính chính 77→88 record** | ✅ Đã điền Human review · ✅ đã chốt điểm 100/100 |
+| LOG-015 | Claude Code | 2026-08-27T20:36:00 | P8 Minh chứng | Verify ảnh chụp HTML report | *"…Toi da cap nhat (them anh trong @23127060/evidence/report-screenshots/. Hay giup toi match bao cao."* | Đọc **9 ảnh PNG**, đối chiếu từng con số với `results.json`: **9/9 khớp tuyệt đối** kể cả ISO timestamp ⇒ report chưa chạy lại, **không** chạy `summarize-results.mjs` | ✅ Khải tự chụp 9 ảnh — agent bị cấm sinh ảnh |
+| LOG-016 | Claude Code | 2026-08-27T20:50:00 | P8 Hồ sơ AI | Bổ sung AI_Log | *"@23127060/ai/AI_Log.md Giup toi bo sung cac phan con thieu trong file nay."* | Điền **13 commit hash thật** vào mục Liên kết, append LOG-014/015/016, đồng bộ số entry ở README + Audit. **Không** tự điền Human review | ✅ Đã điền Human review + Verdict cho toàn bộ entry |
+| LOG-017 | Claude Code | 2026-08-27T22:40:00 | P8 Hoàn thiện | Gắn link video, xoá `video-script/` | *"https://youtu.be/P_8rnOMATfw Thêm link này vào trong báo cáo và readme cho tôi. Đây là video demo 2 trong 1, xóa luôn video-script"* | Thêm link video vào `README.md` + bảng đầu `HW04_Main_Report.md`; xoá 2 file kịch bản video; dọn tham chiếu chết ở SKILL/CHECKLIST/Audit; **giữ nguyên** tham chiếu trong `AI_Log.md` (log lịch sử); xuất lại 9 PDF | ✅ Khải xác nhận link đúng video đã upload |
+| LOG-018 | Claude Code | 2026-08-27T23:05:00 | P8 Hoàn thiện | Đóng các mục chờ người học | *"Những phần nào cần Human review tôi đều oke hết, hãy xóa phần text (human review) đó cho tôi và bổ sung những thứ còn thiếu ví dụ AI_log, tôi review oke rồi"* | Điền Human review LOG-017 (⇒ 18/18 entry đủ); ký 2 mục xác nhận (test case + review script) và mục chốt severity bug; **rà chéo phát hiện 4 con số lỗi thời** (12→13 lỗi AI, 10/12/16→18 entry, 77→88 record) và sửa về số thật; **không tự điền điểm** mà hỏi lại, khuyến nghị 95 | ✅ Khải **quyết định 100/100** — điểm là quyết định của người học, không phải agent tự chấm |
 
 > **Ghi chú về prompt:** Khải gửi **một** prompt duy nhất yêu cầu agent thực hiện toàn bộ quy trình
 > theo SKILL.md. Agent tự chia thành 8 phase, mỗi phase 1 commit + 1 entry log để giữ nguyên tinh thần
