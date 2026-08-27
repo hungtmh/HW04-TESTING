@@ -1,18 +1,15 @@
 # AI Log — HW04 Automation Testing (EShop)
 
-> File append-only. Mỗi lượt hội thoại với AI = 1 entry. Dùng để sinh `AI_Audit_Report.md` (§9 đề bài) và `AI_Critique.md` (§10).
-
 - **Sinh viên:** Ninh Văn Khải — MSSV 23127060
 - **Feature:** FR-03 (Quên/Đặt lại mật khẩu), FR-08 (Thanh toán), FR-15 (Quản lý sản phẩm)
 - **AI tools khai báo:** Claude Code (CLI) — sinh/refactor script Playwright, viết tài liệu; Notion AI — phân tích đề & thiết kế SKILL.md
-- **Khai báo bắt buộc:** *"I use AI tools for the following tasks"* (chi tiết từng entry bên dưới)
 - **Timezone:** Asia/Ho_Chi_Minh (+07:00)
 
-| Verdict | Ý nghĩa |
-|---|---|
-| Accepted | Dùng nguyên output của AI |
+| Verdict           | Ý nghĩa                       |
+| ----------------- | ----------------------------- |
+| Accepted          | Dùng nguyên output của AI     |
 | Accepted-with-fix | Dùng sau khi người review sửa |
-| Rejected | Bỏ output, tự làm lại |
+| Rejected          | Bỏ output, tự làm lại         |
 
 ---
 
@@ -28,25 +25,29 @@
 > Tôi là Ninh Văn Khải, MSSV: 23127060, tôi cần bạn giúp tôi phân tích đề bài, thiết kế ra SKILL.md để guildline AI agent làm việc, chia task từng bước, hỗ trợ tui trong quá trình test và viết báo cáo. phần nào MCP làm được thì cho Claude Agent (tôi có claude cli) làm luôn, còn phần nào cần human verified thì để tui. Đây là nhóm tính năng tôi sẽ làm: Pool A: FR-03 Quên mật khẩu & Đặt lại mật khẩu; Pool B: FR-08 Thanh toán; Pool C: FR-15 Quản lý sản phẩm; Pool D (Mobile): Giỏ hàng và Thanh toán (FR-20). […kèm đề bài HW04, cây thư mục repo, và source backend server.js / database.js / package.json…] vì tôi cần trace lại các prompt và viết vào để tạo AI_Audit_Report nên nhớ nhắc Agent làm việc này mỗi khi tôi hỏi nó (thêm chức năng này vào Skill.md). Một file AI_log.md sẽ có các mục như vậy ứng với từng đoạn chat. Vì tôi làm với nhóm tôi, nên có lẽ tôi sẽ viết 1 file Skill.md mới, và kêu AI không cần quan tâm đến các folder của 23127195 hay 23127259, chỉ quan tâm đến 23127060 thôi.
 
 **AI output (tóm tắt):**
+
 - Đọc `backend/server.js` + `database.js` để xác minh API/seed data thật, lập danh sách bug-candidate cho FR-03/FR-08/FR-15.
 - Sinh `SKILL.md` (skill cho Claude CLI): luật scope chỉ `23127060/`, quy trình 9 phase, chuẩn data-driven, ≥3 assertion pattern, banner `Run by: 23127060`, quy tắc 8 commit spec, phân vai Agent vs Human, chức năng ghi AI Log bắt buộc mỗi lượt.
 - Sinh file `AI_Log.md` khởi tạo kèm template entry.
 
 **File tạo/sửa:**
+
 - `23127060/agent-skill/SKILL.md` (mới)
 - `23127060/ai/AI_Log.md` (mới)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 (chưa chạy test ở bước này — chỉ đọc source SUT)
 ```
 
-**Human review (Khải):**
-- Sai/thiếu: <điền sau khi đọc SKILL.md>
-- Đã sửa: <…>
+**Human review :**
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>`
+- Sai/thiếu: SKILL.md khá chính xác, em chỉ bổ sung thêm 1 dòng là: "Không thêm icon vào báo cáo vì trông nó thiếu chuyên nghiệp"
+- Đã sửa:
+
+**Verdict:** Accepted-with-fix
+**Liên kết:** _(chưa có commit — bước này chỉ phân tích đề và soạn SKILL.md, trước khi khởi tạo repo)_
 
 ---
 
@@ -74,11 +75,11 @@ npx playwright test --project=chromium --grep @frXX
 → <passed/failed thật, không bịa>
 ```
 
-**Human review (Khải):**
+**Human review  :**
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
+**Verdict:**  Accepted
 **Liên kết:** commit `<hash>` · bug `BUG-0X` · report `<report dir>`
 
 ============================================================================ -->
@@ -93,9 +94,11 @@ npx playwright test --project=chromium --grep @frXX
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - Đọc `.claude/skills/eshop-automation-23127060/SKILL.md` (bản giống hệt `23127060/agent-skill/SKILL.md`), nắm luật scope + 9 phase.
 - Kiểm tra môi trường: backend `:3000` sống, frontend-web `:5173` sống, frontend-admin **thiếu `node_modules`** → chạy `npm install` (node_modules đã nằm trong `.gitignore`, không đụng source SUT).
 - Đọc source thật: `backend/server.js` (572 dòng), `backend/database.js`, `frontend-web/src/pages/{ForgotPassword,Cart,Checkout,Login,Home,ProductDetail}.jsx`, `context/{Cart,Auth}Context.jsx`, `frontend-admin/src/App.jsx` (922 dòng).
@@ -104,6 +107,7 @@ npx playwright test --project=chromium --grep @frXX
 - Dựng đủ cây thư mục §3, di chuyển `AI_Log/AI_Log.md` → `ai/AI_Log.md` cho đúng chuẩn.
 
 **File tạo/sửa:**
+
 - `23127060/report/00-SUT-RECON.md` (mới — bảng route ↔ selector ↔ API ↔ rủi ro, có số dòng dẫn nguồn)
 - `23127060/automation/playwright.config.js` (mới — banner `Run by: 23127060` + ISO timestamp)
 - `23127060/automation/package.json` (mới)
@@ -111,6 +115,7 @@ npx playwright test --project=chromium --grep @frXX
 - `23127060/ai/AI_Log.md` (di chuyển từ `23127060/AI_Log/`)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 curl -s http://localhost:3000/api/products            ⇒ 200, 5 sản phẩm seed
 curl -s -o /dev/null -w "%{http_code}" :5173/          ⇒ 200
@@ -128,12 +133,13 @@ POST /api/apply-coupon {"code":"SAVE10","total_amount":1000000}
 GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…}
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · report `00-SUT-RECON.md`
+**Verdict:** Accepted
+**Liên kết:** commit `6697018` · report `00-SUT-RECON.md`
 
 ---
 
@@ -145,9 +151,11 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - Sinh `report/01-TEST-CASES.md`: **54 test case** (FR-03: 16, FR-08: 18, FR-15: 20) — vượt mốc 12 TC/feature.
 - Mỗi TC có: ID · loại (P/N/E/S) · tiền đề · bước · dữ liệu · expected **dẫn số dòng source** · assertion pattern · cờ automate được.
 - Khai báo 5 assertion pattern A1–A5 (thêm A5 = dialog vì SUT dùng `alert()` thay toast).
@@ -155,20 +163,23 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 - Phát hiện thêm 2 bug chưa có trong danh sách candidate của SKILL: **coupon percent nghịch dấu** (`server.js:432`) và **boundary `min_order_amount` dùng `>` thay vì `>=`** (`server.js:421`).
 
 **File tạo/sửa:**
+
 - `23127060/report/01-TEST-CASES.md` (mới, 54 TC)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 (Phase thiết kế — chưa chạy test. Expected của mọi TC được đối chiếu trực tiếp với
  source đã đọc ở Phase 0 và với kết quả curl đã ghi trong LOG-002.)
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · report `01-TEST-CASES.md`
+**Verdict:** Accepted
+**Liên kết:** commit `78b5dc7` · report `01-TEST-CASES.md`
 
 ---
 
@@ -180,9 +191,11 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - Sinh đủ 6 file theo §3 SKILL: mỗi feature 1 JSON (case phức, có nhánh `flow: ui|api`) + 1 CSV (bảng boundary).
 - Tổng **77 record dữ liệu**, phủ đúng 54 TC của Phase 1 (một số TC tách thành nhiều biến thể a/b/c).
 - Dùng sentinel `__VALID__ / __EMPTY__ / __MISSING__ / __SPACES__ / __UNIQUE__` để biểu diễn giá trị mà CSV không mã hoá trực tiếp được (chuỗi rỗng, khoảng trắng, trường không gửi, giá trị sinh runtime).
@@ -190,6 +203,7 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 - Viết `utils/csv.js` (parser tự làm, hỗ trợ ô bọc ngoặc kép) để không thêm dependency ngoài.
 
 **File tạo/sửa:**
+
 - `automation/tests/data/fr03-reset-cases.json` (mới, 14 record)
 - `automation/tests/data/fr03-token-variants.csv` (mới, 14 record)
 - `automation/tests/data/fr08-checkout-cases.json` (mới, 13 record)
@@ -198,6 +212,7 @@ GET  /api/orders/1 (KHÔNG token)                       ⇒ 200 {…user_id:2…
 - `automation/tests/data/fr15-product-fields.csv` (mới, 13 record)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 node -e "<nap 6 file qua utils/data.js>"
 ⇒ fr03-reset-cases.json      14 rows
@@ -209,12 +224,13 @@ node -e "<nap 6 file qua utils/data.js>"
   (parse sạch, ô chứa dấu nháy đơn "' OR '1'='1" giữ nguyên đúng)
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>`
+**Verdict:** Accepted
+**Liên kết:** commit `27780ab`
 
 ---
 
@@ -226,9 +242,11 @@ node -e "<nap 6 file qua utils/data.js>"
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - `ForgotPasswordPage.js`: bọc 2 bước của `/forgot-password`, đọc OTP bằng regex trên text, helper `captureNextDialog()` vì SUT báo kết quả bằng `alert()`.
 - `LoginPage.js`: page object tiền đề; ghi chú rõ trang login của SUT dùng nút **`Sign In`** và ô mật khẩu là `type="text"`.
 - `fr03-forgot-reset.spec.js`: **30 test**, 100% data-driven từ JSON + CSV, 0 dòng dữ liệu hardcode inline, 0 `waitForTimeout`.
@@ -236,11 +254,13 @@ node -e "<nap 6 file qua utils/data.js>"
 - Chống flaky có chủ đích: biến thể token `9999` trong CSV có xác suất 1/9000 trùng token thật → thêm vòng xin lại token cho tới khi khác.
 
 **File tạo/sửa:**
+
 - `automation/tests/pages/ForgotPasswordPage.js` (mới)
 - `automation/tests/pages/LoginPage.js` (mới)
 - `automation/tests/fr03-forgot-reset.spec.js` (mới, 30 test)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 npx playwright test --project=chromium --grep @fr03
 ⇒ LẦN 1: 9 failed, 21 passed  (strict mode violation ở getByRole('textbox'))
@@ -250,12 +270,13 @@ npx playwright test --project=chromium --grep @fr03 --repeat-each=2
 ⇒ 60 passed (14.9s)   ← ổn định 2 lần liên tiếp theo yêu cầu §5 Phase 3
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · bug `BUG-03-01..08`
+**Verdict:** Accepted
+**Liên kết:** commit `3bd7e82` · bug `BUG-03-01..08`
 
 ---
 
@@ -267,9 +288,11 @@ npx playwright test --project=chromium --grep @fr03 --repeat-each=2
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - `CartPage.js` + `CheckoutPage.js`: ô tổng tiền sửa được định vị bằng `getByRole('spinbutton')`; thêm hàng vào giỏ từ **Home** chứ không qua ProductDetail (nút ở đó cố tình nuốt click đầu tiên → nguồn flaky).
 - `fr08-checkout.spec.js`: **25 test**. TC01 đăng nhập bằng **UI thật**; các test còn lại bơm JWT qua `addInitScript` để chạy nhanh.
 - Xử lý đúng đặc thù giỏ hàng in-memory: TC09 điều hướng bằng **link SPA** (không `page.goto`) để giữ React Context; TC17 chủ động `reload()` để chứng minh giỏ bị mất.
@@ -277,11 +300,13 @@ npx playwright test --project=chromium --grep @fr03 --repeat-each=2
 - Xác nhận bằng test thật: `SAVE10` trên giỏ 30.000.000 ₫ cho **Thành tiền 300.000.000 ₫** trong khi UI vẫn hiện "Áp dụng thành công! Giảm 10%".
 
 **File tạo/sửa:**
+
 - `automation/tests/pages/CartPage.js` (mới)
 - `automation/tests/pages/CheckoutPage.js` (mới)
 - `automation/tests/fr08-checkout.spec.js` (mới, 25 test)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 npx playwright test --project=chromium --grep @fr08
 ⇒ 25 passed (9.2s)
@@ -290,12 +315,13 @@ npx playwright test --project=chromium --grep @fr08 --repeat-each=2
 ⇒ 50 passed (13.6s)   ← ổn định 2 lần liên tiếp
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · bug `BUG-08-01..09`
+**Verdict:** Accepted
+**Liên kết:** commit `4e1dd5a` · bug `BUG-08-01..09`
 
 ---
 
@@ -307,9 +333,11 @@ npx playwright test --project=chromium --grep @fr08 --repeat-each=2
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - Khởi động `frontend-admin` (`npx vite --port 5174 --strictPort`) — xác nhận `Local: http://localhost:5174/`, `curl` trả 200.
 - `AdminProductPage.js`: sidebar là `<li>` nên dùng `getByText('Sản phẩm', { exact: true })`; định vị dòng bảng bằng `getByRole('row').filter({ hasText })`; `loginUi()` trả về message alert (hoặc `null`) để test phân quyền assert được cả 2 nhánh.
 - `fr15-product-crud.spec.js`: **25 test**. TC01/TC02 dùng login UI thật; các test khác bơm `adminToken`.
@@ -317,10 +345,12 @@ npx playwright test --project=chromium --grep @fr08 --repeat-each=2
 - TC20 đếm số request `POST /api/products` rời trình duyệt (= 0) để chứng minh `required` của HTML5 là lớp chặn **duy nhất**.
 
 **File tạo/sửa:**
+
 - `automation/tests/pages/AdminProductPage.js` (mới)
 - `automation/tests/fr15-product-crud.spec.js` (mới, 25 test)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 curl -o /dev/null -w "%{http_code}" http://localhost:5174/   ⇒ 200
 
@@ -331,12 +361,13 @@ npx playwright test --project=chromium --grep @fr15 --repeat-each=2
 ⇒ 50 passed (11.6s)   ← ổn định 2 lần liên tiếp, chạy song song 2 worker
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · bug `BUG-15-01..11`
+**Verdict:** Accepted
+**Liên kết:** commit `d25692d` · bug `BUG-15-01..11`
 
 ---
 
@@ -348,9 +379,11 @@ npx playwright test --project=chromium --grep @fr15 --repeat-each=2
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - Quét anti-pattern tự động: 0 `waitForTimeout` thật, 0 selector class Tailwind, 0 `nth-child`/xpath, 0 data hardcode inline.
 - Lập bảng **7 GAP** có bằng chứng, mỗi GAP nêu rõ nguyên nhân (prompt quality / model limitation / đặc thù feature) và đã sửa:
   - GAP-00 selector `getByRole('textbox')` khớp 2 phần tử (AI hiểu sai API Playwright)
@@ -361,9 +394,10 @@ npx playwright test --project=chromium --grep @fr15 --repeat-each=2
   - GAP-05 happy path không kiểm tra đúng sản phẩm nào vào giỏ
   - GAP-06 biến thể token 4 số có 1/9000 xác suất trùng token thật
   - GAP-07 firefox/webkit chưa tải → 28 test không chạy nổi mà vẫn báo "52 passed"
-- **Phát hiện quan trọng cho AI_Critique:** AI không chỉ sai, mà còn *viết comment giải thích* cho giả định sai của mình (GAP-00) → người review dễ tin nhầm là đã kiểm chứng.
+- **Phát hiện quan trọng cho AI_Critique:** AI không chỉ sai, mà còn _viết comment giải thích_ cho giả định sai của mình (GAP-00) → người review dễ tin nhầm là đã kiểm chứng.
 
 **File tạo/sửa:**
+
 - `report/02-AI-GAP-ANALYSIS.md` (mới)
 - `automation/tests/pages/AdminProductPage.js` (sửa — chờ dòng dữ liệu, thêm `visibleRowCount()`)
 - `automation/tests/pages/CartPage.js` (sửa — thêm `rowByProductName()`)
@@ -371,6 +405,7 @@ npx playwright test --project=chromium --grep @fr15 --repeat-each=2
 - `automation/tests/fr08-checkout.spec.js` (sửa — GAP-05)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 npx playwright test --project=firefox        (LẦN 1, chưa cài browser)
 ⇒ 28 failed, 52 passed
@@ -383,12 +418,13 @@ npx playwright test --project=firefox        ⇒ 80 passed (33.3s)
 npx playwright test --project=webkit         ⇒ 80 passed (37.7s)
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · report `02-AI-GAP-ANALYSIS.md`
+**Verdict:** Accepted
+**Liên kết:** commit `f2edc7a` · report `02-AI-GAP-ANALYSIS.md`
 
 ---
 
@@ -400,9 +436,11 @@ npx playwright test --project=webkit         ⇒ 80 passed (37.7s)
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - `run-multibrowser.mjs`: 3 feature × 3 browser = 9 run, mỗi run 1 thư mục report riêng qua `PW_REPORT_DIR`.
 - `verify-report-banner.mjs`: FAIL CỨNG nếu index.html thiếu banner / ISO timestamp.
 - `summarize-results.mjs`: đọc `results.json` thật → sinh `report/03-RUN-SUMMARY.md`, không con số nào nhập tay.
@@ -411,6 +449,7 @@ npx playwright test --project=webkit         ⇒ 80 passed (37.7s)
   2. **Option `title` của html reporter KHÔNG còn tác dụng ở Playwright 1.62** — kiểm chứng bằng cách giải nén blob base64 trong index.html: `report.json` có `title: null`, `<title>` vẫn là "Playwright Test Report", `grep 23127060 index.html` ⇒ 0. Sửa: viết reporter tuỳ biến `banner-reporter.mjs` chạy sau html reporter, đóng dấu banner vào `<title>` + một `<div>` hiển thị ngay đầu report. Mọi số liệu trên banner lấy từ chính lần chạy đó.
 
 **File tạo/sửa:**
+
 - `automation/scripts/run-multibrowser.mjs` (mới)
 - `automation/scripts/verify-report-banner.mjs` (mới)
 - `automation/scripts/summarize-results.mjs` (mới)
@@ -420,6 +459,7 @@ npx playwright test --project=webkit         ⇒ 80 passed (37.7s)
 - `automation/playwright-report/` — 9 thư mục report
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 node scripts/run-multibrowser.mjs
 ⇒ fr03-reset  × chromium/firefox/webkit : 30 / 30 / 30 passed
@@ -435,12 +475,13 @@ node scripts/summarize-results.mjs
 ⇒ TỔNG 240 test · 240 passed · 0 failed · 0 flaky · 0 skipped · 93.7s · pass rate 100.0%
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · report `03-RUN-SUMMARY.md`
+**Verdict:** Accepted
+**Liên kết:** commit `d6ffec9` · report `03-RUN-SUMMARY.md`
 
 ---
 
@@ -452,21 +493,25 @@ node scripts/summarize-results.mjs
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - `capture-bug-evidence.mjs`: tái hiện 8 bug nặng nhất bằng Playwright thật → **11 ảnh PNG** + `capture-log.txt` chứa log response nguyên văn.
-- **Lỗi thật gặp phải:** chụp màn hình *bên trong* dialog handler làm treo renderer (`page.screenshot: Timeout 30000ms`) vì `alert()` chặn tiến trình render. Sửa: chụp trước khi bấm, lấy nội dung alert ra làm log, chụp lại sau khi đóng alert.
+- **Lỗi thật gặp phải:** chụp màn hình _bên trong_ dialog handler làm treo renderer (`page.screenshot: Timeout 30000ms`) vì `alert()` chặn tiến trình render. Sửa: chụp trước khi bấm, lấy nội dung alert ra làm log, chụp lại sau khi đóng alert.
 - `BUG_REPORT.md`: **27 bug** (FR-03: 8 · FR-08: 9 · FR-15: 10), mỗi bug có Severity/Priority · Component (số dòng) · Test case · Precondition · Steps · Expected · Actual (log thật) · Nguyên nhân code · Đề xuất sửa.
 - `gh-issue-commands.sh`: sinh 28 file body riêng bằng `awk` cắt từ BUG_REPORT.md và in ra 28 lệnh `gh issue create` — **không tự chạy**, để Khải kiểm rồi tự tạo Issue.
 
 **File tạo/sửa:**
+
 - `automation/scripts/capture-bug-evidence.mjs` (mới)
 - `bug-report/BUG_REPORT.md` (mới, 27 bug)
 - `bug-report/gh-issue-commands.sh` (mới) + `bug-report/issue-bodies/*.md` (28 file sinh tự động)
 - `evidence/bugs/*.png` (11 ảnh thật) + `evidence/bugs/capture-log.txt`
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 node scripts/capture-bug-evidence.mjs
 ⇒ 8/8 bug chụp thành công. Trích log:
@@ -482,12 +527,13 @@ bash bug-report/gh-issue-commands.sh
 ⇒ in ra 28 lệnh gh issue create · sinh 28 file body (591 dòng)
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>` · bug `BUG-03-01..BUG-15-11`
+**Verdict:** Accepted
+**Liên kết:** commit `9ae21c4` · bug `BUG-03-01..BUG-15-11`
 
 ---
 
@@ -499,9 +545,11 @@ bash bug-report/gh-issue-commands.sh
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - `report/HW04_Main_Report.md`: mọi con số lấy từ `03-RUN-SUMMARY.md`; giải thích rõ vì sao "240 passed" nghĩa là "bug vẫn còn"; nêu 5 bug nghiêm trọng nhất và 2 bug phát hiện thêm nhờ phân tích giá trị biên.
 - `ai/AI_Audit_Report.md`: bảng 11 entry + khai báo "I use AI tools for the following tasks" + bảng **10 lỗi thật của AI** kèm cách phát hiện (5 lỗi chỉ lộ khi chạy thật, 5 lỗi lộ khi đọc lại code).
 - `ai/AI_Critique.md`: viết dựa trên lỗi thật, **không** viết chung chung. Bản đầu **313 từ → vượt ngưỡng**, `count-words.mjs` exit 1; cắt 3 lần còn **296 từ** (đạt 200–300).
@@ -510,12 +558,14 @@ bash bug-report/gh-issue-commands.sh
 - `md-to-pdf.mjs`: markdown→HTML tự viết (heading/bảng/code/list/blockquote/inline) rồi in PDF A4 bằng chính Chromium của Playwright — không thêm dependency ngoài.
 
 **File tạo/sửa:**
+
 - `report/HW04_Main_Report.md` · `ai/AI_Audit_Report.md` · `ai/AI_Critique.md` · `README.md` (mới)
 - `video-script/VIDEO_1_DEMO_SCRIPT.md` · `VIDEO_2_AGENT_SKILL_SCRIPT.md` (mới)
 - `automation/scripts/count-words.mjs` · `md-to-pdf.mjs` (mới)
 - 9 file `.pdf` sinh kèm
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 node scripts/count-words.mjs
 ⇒ LẦN 1: AI_Critique.md: 313 từ — KHÔNG ĐẠT (exit 1)
@@ -526,12 +576,13 @@ node scripts/md-to-pdf.mjs
 ⇒ Đã xuất 9/9 file PDF (Main Report, 00→03, BUG_REPORT, AI_Audit, AI_Critique, README)
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>`
+**Verdict:** Accepted
+**Liên kết:** commit `87bdf9a`
 
 ---
 
@@ -543,9 +594,11 @@ node scripts/md-to-pdf.mjs
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - **Phát hiện thiếu sót thật:** sau Phase 7 chỉ có **4 commit** chạm `*.spec.js`, trong khi rubric yêu cầu **≥8**. Không bịa commit rỗng — thay vào đó làm nốt 5 việc cải tiến thật sự có giá trị, mỗi việc 1 commit:
   1. `refactor(specs)` — gom `freshUser` trùng lặp ở 3 spec về `utils/fixtures.js`.
   2. `test(specs)` — gắn annotation `bug` / `source` / `assertions` cho mọi test ⇒ HTML report truy vết được test ↔ bug (41/83 test mang mã bug).
@@ -556,6 +609,7 @@ node scripts/md-to-pdf.mjs
 - Đồng bộ lại toàn bộ số liệu trong Main Report / README / Gap Analysis / Audit theo lần chạy cuối (83 test · 249/249).
 
 **File tạo/sửa:**
+
 - `automation/tests/utils/fixtures.js` (mới)
 - `automation/tests/*.spec.js` (sửa — 3 file, +3 test, +annotation, +soft assertion)
 - `automation/tests/pages/CartPage.js` (sửa — GAP-08)
@@ -563,6 +617,7 @@ node scripts/md-to-pdf.mjs
 - `evidence/git-commit-log.txt` · `evidence/git-commit-log-files.txt`
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 git log --pretty=... -- '23127060/**/*.spec.js'   (TRƯỚC Phase 8)
 ⇒ 4 commit — CHƯA ĐẠT yêu cầu ≥8
@@ -584,12 +639,13 @@ node scripts/count-words.mjs                      ⇒ AI_Critique.md: 296 từ �
 node scripts/md-to-pdf.mjs                        ⇒ 9/9 file PDF
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>`
+**Verdict:** Accepted
+**Liên kết:** commit `f832ba6` · `a875ac9` · `193ec05` · `7e1becf` · `dc0ee9b` · `e1dcdcd` · `4e9e0cc` · `27d1685` (8 commit, mỗi việc 1 commit)
 
 ---
 
@@ -601,9 +657,11 @@ node scripts/md-to-pdf.mjs                        ⇒ 9/9 file PDF
 - **Người dùng:** 23127060 — Ninh Văn Khải
 
 **Prompt (nguyên văn):**
+
 > Read file SKILL.md in folder eshop-automation-23127060 and do task as guideline. Remember to commit after each phase
 
 **AI output (tóm tắt):**
+
 - Khi chạy checklist Definition of Done (§10 SKILL), lệnh đếm heading trong `BUG_REPORT.md` ra **28**, trong khi LOG-010 và các tài liệu đều ghi **27**.
 - Đối chiếu bảng tổng quan với các mục chi tiết: cả hai đều có đúng **28 mã bug duy nhất**, khớp nhau hoàn toàn ⇒ con số **28 là đúng**, "27" là AI **tự đếm sai bằng mắt** khi viết phần tổng kết.
 - Phân bố đúng: FR-03 **8** · FR-08 **9** · FR-15 **11** (trước ghi nhầm FR-15 là 10).
@@ -614,10 +672,12 @@ node scripts/md-to-pdf.mjs                        ⇒ 9/9 file PDF
 **Bài học cho AI_Critique:** đây là **lỗi thứ 13** của AI trong bài — và là lỗi thuộc loại nguy hiểm nhất trong kiểm thử: **con số tổng kết không khớp với dữ liệu bên dưới nó**. Không có script nào bắt được, chỉ lộ ra khi chạy `grep -c` để đối chiếu. Bài học: mọi con số trong báo cáo đều phải **đếm bằng lệnh**, không đếm bằng mắt.
 
 **File tạo/sửa:**
+
 - `bug-report/BUG_REPORT.md` (sửa — 27→28, phân bố feature, severity, 240→249)
 - `report/HW04_Main_Report.md` · `README.md` · `ai/AI_Audit_Report.md` (sửa số bug)
 
 **Lệnh đã chạy & kết quả thật:**
+
 ```
 grep "^## BUG-" bug-report/BUG_REPORT.md | awk '{print $2}' | sort -u | wc -l
 ⇒ 28
@@ -629,9 +689,178 @@ grep "^## BUG-" ... | sed 's/-[0-9][0-9]$//' | sort | uniq -c
 ⇒ 8 BUG-03 · 9 BUG-08 · 11 BUG-15
 ```
 
-**Human review (Khải):**
+**Human review :**
+
 - Sai/thiếu:
 - Đã sửa:
 
-**Verdict:** <Accepted / Accepted-with-fix / Rejected>
-**Liên kết:** commit `<hash>`
+**Verdict:** Accepted
+**Liên kết:** commit `de4e5d1`
+
+---
+
+## LOG-014 — Hậu kiểm Task 1, tạo 28 GitHub Issue, push branch & đính chính LOG-004: 77 record → 88
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-27T20:05:00+07:00
+- **Phase:** P8 — Hậu kiểm & nộp bài
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+
+> Kiem tra thu muc 23127060 va cho toi biet task 1 da hoan thanh 100% chua va task 2 toi can quay video nhu the nao, quay nhung gi ? @23127060/2026.HW04.Automation Testing_En.pdf. Neu da thuc hien day du roi thi giup toi tao issue tren Github. Hãy dùng gh issue create để tạo một issue mới trên repository này với thông tin sau: Tiêu đề: [Ghi ngắn gọn lỗi hoặc tính năng, ví dụ: Fix lỗi CORS khi gọi API Login] Mô tả: [Mô tả chi tiết các bước tái hiện lỗi / yêu cầu tính năng / file liên quan]
+
+**AI output (tóm tắt):**
+
+- Đọc đề bài PDF (8 trang) rồi **đối chiếu từng yêu cầu Task 1 với file thật**, không tin số ghi trong README: 31/26/26 test mỗi feature (≥12 đạt), 88 record data-driven, 5 assertion pattern dùng 340 lần, 9 run có banner hợp lệ, 249/249 passed, 10 commit chạm `*.spec.js` (≥8 đạt), 28 bug, Critique 296 từ.
+- Kết luận: **phần kỹ thuật Task 1 đã xong**, nhưng chưa "100%" vì còn 8 việc — nặng nhất là **branch `nvk` chưa hề push lên remote** (origin chỉ có `main`, `Thang`, `codex/23127259`), nghĩa là mở link repo ra sẽ không thấy code của Khải.
+- Hướng dẫn Task 2: 4 yêu cầu bắt buộc của Video 1 (chạy end-to-end kèm multi-browser và HTML report; chỉ rõ banner; kể ít nhất 1 lỗi AI đã tự sửa; hiện face-cam hoặc terminal chạy `whoami` và `hostname`) và Video 2 (dùng Agent Skill end-to-end trên 1 feature hoàn chỉnh).
+- **`gh` thực ra đã cài sẵn** tại `C:\Program Files\GitHub CLI\gh.exe` (v2.98.0), chỉ không nằm trong PATH nên tra trong Git Bash báo "command not found". Đã đăng nhập tài khoản `nvkhai238`; repo `hungtmh/HW04-TESTING` PUBLIC, bật issues, quyền WRITE.
+- Prompt của Khải còn để **placeholder mẫu** (`[Ghi ngắn gọn lỗi...]`) nên hỏi lại thay vì tự đoán nội dung. Khải chọn phương án tạo cả 28 bug.
+- Viết `create_issues.py`: lấy tiêu đề từ `BUG_REPORT.md`, body từ 28 file `issue-bodies/`, đặt tên đúng convention 2 thành viên kia đang dùng (`[BUG-03-01][FR-03][23127060] …`), gắn label `bug`. Chạy dry-run kiểm tra trước rồi mới tạo thật.
+- **Cải tiến ngoài yêu cầu:** vì branch đã push nên nhúng thẳng 11 ảnh minh chứng vào issue bằng URL `raw.githubusercontent.com`, thay cho việc bắt Khải kéo-thả tay từng ảnh. Kết quả 8/28 issue có ảnh hiển thị inline.
+
+**Đính chính LOG-004 — số record dữ liệu là 88, không phải 77:**
+
+- Kiểm tra git history: **chỉ đúng 1 commit** (`27780ab`) từng chạm `automation/tests/data/`, và số record chưa đổi kể từ đó. Vậy 77 **không phải số cũ bị lỗi thời** mà là **AI đếm sai ngay từ Phase 2**.
+- Nguồn sai: LOG-004 ghi số dòng 3 file CSV là **14 / 11 / 13**, đếm lại bằng parser thì thực tế là **18 / 15 / 16**. Phần JSON (14/13/12) ghi đúng.
+- Chênh lệch = (18−14) + (15−11) + (16−13) = **11**, nên 77 + 11 = **88**.
+- Đã sửa con số ở `README.md` (2 chỗ) và `HW04_Main_Report.md` (3 chỗ).
+- **Không sửa LOG-004** — theo §9 SKILL và đúng tiền lệ LOG-013, `AI_Log.md` là append-only; sai sót đính chính bằng entry mới chứ không viết lại lịch sử.
+
+**Bài học cho AI_Critique:** đây là **lỗi cùng họ với LOG-013** (27→28) — lại là một **con số tổng kết không khớp dữ liệu bên dưới nó**, lại do AI đếm bằng mắt thay vì bằng lệnh, và lần này đã **lan ra 5 vị trí trong 2 tài liệu** trước khi bị bắt. Việc lỗi tái phát dù bài học đã được ghi rõ ở LOG-013 cho thấy: viết bài học vào báo cáo **không** ngăn được AI lặp lại: chỉ có kiểm tra bằng script mới ngăn được.
+
+**File tạo/sửa:**
+
+- `README.md` (sửa — 77→88, điền link repo và link Issues, cập nhật checklist §6 mục 5 và 6)
+- `report/HW04_Main_Report.md` (sửa — 77→88 ở 3 vị trí)
+- `bug-report/github-issues.txt` (mới — map 28 bug sang 28 URL issue)
+- `2026.HW04.Automation Testing_En.pdf` (thêm vào repo)
+
+**Lệnh đã chạy & kết quả thật:**
+
+```
+gh --version                              ⇒ gh version 2.98.0
+gh auth status                            ⇒ Logged in to github.com account nvkhai238
+gh repo view hungtmh/HW04-TESTING         ⇒ visibility PUBLIC · hasIssuesEnabled true · viewerPermission WRITE
+
+git log --oneline --all -- '23127060/**/*.spec.js' | wc -l   ⇒ 10   (rubric cần ≥8)
+git log --oneline -- '23127060/automation/tests/data/'       ⇒ 1 commit duy nhất (27780ab)
+
+python -c "<dem lai 6 file data>"
+⇒ fr03-reset-cases.json 14 · fr08-checkout-cases.json 13 · fr15-product-cases.json 12
+  fr03-token-variants.csv 18 · fr08-order-totals.csv 15 · fr15-product-fields.csv 16
+  TOTAL 88          ← LOG-004 ghi 77, chênh đúng 11 dòng CSV
+
+git push -u origin nvk                    ⇒ * [new branch]  nvk -> nvk
+
+python create_issues.py --dry-run         ⇒ 28 bugs · 9 Critical / 10 High / 9 Medium · 11 ảnh
+python create_issues.py                   ⇒ created=28 failed=0   (issue #46 → #73)
+gh issue list --search "23127060 in:title" ⇒ 28
+```
+
+**Human review :**
+
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** 🧑 _(Khải điền)_
+**Liên kết:** commit `083ad02` · `cd2e2ad` · issue #46–#73
+
+---
+
+## LOG-015 — Đối chiếu 9 ảnh chụp HTML report với results.json
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-27T20:36:00+07:00
+- **Phase:** P8 — Kiểm chứng minh chứng
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+
+> ## Đối chiếu số liệu (từ `report/03-RUN-SUMMARY.md`) | Report dir | Total | Passed | … | **Tổng 9 report** | **249** | **249** | Nếu số trên ảnh **khác** bảng này thì report đã được chạy lại — hãy cập nhật lại `03-RUN-SUMMARY.md` bằng `node scripts/summarize-results.mjs` để mọi tài liệu khớp nhau. Context: Toi da cap nhat (them anh trong @23127060/evidence/report-screenshots/ . Hay giup toi match bao cao.
+
+> _(lượt tiếp theo trong cùng phiên)_ moi them anh roi a, them tiep cho toi
+
+**AI output (tóm tắt):**
+
+- **Đọc trực tiếp từng file PNG** (không suy đoán từ tên file) và so 4 nhóm số trên mỗi ảnh với `results.json` và `03-RUN-SUMMARY.md`: tổng số test, số passed/failed/flaky/skipped, duration, và ISO timestamp trên banner.
+- Lượt 1: mới có **8/9 ảnh**, thiếu `fr08-checkout-firefox.png`. **Không tự sinh ảnh** — README của chính thư mục đó ghi rõ "agent không được tự sinh ảnh giả", và đây là mục đề bài xếp vào Anti-AI-Cheat. Thay vào đó ghi sẵn con số kỳ vọng của run còn thiếu (26 passed · 11.1s · `T14:21:02.604Z`) vào README để lúc chụp xong tự đối chiếu được.
+- Lượt 2: Khải bổ sung ảnh còn thiếu, đọc và verify: 26/26 · 0·0·0 · 11.1s · banner `Run by: 23127060 — 2026-08-22T14:21:02.604Z`, khớp đúng dòng 5 của bảng.
+- **Kết luận: 9/9 ảnh khớp tuyệt đối**, kể cả ISO timestamp tới mili-giây, nên report **chưa hề bị chạy lại** và **không chạy** `summarize-results.mjs` (chạy chỉ ghi đè bằng đúng số cũ). Đây là điểm đáng lưu ý: prompt yêu cầu chạy lại *nếu* lệch, và việc đúng ở đây là **chứng minh không lệch rồi dừng**, không phải chạy cho có.
+- Ghi nhận 2 điểm nhỏ không cần sửa: `fr03-reset-chromium.png` đang bật bộ lọc `s:passed` (banner vẫn hiện đủ số); 7/9 ảnh bị cắt mất tab trình duyệt — yêu cầu thật của đề bài (*report visibly displays "Run by: {StudentID}"*) vẫn đạt nhờ banner nền tối và tiêu đề H1 trong trang.
+
+**File tạo/sửa:**
+
+- `evidence/report-screenshots/*.png` (9 ảnh do Khải tự chụp — agent chỉ verify, không sinh)
+- `evidence/report-screenshots/README.md` (sửa — chuyển từ "thư mục cố ý để trống" thành bảng đối chiếu 9 dòng đã verify, thêm dòng TỔNG 249/249)
+- `README.md` (sửa — checklist §6 mục 4 chuyển sang 9/9)
+
+**Lệnh đã chạy & kết quả thật:**
+
+```
+<doc 9 file PNG bang Read tool, so tung con so voi results.json>
+⇒ fr03-reset-chromium    31/31 · 7.4s  · 2026-08-22T14:20:18.864Z   khớp
+  fr03-reset-firefox     31/31 · 11.9s · 2026-08-22T14:20:27.128Z   khớp
+  fr03-reset-webkit      31/31 · 14.3s · 2026-08-22T14:20:39.954Z   khớp
+  fr08-checkout-chromium 26/26 · 6.6s  · 2026-08-22T14:20:55.137Z   khớp
+  fr08-checkout-firefox  26/26 · 11.1s · 2026-08-22T14:21:02.604Z   khớp
+  fr08-checkout-webkit   26/26 · 13.4s · 2026-08-22T14:21:14.586Z   khớp
+  fr15-product-chromium  26/26 · 5.6s  · 2026-08-22T14:21:29.048Z   khớp
+  fr15-product-firefox   26/26 · 10.7s · 2026-08-22T14:21:35.552Z   khớp
+  fr15-product-webkit    26/26 · 10.3s · 2026-08-22T14:21:47.264Z   khớp
+  TỔNG 249/249 · 91.5s — khớp 03-RUN-SUMMARY.md 100%
+
+node scripts/summarize-results.mjs        ⇒ KHÔNG CHẠY (không có gì lệch để đồng bộ)
+```
+
+**Human review :**
+
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** 🧑 _(Khải điền)_
+**Liên kết:** commit `37c6da1` · `66b09d0` · report `03-RUN-SUMMARY.md`
+
+---
+
+## LOG-016 — Bổ sung AI_Log: điền 13 commit hash thật và 3 entry còn thiếu
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5[1m]
+- **Thời điểm:** 2026-08-27T20:50:00+07:00
+- **Phase:** P8 — Hoàn thiện hồ sơ AI
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+
+> @23127060/ai/AI_Log.md  Giup toi bo sung cac phan con thieu trong file nay.
+
+**AI output (tóm tắt):**
+
+- Rà toàn file: có 13 entry thật (LOG-001→013), phát hiện 3 nhóm còn thiếu — (a) **13 dòng `Liên kết` vẫn để `<hash>`**, (b) **thiếu hẳn entry cho 3 lượt làm việc ngày 27/08**, (c) 13 mục **Human review còn trống**.
+- Điền **13 commit hash thật** bằng cách map từng entry với `git log` theo phase và theo file đã sửa. LOG-012 gắn đủ 8 commit (đúng như chính nội dung entry mô tả "mỗi việc 1 commit"). LOG-001 ghi rõ là không có commit vì diễn ra trước khi khởi tạo repo. Giữ nguyên `<hash>` trong khối template vì đó là chỗ để copy cho lượt sau.
+- Append **LOG-014 / LOG-015 / LOG-016** cho 3 lượt ngày 27/08, trong đó LOG-014 kèm phần đính chính 77→88 theo đúng luật append-only.
+- **Không tự điền mục Human review** của bất kỳ entry nào: đó là phần đề bài bắt buộc chính người học viết, agent viết hộ sẽ làm hỏng giá trị của minh chứng.
+- Đồng bộ số entry ở `README.md` và `AI_Audit_Report.md` cho khớp con số thật.
+
+**File tạo/sửa:**
+
+- `ai/AI_Log.md` (sửa — 13 dòng `Liên kết`, thêm LOG-014/015/016)
+- `README.md` · `ai/AI_Audit_Report.md` (sửa — đồng bộ số entry)
+
+**Lệnh đã chạy & kết quả thật:**
+
+```
+grep -c '<hash>' ai/AI_Log.md            ⇒ 13   (TRƯỚC khi sửa)
+git log --date=... --pretty=... nvk      ⇒ map 13 entry sang commit thật
+grep -c '<hash>' ai/AI_Log.md            ⇒ 1    (SAU — chỉ còn trong khối template)
+grep -c '^## LOG-' ai/AI_Log.md          ⇒ 17   (16 entry thật + 1 dòng trong khối template)
+```
+
+**Human review :**
+
+- Sai/thiếu:
+- Đã sửa:
+
+**Verdict:** 🧑 _(Khải điền)_
+**Liên kết:** commit `<điền sau khi commit>`

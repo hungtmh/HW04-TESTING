@@ -44,7 +44,7 @@
 ├── README.md                       ← file này
 ├── agent-skill/SKILL.md            AI Skill điều phối toàn bộ quy trình
 ├── ai/
-│   ├── AI_Log.md                   12 entry — nhật ký từng lượt làm việc với AI
+│   ├── AI_Log.md                   16 entry — nhật ký từng lượt làm việc với AI
 │   ├── AI_Audit_Report.md          tổng hợp từ AI_Log + khai báo bắt buộc
 │   └── AI_Critique.md              296 từ (đếm tự động, trong khoảng 200–300)
 ├── automation/
@@ -142,7 +142,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | **FR-03** — Quên/Đặt lại mật khẩu | 25 | 🧑 *điền* | 31 test × 3 browser · 8 bug (3 Critical) · boundary regex mật khẩu 6 biến thể · 100% pass |
 | **FR-08** — Thanh toán | 25 | 🧑 *điền* | 26 test × 3 browser · 9 bug (4 Critical) · boundary coupon 3 mốc bắt được off-by-one · 100% pass |
 | **FR-15** — Quản lý sản phẩm | 25 | 🧑 *điền* | 26 test × 3 browser · 10 bug (3 Critical) · assertion kép UI+API chứng minh bug thuộc frontend · 100% pass |
-| **Báo cáo & AI Audit** | 25 | 🧑 *điền* | Main Report · Bug Report 28 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 12 entry · Critique 296 từ |
+| **Báo cáo & AI Audit** | 25 | 🧑 *điền* | Main Report · Bug Report 28 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 16 entry · Critique 296 từ |
 | **TỔNG** | **100** | 🧑 *điền* | |
 
 ### Điểm mạnh tự nhận
@@ -170,7 +170,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | ✅ **9/9** — mọi ảnh khớp `03-RUN-SUMMARY.md` (test, passed, duration, ISO timestamp) |
 | 5 | Tạo GitHub repo **public**, push toàn bộ | ✅ [`nvk`](https://github.com/hungtmh/HW04-TESTING/tree/nvk/23127060) |
 | 6 | Tạo GitHub Issue cho 28 bug, đính ảnh | ✅ issue [#46–#73](https://github.com/hungtmh/HW04-TESTING/issues?q=is%3Aissue+23127060) — xem [`bug-report/github-issues.txt`](bug-report/github-issues.txt) |
-| 7 | Điền mục **Human review** + **Verdict** cho **14** entry trong `ai/AI_Log.md` | ☐ |
+| 7 | Điền mục **Human review** + **Verdict** cho **16** entry trong `ai/AI_Log.md` | ☐ |
 | 8 | Quay Video 1 (demo ≥5 phút, giọng Việt thật, có face-cam **hoặc** `whoami && hostname`) | ☐ |
 | 9 | Quay Video 2 (demo Agent Skill end-to-end) | ☐ |
 | 10 | Upload 2 video lên YouTube **Unlisted**, dán link vào §đầu README | ☐ |
