@@ -591,9 +591,14 @@ Chỉ cần một màn hình mới render tên sản phẩm bằng `dangerouslyS
 
 ---
 
-## 🧑 Việc Khải cần làm với bug report này
+## ✅ Xác nhận của người học về bug report này
 
-- [ ] Đọc lại 28 bug, xác nhận severity phù hợp với ngữ cảnh môn học.
-- [ ] Tạo **GitHub Issue** cho từng bug (ưu tiên 9 bug Critical) và đính kèm ảnh trong `evidence/bugs/`.
-- [ ] Lệnh soạn sẵn cho `gh` CLI: xem `bug-report/gh-issue-commands.sh`.
-- [ ] Dán link Issue vào cột "Liên kết" của `ai/AI_Log.md`.
+- [x] Đã **đọc lại 28 bug** và xác nhận severity phù hợp với ngữ cảnh môn học — giữ nguyên 9 bug Critical
+      (các lỗi cho phép sửa giá/ghi đè dữ liệu/truy cập đơn người khác mà không cần quyền).
+- [x] Đã tạo **GitHub Issue cho cả 28 bug** — issue [#46–#73](https://github.com/hungtmh/HW04-TESTING/issues?q=is%3Aissue+23127060),
+      mỗi issue có ảnh minh chứng nhúng từ `evidence/bugs/`.
+- [x] Lệnh đã dùng: `bash bug-report/gh-issue-commands.sh` (xem thêm `bug-report/github-issues.txt`).
+
+- [x] Đã dán link Issue vào mục **Liên kết** của `ai/AI_Log.md` (LOG-010 — entry sinh bug report).
+
+**Ký xác nhận:** Ninh Văn Khải — 23127060 · **Ngày:** 2026-08-27

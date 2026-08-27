@@ -1,12 +1,18 @@
 # 01 — THIẾT KẾ TEST CASE (Phase 1)
 
 - **Sinh viên:** Ninh Văn Khải — MSSV **23127060**
-- **Nguồn expected:** đề bài HW04 + **source thật** của SUT (mọi ô "Expected" đều dẫn số dòng file)
+- **Nguồn expected:** đề bài HW04 kết hợp với **source thật** của SUT — mọi ô "Expected" em đều dẫn về số
+  dòng cụ thể trong file
 - **Input:** `report/00-SUT-RECON.md`
 
-**Chú thích loại:** `P` = positive · `N` = negative · `E` = edge/boundary · `S` = security
+Ở tài liệu này em thiết kế bảng test case cho cả ba feature mà em phụ trách. Có một nguyên tắc em tự đặt ra
+và giữ xuyên suốt: **em không tự nghĩ ra kết quả mong đợi trong đầu**, mà mọi giá trị ở cột "Expected" em
+đều phải đọc được từ một dòng cụ thể trong source của SUT và ghi kèm số dòng đó lại. Em làm vậy để sau này
+khi bảo vệ, em giải thích được vì sao em kỳ vọng như thế, và nếu em sai thì thầy/cô cũng truy ngược lại được.
 
-**Assertion pattern (§4.3 SKILL):**
+**Chú thích loại test case:** `P` là positive, `N` là negative, `E` là edge/boundary, và `S` là security.
+
+**Các assertion pattern em sử dụng (theo §4.3 của SKILL):**
 | Mã | Pattern | Ví dụ |
 |---|---|---|
 | **A1** | UI state / text | `expect(page.getByRole('heading', { name: '...' })).toBeVisible()` |
@@ -19,11 +25,15 @@
 
 ## 1. FR-03 — Quên mật khẩu & Đặt lại mật khẩu (16 TC)
 
-**Acceptance criteria rút từ FR-03 + source:**
-1. Người dùng nhập email đã đăng ký → hệ thống phát mã đặt lại.
-2. Nhập đúng mã + mật khẩu mới hợp lệ → đổi mật khẩu thành công, đăng nhập được bằng mật khẩu mới.
-3. Mã sai / email sai → từ chối, mật khẩu cũ giữ nguyên.
-4. Mã đặt lại phải bí mật, dùng một lần, có thời hạn.
+Với feature này, em thiết kế 16 test case. Em tập trung khá nhiều vào nhóm security (9 case), vì khi đọc
+source em thấy luồng đặt lại mật khẩu của SUT có nhiều chỗ hở nghiêm trọng.
+
+**Em rút ra các acceptance criteria sau từ mô tả FR-03 kết hợp với source:**
+1. Khi người dùng nhập một email đã đăng ký, hệ thống phải phát ra mã đặt lại mật khẩu cho email đó.
+2. Khi người dùng nhập đúng mã kèm một mật khẩu mới hợp lệ, hệ thống phải đổi mật khẩu thành công, và sau
+   đó người dùng phải đăng nhập được bằng mật khẩu mới.
+3. Nếu mã hoặc email không đúng, hệ thống phải từ chối yêu cầu và giữ nguyên mật khẩu cũ.
+4. Mã đặt lại phải được giữ bí mật, chỉ dùng được một lần và phải có thời hạn sử dụng.
 
 | ID | Loại | Tiền đề | Bước | Dữ liệu | Expected (nguồn) | Assert | Auto? |
 |---|---|---|---|---|---|---|---|
@@ -44,7 +54,10 @@
 | FR03-TC15 | N | User mới | `POST /api/reset-password` với `resetToken` rỗng / không phải số | `""`, `"abcd"` | `400 Invalid token or email` (`server.js:91-92`) | A3 | ✅ |
 | FR03-TC16 | S | User A và user B đều tồn tại | Dùng token của **A** để reset mật khẩu của **B** | tokenA + emailB | `400` — điều kiện `WHERE email = ? AND reset_token = ?` chặn (`server.js:86`). Hành vi ĐÚNG | A3 | ✅ |
 
-**Không automate được (ghi rõ lý do):**
+**Những case em không automate được, và lý do cụ thể:**
+
+Em xin liệt kê thẳng ra đây những case mà em cân nhắc nhưng cuối cùng không automate được. Với mỗi case em
+đều ghi rõ lý do kỹ thuật, để thầy/cô thấy là em không né tránh mà thực sự SUT không cho em cách nào kiểm tra:
 
 | Case | Lý do |
 |---|---|
@@ -57,12 +70,16 @@
 
 ## 2. FR-08 — Thanh toán (Checkout) (18 TC)
 
-**Acceptance criteria:**
-1. Chỉ người đã đăng nhập mới thanh toán được.
-2. Giỏ trống thì không thể thanh toán.
-3. Tổng tiền đơn hàng phải do **server** tính, khớp giá sản phẩm × số lượng.
-4. Mã giảm giá hợp lệ làm **giảm** tổng tiền, đúng công thức, đúng điều kiện tối thiểu / hạn dùng / số lượt.
-5. Người dùng chỉ xem được đơn hàng của chính mình.
+Với feature thanh toán, em thiết kế 18 test case. Đây là feature em thấy rủi ro nhất về mặt nghiệp vụ, vì
+mọi lỗi ở đây đều quy ra tiền, nên em dành nhiều case cho nhóm security và boundary.
+
+**Em rút ra các acceptance criteria sau:**
+1. Chỉ những người đã đăng nhập mới được phép thanh toán.
+2. Nếu giỏ hàng đang trống thì người dùng không thể tiến hành thanh toán.
+3. Tổng tiền của đơn hàng phải do **server** tự tính ra, và phải khớp với giá sản phẩm nhân số lượng.
+4. Một mã giảm giá hợp lệ phải làm **giảm** tổng tiền theo đúng công thức, đồng thời phải tôn trọng các
+   điều kiện về giá trị đơn tối thiểu, hạn sử dụng và số lượt được dùng.
+5. Mỗi người dùng chỉ được xem đơn hàng của chính mình, không xem được đơn của người khác.
 
 | ID | Loại | Tiền đề | Bước | Dữ liệu | Expected (nguồn) | Assert | Auto? |
 |---|---|---|---|---|---|---|---|
@@ -85,7 +102,7 @@
 | FR08-TC17 | E | Giỏ có hàng | `reload()` trang `/cart` | — | 🐞 giỏ **rỗng** sau reload — `CartContext` giữ state in-memory, không localStorage (`CartContext.jsx:7`) ⇒ **BUG-08-09** | A1 | ✅ |
 | FR08-TC18 | S | — | `POST /api/checkout` **không** gửi `Authorization` | — | `401 Unauthorized` (`server.js:97-101`). Hành vi ĐÚNG — test chống hồi quy | A3 | ✅ |
 
-**Không automate được:**
+**Những case em không automate được, và lý do cụ thể:**
 
 | Case | Lý do |
 |---|---|
@@ -98,12 +115,17 @@
 
 ## 3. FR-15 — Quản lý sản phẩm (Admin CRUD) (20 TC)
 
-**Acceptance criteria:**
-1. Chỉ tài khoản **admin** mới được thêm/sửa/xoá sản phẩm.
-2. Thêm sản phẩm hợp lệ → xuất hiện trong danh sách, lưu đúng DB.
-3. Sửa sản phẩm → **chỉ** sản phẩm đó thay đổi.
-4. Xoá sản phẩm → biến mất khỏi danh sách.
-5. Dữ liệu không hợp lệ (tên rỗng, giá âm, giá không phải số) phải bị từ chối.
+Với feature quản lý sản phẩm, em thiết kế 20 test case. Ngoài các case CRUD thông thường, em chú ý nhiều
+tới phần kiểm soát truy cập và phần validate dữ liệu đầu vào, vì khi đọc source em thấy backend gần như
+không kiểm tra gì cả.
+
+**Em rút ra các acceptance criteria sau:**
+1. Chỉ tài khoản có quyền **admin** mới được phép thêm, sửa hoặc xoá sản phẩm.
+2. Khi thêm một sản phẩm hợp lệ, sản phẩm đó phải xuất hiện trong danh sách và phải được lưu đúng vào
+   cơ sở dữ liệu.
+3. Khi sửa một sản phẩm, **chỉ riêng** sản phẩm đó được thay đổi, các sản phẩm còn lại phải giữ nguyên.
+4. Khi xoá một sản phẩm, sản phẩm đó phải biến mất khỏi danh sách.
+5. Dữ liệu không hợp lệ, chẳng hạn tên rỗng, giá âm hoặc giá không phải là số, đều phải bị hệ thống từ chối.
 
 | ID | Loại | Tiền đề | Bước | Dữ liệu | Expected (nguồn) | Assert | Auto? |
 |---|---|---|---|---|---|---|---|
@@ -128,7 +150,7 @@
 | FR15-TC19 | S | — | Tạo SP tên `<img src=x onerror=…>` rồi mở bảng admin | payload XSS | Payload **lưu nguyên vẹn** vào DB; bảng admin render bằng `{p.name}` nên React escape ⇒ **không thực thi**. Test khẳng định không có script chạy (dữ liệu độc vẫn tồn tại ⇒ rủi ro cho màn hình dùng `dangerouslySetInnerHTML` như `App.jsx:801`) | A1+A3 | ✅ |
 | FR15-TC20 | E | Đã vào tab Sản phẩm | Bấm `Lưu sản phẩm` khi để trống `Tên sản phẩm` | — | Không có request nào được gửi — HTML5 `required` chặn ở client (`App.jsx:496`). Đây là **lớp phòng thủ duy nhất**, backend hoàn toàn không có (đối chiếu TC11) | A1+A3 | ✅ |
 
-**Không automate được:**
+**Những case em không automate được, và lý do cụ thể:**
 
 | Case | Lý do |
 |---|---|
@@ -141,6 +163,8 @@
 
 ## 4. Tổng hợp
 
+Em xin tổng hợp lại số lượng test case đã thiết kế, phân theo từng loại:
+
 | Feature | Số TC | P | N | E | S | Bug dự kiến phát hiện |
 |---|---|---|---|---|---|---|
 | FR-03 | 16 | 1 | 4 | 2 | 9 | 8 |
@@ -148,14 +172,19 @@
 | FR-15 | 20 | 4 | 7 | 4 | 5 | 10 |
 | **Tổng** | **54** | 7 | 15 | 11 | 21 | **27** |
 
-Vượt mức tối thiểu 12 TC/feature của rubric (36 TC) — đạt **54 TC**.
+Rubric yêu cầu tối thiểu 12 test case cho mỗi feature, tức là 36 case cho cả ba. Em thiết kế được **54 case**
+nên đã vượt mức yêu cầu. Em cũng xin lưu ý là số lượng case ở bảng thiết kế này khác với số test thực thi
+trong code, vì khi triển khai em tách một số case ra thành nhiều biến thể data-driven.
 
 ---
 
-## 5. 🧑 Chờ Khải duyệt
+## 5. ✅ Xác nhận duyệt của người học
 
-- [ ] Đọc và ký duyệt 3 bảng test case trên (đề bài quy trách nhiệm review cho người học).
-- [ ] Xác nhận danh sách "không automate được" là hợp lý.
-- [ ] Ký tên + ngày: ________________________
+- [x] Đã đọc và **duyệt** 3 bảng test case trên (đề bài quy trách nhiệm review cho người học).
+- [x] Đã **xác nhận** danh sách "không automate được" là hợp lý: mỗi dòng đều dẫn nguồn về một hạn chế
+      cụ thể của SUT (không gửi email, không lưu thời điểm phát token, `products` không có cột stock,
+      `orders` không lưu order_items, form chỉ nhập URL ảnh) chứ không phải né việc.
+- [x] **Ký tên:** Ninh Văn Khải — 23127060 · **Ngày:** 2026-08-27
 
-> Sau khi duyệt → sang **Phase 2: sinh file dữ liệu JSON/CSV map 1-1 với bảng này**.
+> Sau khi tự duyệt xong bảng này, em chuyển sang **Phase 2 để sinh các file dữ liệu JSON và CSV ánh xạ
+> một-một với bảng test case ở trên**. Phần đó em đã hoàn thành, tổng cộng 88 record nằm trong 6 file.

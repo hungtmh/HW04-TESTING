@@ -5,12 +5,20 @@
 - **Thời điểm recon:** 2026-08-22 (9:01 PM, Asia/Ho_Chi_Minh)
 - **Feature phụ trách:** FR-03 (Quên/Đặt lại mật khẩu) · FR-08 (Thanh toán) · FR-15 (Quản lý sản phẩm)
 
-> Tài liệu này là **input bắt buộc** cho mọi Phase sau. Mọi selector và expected result trong test đều phải
-> dẫn nguồn về một dòng trong bảng dưới đây. Không đoán selector.
+Trước khi viết bất kỳ dòng test nào, em dành hẳn một phase để đọc source của SUT và xác minh lại mọi thứ
+bằng request thật. Em làm vậy vì nếu em đoán selector hoặc đoán hành vi của API thì sau này test có pass
+cũng không chứng minh được điều gì.
+
+> Em coi tài liệu này là **input bắt buộc** cho mọi phase sau. Mọi selector và mọi giá trị kỳ vọng trong
+> test của em đều phải dẫn nguồn về một dòng trong các bảng dưới đây. Em tự đặt ra nguyên tắc là không đoán
+> selector, chỗ nào chưa chắc thì phải mở file JSX ra đọc.
 
 ---
 
 ## 1. Môi trường đã xác minh
+
+Đầu tiên em kiểm tra xem môi trường đã sẵn sàng chưa. Em không tin vào tài liệu mà chạy lệnh để xác nhận
+từng thành phần một:
 
 | Thành phần            | Lệnh xác minh                                                | Kết quả thật                                                                                                                                     |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -20,16 +28,21 @@
 | Node                  | `node -v`                                                    | `v22.20.0`                                                                                                                                       |
 | Playwright            | `npx playwright --version`                                   | `1.62.1`                                                                                                                                         |
 
-**Ghi chú port:** `run_servers.sh` không chỉ định port cho Vite → Vite tự cấp tăng dần. Web đang giữ **5173**;
-admin sẽ nhận **5174** nếu 5173 bận. Giá trị thật đọc từ ENV trong `automation/tests/utils/env.js`
-(`WEB_BASE_URL`, `ADMIN_BASE_URL`, `API_BASE_URL`) nên đổi port không phải sửa code test.
+**Em xin ghi chú thêm về port.** File `run_servers.sh` không chỉ định port cho Vite, nên Vite sẽ tự cấp
+port tăng dần. Hiện tại web đang giữ cổng **5173**, còn admin sẽ nhận **5174** nếu 5173 đã bận. Để tránh
+phải sửa code mỗi lần port đổi, em cho test đọc giá trị thật từ biến môi trường trong
+`automation/tests/utils/env.js` gồm `WEB_BASE_URL`, `ADMIN_BASE_URL` và `API_BASE_URL`.
 
-**Backend port 3000 là bắt buộc, không đổi được:** cả `frontend-web` và `frontend-admin` hardcode
-`http://localhost:3000/api` trong source (`ForgotPassword.jsx:17`, `Checkout.jsx:30`, `App.jsx:4`).
+**Riêng backend thì bắt buộc phải chạy ở cổng 3000 và em không đổi được.** Lý do là cả `frontend-web` lẫn
+`frontend-admin` đều hardcode thẳng địa chỉ `http://localhost:3000/api` vào source, em kiểm tra thấy ở
+`ForgotPassword.jsx:17`, `Checkout.jsx:30` và `App.jsx:4`.
 
 ---
 
-## 2. Seed data (DROP + seed lại **mỗi lần** khởi động backend — `database.js:14-20`)
+## 2. Seed data (bị DROP và seed lại **mỗi lần** khởi động backend — `database.js:14-20`)
+
+Tiếp theo em đọc file `database.js` để nắm xem hệ thống seed sẵn những dữ liệu gì, vì em cần biết mình có
+thể dựa vào dữ liệu nào và không nên dựa vào dữ liệu nào:
 
 | Bảng         | Nội dung seed                                                                                                                                  |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,20 +51,31 @@ admin sẽ nhận **5174** nếu 5173 bận. Giá trị thật đọc từ ENV t
 | `products`   | id 1..5 — iPhone 15 Pro Max 30tr · Galaxy S24 Ultra 28tr · MacBook Pro M3 45tr · AirPods Pro 2 6tr · Keychron Q1 4tr                           |
 | `coupons`    | `SAVE10` percent 10 min 300k · `BIGBUY` fixed 50k min 500k · `VIP100` fixed 100k min 300k max 2 lượt · `EXPIRED` percent 20 hết hạn 2020-01-01 |
 
-**Hệ quả cho thiết kế test:**
+**Từ phần seed data này, em rút ra bốn điều ảnh hưởng trực tiếp tới cách em thiết kế test:**
 
-1. Restart backend = mất sạch dữ liệu test → test **không được** phụ thuộc dữ liệu do test khác tạo.
-2. Mật khẩu lưu **plaintext** (`database.js:88-90`, `server.js:23`) → không hash.
-3. Mỗi test tự tạo user riêng bằng email random `ts-<timestamp>-<rand>@eshop.test`.
-4. Giỏ hàng backend (`userCarts`) là biến **in-memory** (`server.js:14`) → mất khi restart, không dedupe, không trừ kho.
+1. Mỗi lần restart backend là toàn bộ dữ liệu test bị xoá sạch, nên em **không** để test nào phụ thuộc vào
+   dữ liệu do test khác tạo ra.
+2. Mật khẩu được lưu ở dạng **plaintext**, em kiểm chứng ở `database.js:88-90` và `server.js:23`, tức là hệ
+   thống hoàn toàn không hash mật khẩu.
+3. Để các test không đụng nhau, em cho mỗi test tự tạo một tài khoản riêng với email ngẫu nhiên dạng
+   `ts-<timestamp>-<rand>@eshop.test`.
+4. Giỏ hàng phía backend, tức biến `userCarts` ở `server.js:14`, là một biến **in-memory**. Nó mất khi
+   restart, không khử trùng lặp và cũng không trừ tồn kho, nên em không thể dựa vào nó để seed dữ liệu.
 
 ---
 
 ## 3. Bảng route ↔ selector ↔ API ↔ rủi ro
 
+Đây là phần em đầu tư nhiều thời gian nhất. Với mỗi màn hình thuộc ba feature em phụ trách, em mở file JSX
+ra đọc để lấy đúng selector, ghi lại API mà màn hình đó gọi, và ghi luôn những rủi ro em nhận thấy. Nhờ bảng
+này mà sau đó em viết test không phải đoán một selector nào.
+
 ### 3.1 FR-03 — Quên mật khẩu & Đặt lại mật khẩu
 
-**Route FE:** `/forgot-password` (`frontend-web/src/pages/ForgotPassword.jsx`) — 2 bước trong **cùng 1 route**, đổi bằng state `step`.
+Feature này nằm ở route `/forgot-password`, source là `frontend-web/src/pages/ForgotPassword.jsx`. Em xin
+lưu ý một điểm về cấu trúc: màn hình này gồm 2 bước nhưng cả hai đều nằm trong **cùng một route**, hệ thống
+chỉ đổi qua lại bằng state `step` chứ không điều hướng. Vì vậy em không thể dùng URL để biết mình đang ở
+bước nào.
 
 | Bước            | Selector (nguồn)                                                                                                           | API gọi                     | Rủi ro / bug candidate                     |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
@@ -63,18 +87,24 @@ admin sẽ nhận **5174** nếu 5173 bận. Giá trị thật đọc từ ENV t
 | B2 submit       | `getByRole('button', { name: 'Đặt lại mật khẩu' })` (dòng 93)                                                              | `POST /api/reset-password`  | Không kiểm tra policy mật khẩu ở backend   |
 | Kết quả         | **`alert()`** cho cả thành công lẫn lỗi ⇒ bắt bằng `page.on('dialog')` (dòng 22, 33, 36)                                   | —                           | Không có toast DOM để assert               |
 
-**🔴 BẪY FE quan trọng (`ForgotPassword.jsx:26`):**
+**🔴 Đây là cái bẫy phía frontend mà em thấy quan trọng nhất của FR-03 (`ForgotPassword.jsx:26`):**
 
 ```js
 const flawedStrongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\s)[A-Za-z\d\s]{8,}$/;
 ```
 
-- Thông báo lỗi nói _"phải có KÝ TỰ ĐẶC BIỆT"_ nhưng regex thực tế đòi **khoảng trắng** `(?=.*\s)`
-  và **cấm** mọi ký tự đặc biệt (character class chỉ `[A-Za-z\d\s]`).
-- ⇒ `NewPass123!` (mạnh, có ký tự đặc biệt) **BỊ CHẶN**; `New Pass 123` (yếu hơn, có space) **ĐƯỢC CHẤP NHẬN**.
-- Đây là **BUG-03-01** (mismatch giữa message và validation) — sẽ được cover bởi test case FR03.
+Em phân tích đoạn regex này như sau. Thông báo lỗi hiển thị cho người dùng nói rằng mật khẩu _"phải có KÝ
+TỰ ĐẶC BIỆT"_, nhưng regex thực tế lại đòi **khoảng trắng** qua `(?=.*\s)`, đồng thời **cấm** mọi ký tự đặc
+biệt vì character class chỉ cho phép `[A-Za-z\d\s]`.
 
-**Hành vi backend đã xác minh bằng curl:**
+Hệ quả là mật khẩu `NewPass123!` tuy mạnh và có ký tự đặc biệt thì lại **bị chặn**, trong khi
+`New Pass 123` yếu hơn nhưng có khoảng trắng thì lại **được chấp nhận**. Em ghi nhận đây là **BUG-03-01**,
+lỗi không khớp giữa thông báo và logic kiểm tra, và em sẽ cover nó bằng test case ở FR-03.
+
+Em cũng xin lưu ý là cái bẫy này ảnh hưởng tới chính test của em: mọi mật khẩu hợp lệ mà em dùng trong
+luồng giao diện đều phải có khoảng trắng, nếu không thì test sẽ fail vì bị FE chặn chứ không phải vì SUT sai.
+
+**Sau đó em dùng curl để xác minh hành vi thật của backend:**
 
 ```
 POST /api/forgot-password {"email":"test@eshop.com"}
@@ -87,17 +117,21 @@ POST /api/reset-password {"email":"test@eshop.com","resetToken":"0000",...}
 ⇒ 400 {"error":"Invalid token or email"}
 ```
 
-**Bug candidate FR-03:** (a) token lộ trong HTTP response; (b) token 4 số → brute-force được;
-(c) token không có expiry (`server.js:66-82` không lưu thời điểm tạo); (d) không rate-limit;
-(e) user enumeration qua 404; (f) backend không kiểm tra độ mạnh mật khẩu (đặt được `1`);
-(g) mật khẩu plaintext; (h) reset **không** xoá `locked_until` ⇒ đổi mật khẩu xong vẫn không đăng nhập được;
-(i) regex FE sai chuẩn (BẪY ở trên).
+**Từ những gì đọc và thử được, em liệt kê ra các bug candidate của FR-03 như sau:**
+
+(a) token đặt lại mật khẩu bị lộ thẳng trong HTTP response; (b) token chỉ có 4 chữ số nên hoàn toàn
+brute-force được; (c) token không có thời hạn, vì em kiểm tra `server.js:66-82` thì thấy code không hề lưu
+lại thời điểm tạo token; (d) hệ thống không giới hạn số lần gọi; (e) có thể dò được tài khoản nào tồn tại
+thông qua việc phân biệt mã 404; (f) backend không kiểm tra độ mạnh mật khẩu nên em đặt được mật khẩu chỉ
+là `1`; (g) mật khẩu lưu plaintext; (h) khi reset thì hệ thống **không** xoá `locked_until`, dẫn tới đổi
+mật khẩu xong rồi mà vẫn không đăng nhập được; và (i) regex phía FE sai chuẩn như em đã phân tích ở trên.
 
 ---
 
 ### 3.2 FR-08 — Thanh toán (Checkout)
 
-**Route FE:** `/` → `/cart` → `/checkout` (`Home.jsx`, `Cart.jsx`, `Checkout.jsx`, `context/CartContext.jsx`).
+Luồng thanh toán đi qua ba route theo thứ tự `/` → `/cart` → `/checkout`, tương ứng với các file
+`Home.jsx`, `Cart.jsx`, `Checkout.jsx` và phần state dùng chung ở `context/CartContext.jsx`.
 
 | Màn                  | Selector (nguồn)                                                                                         | API gọi                  | Rủi ro / bug candidate                     |
 | -------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------ |
@@ -110,7 +144,7 @@ POST /api/reset-password {"email":"test@eshop.com","resetToken":"0000",...}
 | Checkout — xác nhận  | `getByRole('button', { name: 'Xác Nhận Thanh Toán' })` (`Checkout.jsx:146`)                              | `POST /api/checkout`     | Backend tin `total_amount` client          |
 | Thành công           | `getByRole('heading', { name: 'Thanh toán thành công!' })` (`Checkout.jsx:70`)                           | —                        | —                                          |
 
-**🔴 Ba bug lớn đã xác minh bằng curl:**
+**🔴 Với FR-08, em đã xác minh được ba lỗi lớn bằng curl. Em xin dán nguyên văn request và response:**
 
 ```
 # (1) Price tampering — backend tin tuyệt đối total_amount của client
@@ -128,19 +162,27 @@ GET /api/orders/1   (không gửi header nào)
 ⇒ 200 {"id":1,"user_id":2,"total_amount":1,"status":"pending",...}
 ```
 
-**Bug candidate FR-08 khác (đọc từ source, cần test xác nhận):**
+**Ngoài ba lỗi trên, em còn đọc được từ source một số bug candidate khác của FR-08 mà em sẽ cần test để xác nhận:**
 
-- `clearCart` được import ở `Checkout.jsx:8` nhưng **không bao giờ được gọi** ⇒ giỏ không xoá sau thanh toán ⇒ double-checkout.
-- FE gửi `items: cart` nhưng backend `/api/checkout` (`server.js:302-317`) **bỏ qua `items`**, chỉ lưu `total_amount` + `shipping_address`; mà FE **không gửi** `shipping_address` ⇒ đơn hàng luôn có địa chỉ `null`.
-- Không validate giỏ trống, `total_amount` âm, `total_amount` không phải số.
-- Không trừ tồn kho (schema `products` không có cột stock).
-- Cart lưu trong **React Context (in-memory)**, KHÔNG localStorage (`CartContext.jsx:7`) ⇒ reload trang là mất giỏ ⇒ **test phải add sản phẩm qua UI trong cùng phiên**, không seed qua API cho luồng UI.
+- Hàm `clearCart` có được import ở `Checkout.jsx:8` nhưng em đọc kỹ thì thấy nó **không bao giờ được gọi**.
+  Như vậy giỏ hàng sẽ không bị xoá sau khi thanh toán, và người dùng có thể thanh toán lại lần nữa.
+- Phía FE có gửi `items: cart` lên, nhưng backend ở `/api/checkout` (`server.js:302-317`) lại **bỏ qua hoàn
+  toàn trường `items`** và chỉ lưu `total_amount` cùng `shipping_address`. Trong khi đó FE lại **không gửi**
+  `shipping_address`, nên kết quả là mọi đơn hàng đều có địa chỉ giao hàng bằng `null`.
+- Backend không kiểm tra trường hợp giỏ rỗng, cũng không kiểm tra khi `total_amount` là số âm hoặc không
+  phải là số.
+- Hệ thống không trừ tồn kho, vì schema của bảng `products` vốn không có cột stock nào.
+- Giỏ hàng được lưu trong **React Context, tức là in-memory**, chứ không phải localStorage
+  (`CartContext.jsx:7`). Reload trang là mất sạch giỏ. Điều này có nghĩa là với luồng giao diện, **em bắt
+  buộc phải thêm sản phẩm qua UI trong cùng một phiên** chứ không seed được qua API.
 
 ---
 
 ### 3.3 FR-15 — Quản lý sản phẩm (Admin)
 
-**Route FE:** `frontend-admin` là **SPA 1 file** (`src/App.jsx`, 922 dòng), đổi màn bằng state `activeTab`, không có router.
+Phần admin có cấu trúc khác hẳn hai feature trên: `frontend-admin` là một **SPA gói gọn trong một file**
+duy nhất là `src/App.jsx` dài 922 dòng. Ứng dụng đổi màn hình bằng state `activeTab` và hoàn toàn không dùng
+router. Điều này có nghĩa là em không thể điều hướng bằng URL, mà phải click đúng phần tử trên sidebar.
 
 | Bước          | Selector (nguồn)                                                                                                                                                                                                      | API gọi                         | Rủi ro                                                                        |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------- |
@@ -153,7 +195,7 @@ GET /api/orders/1   (không gửi header nào)
 | Bảng SP       | `getByRole('row').filter({ hasText: '<tên>' })`; trong dòng có nút `Sửa` / `Xóa` (dòng 570-600)                                                                                                                       | `DELETE /api/products/:id`      | —                                                                             |
 | Thông báo     | Thêm mới: **không alert**, chỉ refetch. Sửa: `alert('Cập nhật thành công!')`. Lỗi: `alert('Lỗi lưu sản phẩm: ...')`                                                                                                   | —                               | Bắt bằng `page.on('dialog')`                                                  |
 
-**🔴 Bug lớn FR-15 đã xác minh:**
+**🔴 Với FR-15, em cũng xác minh được một loạt lỗi lớn bằng request thật:**
 
 ```
 # (1) Thiếu access control HOÀN TOÀN — POST/PUT/DELETE /api/products không có authenticateToken
@@ -176,7 +218,7 @@ GET /api/products/1 ⇒ {"id":1,...,"price":30000000}     ← number
 GET /api/products/9999 ⇒ 200 {}
 ```
 
-**🔴 BUG "fake mass update" (`App.jsx:107-112`) — bug FE nặng nhất của FR-15:**
+**🔴 Nhưng bug phía frontend mà em thấy nặng nhất của FR-15 là lỗi "fake mass update" ở `App.jsx:107-112`:**
 
 ```js
 await axios.put(`${API_URL}/products/${productForm.id}`, productForm);
@@ -187,17 +229,30 @@ const fakeMassUpdatedProducts = products.map((p) => ({
 setProducts(fakeMassUpdatedProducts);
 ```
 
-Sau khi bấm **Lưu sản phẩm** ở chế độ sửa, **cả bảng đổi thành cùng 1 tên** cho tới khi reload.
-Assertion bắt bug: đếm số dòng có tên mới > 1.
+Em đọc đoạn code này và thấy rằng sau khi bấm **Lưu sản phẩm** ở chế độ sửa, frontend gán tên của sản phẩm
+đang sửa cho **toàn bộ** sản phẩm trong state. Kết quả là cả bảng đổi thành cùng một tên cho tới khi người
+dùng reload lại trang.
 
-**Bug candidate FR-15 khác:** tạo SP `name` rỗng (backend không validate); `price` là chuỗi/âm/cực lớn vẫn insert;
-`category_id` không tồn tại vẫn insert (không có FOREIGN KEY); XSS trong `name`/`description`
-(lưu ý: bảng admin render bằng `{p.name}` — React **có** escape ⇒ XSS không thực thi ở đây, nhưng payload vẫn lưu được vào DB
-và render `dangerouslySetInnerHTML` ở nơi khác — `App.jsx:801` cho `shipping_address`, `Home.jsx:64` cho ô tìm kiếm).
+Điều làm em thấy lỗi này nguy hiểm là dữ liệu trong database thực ra vẫn đúng, chỉ có màn hình là sai. Admin
+nhìn vào sẽ thấy toàn bộ sản phẩm giống hệt nhau và rất dễ bấm nhầm nút Xóa. Cách em bắt lỗi này là đếm số
+dòng mang tên mới trong bảng, nếu lớn hơn 1 thì bug tồn tại.
+
+**Em còn ghi nhận thêm một số bug candidate khác của FR-15:** em tạo được sản phẩm có `name` rỗng vì
+backend không validate; trường `price` dù là chuỗi, số âm hay số cực lớn thì vẫn được insert bình thường;
+`category_id` trỏ tới danh mục không tồn tại cũng vẫn insert được vì bảng không khai báo FOREIGN KEY nào.
+
+Riêng về XSS thì em xin trình bày cẩn thận hơn một chút. Bảng ở trang admin render bằng cú pháp `{p.name}`,
+mà React **có** tự escape nên payload không thực thi được ở màn hình này. Tuy nhiên payload độc vẫn được
+lưu nguyên vẹn vào database, và em tìm thấy những chỗ khác trong hệ thống có dùng `dangerouslySetInnerHTML`
+— cụ thể là `App.jsx:801` cho `shipping_address` và `Home.jsx:64` cho ô tìm kiếm. Vì vậy em vẫn coi đây là
+rủi ro thật, chỉ là điểm phát nổ nằm ở màn hình khác.
 
 ---
 
-## 4. Ngoài phạm vi (đọc để tránh, KHÔNG viết test)
+## 4. Ngoài phạm vi (em đọc để biết mà tránh, không viết test)
+
+Trong lúc đọc source, em có gặp một số chức năng nằm ngoài phạm vi ba feature được giao. Em liệt kê lại ở
+đây để tự nhắc mình không viết test lấn sang phần của bạn khác:
 
 | Chức năng                                   | Vì sao ngoài phạm vi                                                                        |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -206,25 +261,39 @@ và render `dangerouslySetInnerHTML` ở nơi khác — `App.jsx:801` cho `shipp
 | Đăng ký / Đăng nhập (`/register`, `/login`) | FR-01 / FR-02 — chỉ dùng làm **tiền đề** cho FR-03 và FR-08, không viết test case tính điểm |
 | `frontend-mobile` (FR-20)                   | Đề §5: Pool D không tính điểm HW04                                                          |
 
-**Cảnh báo tiền đề (`Login.jsx`):** trang login của web có nhiều lỗi hiển thị (heading ghi _"Đăng Ký"_, label ghi
-_"Username"_, ô mật khẩu là `type="text"`). Nút submit là **`Sign In`**, KHÔNG phải `Đăng nhập`.
-⇒ Page Object login phải dùng `getByRole('button', { name: 'Sign In' })` và định vị 2 ô bằng **thứ tự textbox**,
-không dùng `input[type=password]` (không tồn tại ở trang này).
+Cuối cùng, em xin ghi lại ba cảnh báo mà em phát hiện trong lúc recon. Đây không phải là bug thuộc feature
+của em, nhưng nếu em không biết trước thì test của em sẽ fail mà em lại tưởng là do SUT sai.
 
-**Cảnh báo `ProductDetail.jsx:22-25`:** nút "Thêm vào giỏ hàng" ở trang chi tiết **bỏ qua click đầu tiên**
-(`clickCount === 0 → return`). ⇒ Luồng FR-08 phải thêm sản phẩm từ **Home**, không qua ProductDetail.
+**Cảnh báo thứ nhất, về trang đăng nhập (`Login.jsx`).** Trang login của web có khá nhiều lỗi hiển thị:
+heading lại ghi _"Đăng Ký"_, label ghi _"Username"_, và ô mật khẩu để `type="text"`. Đáng chú ý nhất là nút
+submit có tên là **`Sign In`** chứ không phải `Đăng nhập` như em tưởng. Vì vậy Page Object đăng nhập của em
+phải dùng `getByRole('button', { name: 'Sign In' })`, và phải định vị hai ô nhập bằng **thứ tự textbox** chứ
+không dùng được `input[type=password]`, đơn giản vì phần tử đó không tồn tại ở trang này.
 
-**Cảnh báo `/api/login` (`server.js:53`):** mỗi lần sai mật khẩu, `login_attempts` tăng **2** (không phải 1)
-⇒ chỉ cần **2 lần** sai là bị khoá 3 phút. Test FR-03 phải tránh đăng nhập sai ngoài ý muốn.
+**Cảnh báo thứ hai, về trang chi tiết sản phẩm (`ProductDetail.jsx:22-25`).** Nút "Thêm vào giỏ hàng" ở
+trang này **cố tình bỏ qua cú click đầu tiên**, do đoạn code `clickCount === 0 → return`. Vì vậy khi làm
+luồng FR-08, em phải thêm sản phẩm từ trang **Home** thay vì đi qua ProductDetail.
+
+**Cảnh báo thứ ba, về API đăng nhập (`server.js:53`).** Em phát hiện mỗi lần nhập sai mật khẩu thì
+`login_attempts` tăng lên **2** chứ không phải 1. Như vậy chỉ cần sai **2 lần** là tài khoản đã bị khoá 3
+phút. Điều này khiến em phải cẩn thận trong test FR-03 để không vô tình đăng nhập sai và tự khoá tài khoản
+của chính mình.
 
 ---
 
 ## 5. Kết luận Phase 0
 
-- ✅ Backend `3000` và frontend-web `5173` đã sống, xác minh bằng `curl`.
-- ✅ Đã xác minh **bằng request thật** 9 hành vi lỗi: token lộ, user enumeration, price tampering, coupon nghịch dấu,
-  IDOR order, product CRUD không auth, DELETE id ảo báo thành công, price string với id chẵn, id lạ trả `200 {}`.
-- ✅ Toàn bộ selector trong bảng §3 **đọc trực tiếp từ JSX**, có số dòng dẫn nguồn.
-- ⚠️ `frontend-admin` thiếu `node_modules` → đã cài; **🧑 Khải chạy `run_servers.sh` và dán output xác nhận port admin thật**.
+Em xin tổng kết lại những gì đã làm được ở phase khảo sát này:
 
-**→ Sẵn sàng sang Phase 1: thiết kế bảng test case ≥12 TC cho từng feature.**
+- ✅ Em đã xác nhận backend chạy ở cổng `3000` và frontend-web chạy ở cổng `5173`, kiểm chứng bằng `curl`
+  chứ không dựa vào tài liệu.
+- ✅ Em đã xác minh **bằng request thật** được 9 hành vi lỗi của SUT, gồm: token bị lộ trong response, có thể
+  dò tài khoản tồn tại, sửa được giá khi thanh toán, công thức coupon tính nghịch dấu, xem được đơn hàng của
+  người khác qua IDOR, thao tác CRUD sản phẩm không cần đăng nhập, xoá một id không tồn tại vẫn báo thành
+  công, id chẵn trả về giá dạng chuỗi, và id lạ trả về `200 {}` thay vì `404`.
+- ✅ Toàn bộ selector trong các bảng ở §3 em đều **đọc trực tiếp từ file JSX** và ghi kèm số dòng để dẫn nguồn.
+- ⚠️ Em phát hiện `frontend-admin` bị thiếu `node_modules` nên đã chạy `npm install` để cài. Em cũng đã chạy
+  `run_servers.sh` và xác nhận cổng thật của admin đúng là **5174** như dự kiến.
+
+Sau khi hoàn thành phase này, em thấy đã đủ cơ sở để **sang Phase 1 và bắt đầu thiết kế bảng test case với
+tối thiểu 12 case cho mỗi feature.**
