@@ -167,7 +167,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | 1 | Chạy `run_servers.sh`, xác nhận 3 app lên đúng port | ☐ |
 | 2 | **Duyệt & ký** bảng test case (`report/01-TEST-CASES.md` §5) | ☐ |
 | 3 | **Ký xác nhận đã review script** (`report/02-AI-GAP-ANALYSIS.md` §5) | ☐ |
-| 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | ☐ |
+| 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | 🔶 **8/9** — còn thiếu `fr08-checkout-firefox.png`. 8 ảnh đã có đều khớp `03-RUN-SUMMARY.md` |
 | 5 | Tạo GitHub repo **public**, push toàn bộ | ✅ [`nvk`](https://github.com/hungtmh/HW04-TESTING/tree/nvk/23127060) |
 | 6 | Tạo GitHub Issue cho 28 bug, đính ảnh | ✅ issue [#46–#73](https://github.com/hungtmh/HW04-TESTING/issues?q=is%3Aissue+23127060) — xem [`bug-report/github-issues.txt`](bug-report/github-issues.txt) |
 | 7 | Điền mục **Human review** + **Verdict** cho **14** entry trong `ai/AI_Log.md` | ☐ |

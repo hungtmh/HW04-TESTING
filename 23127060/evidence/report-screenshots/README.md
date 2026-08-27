@@ -1,38 +1,51 @@
-# Ảnh chụp 9 HTML report — 🧑 Khải tự chụp
+# Ảnh chụp 9 HTML report
 
-Thư mục này **cố ý để trống**. Theo SKILL.md §7, việc mở report và chụp màn hình là việc của người học,
-agent không được tự sinh ảnh giả.
+Ảnh trong thư mục này do 🧑 **Khải tự mở report và chụp màn hình**. Theo SKILL.md §7,
+agent **không được tự sinh ảnh** — agent chỉ đối chiếu số liệu trên ảnh với `results.json`.
 
-## Cách làm
+## Kết quả đối chiếu (đã verify 2026-08-27)
 
-1. Mở lần lượt 9 file (hoặc `npx playwright show-report <đường dẫn>`):
+Đọc từng ảnh, so số hiển thị với `report/03-RUN-SUMMARY.md` và `playwright-report/<dir>/results.json`:
+
+| # | Ảnh | All / Passed | Failed·Flaky·Skipped | Duration | ISO timestamp trên banner | Khớp |
+|---|---|---|---|---|---|---|
+| 1 | `fr03-reset-chromium.png` | 31 / 31 | 0 · 0 · 0 | 7.4s | `2026-08-22T14:20:18.864Z` | ✅ |
+| 2 | `fr03-reset-firefox.png` | 31 / 31 | 0 · 0 · 0 | 11.9s | `2026-08-22T14:20:27.128Z` | ✅ |
+| 3 | `fr03-reset-webkit.png` | 31 / 31 | 0 · 0 · 0 | 14.3s | `2026-08-22T14:20:39.954Z` | ✅ |
+| 4 | `fr08-checkout-chromium.png` | 26 / 26 | 0 · 0 · 0 | 6.6s | `2026-08-22T14:20:55.137Z` | ✅ |
+| 5 | `fr08-checkout-firefox.png` | — | — | — | — | ⛔ **THIẾU ẢNH** |
+| 6 | `fr08-checkout-webkit.png` | 26 / 26 | 0 · 0 · 0 | 13.4s | `2026-08-22T14:21:14.586Z` | ✅ |
+| 7 | `fr15-product-chromium.png` | 26 / 26 | 0 · 0 · 0 | 5.6s | `2026-08-22T14:21:29.048Z` | ✅ |
+| 8 | `fr15-product-firefox.png` | 26 / 26 | 0 · 0 · 0 | 10.7s | `2026-08-22T14:21:35.552Z` | ✅ |
+| 9 | `fr15-product-webkit.png` | 26 / 26 | 0 · 0 · 0 | 10.3s | `2026-08-22T14:21:47.264Z` | ✅ |
+
+**Kết luận: 8/8 ảnh hiện có khớp tuyệt đối** với `03-RUN-SUMMARY.md` — cả số test, số passed,
+duration lẫn ISO timestamp. **Report chưa hề bị chạy lại**, nên **không cần** chạy
+`node scripts/summarize-results.mjs`; mọi tài liệu đang khớp nhau.
+
+## ⛔ Việc còn lại — 🧑 Khải tự chụp
+
+Còn thiếu **1 ảnh**: `fr08-checkout-firefox.png` (dòng 5 — đây là run duy nhất chưa có ảnh).
 
 ```
-23127060/automation/playwright-report/fr03-reset-chromium/index.html
-23127060/automation/playwright-report/fr03-reset-firefox/index.html
-23127060/automation/playwright-report/fr03-reset-webkit/index.html
-23127060/automation/playwright-report/fr08-checkout-chromium/index.html
 23127060/automation/playwright-report/fr08-checkout-firefox/index.html
-23127060/automation/playwright-report/fr08-checkout-webkit/index.html
-23127060/automation/playwright-report/fr15-product-chromium/index.html
-23127060/automation/playwright-report/fr15-product-firefox/index.html
-23127060/automation/playwright-report/fr15-product-webkit/index.html
 ```
 
-2. Mỗi ảnh phải thấy rõ **cả hai** chỗ mang banner:
-   - **Tiêu đề tab trình duyệt**: `Run by: 23127060 — <ISO timestamp> · <feature>`
-   - **Khối banner nền tối ở đầu trang**: MSSV, họ tên, feature, browser, và số passed/failed thật.
+Số phải thấy trên ảnh đó: **26 passed · 0 failed · 0 flaky · 0 skipped · tổng 26 test · 11.1s**,
+banner ghi `Run by: 23127060 — 2026-08-22T14:21:02.604Z`.
 
-3. Đặt tên ảnh trùng tên thư mục report, ví dụ `fr03-reset-chromium.png`.
+## Cách chụp
 
-## Đối chiếu số liệu (từ `report/03-RUN-SUMMARY.md`)
+1. Mở file `index.html` của report bằng trình duyệt (hoặc `npx playwright show-report <đường dẫn>`).
+2. Ảnh cần thấy rõ **khối banner nền tối ở đầu trang**: MSSV, họ tên, feature, browser,
+   và số passed/failed thật. Thấy thêm **tiêu đề tab trình duyệt**
+   (`Run by: 23127060 — <ISO> · <feature>`) thì càng chắc.
+3. Đặt tên ảnh trùng tên thư mục report, ví dụ `fr08-checkout-firefox.png`.
 
-| Report dir | Total | Passed |
-|---|---|---|
-| fr03-reset-chromium / firefox / webkit | 31 | 31 |
-| fr08-checkout-chromium / firefox / webkit | 26 | 26 |
-| fr15-product-chromium / firefox / webkit | 26 | 26 |
-| **Tổng 9 report** | **249** | **249** |
+## Ghi chú nhỏ (không bắt buộc sửa)
 
-Nếu số trên ảnh **khác** bảng này thì report đã được chạy lại — hãy cập nhật lại `03-RUN-SUMMARY.md`
-bằng `node scripts/summarize-results.mjs` để mọi tài liệu khớp nhau.
+- `fr03-reset-chromium.png` đang bật bộ lọc `s:passed` trên thanh tìm kiếm nên có thêm dòng
+  *"Filtered: 31"*. Không sai lệch gì — `All 31 / Passed 31` và banner vẫn hiện đầy đủ.
+- 6/8 ảnh bị cắt phần tab trình duyệt, chỉ còn từ thanh địa chỉ trở xuống. Yêu cầu của đề bài
+  (*HTML report visibly displays "Run by: {StudentID}"*) vẫn **đạt**, vì banner nền tối và
+  tiêu đề H1 trong trang đều ghi rõ `Run by: 23127060` kèm ISO timestamp. Không cần chụp lại.
