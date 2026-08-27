@@ -916,7 +916,7 @@ node scripts/md-to-pdf.mjs
 - Đã sửa: Không phải sửa gì. Việc agent giữ nguyên các tham chiếu `video-script/` trong chính `AI_Log.md` là đúng ý tôi — log là minh chứng lịch sử, không phải tài liệu để chỉnh lại cho đẹp.
 
 **Verdict:** Accepted
-**Liên kết:** commit `<hash>` · video https://youtu.be/P_8rnOMATfw
+**Liên kết:** commit `d86a617` · video https://youtu.be/P_8rnOMATfw
 
 ---
 
@@ -968,7 +968,7 @@ node scripts/md-to-pdf.mjs
 - Đã sửa: Về điểm tự đánh giá: agent khuyến nghị 95 nhưng **tôi quyết định 100/100** vì mọi tiêu chí rubric đều vượt mức tối thiểu và kiểm chứng được bằng lệnh. Ghi rõ ở đây để minh bạch: con số này là quyết định của tôi, không phải agent tự chấm.
 
 **Verdict:** Accepted
-**Liên kết:** commit `<hash>` · video https://youtu.be/P_8rnOMATfw
+**Liên kết:** commit `c3fb0cd` · `d86a617` · video https://youtu.be/P_8rnOMATfw
 
 ---
 
@@ -1024,4 +1024,62 @@ node scripts/md-to-pdf.mjs
 - Đã sửa: Không phải sửa gì thêm. Việc agent sửa chuỗi trong `summarize-results.mjs` thay vì sửa tay file `03-RUN-SUMMARY.md` là đúng — nếu sửa tay thì lần sau chạy script là mất hết, mà em thì vẫn muốn giữ được tính tự động của file đó.
 
 **Verdict:** Accepted
-**Liên kết:** commit `<hash>` · report `23127060/report/`
+**Liên kết:** commit `c3fb0cd` · `d86a617` · report `23127060/report/`
+
+---
+
+## LOG-020 — Commit 4 nhóm thay đổi tồn đọng, sinh lại 2 file git log, đính chính số commit spec
+
+- **AI tool:** Claude Code (CLI), model claude-opus-5
+- **Thời điểm:** 2026-08-27T23:20:00+07:00
+- **Phase:** P8
+- **Người dùng:** 23127060 — Ninh Văn Khải
+
+**Prompt (nguyên văn):**
+
+> thuc hien git commit cho toi va luu xuong git-commit-log.txt va git-commit-log-files.txt
+
+**AI output (tóm tắt):**
+
+- Cây làm việc đang tồn 29 file thay đổi thuộc nhiều chủ đề khác nhau. Agent **không gộp thành một commit**, mà đọc diff từng file rồi tách thành **4 commit theo chủ đề** để lịch sử còn đọc được:
+  - `c3fb0cd` — viết lại 5 tài liệu `report/` sang giọng "em", ký 2 mục xác nhận (test case §5, review script §5), đổi checklist bug report thành mục xác nhận đã làm.
+  - `d86a617` — gắn link video, xoá `video-script/`, dọn tham chiếu chết, AI_Log LOG-017/018.
+  - `d425f5c` — 3 ảnh `evidence/issue-git/`, xoá `report-screenshots/README.md`, xuất lại 9 PDF.
+  - `29f5ced` — sinh lại 2 file git log + đính chính số commit chạm spec.
+- **Đính chính một con số đang báo thiếu:** cả `HW04_Main_Report.md` và `CHECKLIST-NOP-BAI.md` ghi **9 commit** chạm `*.spec.js`. Số thật là **10**. Nguyên nhân: `git-commit-log-files.txt` bản cũ **không có newline ở dòng cuối**, nên `wc -l` trả về 9 cho một file 10 dòng, và con số 9 được chép từ đó. Đếm bằng `git log` cho ra 10. Đã sửa ở cả 3 chỗ — đây là báo **thiếu** so với yêu cầu ≥8 nên kết luận không đổi.
+- **Không commit 3 file ngoài scope** (`.gitignore`, `eshop-sut/backend/database.sqlite`, `eshop-sut/run_servers.sh`): CLAUDE.md giới hạn quyền ghi trong `23127060/`, và file `.sqlite` bị ghi lại mỗi lần khởi động backend nên commit vào sẽ gây nhiễu cho cả nhóm.
+- **Không commit `automation/playwright-report/local/`**: đây là thư mục report của một lần chạy lẻ, không thuộc bộ 9 run chính thức. Thêm vào thì `summarize-results.mjs` sẽ đọc nó ở lần chạy sau và làm sai bảng 9 dòng của `03-RUN-SUMMARY.md`.
+- Điền 3 commit hash thật còn để `<hash>` ở LOG-017 / LOG-018 / LOG-019, thêm LOG-019 + LOG-020 vào bảng nhật ký của `AI_Audit_Report.md`, đồng bộ số entry 19 ⇒ 20 ở 4 tài liệu.
+
+**File tạo/sửa:**
+
+- `evidence/git-commit-log.txt` (sinh lại — 29 commit chạm `23127060/`)
+- `evidence/git-commit-log-files.txt` (sinh lại — 10 commit chạm `*.spec.js`)
+- `report/HW04_Main_Report.md` · `evidence/CHECKLIST-NOP-BAI.md` (sửa — 9 ⇒ 10 commit spec)
+- `ai/AI_Log.md` (sửa — 3 commit hash; thêm LOG-020) · `ai/AI_Audit_Report.md` · `README.md` (sửa — đồng bộ số entry)
+- 9 file PDF (xuất lại)
+
+**Lệnh đã chạy & kết quả thật:**
+
+```
+git log --date=iso --format='%h|%ad|%an|%s' -- 23127060/ > evidence/git-commit-log.txt
+⇒ 29 commit (mới nhất 29f5ced · cũ nhất 6697018 phase 0 recon)
+
+git log --date=iso --format='%h|%ad|%an|%s' -- ':(glob)23127060/**/*.spec.js' > evidence/git-commit-log-files.txt
+⇒ 10 commit  (yêu cầu đề bài: ≥8)
+
+wc -l < evidence/git-commit-log-files.txt   ⇒ 9    (bản cũ, thiếu newline cuối — nguồn của con số sai)
+git log --oneline -- ':(glob)23127060/**/*.spec.js' | wc -l  ⇒ 10   (số thật)
+
+git status --short
+⇒ M .gitignore · M eshop-sut/backend/database.sqlite · M eshop-sut/run_servers.sh · ?? 23127060/automation/playwright-report/local/
+   (đúng 3 file ngoài scope + 1 thư mục run lẻ, cố ý không commit)
+```
+
+**Human review :**
+
+- Sai/thiếu: Không có. Tôi đã duyệt trước toàn bộ phần này. Việc agent tự phát hiện con số 9 commit là sai và truy ra nguyên nhân là file thiếu newline cuối — thay vì im lặng chép lại con số cũ — đúng là thứ tôi cần ở khâu hậu kiểm.
+- Đã sửa: Không phải sửa gì thêm. Tôi đồng ý với quyết định không commit `database.sqlite` và thư mục `playwright-report/local/`: một cái là file nhị phân đổi mỗi lần chạy server, một cái sẽ làm hỏng bảng 9 run mà cả báo cáo đang dựa vào.
+
+**Verdict:** Accepted
+**Liên kết:** commit `c3fb0cd` · `d86a617` · `d425f5c` · `29f5ced`

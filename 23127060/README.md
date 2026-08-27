@@ -43,7 +43,7 @@
 ├── README.md                       ← file này
 ├── agent-skill/SKILL.md            AI Skill điều phối toàn bộ quy trình
 ├── ai/
-│   ├── AI_Log.md                   19 entry — nhật ký từng lượt làm việc với AI
+│   ├── AI_Log.md                   20 entry — nhật ký từng lượt làm việc với AI
 │   ├── AI_Audit_Report.md          tổng hợp từ AI_Log + khai báo bắt buộc
 │   └── AI_Critique.md              296 từ (đếm tự động, trong khoảng 200–300)
 ├── automation/
@@ -138,7 +138,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | **FR-03** — Quên/Đặt lại mật khẩu | 25 | **25** | 31 test × 3 browser · 8 bug (3 Critical) · boundary regex mật khẩu 6 biến thể · 100% pass |
 | **FR-08** — Thanh toán | 25 | **25** | 26 test × 3 browser · 9 bug (4 Critical) · boundary coupon 3 mốc bắt được off-by-one · 100% pass |
 | **FR-15** — Quản lý sản phẩm | 25 | **25** | 26 test × 3 browser · 10 bug (3 Critical) · assertion kép UI+API chứng minh bug thuộc frontend · 100% pass |
-| **Báo cáo & AI Audit** | 25 | **25** | Main Report · Bug Report 28 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 19 entry (đã review đủ) · Critique 296 từ |
+| **Báo cáo & AI Audit** | 25 | **25** | Main Report · Bug Report 28 bug có ảnh thật · Gap Analysis 9 GAP · AI Log 20 entry (đã review đủ) · Critique 296 từ |
 | **TỔNG** | **100** | **100** | Mọi tiêu chí rubric đều **vượt** mức tối thiểu và **kiểm chứng được bằng lệnh**, không có mục nào tự khai |
 
 ### Điểm mạnh tự nhận
@@ -169,7 +169,7 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | ✅ **9/9** — mọi ảnh khớp `03-RUN-SUMMARY.md` (test, passed, duration, ISO timestamp) |
 | 5 | Tạo GitHub repo **public**, push toàn bộ | ✅ [`nvk`](https://github.com/hungtmh/HW04-TESTING/tree/nvk/23127060) |
 | 6 | Tạo GitHub Issue cho 28 bug, đính ảnh | ✅ issue [#46–#73](https://github.com/hungtmh/HW04-TESTING/issues?q=is%3Aissue+23127060) — xem [`bug-report/github-issues.txt`](bug-report/github-issues.txt) |
-| 7 | Điền mục **Human review** + **Verdict** cho **19** entry trong `ai/AI_Log.md` | ✅ **19/19** entry đã có Human review + Verdict |
+| 7 | Điền mục **Human review** + **Verdict** cho **20** entry trong `ai/AI_Log.md` | ✅ **20/20** entry đã có Human review + Verdict |
 | 8 | Quay video demo **2-trong-1** (demo end-to-end + Agent Skill, giọng Việt thật, có face-cam **hoặc** `whoami && hostname`) và upload YouTube | ✅ https://youtu.be/P_8rnOMATfw |
 | 9 | Chốt điểm tự đánh giá ở §5 | ✅ **100/100** |
 | 10 | Xuất PDF cho các `.md` bắt buộc | ✅ **9/9** — `node scripts/md-to-pdf.mjs` |

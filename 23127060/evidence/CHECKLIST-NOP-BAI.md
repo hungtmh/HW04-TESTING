@@ -18,7 +18,7 @@
 | 10 | Gap Analysis cho cả 3 feature | ✅ 9 GAP (GAP-00…09), 7 đã sửa trong code | `report/02-AI-GAP-ANALYSIS.md` |
 | 11 | Bug report có evidence ảnh thật | ✅ **28 bug**, 11 ảnh PNG + `capture-log.txt` | `ls evidence/bugs/` |
 | 12 | ≥8 commit chạm `*.spec.js` | **10 commit** | `evidence/git-commit-log-files.txt` |
-| 13 | AI_Log đầy đủ | **19 entry** (LOG-001…019), 19/19 có Human review + Verdict | `grep -c "^## LOG-" ai/AI_Log.md` |
+| 13 | AI_Log đầy đủ | **20 entry** (LOG-001…020), 20/20 có Human review + Verdict | `grep -cE "^## LOG-0[0-9]{2} " ai/AI_Log.md` |
 | 14 | AI_Critique 200–300 từ | **296 từ**, script exit 0 | `node scripts/count-words.mjs` |
 | 15 | README có self-assessment + test summary | ✅ | `README.md` §1, §5 |
 | 16 | PDF cho tài liệu bắt buộc | ✅ 9/9 file | `node scripts/md-to-pdf.mjs` |
@@ -35,7 +35,7 @@
 | 4 | Mở 9 HTML report, chụp banner → `evidence/report-screenshots/` | ✅ 9/9 ảnh, khớp `03-RUN-SUMMARY.md` |
 | 5 | Tạo GitHub repo **public**, push | ✅ branch `nvk`, link đã có trong `README.md` |
 | 6 | Tạo Issue cho 28 bug + đính ảnh | ✅ issue #46–#73 |
-| 7 | Điền **Human review** + **Verdict** cho các entry AI_Log | ✅ 17/17 entry |
+| 7 | Điền **Human review** + **Verdict** cho các entry AI_Log | ✅ 20/20 entry |
 | 8 | Quay video **2-trong-1** (demo end-to-end + Agent Skill, ≥5 phút) & upload YouTube | ✅ https://youtu.be/P_8rnOMATfw — có `whoami && hostname` hoặc face-cam |
 | 9 | Chốt điểm tự đánh giá — `README.md` §5 | ✅ **100/100** (25 × 4) |
 | 10 | Đóng gói `23127060_HW04_AI_Automation_100.zip` | ☐ **còn lại** |

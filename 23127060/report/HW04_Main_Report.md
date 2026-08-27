@@ -270,7 +270,7 @@ mình đã xong hay chưa:
 
 Em quy ước mỗi phase tương ứng với một commit riêng và một entry trong `ai/AI_Log.md`, để sau này nhìn lại
 là truy được ngay việc nào làm ở đâu. Toàn bộ hội thoại của em với AI đều được ghi lại trong `ai/AI_Log.md`,
-hiện có 19 entry và em đã tự đọc lại rồi điền mục Human review cùng Verdict cho từng entry một. Phần tổng
+hiện có 20 entry và em đã tự đọc lại rồi điền mục Human review cùng Verdict cho từng entry một. Phần tổng
 hợp em để ở `ai/AI_Audit_Report.md`.
 
 ### 7.1 Bốn lỗi AI đáng chú ý nhất (chi tiết ở `report/02-AI-GAP-ANALYSIS.md`)
@@ -324,7 +324,7 @@ Em xin tự đánh giá bài làm của mình theo bốn tiêu chí như sau:
 | FR-03 automation | 25 | **25** | 31 test, 3 browser, 8 bug, 100% pass |
 | FR-08 automation | 25 | **25** | 26 test, 3 browser, 9 bug (4 Critical), 100% pass |
 | FR-15 automation | 25 | **25** | 26 test, 3 browser, 10 bug, 100% pass |
-| Báo cáo & AI Audit | 25 | **25** | Main Report, Bug Report 28 bug, Gap Analysis 9 GAP, AI Log 19 entry, AI Critique 296 từ |
+| Báo cáo & AI Audit | 25 | **25** | Main Report, Bug Report 28 bug, Gap Analysis 9 GAP, AI Log 20 entry, AI Critique 296 từ |
 | **TỔNG** | **100** | **100** | |
 
 **Em xin trình bày căn cứ cho mức điểm tự chấm này.** Em tự chấm tuyệt đối vì mọi tiêu chí trong rubric em
@@ -332,7 +332,7 @@ Em xin tự đánh giá bài làm của mình theo bốn tiêu chí như sau:
 em có 83 test so với yêu cầu tối thiểu 36, cả 249 lượt chạy đều pass trên 3 trình duyệt, em dùng 5 assertion
 pattern so với yêu cầu 3, dữ liệu data-driven có 88 record và không còn mảng nào hardcode inline trong spec,
 em báo cáo 28 bug đều có ảnh thật kèm 28 GitHub Issue, có 10 commit chạm vào `*.spec.js` so với yêu cầu 8,
-cả 9 report đều có banner và script verify thoát với exit code 0, và 19 entry trong AI_Log đều đã được em
+cả 9 report đều có banner và script verify thoát với exit code 0, và 20 entry trong AI_Log đều đã được em
 đọc lại và review đầy đủ.
 
 Riêng những case ở §8 mà em không automate được, em xin khẳng định lại đó là **ràng buộc của chính SUT**

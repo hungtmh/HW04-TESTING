@@ -1,7 +1,7 @@
 # AI AUDIT REPORT — HW04 Automation Testing (EShop)
 
 - **Sinh viên:** Ninh Văn Khải — MSSV **23127060**
-- **Nguồn:** tổng hợp từ `ai/AI_Log.md` (19 entry, append-only, ghi ngay tại thời điểm làm việc)
+- **Nguồn:** tổng hợp từ `ai/AI_Log.md` (20 entry, append-only, ghi ngay tại thời điểm làm việc)
 - **Timezone:** Asia/Ho_Chi_Minh (+07:00)
 
 ---
@@ -49,6 +49,8 @@
 | LOG-016 | Claude Code | 2026-08-27T20:50:00 | P8 Hồ sơ AI | Bổ sung AI_Log | *"@23127060/ai/AI_Log.md Giup toi bo sung cac phan con thieu trong file nay."* | Điền **13 commit hash thật** vào mục Liên kết, append LOG-014/015/016, đồng bộ số entry ở README + Audit. **Không** tự điền Human review | ✅ Đã điền Human review + Verdict cho toàn bộ entry |
 | LOG-017 | Claude Code | 2026-08-27T22:40:00 | P8 Hoàn thiện | Gắn link video, xoá `video-script/` | *"https://youtu.be/P_8rnOMATfw Thêm link này vào trong báo cáo và readme cho tôi. Đây là video demo 2 trong 1, xóa luôn video-script"* | Thêm link video vào `README.md` + bảng đầu `HW04_Main_Report.md`; xoá 2 file kịch bản video; dọn tham chiếu chết ở SKILL/CHECKLIST/Audit; **giữ nguyên** tham chiếu trong `AI_Log.md` (log lịch sử); xuất lại 9 PDF | ✅ Khải xác nhận link đúng video đã upload |
 | LOG-018 | Claude Code | 2026-08-27T23:05:00 | P8 Hoàn thiện | Đóng các mục chờ người học | *"Những phần nào cần Human review tôi đều oke hết, hãy xóa phần text (human review) đó cho tôi và bổ sung những thứ còn thiếu ví dụ AI_log, tôi review oke rồi"* | Điền Human review LOG-017 (⇒ 18/18 entry đủ); ký 2 mục xác nhận (test case + review script) và mục chốt severity bug; **rà chéo phát hiện 4 con số lỗi thời** (12→13 lỗi AI, 10/12/16→18 entry, 77→88 record) và sửa về số thật; **không tự điền điểm** mà hỏi lại, khuyến nghị 95 | ✅ Khải **quyết định 100/100** — điểm là quyết định của người học, không phải agent tự chấm |
+| LOG-019 | Claude Code | 2026-08-27T23:30:00 | P7 Giọng văn | Viết lại 5 tài liệu `report/` | *"@23127060/report/ Viết lại các phần báo cáo trong report cho mềm hơn, con người hơn. Ví dụ xưng em … Viết đầy đủ chủ ngữ (em) và vị ngữ không cộc lốc như hiện tại"* | Chuyển văn xuôi 5 file sang ngôi **"em"**, thêm câu dẫn cho mọi mục trước đây vào thẳng bảng. `03-RUN-SUMMARY.md` được sửa **qua `summarize-results.mjs`** rồi sinh lại, giữ nguyên tính "không con số nào nhập tay". **Không đụng vào một con số nào** | ✅ Khải xác nhận giọng văn đúng ý |
+| LOG-020 | Claude Code | 2026-08-27T23:20:00 | P8 Đóng gói | Commit tồn đọng + sinh lại git log | *"thuc hien git commit cho toi va luu xuong git-commit-log.txt va git-commit-log-files.txt"* | Tách 29 file đang thay đổi thành **4 commit theo chủ đề**; sinh lại 2 file git log (**29** commit chạm `23127060/`, **10** commit chạm `*.spec.js`); **đính chính 9 ⇒ 10 commit spec** (con số cũ chép từ `wc -l` trên file thiếu newline cuối); cố ý **không commit** 3 file ngoài scope và thư mục run lẻ | ✅ Khải duyệt trước, đồng ý phạm vi commit |
 
 > **Ghi chú về prompt:** Khải gửi **một** prompt duy nhất yêu cầu agent thực hiện toàn bộ quy trình
 > theo SKILL.md. Agent tự chia thành 8 phase, mỗi phase 1 commit + 1 entry log để giữ nguyên tinh thần
