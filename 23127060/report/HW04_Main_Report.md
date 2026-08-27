@@ -21,7 +21,7 @@
 | Tổng test case | ≥ 36 | **83** |
 | Lần chạy multi-browser | 9 (3 feature × 3 browser) | **9/9 · 249 test · 249 passed · 0 failed · 0 flaky** |
 | Assertion pattern khác nhau | ≥ 3 | **5** (A1–A5, §4) |
-| Data-driven | không hardcode inline | **77 record** trong 6 file JSON/CSV, 0 mảng dữ liệu inline |
+| Data-driven | không hardcode inline | **88 record** trong 6 file JSON/CSV, 0 mảng dữ liệu inline |
 | Bug phát hiện | ≥ 3 / feature | **28 bug** (FR-03: 8 · FR-08: 9 · FR-15: 11) — trong đó **9 Critical** |
 | Commit chạm `*.spec.js` | ≥ 8 | **9 commit** — xem `evidence/git-commit-log-files.txt` |
 | Banner chống gian lận | mọi report | **9/9 report** có `Run by: 23127060` + ISO timestamp, verify script pass |
@@ -68,7 +68,7 @@ Test đọc URL từ ENV (`automation/tests/utils/env.js`) nên đổi port khô
 │   ├── summarize-results.mjs    results.json → 03-RUN-SUMMARY.md
 │   └── capture-bug-evidence.mjs chụp ảnh bug bằng Playwright thật
 └── tests/
-    ├── data/       6 file (3 JSON + 3 CSV) — 77 record
+    ├── data/       6 file (3 JSON + 3 CSV) — 88 record
     ├── pages/      5 Page Object
     ├── utils/      env · csv · data · api · fixtures
     ├── fr03-forgot-reset.spec.js   31 test
@@ -197,7 +197,7 @@ chứ không phải bản thân việc dùng AI.
 |---|---|---|
 | P0 | Recon SUT, xác minh 9 hành vi lỗi bằng `curl` | `report/00-SUT-RECON.md` |
 | P1 | Thiết kế 54 test case (bảng chuẩn, dẫn nguồn expected) | `report/01-TEST-CASES.md` |
-| P2 | Sinh 6 file dữ liệu, 77 record | `automation/tests/data/` |
+| P2 | Sinh 6 file dữ liệu, 88 record | `automation/tests/data/` |
 | P3 | 5 Page Object + 3 spec, chạy tới khi ổn định `--repeat-each=2` | `automation/tests/` |
 | P4 | Tự phê bình, tìm GAP-00..07, vá lại | `report/02-AI-GAP-ANALYSIS.md` |
 | P5 | 9 run multi-browser + verify banner + bảng số liệu | `report/03-RUN-SUMMARY.md` |

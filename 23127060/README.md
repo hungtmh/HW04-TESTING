@@ -5,7 +5,8 @@
 **Feature:** FR-03 Quên/Đặt lại mật khẩu · FR-08 Thanh toán · FR-15 Quản lý sản phẩm
 **Framework:** Playwright Test 1.62.1 (JavaScript, ESM) · Chromium / Firefox / WebKit
 
-> 🔗 **GitHub repo:** 🧑 *Khải dán link repo public vào đây*
+> 🔗 **GitHub repo:** https://github.com/hungtmh/HW04-TESTING (branch `nvk` · thư mục [`23127060/`](https://github.com/hungtmh/HW04-TESTING/tree/nvk/23127060))
+> 🐛 **GitHub Issues:** https://github.com/hungtmh/HW04-TESTING/issues?q=is%3Aissue+23127060
 > 🎥 **Video 1 (Demo ≥5 phút):** 🧑 *Khải dán link YouTube unlisted*
 > 🎥 **Video 2 (Agent Skill):** 🧑 *Khải dán link YouTube unlisted*
 
@@ -28,7 +29,7 @@
 | Hạng mục | Con số |
 |---|---|
 | Bug phát hiện | **28** (9 Critical · 10 High · 9 Medium) |
-| Record dữ liệu data-driven | **77** trong 6 file JSON/CSV |
+| Record dữ liệu data-driven | **88** trong 6 file JSON/CSV |
 | Assertion pattern | **5** (A1 UI · A2 URL · A3 API · A4 boundary · A5 dialog) |
 | Page Object | 5 |
 | Report HTML có banner | **9/9** verify pass |
@@ -50,7 +51,7 @@
 │   ├── playwright.config.js        banner "Run by: 23127060" + 3 project browser
 │   ├── scripts/                    6 script hạ tầng (xem §4)
 │   ├── tests/
-│   │   ├── data/                   3 JSON + 3 CSV — 77 record
+│   │   ├── data/                   3 JSON + 3 CSV — 88 record
 │   │   ├── pages/                  5 Page Object
 │   │   ├── utils/                  env · csv · data · api · fixtures
 │   │   ├── fr03-forgot-reset.spec.js    31 test
