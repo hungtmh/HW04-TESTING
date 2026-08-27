@@ -168,9 +168,9 @@ ADMIN_BASE_URL=http://localhost:5174 npm test
 | 2 | **Duyệt & ký** bảng test case (`report/01-TEST-CASES.md` §5) | ☐ |
 | 3 | **Ký xác nhận đã review script** (`report/02-AI-GAP-ANALYSIS.md` §5) | ☐ |
 | 4 | Mở 9 HTML report bằng trình duyệt, chụp màn hình banner → `evidence/report-screenshots/` | ☐ |
-| 5 | Tạo GitHub repo **public**, push toàn bộ | ☐ |
-| 6 | Tạo GitHub Issue cho 28 bug (`bash bug-report/gh-issue-commands.sh`), đính ảnh | ☐ |
-| 7 | Điền mục **Human review** + **Verdict** cho 12 entry trong `ai/AI_Log.md` | ☐ |
+| 5 | Tạo GitHub repo **public**, push toàn bộ | ✅ [`nvk`](https://github.com/hungtmh/HW04-TESTING/tree/nvk/23127060) |
+| 6 | Tạo GitHub Issue cho 28 bug, đính ảnh | ✅ issue [#46–#73](https://github.com/hungtmh/HW04-TESTING/issues?q=is%3Aissue+23127060) — xem [`bug-report/github-issues.txt`](bug-report/github-issues.txt) |
+| 7 | Điền mục **Human review** + **Verdict** cho **14** entry trong `ai/AI_Log.md` | ☐ |
 | 8 | Quay Video 1 (demo ≥5 phút, giọng Việt thật, có face-cam **hoặc** `whoami && hostname`) | ☐ |
 | 9 | Quay Video 2 (demo Agent Skill end-to-end) | ☐ |
 | 10 | Upload 2 video lên YouTube **Unlisted**, dán link vào §đầu README | ☐ |

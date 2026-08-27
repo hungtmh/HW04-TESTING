@@ -1,0 +1,31 @@
+GitHub Issues — 23127060 Ninh Van Khai
+repo: hungtmh/HW04-TESTING
+
+BUG-03-01	High	https://github.com/hungtmh/HW04-TESTING/issues/46
+BUG-03-02	Critical	https://github.com/hungtmh/HW04-TESTING/issues/47
+BUG-03-03	Critical	https://github.com/hungtmh/HW04-TESTING/issues/48
+BUG-03-04	High	https://github.com/hungtmh/HW04-TESTING/issues/49
+BUG-03-05	Medium	https://github.com/hungtmh/HW04-TESTING/issues/50
+BUG-03-06	High	https://github.com/hungtmh/HW04-TESTING/issues/51
+BUG-03-07	Critical	https://github.com/hungtmh/HW04-TESTING/issues/52
+BUG-03-08	High	https://github.com/hungtmh/HW04-TESTING/issues/53
+BUG-08-01	Critical	https://github.com/hungtmh/HW04-TESTING/issues/54
+BUG-08-02	High	https://github.com/hungtmh/HW04-TESTING/issues/55
+BUG-08-03	Medium	https://github.com/hungtmh/HW04-TESTING/issues/56
+BUG-08-04	Critical	https://github.com/hungtmh/HW04-TESTING/issues/57
+BUG-08-05	High	https://github.com/hungtmh/HW04-TESTING/issues/58
+BUG-08-06	High	https://github.com/hungtmh/HW04-TESTING/issues/59
+BUG-08-07	Critical	https://github.com/hungtmh/HW04-TESTING/issues/60
+BUG-08-08	Medium	https://github.com/hungtmh/HW04-TESTING/issues/61
+BUG-08-09	Medium	https://github.com/hungtmh/HW04-TESTING/issues/62
+BUG-15-01	Critical	https://github.com/hungtmh/HW04-TESTING/issues/63
+BUG-15-02	Critical	https://github.com/hungtmh/HW04-TESTING/issues/64
+BUG-15-03	Critical	https://github.com/hungtmh/HW04-TESTING/issues/65
+BUG-15-04	Medium	https://github.com/hungtmh/HW04-TESTING/issues/66
+BUG-15-05	High	https://github.com/hungtmh/HW04-TESTING/issues/67
+BUG-15-06	Medium	https://github.com/hungtmh/HW04-TESTING/issues/68
+BUG-15-07	Medium	https://github.com/hungtmh/HW04-TESTING/issues/69
+BUG-15-08	Medium	https://github.com/hungtmh/HW04-TESTING/issues/70
+BUG-15-09	High	https://github.com/hungtmh/HW04-TESTING/issues/71
+BUG-15-10	Medium	https://github.com/hungtmh/HW04-TESTING/issues/72
+BUG-15-11	High	https://github.com/hungtmh/HW04-TESTING/issues/73
