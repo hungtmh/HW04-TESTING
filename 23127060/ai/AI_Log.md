@@ -863,4 +863,4 @@ grep -c '^## LOG-' ai/AI_Log.md          ⇒ 17   (16 entry thật + 1 dòng tro
 - Đã sửa:
 
 **Verdict:** 🧑 _(Khải điền)_
-**Liên kết:** commit `<điền sau khi commit>`
+**Liên kết:** commit `c55c6dd`
