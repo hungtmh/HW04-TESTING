@@ -1,3 +1,14 @@
+d425f5c|2026-08-27 23:17:42 +0700|nvkhai238|chore(evidence): add the GitHub issue screenshots and regenerate all 9 PDFs
+d86a617|2026-08-27 23:17:05 +0700|nvkhai238|docs(23127060): link the demo video and drop the video scripts
+c3fb0cd|2026-08-27 23:16:44 +0700|nvkhai238|docs(23127060): rewrite the reports in the student's own voice and sign them off
+564e89b|2026-08-27 21:19:19 +0700|nvkhai238|docs(ai): fill the Human review and Verdict blocks of all 16 log entries
+ba1a878|2026-08-27 21:10:25 +0700|nvkhai238|docs(ai): point LOG-016 at its own commit
+c55c6dd|2026-08-27 21:10:09 +0700|nvkhai238|docs(ai): fill 13 real commit hashes into AI_Log and add the 3 missing entries
+66b09d0|2026-08-27 20:36:46 +0700|nvkhai238|docs(evidence): complete the report screenshot set at 9/9
+37c6da1|2026-08-27 20:33:54 +0700|nvkhai238|docs(evidence): add 8 HTML report screenshots and verify them against results.json
+cd2e2ad|2026-08-27 20:05:01 +0700|nvkhai238|docs(bugs): file all 28 bugs as GitHub Issues and record their links
+083ad02|2026-08-27 20:02:04 +0700|nvkhai238|docs: correct data-driven record count to 88 and publish repo links
+27d1685|2026-08-22 21:29:19 +0700|nvkhai238|chore(evidence): refresh git commit logs
 4e9e0cc|2026-08-22 21:29:05 +0700|nvkhai238|chore: add submission checklist and report-screenshot instructions
 de4e5d1|2026-08-22 21:28:12 +0700|nvkhai238|docs: correct the defect count from 27 to 28 and sync every figure
 e1dcdcd|2026-08-22 21:25:26 +0700|nvkhai238|fix(specs): eliminate two flaky waits that only WebKit exposed

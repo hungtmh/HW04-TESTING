@@ -29,7 +29,7 @@ mục sau để thầy/cô tiện đối chiếu.
 | Assertion pattern khác nhau | ≥ 3 | **5** (A1–A5, §4) |
 | Data-driven | không hardcode inline | **88 record** trong 6 file JSON/CSV, 0 mảng dữ liệu inline |
 | Bug phát hiện | ≥ 3 / feature | **28 bug** (FR-03: 8 · FR-08: 9 · FR-15: 11) — trong đó **9 Critical** |
-| Commit chạm `*.spec.js` | ≥ 8 | **9 commit** — xem `evidence/git-commit-log-files.txt` |
+| Commit chạm `*.spec.js` | ≥ 8 | **10 commit** — xem `evidence/git-commit-log-files.txt` |
 | Banner chống gian lận | mọi report | **9/9 report** có `Run by: 23127060` + ISO timestamp, verify script pass |
 
 Toàn bộ số liệu chi tiết em để ở `report/03-RUN-SUMMARY.md`. File đó được sinh tự động từ `results.json`
@@ -331,7 +331,7 @@ Em xin tự đánh giá bài làm của mình theo bốn tiêu chí như sau:
 đều vượt mức tối thiểu, và quan trọng hơn là **em đều kiểm chứng lại được bằng lệnh** chứ không tự khai:
 em có 83 test so với yêu cầu tối thiểu 36, cả 249 lượt chạy đều pass trên 3 trình duyệt, em dùng 5 assertion
 pattern so với yêu cầu 3, dữ liệu data-driven có 88 record và không còn mảng nào hardcode inline trong spec,
-em báo cáo 28 bug đều có ảnh thật kèm 28 GitHub Issue, có 9 commit chạm vào `*.spec.js` so với yêu cầu 8,
+em báo cáo 28 bug đều có ảnh thật kèm 28 GitHub Issue, có 10 commit chạm vào `*.spec.js` so với yêu cầu 8,
 cả 9 report đều có banner và script verify thoát với exit code 0, và 19 entry trong AI_Log đều đã được em
 đọc lại và review đầy đủ.
 

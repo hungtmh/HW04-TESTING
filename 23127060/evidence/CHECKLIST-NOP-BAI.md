@@ -17,7 +17,7 @@
 | 9 | Số liệu run thật | **249/249 pass · 0 failed · 0 flaky · 91.5s** | `node scripts/summarize-results.mjs` |
 | 10 | Gap Analysis cho cả 3 feature | ✅ 9 GAP (GAP-00…09), 7 đã sửa trong code | `report/02-AI-GAP-ANALYSIS.md` |
 | 11 | Bug report có evidence ảnh thật | ✅ **28 bug**, 11 ảnh PNG + `capture-log.txt` | `ls evidence/bugs/` |
-| 12 | ≥8 commit chạm `*.spec.js` | **9 commit** | `evidence/git-commit-log-files.txt` |
+| 12 | ≥8 commit chạm `*.spec.js` | **10 commit** | `evidence/git-commit-log-files.txt` |
 | 13 | AI_Log đầy đủ | **19 entry** (LOG-001…019), 19/19 có Human review + Verdict | `grep -c "^## LOG-" ai/AI_Log.md` |
 | 14 | AI_Critique 200–300 từ | **296 từ**, script exit 0 | `node scripts/count-words.mjs` |
 | 15 | README có self-assessment + test summary | ✅ | `README.md` §1, §5 |
